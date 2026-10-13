@@ -1,6 +1,6 @@
 {
   "leagueId": 1870538635,
   "season": 2026,
-  "managers": {},
+  "managers": {"2": "josh"},
   "recapModel": "claude-sonnet-5-5"
 }
