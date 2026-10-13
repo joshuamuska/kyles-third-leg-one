@@ -125,10 +125,31 @@ def auto_recap(m, week_hi, week_lo):
     return " ".join(parts)
 
 
+RECAP_STYLE = (
+    "Write a recap of this fantasy football matchup for a friends' league website. "
+    "3 to 5 sentences, plain text, no headline. These are close friends who love roasting each "
+    "other, so be ruthless: savage, specific trash talk about bad lineup calls, benched points, "
+    "blowouts, and lucky wins. Even the winner gets roasted for something. Keep it PG-13: "
+    "no slurs, nothing about race, religion, sexuality, family or health, and no explicit "
+    "sexual content. Use only facts in the data; don't invent injuries, trades or history. "
+    "Refer to people by manager name."
+)
+TARGETS_NOTE = (
+    " {names} {verb} in this game and {gets} extra heat no matter how it went: if they won, "
+    "make it sound like luck or an embarrassment anyway; if they lost, bury them."
+)
+# Saved Claude recaps are only reused when they were written with this exact style,
+# so editing the prompt above rewrites every recap on the next run.
+ROAST_TARGETS = ("keith", "brad")
+RECAP_STYLE_ID = hashlib.md5((RECAP_STYLE + TARGETS_NOTE + ",".join(ROAST_TARGETS)).encode()).hexdigest()[:10]
+
+
 def ai_recap(m, week, fallback):
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         return None
+    targets = [MANAGERS[s["manager"]][0] for s in (m["home"], m["away"])
+               if s.get("manager") in ROAST_TARGETS]
     facts = {
         "week": week,
         "playoff_game": m["playoff"],
@@ -139,12 +160,12 @@ def ai_recap(m, week, fallback):
         ],
         "notes": fallback,
     }
-    prompt = (
-        "Write a recap of this fantasy football matchup for a friends' league website. "
-        "3 to 5 sentences, plain text, no headline. Sound like the league's group chat: "
-        "playful trash talk, keep it PG-13. Use only facts in the data; don't invent injuries, "
-        "trades or history. Refer to people by manager name.\n\n" + json.dumps(facts)
-    )
+    prompt = RECAP_STYLE
+    if targets:
+        prompt += TARGETS_NOTE.format(names=" and ".join(targets),
+                                      verb="both play" if len(targets) > 1 else "plays",
+                                      gets="get" if len(targets) > 1 else "gets")
+    prompt += "\n\n" + json.dumps(facts)
     for attempt in range(5):
         try:
             r = requests.post(
@@ -206,7 +227,7 @@ def main():
     current = league.current_week
     last = min(current, league.finalScoringPeriod)
 
-    # Reuse Claude-written recaps for games whose scores haven't changed.
+    # Reuse Claude-written recaps for games whose scores and recap style haven't changed.
     out_path = ROOT / "data" / f"{season}.json"
     old = {}
     if out_path.exists():
@@ -251,13 +272,22 @@ def main():
             base = auto_recap(m, hi, lo)
             prev = old.get(m["key"])
             if (prev and prev.get("recapBy") == "claude"
+                    and prev.get("recapStyle") == RECAP_STYLE_ID
                     and (prev.get("recap") or "").rstrip()[-1:] in ".!?\"')"
                     and prev["home"]["score"] == m["home"]["score"]
                     and prev["away"]["score"] == m["away"]["score"]):
-                m["recap"], m["recapBy"] = prev["recap"], "claude"
+                m["recap"], m["recapBy"], m["recapStyle"] = prev["recap"], "claude", RECAP_STYLE_ID
                 continue
             text = ai_recap(m, wk, base)
-            m["recap"], m["recapBy"] = (text, "claude") if text else (base, "auto")
+            if text:
+                m["recap"], m["recapBy"], m["recapStyle"] = text, "claude", RECAP_STYLE_ID
+            elif (prev and prev.get("recapBy") == "claude"
+                    and prev["home"]["score"] == m["home"]["score"]
+                    and prev["away"]["score"] == m["away"]["score"]):
+                # Rewrite failed: keep the old-style recap (unstamped) and retry next run.
+                m["recap"], m["recapBy"] = prev["recap"], "claude"
+            else:
+                m["recap"], m["recapBy"] = base, "auto"
         weeks.append({"week": wk, "final": done, "playoff": any(m["playoff"] for m in matchups),
                       "matchups": matchups})
 
