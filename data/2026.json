@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-13T21:57+00:00",
+ "updated": "2026-10-13T22:33+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -399,7 +399,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Kyle came out of Week 1 swinging and handled Brad 143.26 to 117.00, and it wasn't as close as the score makes it sound. Kenneth Walker III went off for 34.10 and",
+     "recap": "Kyle came out of the gate swinging in Week 1 and beat Brad 143.26 to 117.00 for a 26-point cruise. Kenneth Walker III dropped 34.1 on a 14.7 projection, and Amon-Ra St. Brown added 28.7 to make sure nobody was sweating this one. Brad got big games from Zay Flowers (26.0) and DJ Moore (21.0), but the Texans D/ST put up -4.0 and Christian McCaffrey managed just 13.8, so that was never going to be enough. Brad also left Jaxson Dart's 26.6 on the bench while Dak Prescott gave him 14.4, and Josh Jacobs sat there with 0 points, so Free Josh Jacobs is right, somebody get that man out of the bench.",
      "recapBy": "claude"
     },
     {
@@ -658,8 +658,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Josh beat Brett, 109.86-89.16. Trey McBride led the way with 24.50. Brett also posted the lowest score of the week. Brett also left Kenyon Sadiq (11.40) on the bench.",
-     "recapBy": "auto"
+     "recap": "Josh took Week 1 over Brett, 109.86 to 89.16, and it wasn't all that close. Trey McBride went off for 24.50 to lead the way, and Jayden Daniels (17.66) and the Seahawks D/ST (14.0) helped out. Josh even got a 3.20 from Ja'Marr Chase and still won, which is pretty rude. Brett posted the lowest score of the week and left Kenyon Sadiq's 11.40 on the bench while Colston Loveland put up a big fat 0 at TE. Matthew Golden dropped 15.50 on the bench too, so Brett might want to have a little chat with his lineup setter (himself).",
+     "recapBy": "claude"
     },
     {
      "key": "2026-1-4-10",
@@ -917,7 +917,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis opened the season by absolutely mauling",
+     "recap": "Reis came out of Week 1 swinging and beat Brandon 160.66 to 117.02, a 43-point beatdown that Brandon will be hearing about for a while. Josh Allen dropped 35.66 on his own, Bijan Robinson added 31.3, and Dallas Goedert chipped in 23.7 at tight end, so Snooki was basically a highlight reel. Brandon got big games from Jalen Hurts (24.72) and Javonte Williams (24.2), but George Pickens gave him 5.8, Tre Tucker 4.7, and the Chargers D/ST a perfect, beautiful zero. Brandon also left Caleb Douglas and his 14.4 points on the bench, though even that wouldn't have saved him. The funniest part is that Reis had Jalen Coker sitting on the bench with 33.8 points and still won by 40+, which is just rude.",
      "recapBy": "claude"
     },
     {
@@ -1169,8 +1169,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Tyler took care of Noah, 157.46-138.46. Caleb Williams led the way with 37.26.",
-     "recapBy": "auto"
+     "recap": "Tyler opened the season with a 157.46-138.46 win over Noah, and Caleb Williams led the way with 37.26 points. Derrick Henry (35.3) and Ashton Jeanty (32.7) piled on, so those three combined for 105.26 of Tyler's points. Tyler also got a big fat zero from Kyle Pitts Sr. and 3.4 from Terry McLaurin, and left Chuba Hubbard's 23.7 points on the bench, and he still won by 19. Noah got big games from Justin Jefferson (31.2) and David Montgomery (28.9), but Puka Nacua managed 12.4 against a 21.05 projection, and the Broncos D/ST and Jake Ferguson combined for 4.6 points. Noah, that's a tough way to start Week 1, but Tyler's group chat bragging rights are going to be loud.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-1-3-6",
@@ -1435,8 +1435,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith beat Cody, 165.60-142.30. D'Andre Swift led the way with 32.40. It was the highest score of the week. The painful part: Christian Watson scored 32.70 on Cody's bench while Tee Higgins put up 8.90 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Keith took down Cody 165.6 to 142.3, and D'Andre Swift's 32.4 was the top score of the week. Cody, though, has some explaining to do: Christian Watson dropped 32.7 on his bench while Tee Higgins gave him 8.9 in the flex spot. That one swap flips the result by half a point, and Isaiah Likely added another 27.8 on the pine for good measure. Matthew Stafford's 4.1 and Harrison Mevis's 1.0 didn't help either, so Cody's lineup got outscored by his own bench. Keith can enjoy the W, but Cody should maybe stop setting his lineup like he's blindfolded.",
+     "recapBy": "claude"
     }
    ]
   },
@@ -1694,8 +1694,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Josh edged Kyle, 134.84-128.78. Ja'Marr Chase led the way with 26.50. The painful part: Stefon Diggs scored 21.70 on Kyle's bench while Malik Nabers put up 1.10 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Josh slipped past Kyle 134.84-128.78 in Week 2, and Kyle can only blame himself. Stefon Diggs dropped 21.7 on Kyle's bench while Malik Nabers sat in the lineup and laid a 1.1 egg, and that swap alone flips the whole result. Amon-Ra St. Brown went nuclear for 35.2 and Kyle still lost, which is almost impressive. Cameron Dicker's 1.0 at kicker against Brandon Aubrey's 17.0 for Josh didn't help either. Ja'Marr Chase led the way for Josh with 26.5, so enjoy the W, OMM, even if a kicker did a lot of the heavy lifting.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-2-7-10",
@@ -1960,7 +1960,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis absol",
+     "recap": "Reis absolutely ran Brad out of the building, 167.62 to 113.66, a 53.96-point beating that was also the highest score of the week. Josh Allen dropped 40.82 and Davante Adams added 39.5, so Reis got about 80 points from two guys projected for roughly 38 combined. Reis even left Travis Kelce's 25.1 on the bench while Dallas Goedert put up 1.4 at TE, and still won by a mile. Brad got a big day from Dak Prescott (29.76) and Christian McCaffrey (22.6), but DJ Moore posted -0.1, which is honestly impressive in the wrong direction. Brad's team is called Free Josh Jacobs and Jacobs scored 0 on the bench, so maybe leave him locked up.",
      "recapBy": "claude"
     },
     {
@@ -2219,8 +2219,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brett handled Noah with room to spare, 125.88-93.20. CeeDee Lamb led the way with 35.30. Noah also posted the lowest score of the week. Noah also left Jonah Coleman (14.80) on the bench.",
-     "recapBy": "auto"
+     "recap": "Brett took Noah behind the barn, 125.88 to 93.20, and CeeDee Lamb did most of the damage with a 35.30 line that Noah's whole receiving corps couldn't match. DeVonta Smith (27.70) and James Cook III (20.90) piled on, and Brett won by 32.68 even with the Lions D/ST putting up -4.0 and Justin Herbert managing just 7.88. Noah's 93.20 was the lowest score of the week, and he got there by starting Puka Nacua for a big fat zero. Meanwhile Jonah Coleman dropped 14.80 on his bench, and Rachaad White (14.30) and Bhayshul Tuten (14.20) were sitting there too. Jake Ferguson (20.30) and Harrison Butker (16.00) carried the load for Noah, but a tight end and a kicker can only do so much, brother.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-2-4-6",
@@ -2506,7 +2506,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith took Brandon to the woodshed in Week 2, 163.56 to 119",
+     "recap": "Keith's Taylor Swift squad dropped 163.56 on Brandon's 119.16, a 44.40-point beatdown, and it was not close at any point in this group chat's imagination. Jaxon Smith-Njigba went off for 42.50 against a projection of 18.49, and Jonathan Taylor tossed in 29.20 from the flex like it was nothing. Keith won by 44 even though Trevor Lawrence gave him just 6.16 at QB, which is the kind of flex that makes the rest of us want to mute the thread. Brandon got 22.90 from Tre Tucker and little else, with Javonte Williams (8.00) and Travis Etienne Jr. (7.10) both stinking it up in his lineup. Brandon also left Dontayvion Wicks and his 12.40 on the bench while Etienne put up 7.10, so maybe check the lineup before kickoff next week, big guy.",
      "recapBy": "claude"
     },
     {
@@ -2758,8 +2758,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Cody handled Tyler with room to spare, 132.28-96.12. Brock Purdy led the way with 28.48.",
-     "recapBy": "auto"
+     "recap": "Cody's KYLE ONLY HATE rolled Tyler 132.28 to 96.12, and it was never really close. Brock Purdy dropped 28.48 for Cody while Tyler's Caleb Williams limped in with 7.72, so that's a 20-point hole at QB before anyone else even showed up. Cody got a measly 3.0 from Saquon Barkley and still won by 36, then left Denzel Boston's 20.5 sitting on the bench like it was nothing. Tyler got decent work from Derrick Henry (17.7), Omarion Hampton (17.5) and Kyren Williams (15.7), but Kyle Pitts Sr. put up 2.5 and DK Metcalf and Terry McLaurin chipped in 6.7 and 7.0, so Ashton 3:16 never stood a chance. Tyler, we love the effort, but that receiver room needs a group chat intervention.",
+     "recapBy": "claude"
     }
    ]
   },
@@ -3031,8 +3031,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis handled Kyle with room to spare, 141.26-101.38. Bijan Robinson led the way with 35.30.",
-     "recapBy": "auto"
+     "recap": "Reis took Kyle behind the barn, 141.26 to 101.38, and the 39.88-point gap wasn't close. Bijan Robinson went nuclear for 35.3 points against a 19.54 projection, with Garrett Wilson (26.7) and Davante Adams (20.7) piling on. Reis even left Bo Nix on the bench for 24.14 while Josh Allen gave him 17.46, and still won comfortably, which is a bit disrespectful. Kyle got solid numbers from Joe Burrow (22.58) and Kenneth Walker III (21.3), but the Eagles D/ST put up a -1.0 and Tetairoa McMillan managed just 3.7 in the flex. Kyle, \"WE GOT A SITUATION\" is right, because that was a mess.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-3-2-8",
@@ -3304,7 +3304,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Josh rolled over Noah 130.64 to 99.34, and it was never close. Ja'Mar",
+     "recap": "Josh rolled Noah 130.64 to 99.34, and it was never close. Ja'Marr Chase put up 24.8 to lead the way, and Jeremiyah Love chipped in 21.9 against a 12.77 projection. Noah got 28.4 from Drake London and 20.44 from Lamar Jackson, but Justin Jefferson gave him 5.2, Khalil Shakir gave him 1.6, and the Bengals D/ST laid a goose egg. Noah, the Ferguson mix-up hurts: Terrance Ferguson scored 1.9 at TE while Jake Ferguson dropped 9.3 on your bench. Josh even left 18.7 from Wan'Dale Robinson on the pine and still won by 31, which is just rude.",
      "recapBy": "claude"
     },
     {
@@ -3591,8 +3591,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith beat Brad, 140.24-128.34. Jaxon Smith-Njigba led the way with 35.36. The painful part: Jordan Addison scored 20.00 on Brad's bench while Brian Thomas Jr. put up 1.80 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Keith took down Brad 140.24 to 128.34, and Jaxon Smith-Njigba did the heavy lifting with a 35.36-point detonation. George Kittle added 26.2 at TE, so Keith's team name had better luck than his Jonathan Taylor (9.2 points on a 20.62 projection). Brad, meanwhile, started Brian Thomas Jr. for 1.8 points while Jordan Addison sat on the bench with 20.0, and that swap alone flips the result. Brad also left Jakobi Meyers (19.4) on the pine and started TreVeyon Henderson (3.9), so the lineup card did him dirty. Brock Bowers going off for 27.6 wasn't enough to save Brad from himself, and Keith gets the W.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-3-1-3",
@@ -4116,7 +4116,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Tyler goes 112.36 to 95.82 over Brandon, and Brandon can only blame himself. Michael Wilson dropped 25.9 on Brandon's bench while Dontayvion Wicks sat in the lineup and gave him 5.2, and that swap alone flips the whole result. Brandon's De'Von Achane managed 1.7 against a 19.42",
+     "recap": "Tyler beat Brandon 112.36 to 95.82 in Week 3, and Brandon's bench will be keeping him up tonight. Michael Wilson dropped 25.90 sitting on the pine while Dontayvion Wicks put up 5.20 in the flex spot, and that one swap alone flips the game. Brandon also got a 1.7 from De'Von Achane, who was projected for over 19, and a big fat zero from the 49ers D/ST, so Bobby Light really did him dirty. Tyler wasn't perfect either, with Kyle Pitts putting up 1.5 and Luther Burden III sitting on 19.8 points on the bench, but Derrick Henry (21.90), Kyren Williams (21.80) and Jared Goff (19.36) carried Ashton 3:16 anyway. Brandon also posted the lowest score of the week, so maybe check the bench before lock next time, my guy.",
      "recapBy": "claude"
     }
    ]
@@ -4389,8 +4389,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Kyle buried Noah, 180.72-120.78, winning by 59.94. Tetairoa McMillan led the way with 45.20.",
-     "recapBy": "auto"
+     "recap": "Kyle took Noah behind the shed this week, 180.72 to 120.78, a 59.94-point beatdown that was over before the Sunday night games even loaded. Tetairoa McMillan went nuclear for 45.20 from the flex spot against a 15.85 projection, and Kenneth Walker III (30.90) and Joe Burrow (23.72) piled on. Kyle even left Alvin Kamara's 22.80 on the bench and Bills D/ST put up a single point, and he still won by about 60, which is just rude. Noah got a big 27.70 from Puka Nacua, but David Montgomery (4.30) and Cam Skattebo (7.60) both face-planted against projections of 13.47 and 16.12. Noah, your bench had Keaton Mitchell at 11.30 while Montgomery was busy producing 4.30, so maybe we need a group chat intervention on lineup setting.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-4-6-10",
@@ -4669,7 +4669,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith's Taylor Swift cruised past Reis's Snooki 123",
+     "recap": "Keith's Taylor Swift squad beat Reis's Snooki 123.28 to 91.12, and it wasn't close. Jonathan Taylor led the way with 22.7, and Chase Brown (19.1), Devaughn Vele (17.4) and George Kittle (17.0) all showed up too. Keith even left Emanuel Wilson sitting on the bench with 27.0 points and still won by 32, which is just rude. Reis got 27.7 from Bijan Robinson, then watched Travis Kelce put up 3.5 and Courtland Sutton put up 1.4, and the rest of the lineup couldn't keep up. Snooki's 91.12 was the lowest score of the week, so Reis gets to carry that around until next Sunday.",
      "recapBy": "claude"
     },
     {
@@ -4942,8 +4942,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Cody buried Josh, 164.32-118.16, winning by 46.16. Nico Collins led the way with 30.80. Josh also left Kyle Monangai (28.00) on the bench.",
-     "recapBy": "auto"
+     "recap": "Cody put Josh in the blender this week, winning 164.32 to 118.16, a 46.16-point beatdown that wasn't close. Nico Collins went off for 30.80 out of the flex spot and Tee Higgins added 26.70 from the other one, so Cody got about 57 points from two slots that projected for under 29 combined. Josh's Ja'Marr Chase managed 5.70 against a 20.43 projection, and Emeka Egbuka chipped in a cool 3.30, which is how your team ends up looking like a group chat nobody's replying to. The cherry on top is that Josh left Kyle Monangai's 28.00 sitting on the bench, so Josh had the week's second-biggest hammer in the garage and never picked it up. Bryce Young was Josh's top scorer at 21.46, and that tells you everything about how this one went.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-4-5-7",
@@ -5208,7 +5208,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Tyler absolutely ran Brad out of the building, 186.28 to 127.90, and a 58.38-point beating is the kind of thing we",
+     "recap": "Tyler ran Brad out of the building 186.28 to 127.90, a 58.38-point beating that Brad will be hearing about until Week 5. Kyren Williams dropped 36.7 on a 13.09 projection, and Tyler also got 25.9 from Chuba Hubbard and 21.5 from Carnell Tate, so Tyler basically had a cheat code this week. Brad got 22.4 from Sam LaPorta and 25.8 from Zay Flowers, but DJ Moore (2.7), TreVeyon Henderson (4.2) and the Texans D/ST (3.0) all stayed home, and the team just couldn't keep up. The real kicker is Brian Robinson Jr. putting up 25.7 on Brad's bench, which is a rough lineup call even in a blowout. Brad's team name says \"Free Josh Jacobs,\" but this week Jacobs sat on the bench and scored zero, so the freedom is going great.",
      "recapBy": "claude"
     },
     {
@@ -5488,7 +5488,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brett beat Brandon 131.40 to 116.72, and CeeDee Lamb did most of the work with a 41.30-point eruption against a 16.9 projection. Brandon got a monster 31.30 from Javonte Williams, but Rash",
+     "recap": "Brett beat Brandon 131.40 to 116.72, and CeeDee Lamb did most of the work with a 41.30-point eruption against a 16.90 projection. Brandon got a big game from Javonte Williams (31.30), but Rashee Rice laid a goose egg in a starting WR slot and Dontayvion Wicks added just 4.80 in the flex. Brett's kicker Will Reichard dropped 19.00, which is a lot for a kicker and should make everyone else in this league a little mad. Brett also left Quinshon Judkins (21.60) on the bench while Ladd McConkey put up a zero in the lineup, so he won with points to spare. Brandon can look at Tre Tucker's 8.40 on the pine and think about it, but he lost by 14.68, so that one isn't on Tucker.",
      "recapBy": "claude"
     }
    ]
@@ -5775,7 +5775,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith edged Kyle 147.04 to 140.10 in Week 5, and Parker Washington did the heavy lifting with 30.40 points against a 14.11 projection. Kyle got big games from Malik Nabers (29.10), Mike Evans (26.30) and Joe Burrow",
+     "recap": "Keith edges Kyle 147.04 to 140.10 in Week 5, and Parker Washington did the heavy lifting with 30.40 points from a 14.11 projection. Kyle had a real shot, with Malik Nabers (29.10), Mike Evans (26.30) and Joe Burrow (24.60) all showing up, but he left the door open. Alvin Kamara gave him 2.60 in the lineup while Jacory Croskey-Merritt dropped 14.20 on Kyle's bench. That one swap is an 11.60-point difference and would have flipped this to Kyle by about 4.6, so Kyle gets to stew on that all week. Keith survived Jonathan Taylor (11.20) and Chase Brown (7.00) both underperforming, so he can enjoy the win and not ask questions.",
      "recapBy": "claude"
     },
     {
@@ -6041,8 +6041,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Cody took care of Noah, 199.38-179.52. Jahmyr Gibbs led the way with 37.70. It was the highest score of the week.",
-     "recapBy": "auto"
+     "recap": "Cody took down Noah 199.38 to 179.52, and Jahmyr Gibbs did the heavy lifting with 37.70 points. Noah matched that number with Puka Nacua's 37.70, but Cody had Jaylen Warren (36.8), Isaiah Likely (32.4) and Christian Watson (32.3) all going off too, so Noah needed way more help than he got. Cody's RJ Harvey put up 0.7 in the flex while Denzel Boston sat on the bench with 13.6, and Cody still won by almost 20, which is just disrespectful. Noah got 21 from Spencer Shrader and 27.32 from Matthew Stafford, but Cam Skattebo (7.1) and Juwan Johnson (5.6) did him no favors. Noah, I'd say run it back, but the scoreboard says you shouldn't.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-5-5-10",
@@ -6307,8 +6307,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis handled Tyler with room to spare, 156.90-129.24. Bucky Irving led the way with 31.50. Tyler also posted the lowest score of the week. Tyler also left Terry McLaurin (12.20) on the bench.",
-     "recapBy": "auto"
+     "recap": "Reis and Snooki took care of business in Week 5, beating Tyler 156.90 to 129.24, and Bucky Irving did the heavy lifting with a 31.50 slate. Josh Allen chipped in 30.50, and Garrett Wilson added 23.40, so Reis could afford for T.J. Hockenson to put up a 1.70 at tight end. Tyler had a rough one: Ashton 3:16 posted the lowest score of the week, with Carnell Tate (1.60), Omarion Hampton (4.90) and DK Metcalf (5.30) all stinking up the lineup. Even worse, Terry McLaurin dropped 12.20 on Tyler's bench while Tate was out there collecting dust. Jared Goff (28.94) and the kicker, Ka'imi Fairbairn (17.00), did what they could, but the Ashton 3:16 boat sprang too many leaks.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-5-2-4",
@@ -6587,7 +6587,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brandon edged Josh 136.88 to 135.26 in a 1.62-point squeaker, and Josh is going to be staring at his bench for days. George Pickens dropped 28 for Brandon, and the 49ers D/ST chipped in 20 on a 4.94 projection, which is rude. Josh got 32.26 from Jayden Daniels and still lost, mostly because Deebo Samuel Sr. posted 2.5 in a flex spot while Emeka Egbuka sat on the bench with 17.2. Swapping those two wins it by a mile, and Blake",
+     "recap": "Brandon edged Josh 136.88 to 135.26, a 1.62-point margin that Josh is going to be thinking about all week. George Pickens went off for 28 and the 49ers D/ST dropped 20 on a 4.94 projection, which is more than enough to cover for Tony Pollard and Michael Wilson stinking it up. Josh got 32.26 from Jayden Daniels and 21.6 from Trey McBride, then left Emeka Egbuka's 17.2 on the bench while Deebo Samuel Sr. posted 2.5 in the flex. That swap alone wins it by 13 points, and Blake Corum also sat there with 16.2 while Jeremiyah Love gave Josh 2.2. Brandon survives, and Josh gets to run the \"set your lineup\" tape back all week.",
      "recapBy": "claude"
     },
     {
@@ -6860,7 +6860,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brett beat Brad 146.76 to 135.84, and Drake Maye did most of the damage with 39.46 points, more than double his 18.47 projection. Brad can blame his bench, because Samaje Per",
+     "recap": "Brett survived Week 5 with a 146.76-135.84 win over Brad, and Drake Maye did most of the heavy lifting with a ridiculous 39.46 from the QB slot. Brett's team had CeeDee Lamb limping to 2.9 and still got it done, which is just disrespectful. Brad can blame himself, though: Samaje Perine dropped 15.8 on his bench while TreVeyon Henderson gave him 4.8 in the lineup. Start Perine instead and Brad wins by 0.08, so check your roster before you complain in the chat, Brad. Brad's kicker and Brock Bowers each scored 23, and none of it mattered.",
      "recapBy": "claude"
     }
    ]
