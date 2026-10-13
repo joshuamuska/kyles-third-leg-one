@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-13T21:30+00:00",
+ "updated": "2026-10-13T21:35+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -21,7 +21,7 @@
   },
   {
    "espnId": 2,
-   "manager": null,
+   "manager": "josh",
    "owner": "Joshua Muska",
    "name": "OMM",
    "w": 3,
@@ -535,7 +535,7 @@
      },
      "away": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 109.86,
       "starters": [
@@ -658,7 +658,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "OMM beat Brett, 109.86-89.16. Trey McBride led the way with 24.50. Brett also posted the lowest score of the week. Brett also left Kenyon Sadiq (11.40) on the bench.",
+     "recap": "Josh beat Brett, 109.86-89.16. Trey McBride led the way with 24.50. Brett also posted the lowest score of the week. Brett also left Kenyon Sadiq (11.40) on the bench.",
      "recapBy": "auto"
     },
     {
@@ -1571,7 +1571,7 @@
      },
      "away": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 134.84,
       "starters": [
@@ -1694,7 +1694,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "OMM edged Kyle, 134.84-128.78. Ja'Marr Chase led the way with 26.50. The painful part: Stefon Diggs scored 21.70 on Kyle's bench while Malik Nabers put up 1.10 in the lineup. That swap alone wins it.",
+     "recap": "Josh edged Kyle, 134.84-128.78. Ja'Marr Chase led the way with 26.50. The painful part: Stefon Diggs scored 21.70 on Kyle's bench while Malik Nabers put up 1.10 in the lineup. That swap alone wins it.",
      "recapBy": "auto"
     },
     {
@@ -3038,7 +3038,7 @@
      "key": "2026-3-2-8",
      "home": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 130.64,
       "starters": [
@@ -3304,7 +3304,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "OMM handled Noah with room to spare, 130.64-99.34. Ja'Marr Chase led the way with 24.80.",
+     "recap": "Josh handled Noah with room to spare, 130.64-99.34. Ja'Marr Chase led the way with 24.80.",
      "recapBy": "auto"
     },
     {
@@ -4805,7 +4805,7 @@
      },
      "away": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 118.16,
       "starters": [
@@ -4942,7 +4942,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Cody buried OMM, 164.32-118.16, winning by 46.16. Nico Collins led the way with 30.80. OMM also left Kyle Monangai (28.00) on the bench.",
+     "recap": "Cody buried Josh, 164.32-118.16, winning by 46.16. Nico Collins led the way with 30.80. Josh also left Kyle Monangai (28.00) on the bench.",
      "recapBy": "auto"
     },
     {
@@ -6314,7 +6314,7 @@
      "key": "2026-5-2-4",
      "home": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 135.26,
       "starters": [
@@ -6587,7 +6587,7 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brandon survived OMM by 1.62, 136.88-135.26. George Pickens led the way with 28.00. The painful part: Emeka Egbuka scored 17.20 on OMM's bench while Deebo Samuel Sr. put up 2.50 in the lineup. That swap alone wins it.",
+     "recap": "Brandon survived Josh by 1.62, 136.88-135.26. George Pickens led the way with 28.00. The painful part: Emeka Egbuka scored 17.20 on Josh's bench while Deebo Samuel Sr. put up 2.50 in the lineup. That swap alone wins it.",
      "recapBy": "auto"
     },
     {
@@ -8098,7 +8098,7 @@
      },
      "away": {
       "espnId": 2,
-      "manager": null,
+      "manager": "josh",
       "name": "OMM",
       "score": 0,
       "starters": [
