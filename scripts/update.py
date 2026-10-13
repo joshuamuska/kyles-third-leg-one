@@ -11,6 +11,7 @@ import json
 import os
 import pathlib
 import sys
+import time
 
 import requests
 from espn_api.football import League
@@ -144,21 +145,35 @@ def ai_recap(m, week, fallback):
         "playful trash talk, keep it PG-13. Use only facts in the data; don't invent injuries, "
         "trades or history. Refer to people by manager name.\n\n" + json.dumps(facts)
     )
-    try:
-        r = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={"x-api-key": key, "anthropic-version": "2023-06-01",
-                     "content-type": "application/json"},
-            json={"model": CFG.get("recapModel", "claude-sonnet-5-5"), "max_tokens": 400,
-                  "messages": [{"role": "user", "content": prompt}]},
-            timeout=60,
-        )
-        r.raise_for_status()
-        text = "".join(b.get("text", "") for b in r.json().get("content", []))
-        return text.strip() or None
-    except Exception as e:  # never let a recap break the update
-        print(f"::warning::Claude recap failed for {m['key']}: {e}")
-        return None
+    for attempt in range(5):
+        try:
+            r = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                         "content-type": "application/json"},
+                json={"model": CFG.get("recapModel", "claude-sonnet-5-5"), "max_tokens": 1500,
+                      "messages": [{"role": "user", "content": prompt}]},
+                timeout=90,
+            )
+            if r.status_code in (429, 500, 502, 503, 529):
+                # Rate limited or busy: wait and try again.
+                wait = float(r.headers.get("retry-after") or 0) or 10 * (attempt + 1)
+                print(f"Claude busy for {m['key']} ({r.status_code}), retrying in {wait:.0f}s")
+                time.sleep(min(wait, 90))
+                continue
+            r.raise_for_status()
+            body = r.json()
+            if body.get("stop_reason") == "max_tokens":
+                print(f"::warning::Claude recap for {m['key']} was cut off; keeping the short recap for now.")
+                return None
+            text = "".join(b.get("text", "") for b in body.get("content", []) if b.get("type") == "text")
+            time.sleep(2)  # stay well under new-account rate limits
+            return text.strip() or None
+        except Exception as e:  # never let a recap break the update
+            print(f"::warning::Claude recap failed for {m['key']}: {e}")
+            return None
+    print(f"::warning::Claude was too busy to write {m['key']}; it will try again next run.")
+    return None
 
 
 def main():
@@ -236,6 +251,7 @@ def main():
             base = auto_recap(m, hi, lo)
             prev = old.get(m["key"])
             if (prev and prev.get("recapBy") == "claude"
+                    and (prev.get("recap") or "").rstrip()[-1:] in ".!?\"')"
                     and prev["home"]["score"] == m["home"]["score"]
                     and prev["away"]["score"] == m["away"]["score"]):
                 m["recap"], m["recapBy"] = prev["recap"], "claude"
