@@ -147,9 +147,12 @@ tr.champ td:first-child{box-shadow:inset 4px 0 var(--gold)}
 .mc .recap{margin:10px 0 0;font-size:.95rem;line-height:1.5}
 .mc details{margin-top:10px;font-size:.88rem}
 .mc summary{cursor:pointer;color:var(--muted);font-weight:600}
-.lineups{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
-.lineups table{min-width:0;font-size:.85rem}
-.lineups td{padding:3px 4px;border:0;white-space:normal}
+.lineups{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+.lineups table{min-width:0;font-size:.88rem;table-layout:fixed}
+.lineups td{padding:4px 6px;border:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lineups td:first-child{width:52px;color:var(--muted);font-weight:600;font-size:.8rem}
+.lineups td:last-child{width:52px}
+.lineups tr.tot td{border-top:1px solid var(--line);font-weight:700}
 .lineups tbody tr:nth-child(even){background:none}
 .lineups .bn td{color:var(--muted)}
 .lineups h4{margin:0 0 2px;font-size:.85rem}
@@ -292,13 +295,17 @@ function rebuild(){
 }
 const who = s => s.manager&&M[s.manager] ? mlink(s.manager) : esc(s.owner||s.name||"Unknown");
 const liveOpen = () => LIVE && !LIVE.seasonOver ? LIVE : null;
+const SLOT_ORDER=["QB","RB","WR","TE","FLEX","D/ST","K"];
+const slotName=s=>s==="RB/WR/TE"||s==="WR/TE"||s==="RB/WR"?"FLEX":s;
+const slotRank=s=>{const i=SLOT_ORDER.indexOf(slotName(s));return i<0?SLOT_ORDER.length:i;};
 function matchCard(m, opts={}){
   const fin=m.final, hiScore=Math.max(m.home.score,m.away.score);
   const line=s=>`<div class="line ${fin&&s.score===hiScore&&m.home.score!==m.away.score?"won":""}">
     <div class="nm">${who(s)}<small>${esc(s.name||"")}</small></div><div class="sc">${s.score.toFixed(2)}</div></div>`;
   const lu=s=>`<div><h4>${s.manager&&M[s.manager]?esc(M[s.manager].name):esc(s.name||"")}</h4><table><tbody>
-    ${s.starters.map(p=>`<tr><td>${esc(p.slot)}</td><td>${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
-    ${s.bench.map(p=>`<tr class="bn"><td>BN</td><td>${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
+    ${[...s.starters].sort((a,b)=>slotRank(a.slot)-slotRank(b.slot)).map(p=>`<tr><td>${esc(slotName(p.slot))}</td><td title="${esc(p.name)}">${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
+    <tr class="tot"><td></td><td>Total</td><td class="num">${s.score.toFixed(1)}</td></tr>
+    ${s.bench.map(p=>`<tr class="bn"><td>BN</td><td title="${esc(p.name)}">${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
   </tbody></table></div>`;
   return `<div class="mc">${m.playoff?`<span class="tag">${m.type&&/WINNER/.test(m.type)?"Playoffs":"Consolation"}</span>`:""}
     ${line(m.away)}${line(m.home)}
