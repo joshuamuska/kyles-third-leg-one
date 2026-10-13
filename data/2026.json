@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-13T21:35+00:00",
+ "updated": "2026-10-13T21:57+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -399,8 +399,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Kyle handled Brad with room to spare, 143.26-117.00. Kenneth Walker III led the way with 34.10. Brad also left Jaxson Dart (26.60) on the bench.",
-     "recapBy": "auto"
+     "recap": "Kyle came out of Week 1 swinging and handled Brad 143.26 to 117.00, and it wasn't as close as the score makes it sound. Kenneth Walker III went off for 34.10 and",
+     "recapBy": "claude"
     },
     {
      "key": "2026-1-1-2",
@@ -917,8 +917,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis handled Brandon with room to spare, 160.66-117.02. Josh Allen led the way with 35.66. Brandon also left Caleb Douglas (14.40) on the bench.",
-     "recapBy": "auto"
+     "recap": "Reis opened the season by absolutely mauling",
+     "recapBy": "claude"
     },
     {
      "key": "2026-1-5-8",
@@ -1960,8 +1960,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Reis ran Brad out of the building, 167.62-113.66. That's a 53.96-point beating. Josh Allen led the way with 40.82. It was the highest score of the week.",
-     "recapBy": "auto"
+     "recap": "Reis absol",
+     "recapBy": "claude"
     },
     {
      "key": "2026-2-1-8",
@@ -2506,8 +2506,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith handled Brandon with room to spare, 163.56-119.16. Jaxon Smith-Njigba led the way with 42.50.",
-     "recapBy": "auto"
+     "recap": "Keith took Brandon to the woodshed in Week 2, 163.56 to 119",
+     "recapBy": "claude"
     },
     {
      "key": "2026-2-3-5",
@@ -3304,8 +3304,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Josh handled Noah with room to spare, 130.64-99.34. Ja'Marr Chase led the way with 24.80.",
-     "recapBy": "auto"
+     "recap": "Josh rolled over Noah 130.64 to 99.34, and it was never close. Ja'Mar",
+     "recapBy": "claude"
     },
     {
      "key": "2026-3-6-7",
@@ -3850,8 +3850,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Cody never let Brett get close, winning 180.28-136.34. Jahmyr Gibbs led the way with 41.40. It was the highest score of the week. Brett also left Kenyon Sadiq (23.50) on the bench.",
-     "recapBy": "auto"
+     "recap": "Cody wasn't just winning this one, he was lapping the field, rolling past Brett 180.28 to 136.34 in Week 3. Jahmyr Gibbs went absolutely nuclear for 41.40 against a 25.35 projection, and Brock Purdy chipped in 31.28, so KYLE ONLY HATE put up the highest score of the week. Brett did get big games from Matthew Golden (21.00), CeeDee Lamb (20.20) and James Cook III (19.40), but then left Kenyon Sadiq's 23.50 sitting on the bench, which is the kind of thing the group chat will not let go. Dalton Kincaid's 3.80 in the TE slot didn't help the cause either, Brett. Cody takes the W and the bragging rights, and Spencer James Squad takes the L and a long look at the lineup page.",
+     "recapBy": "claude"
     },
     {
      "key": "2026-3-4-5",
@@ -4116,8 +4116,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Tyler took care of Brandon, 112.36-95.82. Derrick Henry led the way with 21.90. Brandon also posted the lowest score of the week. The painful part: Michael Wilson scored 25.90 on Brandon's bench while Dontayvion Wicks put up 5.20 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Tyler goes 112.36 to 95.82 over Brandon, and Brandon can only blame himself. Michael Wilson dropped 25.9 on Brandon's bench while Dontayvion Wicks sat in the lineup and gave him 5.2, and that swap alone flips the whole result. Brandon's De'Von Achane managed 1.7 against a 19.42",
+     "recapBy": "claude"
     }
    ]
   },
@@ -4669,8 +4669,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith handled Reis with room to spare, 123.28-91.12. Jonathan Taylor led the way with 22.70. Reis also posted the lowest score of the week.",
-     "recapBy": "auto"
+     "recap": "Keith's Taylor Swift cruised past Reis's Snooki 123",
+     "recapBy": "claude"
     },
     {
      "key": "2026-4-2-3",
@@ -5208,8 +5208,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Tyler ran Brad out of the building, 186.28-127.90. That's a 58.38-point beating. Kyren Williams led the way with 36.70. It was the highest score of the week. Brad also left Brian Robinson Jr. (25.70) on the bench.",
-     "recapBy": "auto"
+     "recap": "Tyler absolutely ran Brad out of the building, 186.28 to 127.90, and a 58.38-point beating is the kind of thing we",
+     "recapBy": "claude"
     },
     {
      "key": "2026-4-1-4",
@@ -5488,8 +5488,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brett took care of Brandon, 131.40-116.72. CeeDee Lamb led the way with 41.30. Brandon also left Tre Tucker (8.40) on the bench.",
-     "recapBy": "auto"
+     "recap": "Brett beat Brandon 131.40 to 116.72, and CeeDee Lamb did most of the work with a 41.30-point eruption against a 16.9 projection. Brandon got a monster 31.30 from Javonte Williams, but Rash",
+     "recapBy": "claude"
     }
    ]
   },
@@ -5775,8 +5775,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Keith held off Kyle, 147.04-140.10. Parker Washington led the way with 30.40. The painful part: Jacory Croskey-Merritt scored 14.20 on Kyle's bench while Alvin Kamara put up 2.60 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Keith edged Kyle 147.04 to 140.10 in Week 5, and Parker Washington did the heavy lifting with 30.40 points against a 14.11 projection. Kyle got big games from Malik Nabers (29.10), Mike Evans (26.30) and Joe Burrow",
+     "recapBy": "claude"
     },
     {
      "key": "2026-5-3-8",
@@ -6587,8 +6587,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brandon survived Josh by 1.62, 136.88-135.26. George Pickens led the way with 28.00. The painful part: Emeka Egbuka scored 17.20 on Josh's bench while Deebo Samuel Sr. put up 2.50 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Brandon edged Josh 136.88 to 135.26 in a 1.62-point squeaker, and Josh is going to be staring at his bench for days. George Pickens dropped 28 for Brandon, and the 49ers D/ST chipped in 20 on a 4.94 projection, which is rude. Josh got 32.26 from Jayden Daniels and still lost, mostly because Deebo Samuel Sr. posted 2.5 in a flex spot while Emeka Egbuka sat on the bench with 17.2. Swapping those two wins it by a mile, and Blake",
+     "recapBy": "claude"
     },
     {
      "key": "2026-5-1-7",
@@ -6860,8 +6860,8 @@
      "playoff": false,
      "type": "NONE",
      "final": true,
-     "recap": "Brett took care of Brad, 146.76-135.84. Drake Maye led the way with 39.46. The painful part: Samaje Perine scored 15.80 on Brad's bench while TreVeyon Henderson put up 4.80 in the lineup. That swap alone wins it.",
-     "recapBy": "auto"
+     "recap": "Brett beat Brad 146.76 to 135.84, and Drake Maye did most of the damage with 39.46 points, more than double his 18.47 projection. Brad can blame his bench, because Samaje Per",
+     "recapBy": "claude"
     }
    ]
   },
