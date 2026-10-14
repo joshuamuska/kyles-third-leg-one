@@ -54,6 +54,10 @@ nav::-webkit-scrollbar{display:none}
 nav a{flex:none;text-decoration:none;padding:12px 12px 13px;font-weight:600;color:rgba(243,245,239,.75);border-bottom:3px solid transparent}
 nav a:hover{color:var(--on-turf)}
 nav a[aria-current="page"]{color:var(--on-turf);border-bottom-color:var(--gold)}
+/* Unread dot on Forum. Sits inside the link's padding so the scrolling nav doesn't clip it. */
+#forum-link{position:relative}
+.nav-dot{position:absolute;top:8px;right:3px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 2px var(--turf)}
+.nav-dot[hidden]{display:none}
 nav .nav-dd{flex:none;display:inline-flex;align-items:center;gap:6px;background:none;border:0;border-bottom:3px solid transparent;border-radius:0;font:inherit;font-weight:600;
   padding:12px 12px 13px;color:rgba(243,245,239,.75);cursor:pointer}
 nav .nav-dd:hover,nav .nav-dd[aria-expanded="true"]{color:var(--on-turf)}
@@ -802,7 +806,7 @@ table.pts td.neg{color:var(--gold-text)}
       <a href="#/live">This season</a>
       <a href="#/rosters">Rosters</a>
       <a href="#/rules">Rules</a>
-      <a href="#/forum">Forum</a>
+      <a href="#/forum" id="forum-link">Forum<span class="nav-dot" id="forum-dot" hidden><span class="sr-only"> (new posts)</span></span></a>
     </nav>
   </div>
 </header>
@@ -2304,6 +2308,8 @@ async function loadThreads(){
     const threads=await sb("forum_posts?select=id,author,body,created_at&parent_id=is.null&order=last_activity.desc&limit=50");
     const replies=threads.length?await sb(`forum_posts?select=id,parent_id,author,body,created_at&parent_id=in.(${threads.map(t=>t.id).join(",")})&order=created_at.asc`):[];
     if(!document.body.contains(el)) return;
+    // Use the server's own timestamps too, so a slow device clock can't bring the dot back for posts already seen.
+    threads.concat(replies).forEach(p=>markForumSeen(p.created_at));
     el.innerHTML=threads.length?threads.map(t=>{
       const rs=replies.filter(r=>r.parent_id===t.id);
       return `<article class="thread">${postHtml(t)}
@@ -2354,6 +2360,25 @@ function setupForum(){
   loadThreads();
 }
 
+/* Unread dot: "forum-seen" holds the newest post time this browser has seen on the Forum. */
+const onForum=()=>/^#\/forum/.test(location.hash);
+function markForumSeen(t){
+  const n=Date.parse(t||new Date()), seen=Date.parse(store.get("forum-seen"))||0;
+  if(n>seen) store.set("forum-seen",new Date(n).toISOString());
+  document.getElementById("forum-dot").hidden=true;
+}
+async function checkForumDot(){
+  if(!FORUM.key) return;
+  // First-ever visit: start the clock now and show nothing.
+  if(!store.get("forum-seen")){ markForumSeen(); return; }
+  try{
+    const [p]=await sb("forum_posts?select=created_at&order=created_at.desc&limit=1");
+    if(p&&!onForum()&&Date.parse(p.created_at)>Date.parse(store.get("forum-seen")))
+      document.getElementById("forum-dot").hidden=false;
+  }catch(e){}   // Supabase down: just no dot.
+}
+checkForumDot();
+
 /* ---------- Router ---------- */
 function route(){
   const parts=(location.hash.replace(/^#\/?/,"")||"").split("/");
@@ -2373,7 +2398,7 @@ function route(){
     case "live": app.innerHTML=live(parts[1]); tab="#/live"; break;
     case "rosters": app.innerHTML=rosters(parts[1]); setupRosters(parts[1]); tab="#/rosters"; break;
     case "rules": app.innerHTML=rulesPage(); tab="#/rules"; break;
-    case "forum": app.innerHTML=forum(); setupForum(); tab="#/forum"; break;
+    case "forum": app.innerHTML=forum(); setupForum(); markForumSeen(); tab="#/forum"; break;
     default: app.innerHTML=home(); renderAllTime();
   }
   const here=tab==="#/ledger"?`#/ledger/${parts[1]||"versus"}`:tab;
