@@ -948,14 +948,14 @@ const COLS = [
 ];
 // Finished seasons plus the season in progress, so records and seasons move every week like the Ledger's.
 // Titles, top 3s, playoff trips and average finish only count finished seasons.
+function statsNow(id){
+  const s=stats(id), t=inProgress()?liveTeam(id):null;
+  if(!t) return s;
+  const w=s.w+t.w, l=s.l+t.l, ti=t.t||0;
+  return {...s,w,l,t:ti,p:pct(w+ti/2,l+ti/2),seasons:s.seasons+1,avg:s.seasons?s.avg:null};
+}
 function allTimeRows(){
-  const live=inProgress();
-  return Object.keys(M).map(id=>{
-    const s=stats(id), t=live?liveTeam(id):null;
-    if(!t) return s.seasons?s:null;
-    const w=s.w+t.w, l=s.l+t.l, ti=t.t||0;
-    return {...s,w,l,t:ti,p:pct(w+ti/2,l+ti/2),seasons:s.seasons+1,avg:s.seasons?s.avg:null};
-  }).filter(Boolean);
+  return Object.keys(M).map(statsNow).filter(s=>s.seasons);
 }
 function renderAllTime(){
   const el=document.getElementById("alltime"); if(!el) return;
@@ -1105,7 +1105,7 @@ function thisSeason(id){
 
 function profile(id){
   const m=M[id]; if(!m) return managers();
-  const s=stats(id);
+  const s=stats(id), now=statsNow(id), live=now.seasons>s.seasons;
   const sub=[m.full, m.nickname&&`“${m.nickname}”`, m.former||(teamNow(id)&&`Now playing as ${teamNow(id)}`)].filter(Boolean).map(esc).join(" · ");
   return `<section>
     <a class="back" href="#/managers">All managers</a>
@@ -1121,11 +1121,11 @@ function profile(id){
   </section>
   ${s.seasons?`<section>
     <h2>Career highlights</h2>
-    <p class="lede">${YEARS[0]}–${YEARS[YEARS.length-1]}. League records before 2021 were lost in the move from NFL.com.</p>
+    <p class="lede">${YEARS[0]}–${YEARS[YEARS.length-1]}${live?`, plus the ${LIVE.season} season so far in the record, win % and seasons`:""}. League records before 2021 were lost in the move from NFL.com.</p>
     <div class="strip">
-      <div><b>${s.w}-${s.l}</b><span>Career record</span></div>
-      <div><b>${fmtPct(s.p)}</b><span>Win %</span></div>
-      <div><b>${s.seasons}</b><span>Seasons</span></div>
+      <div><b>${recStr(now)}</b><span>Career record</span></div>
+      <div><b>${fmtPct(now.p)}</b><span>Win %</span></div>
+      <div><b>${now.seasons}</b><span>Seasons</span></div>
       <div><b>${s.avg.toFixed(1)}</b><span>Average finish</span></div>
     </div>
     ${highlights(s)}
