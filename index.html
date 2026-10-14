@@ -11,6 +11,7 @@
 :root{
   --bg:#F1F4EE; --surface:#FFFFFF; --text:#141C2B; --muted:#535E70; --line:#D5DCD1; --row:#EBF0E7;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#D50A0A; --gold-text:#B0080A; --gold-soft:#FBE1E1;
+  --btn:#D50A0A; --field:#FFFFFF;
   color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -20,19 +21,21 @@
   :root:not([data-theme="light"]){
     --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
     --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
+    --btn:#C8102E; --field:#0A1628;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
+  --btn:#C8102E; --field:#0A1628;
   color-scheme:dark;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.5 "Barlow",system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
 .display{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif}
 
 /* Header: a strip of turf with yard lines */
@@ -159,6 +162,35 @@ tr.champ td:first-child{box-shadow:inset 4px 0 var(--gold)}
 .live-note{color:var(--muted);font-size:.9rem;margin:-14px 0 22px}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padding:20px 0 30px}
 
+/* Forum */
+.forum{max-width:760px}
+.compose,.thread{background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.compose{padding:16px 18px;margin-bottom:28px}
+.who-row{display:flex;flex-wrap:wrap;gap:12px 16px;margin-bottom:12px}
+.who-row label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--muted);flex:1 1 200px}
+.forum input,.forum select,.forum textarea{font:inherit;color:var(--text);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
+.forum textarea{display:block;resize:vertical;min-height:84px;line-height:1.45}
+.form-foot{display:flex;align-items:center;gap:12px;margin-top:10px}
+.form-foot .count{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}
+.form-foot .count.over{color:var(--gold-text);font-weight:700}
+.form-foot .msg{flex:1;font-size:.9rem;color:var(--gold-text);font-weight:600;min-width:0}
+.btn{font:700 .95rem/1 "Barlow",system-ui,sans-serif;background:var(--btn);color:#fff;border:0;border-radius:8px;padding:10px 18px;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.5;cursor:default;filter:none}
+.threads{display:grid;gap:14px}
+.thread{padding:16px 18px}
+.post .meta{display:flex;align-items:baseline;gap:10px}
+.post .au{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1.1}
+.post time{color:var(--muted);font-size:.85rem}
+.post .body{margin:4px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.replies{margin:14px 0 0 4px;padding-left:14px;border-left:3px solid var(--gold);display:grid;gap:12px}
+.replies .au{font-size:1.15rem}
+.linkbtn{all:unset;cursor:pointer;margin-top:10px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.linkbtn:hover{color:var(--text)}
+.reply-form{margin-top:12px}
+.reply-form textarea{min-height:64px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
 @media (max-width:600px){
   .masthead{padding-top:26px}
   th,td{padding:9px 10px}
@@ -184,6 +216,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
       <a href="#/managers">Managers</a>
       <a href="#/records">Records</a>
       <a href="#/live">This season</a>
+      <a href="#/forum">Forum</a>
     </nav>
   </div>
 </header>
@@ -536,6 +569,108 @@ function live(week){
     <div class="matchups">${sel.matchups.map(m=>matchCard(m)).join("")}</div></section>`:""}`;
 }
 
+/* ---------- Forum ---------- */
+// The publishable (anon) key is safe to have here: it can only read posts and call forum_post(),
+// which checks the passcode inside Supabase. See supabase/forum.sql.
+const FORUM={url:"https://uppbazlahrfbjjxpfuzl.supabase.co", key:"sb_publishable_HL-D0PiQE5VKQaCdWP91rg_YajYa-WD", max:1000};
+const POSTERS=Object.keys(M).filter(id=>!M[id].former);
+const clen=s=>[...s.trim()].length;
+const store={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+
+async function sb(path, body){
+  const h={apikey:FORUM.key};
+  if(FORUM.key.startsWith("eyJ")) h.Authorization="Bearer "+FORUM.key;
+  if(body) h["Content-Type"]="application/json";
+  let r;
+  try{ r=await fetch(`${FORUM.url}/rest/v1/${path}`,{method:body?"POST":"GET",headers:h,body:body&&JSON.stringify(body),cache:"no-store"}); }
+  catch(e){ throw new Error("Couldn't reach the forum. Try again in a minute."); }
+  const j=await r.json().catch(()=>null);
+  if(!r.ok) throw new Error(j&&j.message||`Forum error (${r.status}).`);
+  return j;
+}
+function ago(t){
+  const s=Math.max(0,(Date.now()-new Date(t))/1000), d=s/86400;
+  return s<60?"just now":s<3600?`${Math.floor(s/60)}m ago`:s<86400?`${Math.floor(s/3600)}h ago`:
+    d<30?`${Math.floor(d)}d ago`:d<365?`${Math.floor(d/30)}mo ago`:`${Math.floor(d/365)}y ago`;
+}
+const postHtml=p=>`<div class="post"><div class="meta"><span class="au">${esc(M[p.author]?M[p.author].name:p.author)}</span>
+  <time datetime="${esc(p.created_at)}" title="${esc(new Date(p.created_at).toLocaleString())}">${ago(p.created_at)}</time></div>
+  <p class="body">${esc(p.body)}</p></div>`;
+const footHtml=label=>`<div class="form-foot"><span class="count">0/${FORUM.max}</span><span class="msg" role="status"></span><button class="btn" type="submit">${label}</button></div>`;
+
+function forum(){
+  return `<section class="forum"><h2>Forum</h2>
+    <p class="lede">Trash talk goes here. Anyone with the link can read it. Posting takes the league passcode.</p>
+    ${FORUM.key?`<form class="compose" id="f-new">
+      <div class="who-row">
+        <label>Posting as<select id="f-name"><option value="">Pick your name</option>${POSTERS.map(id=>`<option value="${id}">${esc(M[id].name)}</option>`).join("")}</select></label>
+        <label>League passcode<input id="f-pass" type="password" autocomplete="current-password"></label>
+      </div>
+      <label class="sr-only" for="f-body">New thread</label>
+      <textarea id="f-body" name="body" rows="3" placeholder="Start a thread"></textarea>
+      ${footHtml("Post")}
+    </form>
+    <div class="threads" id="threads"><p class="note">Loading posts…</p></div>`
+    :`<div class="empty"><h3>Forum isn't connected yet</h3><p>Add the Supabase publishable key to FORUM in index.html.</p></div>`}
+  </section>`;
+}
+
+async function loadThreads(){
+  const el=document.getElementById("threads"); if(!el) return;
+  try{
+    const threads=await sb("forum_posts?select=id,author,body,created_at&parent_id=is.null&order=last_activity.desc&limit=50");
+    const replies=threads.length?await sb(`forum_posts?select=id,parent_id,author,body,created_at&parent_id=in.(${threads.map(t=>t.id).join(",")})&order=created_at.asc`):[];
+    if(!document.body.contains(el)) return;
+    el.innerHTML=threads.length?threads.map(t=>{
+      const rs=replies.filter(r=>r.parent_id===t.id);
+      return `<article class="thread">${postHtml(t)}
+        ${rs.length?`<div class="replies">${rs.map(postHtml).join("")}</div>`:""}
+        <button class="linkbtn" type="button" data-reply="${t.id}">Reply</button>
+        <form class="reply-form" data-parent="${t.id}" hidden>
+          <label class="sr-only" for="r-${t.id}">Reply</label>
+          <textarea id="r-${t.id}" name="body" rows="2" placeholder="Reply"></textarea>
+          ${footHtml("Reply")}
+        </form></article>`;}).join("")
+      :`<div class="empty"><h3>No posts yet</h3><p>Somebody has to start it.</p></div>`;
+  }catch(e){ el.innerHTML=`<div class="empty"><h3>Couldn't load posts</h3><p>${esc(e.message)}</p></div>`; }
+}
+
+function setupForum(){
+  const form=document.getElementById("f-new"); if(!form) return;
+  const name=document.getElementById("f-name"), pass=document.getElementById("f-pass");
+  name.value=store.get("forum-name"); pass.value=store.get("forum-pass");
+  const app=form.closest(".forum");
+  app.addEventListener("input",e=>{
+    const f=e.target.closest("form"); if(!f||e.target.name!=="body") return;
+    const n=clen(e.target.value), c=f.querySelector(".count");
+    c.textContent=`${n}/${FORUM.max}`; c.classList.toggle("over",n>FORUM.max);
+  });
+  app.addEventListener("click",e=>{
+    const b=e.target.closest("[data-reply]"); if(!b) return;
+    const f=b.nextElementSibling; f.hidden=!f.hidden; if(!f.hidden) f.querySelector("textarea").focus();
+  });
+  app.addEventListener("submit",async e=>{
+    const f=e.target.closest("form"); if(!f||!f.querySelector("[name=body]")) return;
+    e.preventDefault();
+    const ta=f.querySelector("[name=body]"), msg=f.querySelector(".msg"), btn=f.querySelector("button[type=submit]");
+    const say=t=>{msg.textContent=t;};
+    if(!name.value){ say(f===form?"Pick your name.":"Pick your name at the top first."); name.focus(); return; }
+    if(!pass.value){ say(f===form?"Enter the league passcode.":"Enter the passcode at the top first."); pass.focus(); return; }
+    const n=clen(ta.value);
+    if(!n){ say("Write something first."); ta.focus(); return; }
+    if(n>FORUM.max){ say(`Keep it under ${FORUM.max} characters.`); ta.focus(); return; }
+    btn.disabled=true; say("");
+    try{
+      await sb("rpc/forum_post",{p_author:name.value,p_body:ta.value,p_passcode:pass.value,p_parent_id:f.dataset.parent?+f.dataset.parent:null});
+      store.set("forum-name",name.value); store.set("forum-pass",pass.value);
+      ta.value=""; ta.dispatchEvent(new Event("input",{bubbles:true}));
+      await loadThreads();
+    }catch(err){ say(err.message); }
+    finally{ btn.disabled=false; }
+  });
+  loadThreads();
+}
+
 /* ---------- Router ---------- */
 function route(){
   const parts=(location.hash.replace(/^#\/?/,"")||"").split("/");
@@ -546,6 +681,7 @@ function route(){
     case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; break;
     case "records": app.innerHTML=records(); tab="#/records"; break;
     case "live": app.innerHTML=live(parts[1]); tab="#/live"; break;
+    case "forum": app.innerHTML=forum(); setupForum(); tab="#/forum"; break;
     default: app.innerHTML=home(); renderAllTime();
   }
   document.querySelectorAll("#nav a").forEach(a=>a.getAttribute("href")===tab?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
@@ -556,7 +692,8 @@ rebuild(); route();
 fetch("data/index.json",{cache:"no-store"}).then(r=>r.ok?r.json():null)
   .then(ix=>ix?Promise.all(ix.seasons.map(y=>fetch(`data/${y}.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null))):[])
   .then(list=>{ LIVES=(list||[]).filter(Boolean).sort((a,b)=>a.season-b.season); LIVE=LIVES[LIVES.length-1]||null;
-    if(LIVES.length){ rebuild(); route(); } })
+    // The forum doesn't use ESPN data, so don't redraw it (that would wipe a half-written post).
+    if(LIVES.length){ rebuild(); if(!/^#\/forum/.test(location.hash)) route(); } })
   .catch(()=>{});
 </script>
 </body>
