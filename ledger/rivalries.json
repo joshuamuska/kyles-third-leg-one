@@ -1,0 +1,10 @@
+{
+  "_help": "Named rivalries, shown as featured cards on the Rivalries page in this order. managers: two manager IDs from managers.json. name is optional; description is one or two sentences.",
+  "rivalries": [
+    {
+      "managers": ["kyle", "cody"],
+      "name": "Kyle Only Hate",
+      "description": "Cody named his 2026 team KYLE ONLY HATE. Kyle has not forgotten."
+    }
+  ]
+}

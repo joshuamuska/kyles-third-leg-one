@@ -1,0 +1,4 @@
+{
+  "_help": "Optional. Add one entry per season under seasons, for example \"2025\": {\"buyIn\": 100, \"payouts\": {\"brett\": 600, \"tyler\": 250, \"keith\": 150}}. buyIn is what each manager paid that season; payouts uses manager IDs from managers.json. While seasons is empty, the money records stay hidden.",
+  "seasons": {}
+}

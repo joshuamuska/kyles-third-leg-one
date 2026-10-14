@@ -9,6 +9,11 @@ The league website. `index.html` is the site, and `scripts/update.py` pulls the 
 - `league.json`: ESPN league ID, the season to pull, and optional team-to-manager fixes.
 - `data/articles/<season>.json`: each finished week's power rankings and Claude's roundup article, with a one-line roast per team. Written once per week by the update and never redone, so reruns don't spend API credits. To have a week rewritten, delete its entry from this file (deleting its `headline` keeps the rankings and rewrites only the article). Without `ANTHROPIC_API_KEY`, rankings still appear and the article waits for a run that has the key.
 - Power rankings: 40% all-play record (each week's score against every other team's), 35% points per week, 25% average over the last three weeks.
+- `ledger/`: the editable parts of the Ledger menu (Versus, Rivalries, Trophies, Records). Each file has a `_help` line explaining its fields. Same comma-and-quote rule as `managers.json`; a file with a typo is skipped and the page says so.
+  - `trophies.json`: which place earns which trophy, plus each trophy's name and one-liner. `place` is a number, `"last"`, or `"consolation"` (best finisher who missed the playoffs); `historicPlace` overrides it for 2021–2025. `hardware: true` counts toward the Most trophies record.
+  - `rivalries.json`: named rivalries (two manager IDs and a description), shown as featured cards.
+  - `money.json`: optional buy-ins and payouts per season. Leave `seasons` empty to hide the money records.
+- Head-to-head, points and streak stats start with the 2026 ESPN season, since 2021–2025 only kept final standings.
 - `scripts/update.py`: the ESPN update script.
 - `requirements.txt`: what the script needs installed.
 - `setup/update.yml`: the daily schedule. Its contents go in `.github/workflows/update.yml` (see setup).

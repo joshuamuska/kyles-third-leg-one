@@ -11,7 +11,7 @@
 :root{
   --bg:#F1F4EE; --surface:#FFFFFF; --text:#141C2B; --muted:#535E70; --line:#D5DCD1; --row:#EBF0E7;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#D50A0A; --gold-text:#B0080A; --gold-soft:#FBE1E1;
-  --btn:#D50A0A; --field:#FFFFFF; --up:#13773A;
+  --btn:#D50A0A; --field:#FFFFFF; --up:#13773A; --bar-a:#013369; --shadow:0 12px 32px rgba(1,35,74,.18);
   color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -21,14 +21,14 @@
   :root:not([data-theme="light"]){
     --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
     --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-    --btn:#C8102E; --field:#0A1628; --up:#5CD08F;
+    --btn:#C8102E; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-  --btn:#C8102E; --field:#0A1628; --up:#5CD08F;
+  --btn:#C8102E; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
   color-scheme:dark;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -54,6 +54,24 @@ nav::-webkit-scrollbar{display:none}
 nav a{flex:none;text-decoration:none;padding:12px 12px 13px;font-weight:600;color:rgba(243,245,239,.75);border-bottom:3px solid transparent}
 nav a:hover{color:var(--on-turf)}
 nav a[aria-current="page"]{color:var(--on-turf);border-bottom-color:var(--gold)}
+nav .nav-dd{flex:none;display:inline-flex;align-items:center;gap:6px;background:none;border:0;border-bottom:3px solid transparent;border-radius:0;font:inherit;font-weight:600;
+  padding:12px 12px 13px;color:rgba(243,245,239,.75);cursor:pointer}
+nav .nav-dd:hover,nav .nav-dd[aria-expanded="true"]{color:var(--on-turf)}
+nav .nav-dd[aria-current="page"]{color:var(--on-turf);border-bottom-color:var(--gold)}
+nav .nav-dd:focus-visible{outline-offset:-3px}
+nav .nav-dd svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+nav .nav-dd[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ledger-menu{position:fixed;z-index:50;width:290px;margin-top:6px;padding:6px;background:var(--surface);color:var(--text);
+  border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;box-shadow:var(--shadow)}
+.ledger-menu[hidden]{display:none}
+nav .ledger-menu a{display:block;padding:9px 12px;border:0;border-radius:8px;color:var(--text);font-weight:700;line-height:1.25}
+nav .ledger-menu a small{display:block;font-weight:500;font-size:.82rem;color:var(--muted)}
+nav .ledger-menu a:hover{background:var(--row)}
+nav .ledger-menu a[aria-current="page"]{background:var(--gold-soft);color:var(--gold-text)}
+@media (max-width:600px){
+  .ledger-menu{left:16px!important;right:16px;width:auto}
+  nav .ledger-menu a{padding:11px 12px}
+}
 
 main.wrap{padding:34px 20px 60px}
 h2{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:800;font-size:2.1rem;line-height:1;margin:0 0 6px}
@@ -389,6 +407,189 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
   .art .wk b{font-size:2.4rem}
   .art h3{font-size:1.5rem}
 }
+/* Ledger: shared */
+.note.warn{color:var(--gold-text);font-weight:600;margin:0 0 16px}
+.btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);filter:none}
+.ledger-sec+.ledger-sec{margin-top:44px}
+.ledger-sec h2{font-size:1.8rem}
+.empty.soon{border-style:solid;border-top:4px solid var(--gold)}
+
+/* Versus */
+.vs-pick .btn{align-self:flex-end;padding:11px 16px}
+.vs-head{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;margin:0 0 18px;padding:22px 22px 26px;
+  border-radius:14px;overflow:hidden;color:var(--on-turf);
+  background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.06) 79px 81px),linear-gradient(160deg,var(--turf),var(--turf-deep) 75%)}
+.vs-head::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.vs-p{display:flex;align-items:center;gap:14px;min-width:0}
+.vs-p.b{flex-direction:row-reverse;text-align:right}
+.vs-p .ava{width:76px;flex:none;border-radius:50%;border:3px solid #8FB2EA}
+.vs-p.b .ava{border-color:var(--gold)}
+.vs-p .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:2.1rem;line-height:1}
+.vs-p .n a{text-decoration:none}
+.vs-p .n a:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+.vs-p .t{font-size:.88rem;color:rgba(243,245,239,.78);line-height:1.25;overflow-wrap:anywhere}
+.vs-mid{text-align:center}
+.vs-mid b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:3.4rem;line-height:.9;white-space:nowrap}
+.vs-mid span{display:block;margin-top:6px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,245,239,.78)}
+.vs-strip{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;background:none;border:0;border-radius:0;overflow:visible}
+.vs-strip div{border:1px solid var(--line);border-radius:10px}
+.vs-strip b{font-size:1.6rem}
+.strip small{display:block;margin-top:2px;color:var(--muted);font-size:.8rem;line-height:1.3}
+.meets{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.meet{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+.meet .wh{font-size:.84rem;font-weight:600;color:var(--muted)}
+.meet .rs{font-weight:700}
+.meet .sc{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.55rem;line-height:1;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.meet .sc .w{color:var(--text)}
+.meet-key{display:flex;justify-content:flex-end;gap:6px;font-size:.8rem;font-weight:700;color:var(--muted);margin:0 16px 6px}
+.vs-bars{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 18px}
+.vb{display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);grid-template-areas:"a l b";align-items:center;gap:14px;padding:10px 0;border-top:1px solid var(--line)}
+.vb .lb{grid-area:l}.vb .sd.a{grid-area:a}.vb .sd.b{grid-area:b}
+.vb .lb{text-align:center;font-size:.85rem;font-weight:600;color:var(--muted);line-height:1.25}
+.vb .sd{display:flex;align-items:center;gap:12px;min-width:0}
+.vb .sd.b{flex-direction:row-reverse}
+.vb .vl{flex:none;min-width:62px;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.45rem;line-height:1;color:var(--muted);font-variant-numeric:tabular-nums}
+.vb .sd.b .vl{text-align:right}
+.vb .vl small{display:block;font-family:"Barlow",system-ui,sans-serif;font-size:.72rem;font-weight:600;margin-top:3px;white-space:nowrap}
+.vb .win .vl{color:var(--text)}
+.vb .tr{flex:1;height:12px;border-radius:6px;background:var(--row);display:flex;overflow:hidden}
+.vb .sd.a .tr{justify-content:flex-end}
+.vb .tr i{display:block;height:100%;border-radius:6px;background:var(--bar-a);opacity:.4;transition:width .4s}
+.vb .sd.b .tr i{background:var(--gold)}
+.vb .win .tr i,.vb .even .tr i{opacity:1}
+.vs-key{display:flex;justify-content:space-between;gap:12px;font-weight:700;padding:12px 0 8px;border-bottom:1px solid var(--line)}
+.vs-key+.vb{border-top:0}
+.vs-key span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:var(--bar-a)}
+.vs-key span+span::before{background:var(--gold)}
+.lg-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:10px}
+.lg{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:12px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.lg:hover{border-color:var(--gold)}
+.lg .ava{border-radius:50%;border:2px solid var(--line)}
+.lg .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1.05}
+.lg .r{font-size:.88rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.pm{min-width:52px;padding:4px 8px;border-radius:8px;text-align:center;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;line-height:1.1;background:var(--row);color:var(--muted)}
+.pm.up{color:var(--up)}
+.pm.down{color:var(--gold-text);background:var(--gold-soft)}
+.lg.none{opacity:.7}
+
+/* Rivalries */
+.rivals{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(420px,100%),1fr));gap:14px}
+.rv{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.rv:hover{border-color:var(--gold)}
+.rv-top{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;padding:18px 18px 20px;color:var(--on-turf);
+  background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.06) 59px 61px),linear-gradient(160deg,var(--turf),var(--turf-deep) 75%)}
+.rv-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.rv-p{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
+.rv-p .ava{width:64px;border-radius:50%;border:3px solid #8FB2EA}
+.rv-p:last-child .ava{border-color:var(--gold)}
+.rv-p b{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1}
+.rv-vs{text-align:center}
+.rv-vs span{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,245,239,.75)}
+.rv-vs b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.6rem;line-height:.95;white-space:nowrap}
+.rv-body{padding:14px 18px 16px}
+.rv-body h3{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.7rem;line-height:1;margin:0 0 4px}
+.rv-body p{margin:0}
+.rv-body .rv-last{margin-top:10px;font-size:.88rem;color:var(--muted)}
+.rv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:12px}
+.rv-stats div{background:var(--surface);padding:8px 10px;text-align:center}
+.rv-stats b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;line-height:1}
+.rv-stats span{font-size:.76rem;font-weight:600;color:var(--muted)}
+.pairs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:14px 22px}
+.pairs-grid h3{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;margin:0 0 8px}
+.pairs{display:grid;gap:8px}
+.pair{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.pair:hover{border-color:var(--gold)}
+.pair .pf{display:flex}
+.pair .pf .ava{width:36px;border-radius:50%;border:2px solid var(--surface)}
+.pair .pf .ava+.ava{margin-left:-10px}
+.pair .pn{min-width:0;line-height:1.25}
+.pair .pn small{display:block;color:var(--muted);font-size:.82rem}
+.pair .pr{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums}
+
+/* Trophies */
+.tro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:20px 48px}
+section.tro+section.tro{margin-top:64px}
+.tro.flip .tro-tx{order:2;text-align:right}
+.tro.flip .tro-tx .kicker{flex-direction:row-reverse}
+.tro-tx h2{font-size:clamp(2.5rem,5.5vw,3.6rem);line-height:.9;margin:6px 0 10px}
+.tro-tx p{margin:0;font-size:1.12rem;line-height:1.5;color:var(--muted)}
+.tro.flip .tro-tx p{margin-left:auto;max-width:34ch}
+.car{min-width:0}
+.car-stage{position:relative;height:330px;overflow:hidden;touch-action:pan-y;border-radius:14px}
+.car-stage:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.cs{position:absolute;top:10px;left:50%;width:220px;margin-left:-110px;padding:16px 14px 18px;text-align:center;background:var(--surface);
+  border:1px solid var(--line);border-radius:14px;cursor:pointer;user-select:none;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s,visibility .45s}
+.car:not(.ready) .cs{transition:none}
+.cs.on{cursor:default;border-color:var(--gold);box-shadow:var(--shadow)}
+.cs .yr{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.1rem;line-height:1}
+.cs svg{display:block;width:118px;height:138px;margin:6px auto 10px}
+.cs .who{display:flex;align-items:center;justify-content:center;gap:10px;text-align:left}
+.cs .who .ava{width:42px;flex:none;border-radius:50%;border:2px solid var(--gold)}
+.cs .who div{min-width:0}
+.cs .n{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1;text-decoration:none}
+.cs .n:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+.cs .t{font-size:.82rem;color:var(--muted);line-height:1.2;overflow-wrap:anywhere}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.car-btn{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.car-btn:hover{border-color:var(--gold)}
+.car-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.dots{display:flex}
+.dots button{width:26px;height:26px;display:grid;place-items:center;padding:0;border:0;background:none;cursor:pointer}
+.dots button::after{content:"";width:8px;height:8px;border-radius:4px;background:var(--line);transition:width .3s,background .3s}
+.dots button[aria-current="true"]::after{width:20px;background:var(--gold)}
+@media (max-width:760px){
+  .tro{grid-template-columns:1fr}
+  .tro.flip .tro-tx{order:0;text-align:left}
+  .tro.flip .tro-tx .kicker{flex-direction:row}
+  .tro.flip .tro-tx p{margin-left:0}
+  section.tro+section.tro{margin-top:48px}
+}
+@media (prefers-reduced-motion:reduce){.cs,.vb .tr i,.dots button::after{transition:none}}
+
+/* Ledger records */
+.rcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px;align-items:start}
+.rc{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rc-top{position:relative;padding:14px 16px 18px;color:var(--on-turf);
+  background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.06) 59px 61px),linear-gradient(160deg,var(--turf),var(--turf-deep) 80%)}
+.rc-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.rc h3{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,245,239,.8)}
+.rc-hold{display:grid;grid-template-columns:68px minmax(0,1fr);align-items:center;gap:14px}
+.rc-hold .ava{border-radius:50%;border:3px solid var(--gold)}
+.rc-v{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.7rem;line-height:.9;font-variant-numeric:tabular-nums}
+.rc-v .tie{font-family:"Barlow",system-ui,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;padding:2px 6px;border-radius:4px;background:var(--gold)}
+.rc-when{font-size:.84rem;font-weight:600;color:rgba(243,245,239,.8);margin-top:3px;line-height:1.3}
+.rc-n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;line-height:1.05;margin-top:6px}
+.rc-n a{text-decoration:none}
+.rc-n a:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+.rc-t{font-size:.84rem;color:rgba(243,245,239,.78);line-height:1.25;overflow-wrap:anywhere}
+.rc-wait{margin:0;color:rgba(243,245,239,.85);font-size:.95rem}
+.rc-list{list-style:none;margin:0;padding:4px 16px 8px}
+.rc-list li{display:grid;grid-template-columns:22px 30px minmax(0,1fr) auto;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--line)}
+.rc-list li:first-child{border-top:0}
+.rc-list .rk{font-size:.82rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.rc-list .ava{border-radius:50%}
+.rc-list .nm{min-width:0;line-height:1.2}
+.rc-list .nm a{font-weight:700;text-decoration:none}
+.rc-list .nm a:hover{text-decoration:underline}
+.rc-list .nm small{display:block;color:var(--muted);font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc-list .val{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+
+@media (max-width:600px){
+  .vs-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"a b" "m m";padding:18px 14px 22px;gap:14px 10px}
+  .vs-p.a{grid-area:a}.vs-p.b{grid-area:b}.vs-mid{grid-area:m}
+  .vs-p,.vs-p.b{flex-direction:column;text-align:center;gap:8px}
+  .vs-p .ava{width:60px}
+  .vs-p .n{font-size:1.6rem}
+  .vs-mid b{font-size:2.8rem}
+  .vs-bars{padding:4px 12px}
+  .vb{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"l l" "a b";gap:6px 12px}
+  .vb .vl{min-width:0}
+  .meet{padding:10px 12px}
+  .rv-p .ava{width:52px}
+  .rv-vs b{font-size:2.1rem}
+}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 @media (max-width:600px){
@@ -416,7 +617,16 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
       <a href="#/rankings">Power rankings</a>
       <a href="#/seasons/2025">Seasons</a>
       <a href="#/managers">Managers</a>
-      <a href="#/records">Records</a>
+      <button type="button" class="nav-dd" id="ledger-btn" aria-expanded="false" aria-controls="ledger-menu">Ledger<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg></button>
+      <!-- Fixed-position so the scrolling nav doesn't clip it; placed under the button by placeLedgerMenu(). -->
+      <div class="ledger-menu" id="ledger-menu" hidden>
+        <a href="#/ledger/versus">Versus<small>Head-to-head and career, side by side</small></a>
+        <a href="#/ledger/rivalries">Rivalries<small>Grudges, with receipts</small></a>
+        <a href="#/ledger/trophies">Trophies<small>Hardware, and the other kind</small></a>
+        <a href="#/ledger/records">Records<small>Bests, worsts and streaks</small></a>
+        <a href="#/ledger/brackets">Brackets<small>Coming soon</small></a>
+        <a href="#/ledger/draft">Draft Recap<small>Coming soon</small></a>
+      </div>
       <a href="#/live">This season</a>
       <a href="#/rosters">Rosters</a>
       <a href="#/forum">Forum</a>
@@ -521,6 +731,7 @@ function rebuild(){
       d.teams.forEach(t=>{ if(t.manager && M[t.manager]) S.push({year:d.season,id:t.manager,team:t.name,w:t.w,l:t.l,place:t.final,po:t.seed<=d.playoffTeams}); });
   });
   YEARS=[...new Set(S.map(r=>r.year))].sort();
+  SIDES=null;
   ALL=Object.keys(M).filter(id=>S.some(r=>r.id===id)).map(stats);
 }
 const who = s => s.manager&&M[s.manager] ? mlink(s.manager) : esc(s.owner||s.name||"Unknown");
@@ -770,53 +981,511 @@ function profile(id){
   ${m.former?"":thisSeason(id)}`;
 }
 
-function records(){
-  const top=(arr,f)=>{const v=Math.max(...arr.map(f));return {v,items:arr.filter(x=>f(x)===v)};};
-  const sp=r=>pct(r.w,r.l);
-  const seasonLine=r=>`<li>${mlink(r.id)}, ${r.year} <span class="team">(${esc(r.team)})</span></li>`;
-  const out=[];
-  let t;
-  t=top(S,sp); out.push({h:"Best regular season",v:`${t.items[0].w}-${t.items[0].l}`,li:t.items.map(seasonLine)});
-  t=top(S,r=>-sp(r)); out.push({h:"Worst regular season",v:`${t.items[0].w}-${t.items[0].l}`,li:t.items.map(seasonLine)});
-  t=top(ALL,s=>s.titles); out.push({h:"Most championships",v:t.v,li:t.items.map(s=>`<li>${mlink(s.id)}</li>`)});
-  t=top(ALL,s=>s.po); out.push({h:"Most playoff trips",v:t.v,li:t.items.map(s=>`<li>${mlink(s.id)}</li>`)});
-  const reg=ALL.filter(s=>s.seasons>=3);
-  t=top(reg,s=>s.p); out.push({h:"Best career win % (3+ seasons)",v:fmtPct(t.v),li:t.items.map(s=>`<li>${mlink(s.id)} <span class="team">${s.w}-${s.l}</span></li>`)});
-  t=top(S.filter(r=>r.place===1),r=>-sp(r)); out.push({h:"Champion with the worst record",v:`${t.items[0].w}-${t.items[0].l}`,li:t.items.map(seasonLine)});
-  t=top(S.filter(r=>!r.po),sp); out.push({h:"Best record to miss the playoffs",v:`${t.items[0].w}-${t.items[0].l}`,li:t.items.map(seasonLine)});
-  t=top(S.filter(r=>r.po),r=>-sp(r)); out.push({h:"Worst record to make the playoffs",v:`${t.items[0].w}-${t.items[0].l}`,li:t.items.map(seasonLine)});
-  const jumps=[];
-  ALL.forEach(s=>{for(let i=1;i<s.rows.length;i++){const a=s.rows[i-1],b=s.rows[i];if(b.year===a.year+1)jumps.push({id:s.id,a,b,d:a.place-b.place});}});
-  const jl=j=>`<li>${mlink(j.id)}, ${ord(j.a.place)} in ${j.a.year} to ${ord(j.b.place)} in ${j.b.year}</li>`;
-  t=top(jumps,j=>j.d); out.push({h:"Biggest one-year climb",v:`${t.v} spots`,li:t.items.map(jl)});
-  t=top(jumps,j=>-j.d); out.push({h:"Biggest one-year fall",v:`${t.v} spots`,li:t.items.map(jl)});
-  t=top(ALL,s=>s.names); out.push({h:"Most team names",v:t.v,li:t.items.map(s=>`<li>${mlink(s.id)}</li>`)});
-  t=top(ALL,s=>s.nameStreak); out.push({h:"Longest run with one name",v:`${t.v} seasons`,li:t.items.map(s=>`<li>${mlink(s.id)} <span class="team">(${esc(s.rows[0].team)})</span></li>`)});
-  return `<section><h2>League records</h2>
-    <p class="lede">Worked out from 2021–2025 records and finishes. Scoring records start once 2026 data comes in from ESPN.</p>
-    <div class="records">${out.map(o=>`<div class="rec"><h3>${o.h}</h3><div class="v">${o.v}</div><ul>${o.li.join("")}</ul></div>`).join("")}</div></section>
-    ${scoringRecords()}`;
+/* ---------- The Ledger: Versus, Rivalries, Trophies, Records ---------- */
+// The editable parts live in ledger/*.json: trophies.json (which place earns which trophy),
+// rivalries.json (named rivalries) and money.json (buy-ins and payouts, optional).
+const LEDGER={trophies:[],rivalries:[],money:{},bad:[]};
+const H2H_FROM=2026;   // first ESPN season: head-to-head, points and streak stats start here
+const RIVAL_MIN=3;     // meetings before a pair can show up as closest or most lopsided
+const ledgerLoad=Promise.all(["trophies","rivalries","money"].map(n=>fetch(`ledger/${n}.json`,{cache:"no-store"})
+    .then(r=>r.ok?r.json().catch(()=>{ LEDGER.bad.push(`ledger/${n}.json`); return null; }):null).catch(()=>null)))
+  .then(([t,r,m])=>{ LEDGER.trophies=t&&t.trophies||[]; LEDGER.rivalries=r&&r.rivalries||[]; LEDGER.money=m&&m.seasons||{}; });
+const ledgerTypo=f=>LEDGER.bad.includes(f)?`<p class="note warn">${esc(f)} has a typo in it (often a missing comma or quote), so it was skipped.</p>`:"";
+const ledgerHead=(title,lede)=>`<span class="kicker">The Ledger</span><h2>${title}</h2>${lede?`<p class="lede">${lede}</p>`:""}`;
+const nameOfId=id=>id&&M[id]?M[id].name:"Unknown";
+const f1=v=>v.toFixed(1), f2=v=>v.toFixed(2);
+const wkLabel=x=>`${x.kind?x.kind+", week":"Week"} ${x.week}, ${x.season}`;
+const plural=(n,w)=>`${n} ${w}${n===1?"":"s"}`;
+const inProgress=()=>LIVE&&!LIVE.seasonOver&&!S.some(r=>r.year===LIVE.season);
+
+let SIDES=null;   // cleared by rebuild() when ESPN data arrives
+// One row per team per final ESPN game, oldest first. id is null for a team not matched to a manager.
+function sides(){
+  if(SIDES) return SIDES;
+  SIDES=[];
+  LIVES.forEach(d=>d.weeks.forEach(w=>w.matchups.forEach(m=>{
+    if(!m.final) return;
+    const kind=!m.playoff?"":/WINNER/.test(m.type||"")?"Playoffs":"Consolation";
+    [[m.home,m.away],[m.away,m.home]].forEach(([s,o])=>SIDES.push({season:d.season,week:w.week,kind,
+      id:M[s.manager]?s.manager:null,team:s.name||"",pts:s.score,oid:M[o.manager]?o.manager:null,oteam:o.name||"",opts:o.score,
+      res:s.score>o.score?"W":s.score<o.score?"L":"T",margin:s.score-o.score}));
+  })));
+  return SIDES;
+}
+const pick=(arr,f,dir=1)=>arr.length?arr.reduce((a,x)=>dir*(f(x)-f(a))>0?x:a):null;
+
+// a's games against b, newest first.
+function seriesOf(a,b){
+  const g=sides().filter(x=>x.id===a&&x.oid===b).reverse();
+  const n=g.length, w=g.filter(x=>x.res==="W").length, l=g.filter(x=>x.res==="L").length, t=n-w-l;
+  let streak=null;
+  if(n){ let k=0; while(k<n&&g[k].res===g[0].res) k++; streak={res:g[0].res,n:k}; }
+  return {g,n,w,l,t,p:n?(w+t/2)/n:0,pf:g.reduce((s,x)=>s+x.pts,0),pa:g.reduce((s,x)=>s+x.opts,0),streak};
+}
+const seriesRec=s=>`${s.w}-${s.l}${s.t?"-"+s.t:""}`;
+
+// Career numbers: records and finishes from 2021 on (plus the season in progress), points from ESPN only.
+function careerOf(id){
+  const rows=S.filter(r=>r.id===id), lt=inProgress()?liveTeam(id):null;
+  const size=y=>S.filter(r=>r.year===y).length, cnt=f=>rows.filter(f).length;
+  const sd=sides().filter(x=>x.id===id);
+  const w=rows.reduce((a,r)=>a+r.w,0)+(lt?lt.w:0), l=rows.reduce((a,r)=>a+r.l,0)+(lt?lt.l:0), t=lt?lt.t:0;
+  return {id,w,l,t,p:pct(w+t/2,l+t/2),seasons:rows.length+(lt?1:0),
+    po:cnt(r=>r.po),titles:cnt(r=>r.place===1),second:cnt(r=>r.place===2),third:cnt(r=>r.place===3),last:cnt(r=>r.place===size(r.year)),
+    best:rows.length?Math.min(...rows.map(r=>r.place)):null,worst:rows.length?Math.max(...rows.map(r=>r.place)):null,
+    games:sd.length,pf:sd.length?sd.reduce((a,x)=>a+x.pts,0)/sd.length:null,pa:sd.length?sd.reduce((a,x)=>a+x.opts,0)/sd.length:null,
+    hi:pick(sd,x=>x.pts),bl:pick(sd.filter(x=>x.res==="W"),x=>x.margin)};
 }
 
-function scoringRecords(){
-  const games=[]; LIVES.forEach(d=>d.weeks.forEach(w=>w.matchups.forEach(m=>{ if(m.final) games.push({season:d.season,week:w.week,m}); })));
-  if(!games.length) return "";
-  const sides=games.flatMap(g=>[g.m.home,g.m.away].map((s,i,arr)=>({...g,s,o:arr[1-i]})));
-  const top=(arr,f)=>{const v=Math.max(...arr.map(f));return {v,items:arr.filter(x=>f(x)===v)};};
-  const sl=x=>`<li>${who(x.s)}, week ${x.week}, ${x.season} <span class="team">vs ${x.o.manager&&M[x.o.manager]?esc(M[x.o.manager].name):esc(x.o.name||"")}</span></li>`;
-  const gl=g=>`<li>${who(g.m.away)} vs ${who(g.m.home)}, week ${g.week}, ${g.season}</li>`;
-  const margin=g=>Math.abs(g.m.home.score-g.m.away.score);
-  const out=[]; let t;
-  t=top(sides,x=>x.s.score); out.push({h:"Highest score",v:t.v.toFixed(2),li:t.items.map(sl)});
-  t=top(sides,x=>-x.s.score); out.push({h:"Lowest score",v:(-t.v).toFixed(2),li:t.items.map(sl)});
-  t=top(games,margin); out.push({h:"Biggest blowout",v:t.v.toFixed(2),li:t.items.map(gl)});
-  t=top(games,g=>-margin(g)); out.push({h:"Closest game",v:(-t.v).toFixed(2),li:t.items.map(gl)});
-  const losses=sides.filter(x=>x.s.score<x.o.score), wins=sides.filter(x=>x.s.score>x.o.score);
-  if(losses.length){t=top(losses,x=>x.s.score); out.push({h:"Most points in a loss",v:t.v.toFixed(2),li:t.items.map(sl)});}
-  if(wins.length){t=top(wins,x=>-x.s.score); out.push({h:"Fewest points in a win",v:(-t.v).toFixed(2),li:t.items.map(sl)});}
-  return `<section><h2>Scoring records</h2><p class="lede">Weekly scores from ESPN seasons, ${LIVES[0].season} on.</p>
-    <div class="records">${out.map(o=>`<div class="rec"><h3>${o.h}</h3><div class="v">${o.v}</div><ul>${o.li.join("")}</ul></div>`).join("")}</div></section>`;
+/* Versus */
+function versusPage(a,b,mode){
+  if(!M[a]) a="";
+  if(!a) b=""; else if(b!=="league"&&(!M[b]||b===a)) b="league";
+  const ids=Object.keys(M).sort((x,y)=>M[x].name.localeCompare(M[y].name));
+  const opts=(cur,skip)=>{const o=list=>list.filter(id=>id!==skip).map(id=>`<option value="${id}" ${id===cur?"selected":""}>${esc(M[id].name)}</option>`).join("");
+    const fmr=ids.filter(id=>M[id].former&&id!==skip);
+    return o(ids.filter(id=>!M[id].former))+(fmr.length?`<optgroup label="Former managers">${o(fmr)}</optgroup>`:"");};
+  const head=ledgerHead("Versus",`Pick a manager, then another manager or the whole league. Head-to-head games only exist from ${H2H_FROM} on, when the league moved to ESPN.`)+`
+    <div class="filters vs-pick">
+      <label>Manager<select id="vs-a"><option value="">Pick a manager</option>${opts(a)}</select></label>
+      <label>Against<select id="vs-b" ${a?"":"disabled"}><option value="league" ${b==="league"?"selected":""}>Whole League</option>${a?opts(b,a):""}</select></label>
+      ${a&&b!=="league"?`<button class="btn ghost" id="vs-swap" type="button">Swap sides</button>`:""}
+    </div>`;
+  if(!a) return `<section>${head}<div class="empty"><h3>Pick a manager to start</h3><p>Then choose a rival for their head-to-head series and a career comparison, or Whole League to see how they fare against everyone.</p></div></section>`;
+  if(b==="league") return `<section>${head}${leagueMode(a)}</section>`;
+  mode=mode==="career"?"career":"series";
+  const tabs=`<div class="tabs">${[["series","Series"],["career","Career"]].map(([k,l])=>
+    `<a href="#/ledger/versus/${a}/${b}${k==="career"?"/career":""}" ${k===mode?'aria-current="page"':""}>${l}</a>`).join("")}</div>`;
+  return `<section>${head}${tabs}${mode==="career"?careerMode(a,b):seriesMode(a,b)}</section>`;
 }
+
+const vsSide=(id,cls)=>`<div class="vs-p ${cls}">${avatar(id)}<div><div class="n"><a href="#/managers/${id}">${esc(M[id].name)}</a></div>
+  <div class="t">${esc(M[id].former||teamNow(id))}</div></div></div>`;
+const vsHead=(a,b,big,small)=>`<div class="vs-head">${vsSide(a,"a")}<div class="vs-mid"><b>${big}</b><span>${small}</span></div>${b}</div>`;
+
+function seriesMode(a,b){
+  const s=seriesOf(a,b), bSide=vsSide(b,"b");
+  if(!s.n) return vsHead(a,bSide,"0-0","No meetings yet")+`<div class="empty"><h3>${esc(M[a].name)} and ${esc(M[b].name)} haven't played each other yet</h3>
+    <p>Head-to-head data only exists from ${H2H_FROM} on, when the league moved to ESPN. The 2021–2025 records only kept final standings, not individual games${M[a].former||M[b].former?", and former managers never played an ESPN game":""}.
+    The <a href="#/ledger/versus/${a}/${b}/career">career comparison</a> covers everything back to 2021.</p></div>`;
+  const big=pick(s.g,x=>Math.abs(x.margin)), close=pick(s.g,x=>Math.abs(x.margin),-1);
+  const scores=s.g.flatMap(x=>[{id:a,v:x.pts,x},{id:b,v:x.opts,x}]);
+  const hi=pick(scores,y=>y.v), lo=pick(scores,y=>y.v,-1);
+  const winner=x=>x.res==="T"?"Tie":nameOfId(x.res==="W"?a:b);
+  const cell=(v,l,sub)=>`<div><b>${v}</b><span>${l}</span>${sub?`<small>${esc(sub)}</small>`:""}</div>`;
+  const st=s.streak;
+  return vsHead(a,bSide,seriesRec(s),"Head to head")+`
+    <div class="strip vs-strip">
+      ${cell(s.n,s.n===1?"Meeting":"Meetings")}
+      ${cell(fmtPct(s.p),`${esc(M[a].name)} win %`)}
+      ${st.res==="T"?cell(plural(st.n,"tie"),"Current streak"):cell(plural(st.n,"win"),`${esc(nameOfId(st.res==="W"?a:b))}'s streak`)}
+      ${cell(`${f1(s.pf)} – ${f1(s.pa)}`,"Total points")}
+      ${cell(`${f1(s.pf/s.n)} – ${f1(s.pa/s.n)}`,"Average points")}
+      ${cell(f2(Math.abs(big.margin)),"Largest margin",`${winner(big)}, ${wkLabel(big)}`)}
+      ${cell(f2(Math.abs(close.margin)),"Closest margin",`${winner(close)}, ${wkLabel(close)}`)}
+      ${cell(f2(hi.v),"Highest score",`${nameOfId(hi.id)}, ${wkLabel(hi.x)}`)}
+      ${cell(f2(lo.v),"Lowest score",`${nameOfId(lo.id)}, ${wkLabel(lo.x)}`)}
+    </div>
+    <h3>Every meeting</h3>
+    <p class="meet-key">${esc(M[a].name)} – ${esc(M[b].name)}</p>
+    <ol class="meets">${s.g.map(x=>`<li class="meet"><div><div class="wh">${wkLabel(x)}</div>
+      <div class="rs">${x.res==="T"?"Tie":`${esc(winner(x))} by ${f2(Math.abs(x.margin))}`}</div></div>
+      <div class="sc"><span class="${x.res==="W"?"w":""}">${f2(x.pts)}</span> – <span class="${x.res==="L"?"w":""}">${f2(x.opts)}</span></div></li>`).join("")}</ol>`;
+}
+
+function careerMode(a,b){
+  const A=careerOf(a), B=careerOf(b);
+  const size=Math.max(...YEARS.map(y=>S.filter(r=>r.year===y).length));
+  const fin=v=>v==null?null:size+1-v;
+  const when=x=>x?`<small>${esc(wkLabel(x))}</small>`:"";
+  // dir: 1 higher is better, -1 lower is better, 0 no winner. len: bar length when it isn't the value itself.
+  const rows=[
+    {l:"Record",get:c=>c.w,show:c=>recStr(c)},
+    {l:"Win %",get:c=>c.p,show:c=>fmtPct(c.p)},
+    {l:"Seasons played",get:c=>c.seasons},
+    {l:"Playoff appearances",get:c=>c.po},
+    {l:"Titles",get:c=>c.titles},
+    {l:"2nd place finishes",get:c=>c.second},
+    {l:"3rd place finishes",get:c=>c.third},
+    {l:"Last-place finishes",get:c=>c.last,dir:-1},
+    {l:"Best finish",get:c=>c.best,show:c=>c.best?ord(c.best):"—",dir:-1,len:fin},
+    {l:"Worst finish",get:c=>c.worst,show:c=>c.worst?ord(c.worst):"—",dir:-1,len:fin},
+    {l:"Avg points for",get:c=>c.pf,show:c=>c.pf==null?"—":f1(c.pf)},
+    {l:"Avg points against",get:c=>c.pa,show:c=>c.pa==null?"—":f1(c.pa),dir:0},
+    {l:"Highest single score",get:c=>c.hi&&c.hi.pts,show:c=>c.hi?f2(c.hi.pts)+when(c.hi):"—"},
+    {l:"Biggest blowout",get:c=>c.bl&&c.bl.margin,show:c=>c.bl?"+"+f2(c.bl.margin)+when(c.bl):"—"}
+  ];
+  const bar=r=>{
+    const va=r.get(A), vb=r.get(B), dir=r.dir==null?1:r.dir, len=r.len||(v=>v);
+    const la=va==null?0:Math.max(0,len(va)), lb=vb==null?0:Math.max(0,len(vb)), top=Math.max(la,lb);
+    const won=va==null||vb==null||va===vb?"":dir===0?"even":(dir*(va-vb)>0?"a":"b");
+    const side=(c,v,l,k)=>`<div class="sd ${k} ${won===k?"win":won==="even"?"even":""}"><span class="vl">${(r.show||r.get)(c)}</span>
+      <span class="tr"><i style="width:${top?l/top*100:0}%"></i></span></div>`;
+    return `<div class="vb"><div class="lb">${r.l}</div>${side(A,va,la,"a")}${side(B,vb,lb,"b")}</div>`;
+  };
+  return vsHead(a,vsSide(b,"b"),`${A.titles}–${B.titles}`,"Titles")+`
+    <div class="vs-bars"><div class="vs-key"><span>${esc(M[a].name)}</span><span>${esc(M[b].name)}</span></div>${rows.map(bar).join("")}</div>
+    <p class="note">Records and seasons run from 2021${inProgress()?` and include the ${LIVE.season} season so far`:""}. Finishes count completed seasons. Points stats start in ${H2H_FROM}, the first ESPN season, and include playoff and consolation games.</p>`;
+}
+
+function leagueMode(a){
+  const rows=Object.keys(M).filter(id=>id!==a).map(id=>({id,s:seriesOf(a,id)})).filter(x=>x.s.n||!M[x.id].former)
+    .sort((x,y)=>(y.s.w-y.s.l)-(x.s.w-x.s.l)||y.s.n-x.s.n||M[x.id].name.localeCompare(M[y.id].name));
+  const W=rows.reduce((t,x)=>t+x.s.w,0), L=rows.reduce((t,x)=>t+x.s.l,0), T=rows.reduce((t,x)=>t+x.s.t,0);
+  const pm=s=>{const d=s.w-s.l; return !s.n?`<span class="pm">–</span>`:`<span class="pm ${d>0?"up":d<0?"down":""}" title="${d>0?"Won":d<0?"Lost":"Even"} ${Math.abs(d)} more">${d>0?"+"+d:d<0?"−"+(-d):"Even"}</span>`;};
+  const league=`<div class="vs-p b"><div class="ava"><span aria-hidden="true">ALL</span></div><div><div class="n">Whole League</div><div class="t">Everyone ${esc(M[a].name)} has played</div></div></div>`;
+  return vsHead(a,league,`${W}-${L}${T?"-"+T:""}`,"Head to head")+`
+    ${W+L+T?"":`<div class="empty" style="margin-bottom:18px"><h3>No head-to-head games yet</h3><p>Head-to-head data only exists from ${H2H_FROM} on, when the league moved to ESPN. ${M[a].former?`${esc(M[a].name)} left before then.`:"Check back after week 1."}</p></div>`}
+    <div class="lg-cards">${rows.map(({id,s})=>`<a class="lg${s.n?"":" none"}" href="#/ledger/versus/${a}/${id}">${avatar(id)}
+      <div><div class="n">${esc(M[id].name)}</div><div class="r">${s.n?`${seriesRec(s)} · ${plural(s.n,"game")}`:"Haven't met yet"}</div></div>${pm(s)}</a>`).join("")}</div>`;
+}
+
+function setupVersus(a,b,mode){
+  const sa=document.getElementById("vs-a"), sb=document.getElementById("vs-b"), sw=document.getElementById("vs-swap");
+  const go=(x,y,m)=>{location.hash=`#/ledger/versus/${x}${y?"/"+y:""}${m==="career"?"/career":""}`;};
+  if(sa) sa.onchange=()=>{ const x=sa.value; if(!x) return go(""); go(x,b&&b!==x?b:"league",mode); };
+  if(sb) sb.onchange=()=>go(a,sb.value,mode);
+  if(sw) sw.onclick=()=>go(b,a,mode);
+}
+
+/* Rivalries */
+function rivalriesPage(){
+  const feat=LEDGER.rivalries.filter(r=>Array.isArray(r.managers)&&r.managers.length===2&&M[r.managers[0]]&&M[r.managers[1]]&&r.managers[0]!==r.managers[1]);
+  const avgM=s=>s.g.reduce((t,x)=>t+Math.abs(x.margin),0)/s.n;
+  const card=r=>{const [a,b]=r.managers, s=seriesOf(a,b), last=s.g[0];
+    const p=(id)=>`<div class="rv-p">${avatar(id)}<b>${esc(M[id].name)}</b></div>`;
+    return `<a class="rv" href="#/ledger/versus/${a}/${b}"><div class="rv-top">${p(a)}<div class="rv-vs"><span>vs</span><b>${seriesRec(s)}</b></div>${p(b)}</div>
+      <div class="rv-body">${r.name?`<h3>${esc(r.name)}</h3>`:""}${r.description?`<p>${esc(r.description)}</p>`:""}
+        <div class="rv-stats"><div><b>${s.n}</b><span>${s.n===1?"Meeting":"Meetings"}</span></div>
+          <div><b>${s.n?f1(avgM(s)):"—"}</b><span>Avg margin</span></div>
+          <div><b>${s.streak&&s.streak.res!=="T"?s.streak.n:"—"}</b><span>${s.streak&&s.streak.res!=="T"?`${esc(nameOfId(s.streak.res==="W"?a:b))} streak`:"Streak"}</span></div></div>
+        <p class="rv-last">${last?`Last met ${esc(wkLabel(last))}: ${esc(M[a].name)} ${f2(last.pts)}, ${esc(M[b].name)} ${f2(last.opts)}.`
+          :`No meetings yet. Head-to-head games only exist from ${H2H_FROM} on (ESPN).`}</p></div></a>`;};
+  const ids=Object.keys(M), pairs=[];
+  ids.forEach((a,i)=>ids.slice(i+1).forEach(b=>{const s=seriesOf(a,b); if(s.n) pairs.push(s.w>=s.l?{a,b,s}:{a:b,b:a,s:seriesOf(b,a)});}));
+  const most=pairs.reduce((m,p)=>Math.max(m,p.s.n),0), ok=pairs.filter(p=>p.s.n>=RIVAL_MIN);
+  const edge=p=>Math.abs(p.s.p-.5);
+  const closest=[...ok].sort((x,y)=>edge(x)-edge(y)||avgM(x.s)-avgM(y.s)||y.s.n-x.s.n).slice(0,5);
+  const lopsided=[...ok].sort((x,y)=>edge(y)-edge(x)||y.s.n-x.s.n||avgM(y.s)-avgM(x.s)).slice(0,5);
+  const row=p=>`<a class="pair" href="#/ledger/versus/${p.a}/${p.b}"><span class="pf">${avatar(p.a)}${avatar(p.b)}</span>
+    <span class="pn"><b>${esc(M[p.a].name)} vs ${esc(M[p.b].name)}</b><small>${plural(p.s.n,"meeting")} · avg margin ${f1(avgM(p.s))}</small></span>
+    <span class="pr">${seriesRec(p.s)}</span></a>`;
+  return `<section>${ledgerHead("Rivalries","The grudges that matter, with the receipts to back them up. Head-to-head games only exist from "+H2H_FROM+" on, when the league moved to ESPN.")}
+    ${ledgerTypo("ledger/rivalries.json")}
+    ${feat.length?`<div class="rivals">${feat.map(card).join("")}</div>`
+      :`<div class="empty"><h3>No named rivalries yet</h3><p>Add them to ledger/rivalries.json: two manager IDs and a short description.</p></div>`}</section>
+  <section><h2>By the numbers</h2>
+    <p class="lede">Every head-to-head series with at least ${RIVAL_MIN} meetings, closest and most one-sided first.</p>
+    ${ok.length?`<div class="pairs-grid"><div><h3>Closest series</h3><div class="pairs">${closest.map(row).join("")}</div></div>
+      <div><h3>Most lopsided</h3><div class="pairs">${lopsided.map(row).join("")}</div></div></div>`
+      :`<div class="empty"><h3>Not enough games yet</h3><p>A pair needs ${RIVAL_MIN} meetings to show up here. Head-to-head games only go back to ${H2H_FROM}, and so far ${most?`no pair has met more than ${most===1?"once":most+" times"}`:"nobody has played"}.</p></div>`}</section>`;
+}
+
+/* Trophies */
+// The season's row that earns trophy t, per ledger/trophies.json. null if nobody (or no such season).
+function trophyWinner(t,y){
+  const rows=S.filter(r=>r.year===y); if(!rows.length) return null;
+  let p=y<H2H_FROM&&t.historicPlace!=null?t.historicPlace:t.place;
+  if(p==="last") p=Math.max(...rows.map(r=>r.place));
+  if(p==="consolation") return rows.filter(r=>!r.po).sort((a,b)=>a.place-b.place)[0]||null;
+  return rows.find(r=>r.place===+p)||null;
+}
+const placeLabel=p=>p==="last"?"Last place":p==="consolation"?"Consolation bracket winner":+p?`${ord(+p)} place`:"";
+
+let artN=0;
+// Original trophy drawings. Ids are unique per drawing so gradients don't collide.
+function trophyArt(kind){
+  const id="ta"+(++artN);
+  const base=`<linearGradient id="${id}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A3D5C"/><stop offset="1" stop-color="#0B1626"/></linearGradient>`;
+  const plinth=`<rect x="36" y="111" width="48" height="10" rx="2" fill="url(#${id}b)"/><rect x="28" y="120" width="64" height="15" rx="2.5" fill="url(#${id}b)"/>`;
+  const metal={gold:["#FFF4C2","#E9B824","#946C08"],silver:["#FFFFFF","#C2C9D3","#69727F"],bronze:["#FFD9B5","#C9783A","#73390F"]}[kind];
+  if(metal){
+    const [hi,mid,lo]=metal, m=`url(#${id}m)`;
+    return `<svg viewBox="0 0 120 140" aria-hidden="true"><defs>${base}
+      <linearGradient id="${id}m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${lo}"/><stop offset=".3" stop-color="${hi}"/><stop offset=".62" stop-color="${mid}"/><stop offset="1" stop-color="${lo}"/></linearGradient></defs>
+      ${plinth}<rect x="44" y="124" width="32" height="7" rx="1.5" fill="${m}"/>
+      <path d="M50 111h20l-4-9H54z" fill="${m}"/><rect x="56" y="84" width="8" height="19" fill="${m}"/><ellipse cx="60" cy="92" rx="9" ry="3.6" fill="${m}"/>
+      <path d="M31 47C13 47 14 72 38 75M89 47c18 0 17 25-7 28" fill="none" stroke="${m}" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M28 41h64v6c0 23-14 37-32 39-18-2-32-16-32-39z" fill="${m}"/>
+      <rect x="25" y="37" width="70" height="7" rx="3.5" fill="${m}"/>
+      <path d="M38 50c0 15 7 25 15 29" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+      <path d="m60 53 3 6.2 6.8.9-5 4.7 1.3 6.7-6.1-3.3-6.1 3.3 1.3-6.7-5-4.7 6.8-.9z" fill="${lo}" opacity=".55"/>
+      <rect x="55" y="31" width="10" height="7" rx="1.5" fill="${m}"/>
+      <g transform="rotate(-24 60 20)"><ellipse cx="60" cy="20" rx="23" ry="12.5" fill="${m}" stroke="${lo}" stroke-width="1.3"/>
+        <path d="M44.5 11.5q-3 8.5 0 17M75.5 11.5q3 8.5 0 17" fill="none" stroke="${lo}" stroke-width="1.6"/>
+        <path d="M52 20h16M54 17.2v5.6M57.3 17.2v5.6M60.6 17.2v5.6M63.9 17.2v5.6M67.2 17.2v5.6" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></g></svg>`;
+  }
+  if(kind==="toilet"){
+    const p=`url(#${id}p)`, g=`url(#${id}g)`;
+    return `<svg viewBox="0 0 120 140" aria-hidden="true"><defs>${base}
+      <linearGradient id="${id}p" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9D2DE"/><stop offset=".35" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B4BFCD"/></linearGradient>
+      <linearGradient id="${id}g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#946C08"/><stop offset=".35" stop-color="#FFF4C2"/><stop offset=".7" stop-color="#E9B824"/><stop offset="1" stop-color="#946C08"/></linearGradient></defs>
+      ${plinth}
+      <rect x="64" y="28" width="34" height="46" rx="5" fill="${p}" stroke="#8C99AB" stroke-width="1.2"/>
+      <rect x="60" y="21" width="42" height="9" rx="3.5" fill="${p}" stroke="#8C99AB" stroke-width="1.2"/>
+      <rect x="69" y="36" width="12" height="4" rx="2" fill="${g}"/>
+      <path d="M21 80c0 17 13 26 26 28l-2 3h30l-2-5c10-5 16-14 16-26z" fill="${p}" stroke="#8C99AB" stroke-width="1.2"/>
+      <ellipse cx="55" cy="80" rx="35" ry="9.5" fill="${g}" stroke="#7A5806" stroke-width="1"/>
+      <ellipse cx="55" cy="80" rx="25" ry="5.6" fill="#9FD3EE"/><ellipse cx="50" cy="79" rx="9" ry="1.6" fill="#fff" opacity=".7"/>
+      <path d="M18 44l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM40 30l1.4 3.4 3.4 1.4-3.4 1.4L40 39.6l-1.4-3.4-3.4-1.4 3.4-1.4zM104 84l1.4 3.4 3.4 1.4-3.4 1.4-1.4 3.4-1.4-3.4-3.4-1.4 3.4-1.4z" fill="${g}"/></svg>`;
+  }
+  // Last place: a plunger jammed into a deflated football on a cracked plinth, with a fly for company.
+  return `<svg viewBox="0 0 120 140" aria-hidden="true"><defs>${base}
+    <linearGradient id="${id}w" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9C7445"/><stop offset=".45" stop-color="#E2BC86"/><stop offset="1" stop-color="#9C7445"/></linearGradient>
+    <linearGradient id="${id}r" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7E1410"/><stop offset=".4" stop-color="#D23A2E"/><stop offset="1" stop-color="#7E1410"/></linearGradient></defs>
+    <rect x="28" y="112" width="64" height="23" rx="2.5" fill="url(#${id}b)"/>
+    <path d="M40 112l4 8-4 6 2 9" fill="none" stroke="#000" stroke-opacity=".5" stroke-width="1.5"/>
+    <rect x="50" y="119" width="30" height="11" rx="1.5" fill="#6E6656"/>
+    <text x="65" y="127.6" text-anchor="middle" font-family="Barlow,system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#25211B">LAST</text>
+    <path d="M27 112c1-9 20-15 40-14 15 1 27 6 28 16 1 8-2 15-6 13-3-1-1-7-4-11-3-3-10-4-18-4H27z" fill="#8A4A22" stroke="#4E260C" stroke-width="1.4"/>
+    <path d="M33 106q8-3 15-2M74 101q8 2 13 6" fill="none" stroke="#4E260C" stroke-opacity=".55" stroke-width="1.2"/>
+    <path d="M36 109.5q5-2 9-1.5M77 105.5q4 1 7 3" fill="none" stroke="#F3EAD8" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="56" y="22" width="7" height="68" rx="3.5" fill="url(#${id}w)" stroke="#6E4E26" stroke-width="1" transform="rotate(8 60 90)"/>
+    <path d="M44 103c0-13 6-19 16-19s16 6 16 19c-5 2-27 2-32 0z" fill="url(#${id}r)" stroke="#5A0E0B" stroke-width="1.2"/>
+    <path d="M49 98c1-6 4-9 8-10" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+    <path d="M32 96c-3-4 3-6 0-11s3-7 0-11M88 94c-3-4 3-6 0-11s3-7 0-11M40 70c-3-4 3-6 0-11" fill="none" stroke="#7DAA4A" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>
+    <path d="M70 20c9-7 17 3 9 8s-12-9-2-14" fill="none" stroke="#7A8699" stroke-width="1" stroke-dasharray="2 3"/>
+    <ellipse cx="80" cy="11" rx="4.6" ry="3" fill="#C8DCEB" opacity=".9" transform="rotate(-25 80 11)"/><ellipse cx="85.5" cy="11" rx="4.6" ry="3" fill="#C8DCEB" opacity=".9" transform="rotate(25 85.5 11)"/>
+    <ellipse cx="82.8" cy="15" rx="4" ry="2.8" fill="#1E2430" stroke="#7A8699" stroke-width=".6"/></svg>`;
+}
+
+function trophiesPage(){
+  const list=LEDGER.trophies.filter(t=>t&&t.name);
+  const chev=d=>`<svg viewBox="0 0 16 16"><path d="${d}"/></svg>`;
+  const carousel=(t,wins)=>`<div class="car" data-car>
+    <div class="car-stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="${esc(t.name)} winners by year">
+      ${wins.map(({y,r},i)=>`<div class="cs" data-i="${i}" data-label="${y}: ${esc(M[r.id].name)}, ${esc(r.team)}">
+        <div class="yr">${y}</div>${trophyArt(t.art)}
+        <div class="who">${avatar(r.id)}<div><a class="n" href="#/managers/${r.id}">${esc(M[r.id].name)}</a><div class="t">${esc(r.team)}</div></div></div></div>`).join("")}
+    </div>
+    ${wins.length>1?`<div class="car-nav"><button class="car-btn" type="button" data-go="-1" aria-label="Previous year">${chev("M10 3 5 8l5 5")}</button>
+      <div class="dots">${wins.map(({y},i)=>`<button type="button" data-to="${i}" aria-label="${y}"></button>`).join("")}</div>
+      <button class="car-btn" type="button" data-go="1" aria-label="Next year">${chev("m6 3 5 5-5 5")}</button></div>`:""}
+    <p class="sr-only" aria-live="polite"></p></div>`;
+  return `<section>${ledgerHead("Trophies","Every season's hardware, and the other kind.")}${ledgerTypo("ledger/trophies.json")}
+    ${list.length?"":`<div class="empty"><h3>No trophies set up</h3><p>Add them to ledger/trophies.json.</p></div>`}</section>
+    ${list.map((t,i)=>{const wins=YEARS.map(y=>({y,r:trophyWinner(t,y)})).filter(x=>x.r&&M[x.r.id]);
+      return `<section class="tro${i%2?" flip":""}"><div class="tro-tx"><span class="kicker">${esc(placeLabel(t.place))}</span><h2>${esc(t.name)}</h2>${t.line?`<p>${esc(t.line)}</p>`:""}</div>
+        ${wins.length?carousel(t,wins):`<div class="empty"><p>Nobody has earned this one yet.</p></div>`}</section>`;}).join("")}`;
+}
+
+function setupCarousels(){
+  document.querySelectorAll("[data-car]").forEach(car=>{
+    const stage=car.querySelector(".car-stage"), slides=[...car.querySelectorAll(".cs")], dots=[...car.querySelectorAll("[data-to]")];
+    const live=car.querySelector("[aria-live]"), n=slides.length;
+    let cur=n-1, x0=null, swiped=false;
+    const show=(i,say)=>{
+      cur=(i+n)%n;
+      slides.forEach((s,j)=>{
+        let off=j-cur; if(n>2){ if(off>n/2) off-=n; if(off<-n/2) off+=n; }   // wrap so neighbours sit on both sides
+        const d=Math.abs(off);
+        s.style.transform=`translateX(${off*76}%) scale(${d?.72:1})`;
+        s.style.opacity=d===0?1:d===1?.4:0;
+        s.style.visibility=d>1?"hidden":"";
+        s.style.zIndex=10-d;
+        s.classList.toggle("on",!d);
+        s.setAttribute("aria-hidden",d?"true":"false");
+        s.querySelectorAll("a").forEach(a=>a.tabIndex=d?-1:0);
+      });
+      dots.forEach((b,j)=>b.setAttribute("aria-current",j===cur?"true":"false"));
+      if(say&&live) live.textContent=slides[cur].dataset.label;
+    };
+    car.addEventListener("click",e=>{
+      const b=e.target.closest("[data-go],[data-to]");
+      if(b) return show(b.dataset.to!=null?+b.dataset.to:cur+ +b.dataset.go,true);
+      const s=e.target.closest(".cs");
+      if(s&&(swiped||!s.classList.contains("on"))){ e.preventDefault(); if(!swiped) show(+s.dataset.i,true); }
+    });
+    stage.addEventListener("keydown",e=>{ if(e.key==="ArrowLeft"||e.key==="ArrowRight"){ e.preventDefault(); show(cur+(e.key==="ArrowRight"?1:-1),true); } });
+    stage.addEventListener("pointerdown",e=>{ x0=e.clientX; swiped=false; });
+    stage.addEventListener("pointerup",e=>{ if(x0==null) return; const dx=e.clientX-x0; x0=null;
+      if(Math.abs(dx)>40&&n>1){ swiped=true; show(cur+(dx<0?1:-1),true); } });
+    show(cur);
+    const fit=()=>{ if(!stage.isConnected) return window.removeEventListener("resize",fit); stage.style.height=Math.max(...slides.map(s=>s.offsetHeight))+24+"px"; };
+    fit(); window.addEventListener("resize",fit,{passive:true});
+    requestAnimationFrame(()=>requestAnimationFrame(()=>car.classList.add("ready")));
+  });
+}
+
+/* Records */
+// A record card: the holder big at the top, then places 2-5. Entries: {id, v, show, when, team, tb}.
+function recCard(title,list,o={}){
+  list=list.filter(x=>x&&M[x.id]);
+  if(!list.length) return `<div class="rc"><div class="rc-top"><h3>${title}</h3><p class="rc-wait">${o.wait}</p></div></div>`;
+  const L=[...list].sort((a,b)=>(o.asc?a.v-b.v:b.v-a.v)||(a.tb||0)-(b.tb||0));
+  const rank=i=>L.findIndex(x=>x.v===L[i].v)+1, tied=i=>L.filter(x=>x.v===L[i].v).length>1;
+  const sub=x=>[x.team,x.when].filter(Boolean).map(esc).join(" · ");
+  const top=L[0];
+  return `<div class="rc"><div class="rc-top"><h3>${title}</h3>
+    <div class="rc-hold">${avatar(top.id)}<div>
+      <div class="rc-v">${top.show}${tied(0)?` <span class="tie">Tied</span>`:""}</div>
+      ${top.when?`<div class="rc-when">${esc(top.when)}</div>`:""}
+      <div class="rc-n"><a href="#/managers/${top.id}">${esc(M[top.id].name)}</a></div>
+      ${top.team?`<div class="rc-t">${esc(top.team)}</div>`:""}</div></div></div>
+    ${L.length>1?`<ol class="rc-list">${L.slice(1,5).map((x,j)=>`<li><span class="rk">${tied(j+1)?"T":""}${rank(j+1)}</span>${avatar(x.id)}
+      <span class="nm"><a href="#/managers/${x.id}">${esc(M[x.id].name)}</a><small>${sub(x)}</small></span><span class="val">${x.show}</span></li>`).join("")}</ol>`:""}</div>`;
+}
+
+// Win and loss streaks of 2+ games, per manager, across seasons.
+function streaks(){
+  const by={}, out=[];
+  sides().filter(x=>x.id).forEach(x=>(by[x.id]=by[x.id]||[]).push(x));
+  Object.entries(by).forEach(([id,list])=>{
+    let run=null;
+    list.forEach(x=>{ if(run&&run.res===x.res){ run.n++; run.end=x; } else { if(run) out.push(run); run={id,res:x.res,n:1,start:x,end:x}; } });
+    if(run){ run.current=inProgress()&&run.end.season===LIVE.season; out.push(run); }
+  });
+  return out.filter(r=>r.res!=="T"&&r.n>=2);
+}
+
+function recordsPage(){
+  const espnWait=`Starts counting in ${H2H_FROM}, the first ESPN season.`;
+  const wait=sides().length?"Nothing qualifies yet.":espnWait;
+  const careerTeam=id=>M[id].former||teamNow(id);
+  const sec=(h,lede,cards)=>`<section class="ledger-sec"><h2>${h}</h2><p class="lede">${lede}</p><div class="rcards">${cards.join("")}</div></section>`;
+
+  const se=S.map(r=>({id:r.id,team:r.team,when:String(r.year),r,p:pct(r.w,r.l)}));
+  const rec=x=>`${x.r.w}-${x.r.l}`;
+  const season=[
+    recCard("Most wins",se.map(x=>({...x,v:x.r.w,show:rec(x),tb:-x.p}))),
+    recCard("Most losses",se.map(x=>({...x,v:x.r.l,show:rec(x),tb:x.p}))),
+    recCard("Best win %",se.map(x=>({...x,v:x.p,show:fmtPct(x.p),when:`${x.r.year} · ${rec(x)}`}))),
+    recCard("Worst win %",se.map(x=>({...x,v:x.p,show:fmtPct(x.p),when:`${x.r.year} · ${rec(x)}`})),{asc:1}),
+    recCard("Champion with the worst record",se.filter(x=>x.r.place===1).map(x=>({...x,v:x.p,show:rec(x)})),{asc:1}),
+    recCard("Best record to miss the playoffs",se.filter(x=>!x.r.po).map(x=>({...x,v:x.p,show:rec(x),when:`${x.r.year} · ${ord(x.r.place)}`}))),
+    recCard("Worst record to make the playoffs",se.filter(x=>x.r.po).map(x=>({...x,v:x.p,show:rec(x),when:`${x.r.year} · ${ord(x.r.place)}`})),{asc:1})
+  ];
+
+  // Finished seasons only (ALL comes from S): finishes, playoff trips and team names.
+  const done=ALL.filter(s=>s.seasons), fTeam=s=>M[s.id].former||teamNow(s.id);
+  const jumps=[];
+  done.forEach(s=>s.rows.forEach((b,i)=>{ const a=s.rows[i-1]; if(a&&b.year===a.year+1) jumps.push({id:s.id,team:b.team,d:a.place-b.place,when:`${ord(a.place)} in ${a.year} to ${ord(b.place)} in ${b.year}`}); }));
+  const runs=done.map(s=>{ let best=null, cur=null;
+    s.rows.forEach((r,i)=>{ cur=i&&r.team===s.rows[i-1].team?{...cur,n:cur.n+1,to:r.year}:{team:r.team,n:1,from:r.year,to:r.year}; if(!best||cur.n>best.n) best=cur; });
+    return {id:s.id,...best}; }).filter(r=>r.n>1);
+  const spots=n=>plural(n,"spot");
+  const movers=[
+    recCard("Biggest one-year climb",jumps.filter(j=>j.d>0).map(j=>({...j,v:j.d,show:spots(j.d)}))),
+    recCard("Biggest one-year fall",jumps.filter(j=>j.d<0).map(j=>({...j,v:-j.d,show:spots(-j.d)}))),
+    recCard("Most team names",done.map(s=>({id:s.id,team:fTeam(s),v:s.names,show:s.names,when:`In ${plural(s.seasons,"season")}`,tb:-s.seasons}))),
+    recCard("Longest run with one name",runs.map(r=>({id:r.id,team:r.team,v:r.n,show:plural(r.n,"season"),when:`${r.from}–${r.to}`})),{wait:"Nobody has kept a name two years running."})
+  ];
+
+  const cr=Object.keys(M).map(careerOf).filter(c=>c.w+c.l+c.t);
+  const cw=c=>`${recStr(c)} · ${plural(c.seasons,"season")}`;
+  const ce=f=>cr.map(c=>({id:c.id,team:careerTeam(c.id),when:cw(c),...f(c)}));
+  const hw=LEDGER.trophies.filter(t=>t&&t.hardware);
+  const trophies=Object.keys(M).map(id=>{
+    const won=hw.map(t=>[t,YEARS.filter(y=>{const w=trophyWinner(t,y); return w&&w.id===id;}).length]).filter(x=>x[1]);
+    const v=won.reduce((a,x)=>a+x[1],0);
+    return {id,v,show:v,team:careerTeam(id),when:won.map(([t,n])=>`${n}× ${t.name}`).join(", "),tb:-(won[0]&&won[0][0]===hw[0]?won[0][1]:0)};
+  }).filter(x=>x.v);
+  const career=[
+    recCard("Most wins",ce(c=>({v:c.w,show:c.w}))),
+    recCard("Most losses",ce(c=>({v:c.l,show:c.l}))),
+    recCard("Best career win % (3+ seasons)",ce(c=>({v:c.p,show:fmtPct(c.p)})).filter(x=>careerOf(x.id).seasons>=3)),
+    recCard("Worst career win % (3+ seasons)",ce(c=>({v:c.p,show:fmtPct(c.p)})).filter(x=>careerOf(x.id).seasons>=3),{asc:1}),
+    recCard("Most trophies",trophies,{wait:hw.length?"Nobody yet.":"No trophies are marked as hardware in ledger/trophies.json."}),
+    recCard("Most championships",done.filter(s=>s.titles).map(s=>({id:s.id,team:fTeam(s),v:s.titles,show:s.titles,
+      when:s.rows.filter(r=>r.place===1).map(r=>r.year).join(", "),tb:-s.p}))),
+    recCard("Most playoff trips",done.filter(s=>s.po).map(s=>({id:s.id,team:fTeam(s),v:s.po,show:s.po,when:`${s.po} of ${plural(s.seasons,"season")}`,tb:s.seasons})))
+  ];
+
+  const sd=sides().filter(x=>x.id), W=sd.filter(x=>x.res==="W"), Lo=sd.filter(x=>x.res==="L");
+  const we=(arr,f)=>arr.map(x=>({id:x.id,team:x.team,when:`${wkLabel(x)} vs ${nameOfId(x.oid)}`,...f(x)}));
+  const week=[
+    recCard("Highest score",we(sd,x=>({v:x.pts,show:f2(x.pts)})),{wait}),
+    recCard("Lowest score",we(sd,x=>({v:x.pts,show:f2(x.pts)})),{asc:1,wait}),
+    recCard("Biggest margin of victory",we(W,x=>({v:x.margin,show:f2(x.margin)})),{wait}),
+    recCard("Closest game",we(W,x=>({v:x.margin,show:f2(x.margin)})),{asc:1,wait}),
+    recCard("Most points in a loss",we(Lo,x=>({v:x.pts,show:f2(x.pts)})),{wait}),
+    recCard("Fewest points in a win",we(W,x=>({v:x.pts,show:f2(x.pts)})),{asc:1,wait})
+  ];
+
+  const group=key=>{const g={}; sd.forEach(x=>{const k=key(x), r=g[k]||(g[k]={id:x.id,season:x.season,n:0,pf:0,pa:0}); r.n++; r.pf+=x.pts; r.pa+=x.opts; r.team=x.team;}); return Object.values(g).filter(r=>r.n>=3);};
+  const ss=group(x=>x.id+"|"+x.season), cs=group(x=>x.id);
+  const sw=r=>`${r.season}${inProgress()&&r.season===LIVE.season?" so far":""} · ${plural(r.n,"game")}`;
+  const sE=f=>ss.map(r=>({id:r.id,team:r.team,when:sw(r),...f(r)})), cE=f=>cs.map(r=>({id:r.id,team:careerTeam(r.id),when:plural(r.n,"game"),...f(r)}));
+  const sWait=sides().length?"Needs 3 games played.":espnWait;
+  const scoring=[
+    recCard("Highest points per game, season",sE(r=>({v:r.pf/r.n,show:f2(r.pf/r.n)})),{wait:sWait}),
+    recCard("Lowest points per game, season",sE(r=>({v:r.pf/r.n,show:f2(r.pf/r.n)})),{asc:1,wait:sWait}),
+    recCard("Most points against per game, season",sE(r=>({v:r.pa/r.n,show:f2(r.pa/r.n)})),{wait:sWait}),
+    recCard("Highest points per game, career",cE(r=>({v:r.pf/r.n,show:f2(r.pf/r.n)})),{wait:sWait}),
+    recCard("Lowest points per game, career",cE(r=>({v:r.pf/r.n,show:f2(r.pf/r.n)})),{asc:1,wait:sWait}),
+    recCard("Most points against per game, career",cE(r=>({v:r.pa/r.n,show:f2(r.pa/r.n)})),{wait:sWait})
+  ];
+
+  const st=streaks();
+  const span=r=>(r.start.season===r.end.season?`Weeks ${r.start.week}–${r.end.week}, ${r.end.season}`
+    :`Week ${r.start.week}, ${r.start.season} – week ${r.end.week}, ${r.end.season}`)+(r.current?" · active":"");
+  const stE=res=>st.filter(r=>r.res===res).map(r=>({id:r.id,team:r.end.team,v:r.n,show:r.n,when:span(r),tb:-r.end.season*100-r.end.week}));
+  const stWait=sides().length?"No streaks of 2 or more yet.":espnWait;
+  const streakCards=[recCard("Longest win streak",stE("W"),{wait:stWait}),recCard("Longest losing streak",stE("L"),{wait:stWait})];
+
+  const money=moneyRows();
+  const cash=v=>(v<0?"−$":v>0?"+$":"$")+Math.abs(v).toLocaleString();
+  const mE=money&&money.map(x=>({id:x.id,team:careerTeam(x.id),v:x.net,show:cash(x.net),when:`$${x.won.toLocaleString()} won, $${x.paid.toLocaleString()} paid in`}));
+
+  return `<section>${ledgerHead("Records","Season and career records go back to 2021. Game-by-game records start with the "+H2H_FROM+" ESPN season, and playoff and consolation games count. A season in progress counts toward career and scoring records, not single-season ones.")}${ledgerTypo("ledger/trophies.json")}</section>
+    ${sec("Single season",`Regular-season records from completed seasons, 2021 on.`,season)}
+    ${sec("Career",`2021 on${inProgress()?`, including the ${LIVE.season} season so far`:""}. Win % needs 3 or more seasons. Trophies are the ones marked as hardware in ledger/trophies.json.`,career)}
+    ${sec("Movers and names",`Completed seasons, 2021 on. Climbs and falls compare final places in back-to-back seasons.`,movers)}
+    ${sec("Single week",`Every ESPN game, ${H2H_FROM} on.`,week)}
+    ${sec("Scoring",`Points per game, ${H2H_FROM} on. Needs 3 or more games.`,scoring)}
+    ${sec("Streaks",`Consecutive wins or losses across all ESPN games, ${H2H_FROM} on.`,streakCards)}
+    ${money?sec("Money","Career earnings: payouts minus buy-ins, from ledger/money.json.",[recCard("Biggest winner",mE),recCard("Biggest loser",mE,{asc:1})]):ledgerTypo("ledger/money.json")}`;
+}
+
+// Career net earnings from ledger/money.json, or null when nothing's been entered.
+function moneyRows(){
+  const yrs=Object.entries(LEDGER.money||{}).filter(([,s])=>s&&(+s.buyIn||Object.keys(s.payouts||{}).length));
+  if(!yrs.length) return null;
+  const net={}, row=id=>net[id]||(net[id]={id,paid:0,won:0});
+  yrs.forEach(([y,s])=>{
+    const d=LIVES.find(d=>d.season===+y);
+    new Set([...S.filter(r=>r.year===+y).map(r=>r.id),...(d?d.teams.map(t=>t.manager).filter(id=>M[id]):[])]).forEach(id=>row(id).paid+=+s.buyIn||0);
+    Object.entries(s.payouts||{}).forEach(([id,v])=>{ if(M[id]) row(id).won+=+v||0; });
+  });
+  return Object.values(net).map(x=>({...x,net:x.won-x.paid}));
+}
+
+const soonPage=(title,blurb)=>`<section>${ledgerHead(title,"")}<div class="empty soon"><h3>Coming soon</h3><p>${blurb}</p></div></section>`;
+
+function ledger(p){
+  switch(p[0]){
+    case "rivalries": return rivalriesPage();
+    case "trophies": return trophiesPage();
+    case "records": return recordsPage();
+    case "brackets": return soonPage("Brackets","Playoff and consolation brackets for every season, game by game. Check back soon.");
+    case "draft": return soonPage("Draft Recap","Every pick, every reach and every steal from draft night. Check back soon.");
+    default: return versusPage(p[1],p[2],p[3]);
+  }
+}
+
+/* Ledger menu in the nav */
+const ledgerBtn=document.getElementById("ledger-btn"), ledgerMenu=document.getElementById("ledger-menu");
+function placeLedgerMenu(){
+  const r=ledgerBtn.getBoundingClientRect(), vw=document.documentElement.clientWidth;
+  ledgerMenu.style.top=r.bottom+"px";
+  ledgerMenu.style.left=Math.max(16,Math.min(r.left,vw-ledgerMenu.offsetWidth-16))+"px";
+}
+function setLedgerMenu(open,focus){
+  ledgerMenu.hidden=!open; ledgerBtn.setAttribute("aria-expanded",String(open));
+  if(open){ placeLedgerMenu(); if(focus) ledgerMenu.querySelector("a").focus(); }
+}
+ledgerBtn.addEventListener("click",e=>setLedgerMenu(ledgerMenu.hidden,e.detail===0));
+ledgerMenu.addEventListener("click",e=>{ if(e.target.closest("a")) setLedgerMenu(false); });
+document.addEventListener("click",e=>{ if(!ledgerMenu.hidden&&!e.target.closest("#ledger-menu,#ledger-btn")) setLedgerMenu(false); });
+document.addEventListener("keydown",e=>{
+  if(ledgerMenu.hidden) return;
+  if(e.key==="Escape"){ setLedgerMenu(false); ledgerBtn.focus(); }
+  const links=[...ledgerMenu.querySelectorAll("a")], i=links.indexOf(document.activeElement);
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){ e.preventDefault(); links[(i+(e.key==="ArrowDown"?1:links.length-1))%links.length].focus(); }
+});
+ledgerMenu.addEventListener("focusout",e=>{ if(!ledgerMenu.contains(e.relatedTarget)&&e.relatedTarget!==ledgerBtn&&e.relatedTarget) setLedgerMenu(false); });
+["scroll","resize"].forEach(ev=>window.addEventListener(ev,()=>{ if(!ledgerMenu.hidden) placeLedgerMenu(); },{passive:true}));
+document.getElementById("nav").addEventListener("scroll",()=>{ if(!ledgerMenu.hidden) placeLedgerMenu(); },{passive:true});
 
 /* ---------- Articles and power rankings (data/articles/<season>.json) ---------- */
 const articles=()=>LIVES.flatMap(d=>(d.articles||[]).filter(a=>a.headline).map(a=>({...a,season:d.season})))
@@ -1204,13 +1873,21 @@ function route(){
     case "rankings": app.innerHTML=rankingsPage(parts[1]); tab="#/rankings"; break;
     case "seasons": app.innerHTML=season(parts[1]); tab="#/seasons/2025"; break;
     case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; break;
-    case "records": app.innerHTML=records(); tab="#/records"; break;
+    case "records": location.replace("#/ledger/records"); return;   // old link, now under the Ledger
+    case "ledger":
+      app.innerHTML=ledger(parts.slice(1)); tab="#/ledger";
+      if(parts[1]==="trophies") setupCarousels();
+      if(!parts[1]||parts[1]==="versus") setupVersus(parts[2],parts[3],parts[4]);
+      break;
     case "live": app.innerHTML=live(parts[1]); tab="#/live"; break;
     case "rosters": app.innerHTML=rosters(parts[1]); setupRosters(parts[1]); tab="#/rosters"; break;
     case "forum": app.innerHTML=forum(); setupForum(); tab="#/forum"; break;
     default: app.innerHTML=home(); renderAllTime();
   }
-  document.querySelectorAll("#nav a").forEach(a=>a.getAttribute("href")===tab?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  const here=tab==="#/ledger"?`#/ledger/${parts[1]||"versus"}`:tab;
+  document.querySelectorAll("#nav a").forEach(a=>a.getAttribute("href")===here?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  tab==="#/ledger"?ledgerBtn.setAttribute("aria-current","page"):ledgerBtn.removeAttribute("aria-current");
+  setLedgerMenu(false);
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route);
@@ -1223,7 +1900,8 @@ const seasonsLoad=fetch("data/index.json",{cache:"no-store"}).then(r=>r.ok?r.jso
   .catch(()=>[]);
 fetch("managers.json",{cache:"no-store"})
   .then(r=>{ if(!r.ok) throw new Error("managers.json is missing."); return r.json().catch(()=>{ throw new Error("managers.json has a typo in it (often a missing comma or quote)."); }); })
-  .then(raw=>{ loadManagers(raw); rebuild(); route(); return seasonsLoad; })
+  .then(raw=>{ loadManagers(raw); rebuild(); return ledgerLoad; })
+  .then(()=>{ route(); return seasonsLoad; })
   .then(list=>{ LIVES=(list||[]).filter(Boolean).sort((a,b)=>a.season-b.season); LIVE=LIVES[LIVES.length-1]||null;
     // The forum doesn't use ESPN data, so don't redraw it (that would wipe a half-written post).
     if(LIVES.length){ rebuild(); if(!/^#\/forum/.test(location.hash)) route(); } })

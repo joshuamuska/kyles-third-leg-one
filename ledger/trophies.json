@@ -1,0 +1,46 @@
+{
+  "_help": "One entry per trophy, in page order. place: a final place (1, 2, 3 ...), \"last\" for last place, or \"consolation\" for the consolation bracket winner (the best finisher who missed the playoffs). historicPlace, if set, is used instead for the hand-entered 2021-2025 seasons. art: gold, silver, bronze, toilet or last. hardware: true counts it toward the Most trophies record.",
+  "trophies": [
+    {
+      "id": "champion",
+      "name": "The Third Leg",
+      "place": 1,
+      "art": "gold",
+      "hardware": true,
+      "line": "The whole point. A year of bragging rights and zero humility."
+    },
+    {
+      "id": "runner-up",
+      "name": "First Loser",
+      "place": 2,
+      "art": "silver",
+      "hardware": true,
+      "line": "Survived every round just to lose the one game that mattered."
+    },
+    {
+      "id": "third",
+      "name": "The Bronze Shrug",
+      "place": 3,
+      "art": "bronze",
+      "hardware": true,
+      "line": "Won the third-place game, which is like winning the parking lot."
+    },
+    {
+      "id": "toilet-bowl",
+      "name": "The Toilet Bowl",
+      "place": "consolation",
+      "historicPlace": 7,
+      "art": "toilet",
+      "hardware": false,
+      "line": "King of the losers' bracket. Flush with pride."
+    },
+    {
+      "id": "last",
+      "name": "The Limp Leg",
+      "place": "last",
+      "art": "last",
+      "hardware": false,
+      "line": "Dead last. Comes with this trophy and a full year of reminders."
+    }
+  ]
+}
