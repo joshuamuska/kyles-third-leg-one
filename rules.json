@@ -1,0 +1,27 @@
+{
+  "_help": "House rules, shown at the top of the Rules page above the ESPN settings. Edit any text in quotes. Anything that still starts with \"Fill in\" shows as a placeholder. payouts and rules are lists shown in order: add or delete entries freely (mind the commas between them). In rules, text is either one sentence in quotes or a list of them in [ ], which shows as bullet points. Delete buyIn, payouts or lastPlace to hide that part.",
+  "updated": "Fill in: when these were last agreed, e.g. August 2026",
+  "buyIn": {
+    "amount": "Fill in: $ per manager",
+    "due": "Fill in: when it's due and how to pay (Venmo, cash at the draft, etc.)"
+  },
+  "payouts": [
+    {"place": "Champion", "amount": "Fill in: $"},
+    {"place": "2nd place", "amount": "Fill in: $"},
+    {"place": "3rd place", "amount": "Fill in: $"},
+    {"place": "Most regular-season points", "amount": "Fill in: $ (or delete this line)"}
+  ],
+  "lastPlace": {
+    "title": "Last-place punishment",
+    "text": "Fill in: what the last-place finisher has to do, and the deadline to do it."
+  },
+  "rules": [
+    {"title": "Draft", "text": "Fill in: draft date and place, and how the draft order is set."},
+    {"title": "Trades", "text": [
+      "Fill in: who reviews trades (commissioner, league vote, nobody).",
+      "Fill in: anything off limits, like trades with teams that are already eliminated."
+    ]},
+    {"title": "Lineups", "text": "Fill in: rules about tanking, or leaving players on bye or injured in the lineup."},
+    {"title": "Disputes", "text": "Fill in: how arguments get settled."}
+  ]
+}

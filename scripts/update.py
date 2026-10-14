@@ -8,6 +8,8 @@ Saved Claude recaps are reused, so daily runs only call Claude for newly
 finished games or games whose score changed (ESPN stat corrections).
 Each finished week also gets power rankings and a Claude-written roundup article
 in data/articles/<season>.json. Those are written once and never redone.
+It also saves the league settings (for the Rules page) and the draft with each pick's
+points so far; Claude's draft-grade roasts are rewritten at most once per NFL week.
 """
 import datetime
 import hashlib
@@ -508,6 +510,229 @@ def transaction_rows(league, team_ids, last_week):
     return faab, rows
 
 
+# ESPN lineup slot ids, in the order the Rules page lists them.
+SLOTS = [(0, "QB"), (2, "RB"), (4, "WR"), (6, "TE"), (23, "FLEX"), (3, "RB/WR"), (5, "WR/TE"), (7, "OP"),
+         (1, "TQB"), (16, "D/ST"), (17, "K"), (18, "P"), (19, "HC"), (8, "DT"), (9, "DE"), (10, "LB"),
+         (11, "DL"), (12, "CB"), (13, "S"), (14, "DB"), (15, "DP"), (24, "ER"), (25, "Rookie"),
+         (20, "BE"), (21, "IR")]
+SLOT_NAME = dict(SLOTS)
+
+# ESPN stat ids used in league scoring: (group, label).
+STATS = {
+    0: ("Passing", "Pass attempts"), 1: ("Passing", "Completions"), 2: ("Passing", "Incompletions"),
+    3: ("Passing", "Passing yards"), 4: ("Passing", "Passing TD"), 15: ("Passing", "40+ yard passing TD bonus"),
+    16: ("Passing", "50+ yard passing TD bonus"), 17: ("Passing", "300-399 yard passing game"),
+    18: ("Passing", "400+ yard passing game"), 19: ("Passing", "2-pt passing conversion"),
+    20: ("Passing", "Interception thrown"), 64: ("Passing", "Sacked"),
+    23: ("Rushing", "Rush attempts"), 24: ("Rushing", "Rushing yards"), 25: ("Rushing", "Rushing TD"),
+    26: ("Rushing", "2-pt rushing conversion"), 35: ("Rushing", "40+ yard rushing TD bonus"),
+    36: ("Rushing", "50+ yard rushing TD bonus"), 37: ("Rushing", "100-199 yard rushing game"),
+    38: ("Rushing", "200+ yard rushing game"),
+    41: ("Receiving", "Receptions"), 42: ("Receiving", "Receiving yards"), 43: ("Receiving", "Receiving TD"),
+    44: ("Receiving", "2-pt receiving conversion"), 45: ("Receiving", "40+ yard receiving TD bonus"),
+    46: ("Receiving", "50+ yard receiving TD bonus"), 53: ("Receiving", "Receptions"),
+    56: ("Receiving", "100-199 yard receiving game"), 57: ("Receiving", "200+ yard receiving game"),
+    58: ("Receiving", "Targets"),
+    63: ("Turnovers and misc", "Fumble recovered for TD"), 68: ("Turnovers and misc", "Fumble"),
+    72: ("Turnovers and misc", "Fumble lost"), 73: ("Turnovers and misc", "Turnover"),
+    74: ("Kicking", "FG made, 50+ yards"), 76: ("Kicking", "FG missed, 50+ yards"),
+    77: ("Kicking", "FG made, 40-49 yards"), 79: ("Kicking", "FG missed, 40-49 yards"),
+    80: ("Kicking", "FG made, under 40 yards"), 82: ("Kicking", "FG missed, under 40 yards"),
+    83: ("Kicking", "FG made"), 84: ("Kicking", "FG attempted"), 85: ("Kicking", "FG missed"),
+    86: ("Kicking", "Extra point made"), 87: ("Kicking", "Extra point attempted"),
+    88: ("Kicking", "Extra point missed"), 198: ("Kicking", "FG made, 50-59 yards"),
+    201: ("Kicking", "FG made, 60+ yards"),
+    89: ("Defense", "0 points allowed"), 90: ("Defense", "1-6 points allowed"),
+    91: ("Defense", "7-13 points allowed"), 92: ("Defense", "14-17 points allowed"),
+    93: ("Defense", "Blocked kick return TD"), 94: ("Defense", "Defensive TD"), 95: ("Defense", "Interception"),
+    96: ("Defense", "Fumble recovery"), 97: ("Defense", "Blocked kick"), 98: ("Defense", "Safety"),
+    99: ("Defense", "Sack"), 101: ("Defense", "Kickoff return TD"), 102: ("Defense", "Punt return TD"),
+    103: ("Defense", "Interception return TD"), 104: ("Defense", "Fumble return TD"),
+    106: ("Defense", "Forced fumble"), 107: ("Defense", "Assisted tackle"), 108: ("Defense", "Solo tackle"),
+    113: ("Defense", "Pass defended"), 114: ("Defense", "Kickoff return yards"),
+    115: ("Defense", "Punt return yards"), 120: ("Defense", "Points allowed"),
+    121: ("Defense", "18-21 points allowed"), 122: ("Defense", "22-27 points allowed"),
+    123: ("Defense", "28-34 points allowed"), 124: ("Defense", "35-45 points allowed"),
+    125: ("Defense", "46+ points allowed"), 127: ("Defense", "Yards allowed"),
+    128: ("Defense", "Under 100 yards allowed"), 129: ("Defense", "100-199 yards allowed"),
+    130: ("Defense", "200-299 yards allowed"), 131: ("Defense", "300-349 yards allowed"),
+    132: ("Defense", "350-399 yards allowed"), 133: ("Defense", "400-449 yards allowed"),
+    134: ("Defense", "450-499 yards allowed"), 135: ("Defense", "500-549 yards allowed"),
+    136: ("Defense", "550+ yards allowed"),
+}
+
+
+def stat_label(sid):
+    if sid in STATS:
+        return STATS[sid]
+    try:  # fall back to espn_api's own stat names, e.g. "receivingYardsAfterCatch"
+        from espn_api.football.constant import PLAYER_STATS_MAP
+        name = PLAYER_STATS_MAP.get(sid)
+        if name:
+            words = "".join(" " + c.lower() if c.isupper() else c for c in str(name)).strip()
+            return "Other", words[:1].upper() + words[1:]
+    except Exception:
+        pass
+    return "Other", f"ESPN stat {sid}"
+
+
+def league_settings(league):
+    """Scoring, roster slots, playoff format, trade and waiver rules, straight from ESPN."""
+    s = league.espn_request.league_get(params={"view": "mSettings"}).get("settings") or {}
+    sched, acq, trade, draft, scoring, roster = (s.get(k) or {} for k in (
+        "scheduleSettings", "acquisitionSettings", "tradeSettings", "draftSettings", "scoringSettings",
+        "rosterSettings"))
+    items = []
+    for it in scoring.get("scoringItems") or []:
+        sid = it.get("statId")
+        group, label = stat_label(sid)
+        row = {"id": sid, "group": group, "label": label, "points": it.get("points")}
+        overrides = {SLOT_NAME.get(int(k), k): v for k, v in (it.get("pointsOverrides") or {}).items()}
+        if overrides:
+            row["overrides"] = overrides
+        items.append(row)
+    counts = {int(k): v for k, v in (roster.get("lineupSlotCounts") or {}).items() if v}
+    return {
+        "name": s.get("name"),
+        "teams": s.get("size"),
+        "scoringType": scoring.get("scoringType"),
+        "scoring": items,
+        "slots": [{"slot": name, "count": counts[sid]} for sid, name in SLOTS if sid in counts],
+        "regularSeasonWeeks": sched.get("matchupPeriodCount"),
+        "playoffTeams": sched.get("playoffTeamCount"),
+        "playoffRoundWeeks": sched.get("playoffMatchupPeriodLength") or 1,
+        "playoffSeeding": sched.get("playoffSeedingRule"),
+        "tieRule": scoring.get("matchupTieRule"),
+        "playoffTieRule": scoring.get("playoffMatchupTieRule"),
+        "tradeDeadline": trade.get("deadlineDate"),
+        "tradeReviewHours": trade.get("revisionHours"),
+        "vetoVotes": trade.get("vetoVotesRequired"),
+        "waiverType": acq.get("acquisitionType"),
+        "waiverHours": acq.get("waiverHours"),
+        "waiverDays": acq.get("waiverProcessDays"),
+        "waiverReset": acq.get("waiverOrderReset"),
+        "faab": bool(acq.get("isUsingAcquisitionBudget")),
+        "faabBudget": acq.get("acquisitionBudget"),
+        "faabMinBid": acq.get("minimumBid"),
+        "moveLimit": acq.get("acquisitionLimit"),
+        "draftType": draft.get("type"),
+        "draftDate": draft.get("date"),
+        "keepers": draft.get("keeperCount"),
+    }
+
+
+GRADES = [(1.2, "A+"), (0.8, "A"), (0.45, "A-"), (0.15, "B+"), (-0.15, "B"), (-0.45, "B-"),
+          (-0.8, "C+"), (-1.2, "C"), (-1.6, "D")]
+
+
+def draft_rows(league, by_id, last_week):
+    """Every pick with the player's season points so far, plus value picks, busts and team grades."""
+    raw = sorted(getattr(league, "draft", None) or [], key=lambda p: (p.round_num, p.round_pick))
+    if not raw:
+        return None
+    on_roster = {p.playerId: t.team_id for t in league.teams for p in t.roster}
+    cards = player_cards(league, {p.playerId for p in raw})
+    picks = []
+    for n, p in enumerate(raw, 1):
+        card, team = cards.get(p.playerId), getattr(p, "team", None)
+        tid = getattr(team, "team_id", team)
+        pts = 0.0
+        if card:
+            stats = getattr(card, "stats", None) or {}
+            pts = getattr(card, "total_points", 0) or sum((stats.get(w) or {}).get("points") or 0
+                                                          for w in range(1, last_week + 1))
+        picks.append({"overall": n, "round": p.round_num, "pick": p.round_pick, "espnId": tid,
+                      "manager": by_id.get(tid, {}).get("manager"), "player": p.playerName,
+                      "playerId": p.playerId, "pos": card.position if card else "",
+                      "nfl": nfl_team(card) if card else "", "pts": round(pts or 0, 2),
+                      "kept": on_roster.get(p.playerId) == tid,
+                      "keeper": bool(getattr(p, "keeper_status", False)),
+                      "bid": getattr(p, "bid_amount", 0) or None})
+
+    # Value: where a player was drafted at his position vs. where he ranks there in points.
+    by_pos = {}
+    for p in picks:
+        by_pos.setdefault(p["pos"], []).append(p)
+    for group in by_pos.values():
+        for i, p in enumerate(group, 1):
+            p["posDraft"] = i
+        for i, p in enumerate(sorted(group, key=lambda p: -p["pts"]), 1):
+            p["posFinish"] = i
+            p["value"] = p["posDraft"] - i
+    rounds = max(p["round"] for p in picks)
+    values = sorted((p for p in picks if p["value"] > 0 and p["round"] > 2 and p["pts"] > 0),
+                    key=lambda p: (-p["value"], -p["pts"]))[:5]
+    busts = sorted((p for p in picks if p["value"] < 0 and p["round"] <= max(1, rounds // 2)),
+                   key=lambda p: (p["value"], p["overall"]))[:5]
+
+    totals = {}
+    for p in picks:
+        totals[p["espnId"]] = totals.get(p["espnId"], 0) + p["pts"]
+    mean = sum(totals.values()) / len(totals)
+    sd = (sum((v - mean) ** 2 for v in totals.values()) / len(totals)) ** 0.5
+    teams = []
+    for rank, (tid, total) in enumerate(sorted(totals.items(), key=lambda kv: -kv[1]), 1):
+        z = (total - mean) / sd if sd else 0
+        mine = [p for p in picks if p["espnId"] == tid]
+        teams.append({"espnId": tid, "manager": by_id.get(tid, {}).get("manager"), "rank": rank,
+                      "total": round(total, 2), "grade": next((g for cut, g in GRADES if z >= cut), "F"),
+                      "best": max(mine, key=lambda p: (p["value"], p["pts"]))["overall"],
+                      "worst": min((p for p in mine if p["round"] <= max(1, rounds // 2)),
+                                   key=lambda p: (p["value"], p["overall"]), default=mine[0])["overall"]})
+    return {"rounds": rounds, "picks": picks, "teams": teams,
+            "values": [p["overall"] for p in values], "busts": [p["overall"] for p in busts]}
+
+
+DRAFT_STYLE = (
+    "You write the draft report card for a friends' fantasy football league website. Each team's draft "
+    "has a letter grade based on the fantasy points its picks have scored so far this season (week {week}). "
+    "Write a one-sentence roast of every team's draft, using its grade, its best and worst picks, and "
+    "players it already gave up on (kept: false means the player is no longer on that team). "
+    "These are close friends who love roasting each other, so be ruthless: savage, specific trash talk. "
+    "Even the A+ drafts get roasted for something. Keep it PG-13: no slurs, nothing about race, religion, "
+    "sexuality, family or health, and no explicit sexual content. Use only facts in the data; don't "
+    "invent injuries, trades or history. Refer to people by manager name. {names} get extra heat no "
+    "matter how their draft went.\n\n"
+    "Reply with only a JSON object, no other text: {{\"<team id>\": \"one sentence\"}}, with an entry "
+    "for every team id."
+)
+DRAFT_STYLE_ID = hashlib.md5((DRAFT_STYLE + ",".join(ROAST_TARGETS)).encode()).hexdigest()[:10]
+
+
+def draft_roasts(draft, by_id, week):
+    """Claude's one-line roast of each team's draft, or None."""
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return None
+    pick = {p["overall"]: p for p in draft["picks"]}
+
+    def line(p):
+        return {"round": p["round"], "overall_pick": p["overall"], "player": p["player"], "pos": p["pos"],
+                "points_so_far": p["pts"], "position_drafted": f"{p['pos']}{p['posDraft']}",
+                "position_rank_now": f"{p['pos']}{p['posFinish']}", "kept": p["kept"]}
+
+    facts = [{"id": t["espnId"], "manager": who(by_id.get(t["espnId"], {})),
+              "team_name": by_id.get(t["espnId"], {}).get("name"), "grade": t["grade"],
+              "rank_by_points": t["rank"], "drafted_points_total": t["total"],
+              "best_pick": line(pick[t["best"]]), "worst_early_pick": line(pick[t["worst"]]),
+              "picks": [line(p) for p in draft["picks"] if p["espnId"] == t["espnId"]]}
+             for t in draft["teams"]]
+    targets = " and ".join(MANAGERS[t][0] for t in ROAST_TARGETS)
+    text = ask_claude(DRAFT_STYLE.format(week=week, names=targets) + "\n\n" + json.dumps(facts),
+                      "draft roasts", max_tokens=3000)
+    if not text:
+        return None
+    try:
+        got = json.loads(text[text.index("{"):text.rindex("}") + 1])
+        roasts = {str(k): str(v).strip() for k, v in got.items() if v}
+        missing = [t["espnId"] for t in draft["teams"] if str(t["espnId"]) not in roasts]
+        if missing:
+            raise ValueError(f"missing roasts for {missing}")
+    except (ValueError, AttributeError, TypeError) as e:
+        print(f"::warning::Claude's draft roasts couldn't be used ({e}); they'll be tried again next run.")
+        return None
+    return roasts
+
+
 def main():
     s2, swid = os.environ.get("ESPN_S2"), os.environ.get("ESPN_SWID")
     if not s2 or not swid:
@@ -614,6 +839,28 @@ def main():
         faab, transactions = transaction_rows(league, set(by_id), last)
     except Exception as e:
         print(f"::warning::Couldn't read transactions ({e}); keeping the last saved ones.")
+    settings = saved.get("settings")
+    try:
+        settings = league_settings(league)
+    except Exception as e:
+        print(f"::warning::Couldn't read league settings ({e}); keeping the last saved ones.")
+
+    # Draft recap. Claude's roasts are rewritten at most once per NFL week, so daily runs
+    # don't spend API credits; until then (or if Claude fails) the last ones are kept.
+    old_draft = saved.get("draft") or {}
+    draft = old_draft or None
+    try:
+        draft = draft_rows(league, by_id, last) or draft
+    except Exception as e:
+        print(f"::warning::Couldn't read the draft ({e}); keeping the last saved one.")
+    if draft and draft is not old_draft:
+        draft["roasts"] = old_draft.get("roasts") or {}
+        draft["roastWeek"], draft["roastStyle"] = old_draft.get("roastWeek"), old_draft.get("roastStyle")
+        if draft["roastWeek"] != current or draft["roastStyle"] != DRAFT_STYLE_ID or not draft["roasts"]:
+            got = draft_roasts(draft, by_id, last)
+            if got:
+                draft["roasts"], draft["roastWeek"], draft["roastStyle"] = got, current, DRAFT_STYLE_ID
+                print("Wrote this week's draft roasts.")
 
     data = {
         "season": season,
@@ -627,6 +874,8 @@ def main():
         "faab": faab,
         "rosters": rosters,
         "transactions": transactions,
+        "settings": settings,
+        "draft": draft,
     }
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(json.dumps(data, indent=1))

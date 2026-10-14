@@ -14,6 +14,9 @@ The league website. `index.html` is the site, and `scripts/update.py` pulls the 
   - `rivalries.json`: named rivalries (two manager IDs and a description), shown as featured cards.
   - `money.json`: optional buy-ins and payouts per season. Leave `seasons` empty to hide the money records.
 - Head-to-head, points and streak stats start with the 2026 ESPN season, since 2021–2025 only kept final standings.
+- Brackets (in the Ledger): before the playoffs, the playoff picture from the current seeds; once they start, the playoff and consolation brackets fill in from ESPN's games. 2021–2025 show final places only.
+- Draft Recap (in the Ledger): every pick with the player's season points so far, steals and busts (draft spot at his position vs. his points rank there now), and a letter grade per team from its drafted players' total points. Claude writes a one-line roast per team, saved in `data/<season>.json` and rewritten at most once per NFL week. Without `ANTHROPIC_API_KEY` the grades still show, just without roasts.
+- `rules.json`: the house rules (buy-in, payouts, last-place punishment, anything else) shown at the top of the Rules page, above the league settings the update pulls from ESPN. Anything still starting with "Fill in" shows as a placeholder. Same comma-and-quote rule as `managers.json`.
 - `scripts/update.py`: the ESPN update script.
 - `requirements.txt`: what the script needs installed.
 - `setup/update.yml`: the daily schedule. Its contents go in `.github/workflows/update.yml` (see setup).
