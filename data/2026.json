@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-13T23:07+00:00",
+ "updated": "2026-10-14T00:36+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -8254,6 +8254,3667 @@
      "type": "NONE",
      "final": false,
      "recap": null
+    }
+   ]
+  }
+ ],
+ "faab": false,
+ "rosters": [
+  {
+   "espnId": 1,
+   "players": [
+    {
+     "id": 4241389,
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "DAL",
+     "injury": "QUESTIONABLE",
+     "pts": 115.1
+    },
+    {
+     "id": 4379399,
+     "name": "James Cook III",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "BUF",
+     "injury": null,
+     "pts": 89.3
+    },
+    {
+     "id": 4241478,
+     "name": "DeVonta Smith",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "PHI",
+     "injury": "QUESTIONABLE",
+     "pts": 48.5
+    },
+    {
+     "id": 4612826,
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "LAC",
+     "injury": "QUESTIONABLE",
+     "pts": 36.3
+    },
+    {
+     "id": 4685702,
+     "name": "Quinshon Judkins",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "CLE",
+     "injury": "QUESTIONABLE",
+     "pts": 56.3
+    },
+    {
+     "id": 4432708,
+     "name": "Marvin Harrison Jr.",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 19.5
+    },
+    {
+     "id": 4038815,
+     "name": "Rico Dowdle",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "PIT",
+     "injury": "QUESTIONABLE",
+     "pts": 10.5
+    },
+    {
+     "id": 4701936,
+     "name": "Matthew Golden",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "GB",
+     "injury": null,
+     "pts": 78.3
+    },
+    {
+     "id": 4723086,
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "slot": "RB/WR/TE",
+     "nfl": "CHI",
+     "injury": null,
+     "pts": 24.0
+    },
+    {
+     "id": 5083315,
+     "name": "Kenyon Sadiq",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "NYJ",
+     "injury": "QUESTIONABLE",
+     "pts": 38.9
+    },
+    {
+     "id": 3042519,
+     "name": "Aaron Jones Sr.",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "MIN",
+     "injury": null,
+     "pts": 70.2
+    },
+    {
+     "id": 4426385,
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "SEA",
+     "injury": "OUT",
+     "pts": 0
+    },
+    {
+     "id": 4567104,
+     "name": "Will Reichard",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "MIN",
+     "injury": null,
+     "pts": 68.0
+    },
+    {
+     "id": 4385690,
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "BUF",
+     "injury": null,
+     "pts": 49.7
+    },
+    {
+     "id": 3139477,
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "KC",
+     "injury": null,
+     "pts": 83.58
+    },
+    {
+     "id": 4431452,
+     "name": "Drake Maye",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "NE",
+     "injury": null,
+     "pts": 87.22
+    },
+    {
+     "id": -16005,
+     "name": "Browns D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "CLE",
+     "injury": null,
+     "pts": 27.0
+    }
+   ]
+  },
+  {
+   "espnId": 2,
+   "players": [
+    {
+     "id": 4362628,
+     "name": "Ja'Marr Chase",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 79.9
+    },
+    {
+     "id": 4870808,
+     "name": "Jeremiyah Love",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 51.1
+    },
+    {
+     "id": 4361307,
+     "name": "Trey McBride",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 90.8
+    },
+    {
+     "id": 4567750,
+     "name": "Emeka Egbuka",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "TB",
+     "injury": null,
+     "pts": 53.3
+    },
+    {
+     "id": 4372016,
+     "name": "Jaylen Waddle",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 48.7
+    },
+    {
+     "id": 4426388,
+     "name": "Jameson Williams",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 57.6
+    },
+    {
+     "id": 4426348,
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "WSH",
+     "injury": null,
+     "pts": 64.66
+    },
+    {
+     "id": 4569173,
+     "name": "Rhamondre Stevenson",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "NE",
+     "injury": null,
+     "pts": 60.8
+    },
+    {
+     "id": 4608686,
+     "name": "Kyle Monangai",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "CHI",
+     "injury": "QUESTIONABLE",
+     "pts": 59.3
+    },
+    {
+     "id": 3953687,
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "DAL",
+     "injury": null,
+     "pts": 44.0
+    },
+    {
+     "id": 4429096,
+     "name": "Blake Corum",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 38.4
+    },
+    {
+     "id": 4683062,
+     "name": "Xavier Worthy",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "KC",
+     "injury": null,
+     "pts": 33.3
+    },
+    {
+     "id": -16026,
+     "name": "Seahawks D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "SEA",
+     "injury": null,
+     "pts": 51.0
+    },
+    {
+     "id": 3126486,
+     "name": "Deebo Samuel Sr.",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "SF",
+     "injury": "OUT",
+     "pts": 60.4
+    },
+    {
+     "id": 4685720,
+     "name": "Bryce Young",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "CAR",
+     "injury": null,
+     "pts": 90.62
+    },
+    {
+     "id": 4360078,
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "IND",
+     "injury": "INJURY_RESERVE",
+     "pts": 12.2
+    },
+    {
+     "id": 4569587,
+     "name": "Wan'Dale Robinson",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "TEN",
+     "injury": null,
+     "pts": 51.7
+    }
+   ]
+  },
+  {
+   "espnId": 3,
+   "players": [
+    {
+     "id": 4429795,
+     "name": "Jahmyr Gibbs",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 153.7
+    },
+    {
+     "id": 3929630,
+     "name": "Saquon Barkley",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "PHI",
+     "injury": "QUESTIONABLE",
+     "pts": 23.0
+    },
+    {
+     "id": 4258173,
+     "name": "Nico Collins",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 62.6
+    },
+    {
+     "id": 4361370,
+     "name": "Chris Olave",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 98.7
+    },
+    {
+     "id": 4239993,
+     "name": "Tee Higgins",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 75.3
+    },
+    {
+     "id": 4685512,
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "SEA",
+     "injury": "INJURY_RESERVE",
+     "pts": 14.0
+    },
+    {
+     "id": 4248528,
+     "name": "Christian Watson",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "GB",
+     "injury": null,
+     "pts": 109.4
+    },
+    {
+     "id": 4569987,
+     "name": "Jaylen Warren",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "PIT",
+     "injury": null,
+     "pts": 93.0
+    },
+    {
+     "id": 4572680,
+     "name": "Tucker Kraft",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "GB",
+     "injury": null,
+     "pts": 47.7
+    },
+    {
+     "id": 4688813,
+     "name": "Josh Downs",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "IND",
+     "injury": null,
+     "pts": 44.9
+    },
+    {
+     "id": 4361050,
+     "name": "Isaiah Likely",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 85.4
+    },
+    {
+     "id": 4568490,
+     "name": "RJ Harvey",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 38.8
+    },
+    {
+     "id": 4832800,
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "CLE",
+     "injury": null,
+     "pts": 69.0
+    },
+    {
+     "id": -16023,
+     "name": "Steelers D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "PIT",
+     "injury": null,
+     "pts": 37.0
+    },
+    {
+     "id": 4361741,
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 116.64
+    },
+    {
+     "id": 4697745,
+     "name": "Tyler Loop",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "BAL",
+     "injury": null,
+     "pts": 53.0
+    },
+    {
+     "id": 2578570,
+     "name": "Jacoby Brissett",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 84.3
+    }
+   ]
+  },
+  {
+   "espnId": 4,
+   "players": [
+    {
+     "id": 4428331,
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "KC",
+     "injury": "QUESTIONABLE",
+     "pts": 38.0
+    },
+    {
+     "id": 4429160,
+     "name": "De'Von Achane",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "MIA",
+     "injury": "INJURY_RESERVE",
+     "pts": 24.6
+    },
+    {
+     "id": 4239996,
+     "name": "Travis Etienne Jr.",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": "INJURY_RESERVE",
+     "pts": 30.9
+    },
+    {
+     "id": 4426354,
+     "name": "George Pickens",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "DAL",
+     "injury": null,
+     "pts": 68.5
+    },
+    {
+     "id": 3916148,
+     "name": "Tony Pollard",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "TEN",
+     "injury": null,
+     "pts": 43.7
+    },
+    {
+     "id": 4710714,
+     "name": "De'Zhaun Stribling",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "SF",
+     "injury": "INJURY_RESERVE",
+     "pts": 0
+    },
+    {
+     "id": 4040715,
+     "name": "Jalen Hurts",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "PHI",
+     "injury": null,
+     "pts": 80.02
+    },
+    {
+     "id": 4360761,
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 64.08
+    },
+    {
+     "id": 4361579,
+     "name": "Javonte Williams",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "DAL",
+     "injury": null,
+     "pts": 96.0
+    },
+    {
+     "id": 4431459,
+     "name": "Tyler Warren",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "IND",
+     "injury": null,
+     "pts": 69.9
+    },
+    {
+     "id": 4870847,
+     "name": "Ja'Kobi Lane",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "BAL",
+     "injury": "INJURY_RESERVE",
+     "pts": 2.1
+    },
+    {
+     "id": 4241457,
+     "name": "Najee Harris",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 11.2
+    },
+    {
+     "id": 4686361,
+     "name": "Cam Little",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 46.0
+    },
+    {
+     "id": 4428718,
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "LV",
+     "injury": null,
+     "pts": 51.8
+    },
+    {
+     "id": -16025,
+     "name": "49ers D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 43.0
+    },
+    {
+     "id": 4428850,
+     "name": "Dontayvion Wicks",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "PHI",
+     "injury": null,
+     "pts": 49.0
+    },
+    {
+     "id": 4597500,
+     "name": "Adonai Mitchell",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "NYJ",
+     "injury": "QUESTIONABLE",
+     "pts": 21.3
+    },
+    {
+     "id": 4599739,
+     "name": "Kendre Miller",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 23.8
+    },
+    {
+     "id": 4361432,
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "NE",
+     "injury": null,
+     "pts": 46.9
+    }
+   ]
+  },
+  {
+   "espnId": 5,
+   "players": [
+    {
+     "id": 4890973,
+     "name": "Ashton Jeanty",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "LV",
+     "injury": null,
+     "pts": 84.6
+    },
+    {
+     "id": 3043078,
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "BAL",
+     "injury": null,
+     "pts": 111.8
+    },
+    {
+     "id": 4430737,
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 109.3
+    },
+    {
+     "id": 4685382,
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "LAC",
+     "injury": null,
+     "pts": 49.6
+    },
+    {
+     "id": 3121422,
+     "name": "Terry McLaurin",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "WSH",
+     "injury": null,
+     "pts": 42.3
+    },
+    {
+     "id": 4871023,
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "TEN",
+     "injury": null,
+     "pts": 48.4
+    },
+    {
+     "id": 4360248,
+     "name": "Kyle Pitts Sr.",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "ATL",
+     "injury": null,
+     "pts": 26.9
+    },
+    {
+     "id": 4047650,
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "PIT",
+     "injury": null,
+     "pts": 48.6
+    },
+    {
+     "id": 4431611,
+     "name": "Caleb Williams",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "CHI",
+     "injury": "QUESTIONABLE",
+     "pts": 44.98
+    },
+    {
+     "id": 4685278,
+     "name": "Luther Burden III",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CHI",
+     "injury": null,
+     "pts": 55.8
+    },
+    {
+     "id": 4241416,
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "CAR",
+     "injury": null,
+     "pts": 79.0
+    },
+    {
+     "id": 4870795,
+     "name": "Makai Lemon",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "PHI",
+     "injury": null,
+     "pts": 25.3
+    },
+    {
+     "id": 4429059,
+     "name": "Woody Marks",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 43.3
+    },
+    {
+     "id": -16033,
+     "name": "Ravens D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "BAL",
+     "injury": null,
+     "pts": 26.0
+    },
+    {
+     "id": 2971573,
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 53.0
+    },
+    {
+     "id": 3046779,
+     "name": "Jared Goff",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 115.0
+    }
+   ]
+  },
+  {
+   "espnId": 6,
+   "players": [
+    {
+     "id": 4242335,
+     "name": "Jonathan Taylor",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "IND",
+     "injury": null,
+     "pts": 97.4
+    },
+    {
+     "id": 4362238,
+     "name": "Chase Brown",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 65.0
+    },
+    {
+     "id": 4047646,
+     "name": "A.J. Brown",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "NE",
+     "injury": "INJURY_RESERVE",
+     "pts": 5.6
+    },
+    {
+     "id": 4430878,
+     "name": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "SEA",
+     "injury": "QUESTIONABLE",
+     "pts": 139.46
+    },
+    {
+     "id": 4259545,
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "CHI",
+     "injury": null,
+     "pts": 80.8
+    },
+    {
+     "id": 4432620,
+     "name": "Parker Washington",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 81.5
+    },
+    {
+     "id": 5083076,
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "CLE",
+     "injury": null,
+     "pts": 51.7
+    },
+    {
+     "id": 4360310,
+     "name": "Trevor Lawrence",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 86.86
+    },
+    {
+     "id": 4360569,
+     "name": "Jordan Mason",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "MIN",
+     "injury": "INJURY_RESERVE",
+     "pts": 11.9
+    },
+    {
+     "id": 3040151,
+     "name": "George Kittle",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 71.8
+    },
+    {
+     "id": 4880281,
+     "name": "Jordyn Tyson",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "NO",
+     "injury": "INJURY_RESERVE",
+     "pts": 0
+    },
+    {
+     "id": 4870653,
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CLE",
+     "injury": "QUESTIONABLE",
+     "pts": 31.8
+    },
+    {
+     "id": 4569559,
+     "name": "Devaughn Vele",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 62.2
+    },
+    {
+     "id": 4360234,
+     "name": "Evan McPherson",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 54.0
+    },
+    {
+     "id": 4887558,
+     "name": "Emanuel Wilson",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "SEA",
+     "injury": null,
+     "pts": 51.1
+    },
+    {
+     "id": 3116406,
+     "name": "Tyreek Hill",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "FA",
+     "injury": "OUT",
+     "pts": 0
+    },
+    {
+     "id": 4373626,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 34.3
+    },
+    {
+     "id": -16004,
+     "name": "Bengals D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 40.0
+    },
+    {
+     "id": 4431545,
+     "name": "Will Shipley",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "PHI",
+     "injury": "DOUBTFUL",
+     "pts": 19.8
+    }
+   ]
+  },
+  {
+   "espnId": 7,
+   "players": [
+    {
+     "id": 3117251,
+     "name": "Christian McCaffrey",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 91.3
+    },
+    {
+     "id": 4432665,
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "LV",
+     "injury": null,
+     "pts": 71.2
+    },
+    {
+     "id": 4047365,
+     "name": "Josh Jacobs",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "GB",
+     "injury": "DAY_TO_DAY",
+     "pts": 0
+    },
+    {
+     "id": 4429615,
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "BAL",
+     "injury": null,
+     "pts": 81.8
+    },
+    {
+     "id": 3915416,
+     "name": "DJ Moore",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "BUF",
+     "injury": "QUESTIONABLE",
+     "pts": 36.3
+    },
+    {
+     "id": 4432710,
+     "name": "TreVeyon Henderson",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NE",
+     "injury": "DOUBTFUL",
+     "pts": 26.5
+    },
+    {
+     "id": 4035687,
+     "name": "Michael Pittman Jr.",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "PIT",
+     "injury": "INJURY_RESERVE",
+     "pts": 15.9
+    },
+    {
+     "id": 2577417,
+     "name": "Dak Prescott",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "DAL",
+     "injury": null,
+     "pts": 93.84
+    },
+    {
+     "id": 4429205,
+     "name": "Jordan Addison",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "MIN",
+     "injury": "QUESTIONABLE",
+     "pts": 33.2
+    },
+    {
+     "id": 4430027,
+     "name": "Sam LaPorta",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 76.6
+    },
+    {
+     "id": 3916433,
+     "name": "Jakobi Meyers",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 47.4
+    },
+    {
+     "id": 4366031,
+     "name": "Tank Dell",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "HOU",
+     "injury": "INJURY_RESERVE",
+     "pts": 0
+    },
+    {
+     "id": 2473037,
+     "name": "Jason Myers",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "SEA",
+     "injury": null,
+     "pts": 52.0
+    },
+    {
+     "id": -16034,
+     "name": "Texans D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 31.0
+    },
+    {
+     "id": 4689114,
+     "name": "Jaxson Dart",
+     "pos": "QB",
+     "slot": "IR",
+     "nfl": "NYG",
+     "injury": "INJURY_RESERVE",
+     "pts": 27.4
+    },
+    {
+     "id": 4241474,
+     "name": "Brian Robinson Jr.",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "ATL",
+     "injury": null,
+     "pts": 50.1
+    },
+    {
+     "id": 3116389,
+     "name": "Samaje Perine",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 30.1
+    },
+    {
+     "id": 4432773,
+     "name": "Brian Thomas Jr.",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 25.5
+    }
+   ]
+  },
+  {
+   "espnId": 8,
+   "players": [
+    {
+     "id": 4262921,
+     "name": "Justin Jefferson",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "MIN",
+     "injury": null,
+     "pts": 63.7
+    },
+    {
+     "id": 4426515,
+     "name": "Puka Nacua",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 77.8
+    },
+    {
+     "id": 4426502,
+     "name": "Drake London",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "ATL",
+     "injury": null,
+     "pts": 76.2
+    },
+    {
+     "id": 3916387,
+     "name": "Lamar Jackson",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "BAL",
+     "injury": "QUESTIONABLE",
+     "pts": 79.08
+    },
+    {
+     "id": 4882093,
+     "name": "Bhayshul Tuten",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 63.7
+    },
+    {
+     "id": 4035538,
+     "name": "David Montgomery",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": "DOUBTFUL",
+     "pts": 45.5
+    },
+    {
+     "id": 4373678,
+     "name": "Khalil Shakir",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "BUF",
+     "injury": null,
+     "pts": 41.6
+    },
+    {
+     "id": 4696981,
+     "name": "Cam Skattebo",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 51.3
+    },
+    {
+     "id": 4696044,
+     "name": "Kaelon Black",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 15.1
+    },
+    {
+     "id": 4242355,
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "DAL",
+     "injury": null,
+     "pts": 41.2
+    },
+    {
+     "id": 4702555,
+     "name": "Jonah Coleman",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "DEN",
+     "injury": "INJURY_RESERVE",
+     "pts": 14.8
+    },
+    {
+     "id": 4685247,
+     "name": "Braelon Allen",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NYJ",
+     "injury": null,
+     "pts": 44.5
+    },
+    {
+     "id": 3929645,
+     "name": "Juwan Johnson",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 65.8
+    },
+    {
+     "id": -16016,
+     "name": "Vikings D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "MIN",
+     "injury": null,
+     "pts": 63.0
+    },
+    {
+     "id": 4596334,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "LAC",
+     "injury": null,
+     "pts": 36.7
+    },
+    {
+     "id": 12483,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 88.98
+    },
+    {
+     "id": 4571557,
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "IND",
+     "injury": null,
+     "pts": 75.0
+    }
+   ]
+  },
+  {
+   "espnId": 9,
+   "players": [
+    {
+     "id": 4374302,
+     "name": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 104.2
+    },
+    {
+     "id": 4567048,
+     "name": "Kenneth Walker III",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "KC",
+     "injury": null,
+     "pts": 110.1
+    },
+    {
+     "id": 4595348,
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 73.9
+    },
+    {
+     "id": 4427366,
+     "name": "Breece Hall",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NYJ",
+     "injury": "QUESTIONABLE",
+     "pts": 42.5
+    },
+    {
+     "id": 4685472,
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CAR",
+     "injury": null,
+     "pts": 74.5
+    },
+    {
+     "id": 4431299,
+     "name": "Rome Odunze",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "CHI",
+     "injury": null,
+     "pts": 42.3
+    },
+    {
+     "id": 16737,
+     "name": "Mike Evans",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 76.6
+    },
+    {
+     "id": 3915511,
+     "name": "Joe Burrow",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "CIN",
+     "injury": null,
+     "pts": 101.24
+    },
+    {
+     "id": 4678008,
+     "name": "Jonathon Brooks",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "CAR",
+     "injury": "INJURY_RESERVE",
+     "pts": 9.3
+    },
+    {
+     "id": 2976212,
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "WSH",
+     "injury": "QUESTIONABLE",
+     "pts": 53.0
+    },
+    {
+     "id": 4575131,
+     "name": "Jacory Croskey-Merritt",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "WSH",
+     "injury": null,
+     "pts": 44.9
+    },
+    {
+     "id": 3054850,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 37.7
+    },
+    {
+     "id": 3116365,
+     "name": "Mark Andrews",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "BAL",
+     "injury": null,
+     "pts": 43.7
+    },
+    {
+     "id": 4362081,
+     "name": "Cameron Dicker",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "LAC",
+     "injury": null,
+     "pts": 30.0
+    },
+    {
+     "id": 4711533,
+     "name": "Ollie Gordon II",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "MIA",
+     "injury": null,
+     "pts": 48.0
+    },
+    {
+     "id": 4635008,
+     "name": "Keon Coleman",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "BUF",
+     "injury": null,
+     "pts": 49.4
+    },
+    {
+     "id": -16007,
+     "name": "Broncos D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 35.0
+    }
+   ]
+  },
+  {
+   "espnId": 10,
+   "players": [
+    {
+     "id": 4430807,
+     "name": "Bijan Robinson",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "ATL",
+     "injury": null,
+     "pts": 121.2
+    },
+    {
+     "id": 4569618,
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "NYJ",
+     "injury": null,
+     "pts": 86.4
+    },
+    {
+     "id": 3918298,
+     "name": "Josh Allen",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "BUF",
+     "injury": null,
+     "pts": 142.96
+    },
+    {
+     "id": 4596448,
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "slot": "RB",
+     "nfl": "TB",
+     "injury": null,
+     "pts": 78.7
+    },
+    {
+     "id": 16800,
+     "name": "Davante Adams",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 95.1
+    },
+    {
+     "id": 3128429,
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "slot": "RB/WR/TE",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 27.4
+    },
+    {
+     "id": 4241985,
+     "name": "J.K. Dobbins",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 36.1
+    },
+    {
+     "id": 3121023,
+     "name": "Dallas Goedert",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "PHI",
+     "injury": null,
+     "pts": 34.9
+    },
+    {
+     "id": 15847,
+     "name": "Travis Kelce",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "KC",
+     "injury": null,
+     "pts": 52.6
+    },
+    {
+     "id": 4361529,
+     "name": "Isiah Pacheco",
+     "pos": "RB",
+     "slot": "IR",
+     "nfl": "DET",
+     "injury": "INJURY_RESERVE",
+     "pts": 0
+    },
+    {
+     "id": 4426338,
+     "name": "Bo Nix",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "DEN",
+     "injury": null,
+     "pts": 65.18
+    },
+    {
+     "id": 4034949,
+     "name": "Eddy Pineiro",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "SF",
+     "injury": null,
+     "pts": 34.0
+    },
+    {
+     "id": 4695883,
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "CAR",
+     "injury": "QUESTIONABLE",
+     "pts": 52.2
+    },
+    {
+     "id": -16030,
+     "name": "Jaguars D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 36.0
+    },
+    {
+     "id": 2991662,
+     "name": "Mack Hollins",
+     "pos": "WR",
+     "slot": "IR",
+     "nfl": "NE",
+     "injury": "INJURY_RESERVE",
+     "pts": 35.9
+    },
+    {
+     "id": 4569603,
+     "name": "Malik Washington",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "MIA",
+     "injury": null,
+     "pts": 50.2
+    },
+    {
+     "id": 4036133,
+     "name": "T.J. Hockenson",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "MIN",
+     "injury": "QUESTIONABLE",
+     "pts": 49.2
+    },
+    {
+     "id": 4429023,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "slot": "RB/WR/TE",
+     "nfl": "GB",
+     "injury": null,
+     "pts": 42.7
+    }
+   ]
+  }
+ ],
+ "transactions": [
+  {
+   "id": "6cf4b657-7240-46d4-9ea2-55bffbe8962d",
+   "date": 1791729787047,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4429023,
+     "action": "add",
+     "team": 10,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "nfl": "GB"
+    }
+   ]
+  },
+  {
+   "id": "c7ede25b-6930-4108-926b-873b9b594d4f",
+   "date": 1791544948294,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3116385,
+     "action": "drop",
+     "team": 4,
+     "name": "Joe Mixon",
+     "pos": "RB",
+     "nfl": "FA",
+     "since": null
+    },
+    {
+     "player": 4361432,
+     "action": "add",
+     "team": 4,
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "nfl": "NE"
+    }
+   ]
+  },
+  {
+   "id": "22533725-2a8d-4a33-a4be-16f28ab9169c",
+   "date": 1791482761196,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 2578570,
+     "action": "add",
+     "team": 3,
+     "name": "Jacoby Brissett",
+     "pos": "QB",
+     "nfl": "ARI"
+    },
+    {
+     "player": 4429835,
+     "action": "drop",
+     "team": 3,
+     "name": "George Holani",
+     "pos": "RB",
+     "nfl": "SEA",
+     "since": 5.1
+    }
+   ]
+  },
+  {
+   "id": "30a683cf-62f1-4f4c-9ef5-e42c28b6d609",
+   "date": 1791398153034,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4571557,
+     "action": "add",
+     "team": 8,
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "nfl": "IND"
+    },
+    {
+     "player": 3055899,
+     "action": "drop",
+     "team": 8,
+     "name": "Harrison Butker",
+     "pos": "K",
+     "nfl": "KC",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c9cb3a93-040e-4737-973e-ac48499a05ce",
+   "date": 1791398035102,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 12483,
+     "action": "add",
+     "team": 8,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR"
+    },
+    {
+     "player": 4697815,
+     "action": "drop",
+     "team": 8,
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WSH",
+     "since": 3.0
+    }
+   ]
+  },
+  {
+   "id": "f37536e0-205a-410b-bd15-85d94bc77203",
+   "date": 1791380899801,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16002,
+     "action": "drop",
+     "team": 9,
+     "name": "Bills D/ST",
+     "pos": "D/ST",
+     "nfl": "BUF",
+     "since": -3.0
+    },
+    {
+     "player": -16007,
+     "action": "add",
+     "team": 9,
+     "name": "Broncos D/ST",
+     "pos": "D/ST",
+     "nfl": "DEN"
+    }
+   ]
+  },
+  {
+   "id": "0a26560a-6626-4e6c-b852-4c0466cfd4fe",
+   "date": 1791377091366,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4595342,
+     "action": "drop",
+     "team": 2,
+     "name": "Oronde Gadsden",
+     "pos": "TE",
+     "nfl": "LAC",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "02e8687f-c707-4cd4-9631-8ab13241b585",
+   "date": 1791374781316,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 15818,
+     "action": "drop",
+     "team": 6,
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "nfl": "IND",
+     "since": 9.5
+    },
+    {
+     "player": 4431545,
+     "action": "add",
+     "team": 6,
+     "name": "Will Shipley",
+     "pos": "RB",
+     "nfl": "PHI"
+    }
+   ]
+  },
+  {
+   "id": "089e06a1-6b9b-4959-b327-832bc8b18193",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16004,
+     "action": "add",
+     "team": 6,
+     "name": "Bengals D/ST",
+     "pos": "D/ST",
+     "nfl": "CIN"
+    },
+    {
+     "player": -16014,
+     "action": "drop",
+     "team": 6,
+     "name": "Rams D/ST",
+     "pos": "D/ST",
+     "nfl": "LAR",
+     "since": -1.0
+    }
+   ]
+  },
+  {
+   "id": "6bfae598-95fe-4fd1-8f48-179e1bf894bc",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16005,
+     "action": "add",
+     "team": 1,
+     "name": "Browns D/ST",
+     "pos": "D/ST",
+     "nfl": "CLE"
+    },
+    {
+     "player": -16012,
+     "action": "drop",
+     "team": 1,
+     "name": "Chiefs D/ST",
+     "pos": "D/ST",
+     "nfl": "KC",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "22215817-4d02-4d90-a4a7-7037f1f8f977",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4682745,
+     "action": "drop",
+     "team": 6,
+     "name": "Jaylen Wright",
+     "pos": "RB",
+     "nfl": "MIA",
+     "since": 1.1
+    },
+    {
+     "player": 4373626,
+     "action": "add",
+     "team": 6,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI"
+    }
+   ]
+  },
+  {
+   "id": "73cab9bc-99bf-4845-8a70-458bb51659e0",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4036133,
+     "action": "add",
+     "team": 10,
+     "name": "T.J. Hockenson",
+     "pos": "TE",
+     "nfl": "MIN"
+    },
+    {
+     "player": 5081432,
+     "action": "drop",
+     "team": 10,
+     "name": "Antonio Williams",
+     "pos": "WR",
+     "nfl": "WSH",
+     "since": 6.1
+    }
+   ]
+  },
+  {
+   "id": "10e66fd7-2534-4ae6-bee4-c7428d6cc698",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4635008,
+     "action": "add",
+     "team": 9,
+     "name": "Keon Coleman",
+     "pos": "WR",
+     "nfl": "BUF"
+    },
+    {
+     "player": 2973405,
+     "action": "drop",
+     "team": 9,
+     "name": "Kalif Raymond",
+     "pos": "WR",
+     "nfl": "CHI",
+     "since": 3.4
+    }
+   ]
+  },
+  {
+   "id": "cb68628c-ffc9-4f91-aebe-55550efce5e1",
+   "date": 1791357963189,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 2576925,
+     "action": "drop",
+     "team": 1,
+     "name": "Darren Waller",
+     "pos": "TE",
+     "nfl": "CAR",
+     "since": 0.0
+    },
+    {
+     "player": 4431452,
+     "action": "add",
+     "team": 1,
+     "name": "Drake Maye",
+     "pos": "QB",
+     "nfl": "NE"
+    }
+   ]
+  },
+  {
+   "id": "0e5d3bfe-05e5-4e2e-860b-a4e242434ae2",
+   "date": 1791212270878,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4360689,
+     "action": "drop",
+     "team": 6,
+     "name": "Tyler Shough",
+     "pos": "QB",
+     "nfl": "NO",
+     "since": 15.78
+    },
+    {
+     "player": 3116406,
+     "action": "add",
+     "team": 6,
+     "name": "Tyreek Hill",
+     "pos": "WR",
+     "nfl": "FA"
+    }
+   ]
+  },
+  {
+   "id": "1f296c9f-e79f-4dc2-9a36-677916606a81",
+   "date": 1791133050097,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4869645,
+     "action": "drop",
+     "team": 4,
+     "name": "Caleb Douglas",
+     "pos": "WR",
+     "nfl": "MIA",
+     "since": 0.0
+    },
+    {
+     "player": 3116385,
+     "action": "add",
+     "team": 4,
+     "name": "Joe Mixon",
+     "pos": "RB",
+     "nfl": "FA"
+    }
+   ]
+  },
+  {
+   "id": "6458d700-2483-48af-a665-59376c146c61",
+   "date": 1791131372675,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4569603,
+     "action": "add",
+     "team": 10,
+     "name": "Malik Washington",
+     "pos": "WR",
+     "nfl": "MIA"
+    }
+   ]
+  },
+  {
+   "id": "bd3c0650-6bd3-4a24-9b7c-d33e2777a94e",
+   "date": 1791131139139,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4371733,
+     "action": "drop",
+     "team": 10,
+     "name": "Kenny Gainwell",
+     "pos": "RB",
+     "nfl": "TB",
+     "since": 16.5
+    }
+   ]
+  },
+  {
+   "id": "6e3fe33c-1a18-478a-98f8-f16a6baaae42",
+   "date": 1791130931928,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 2991662,
+     "action": "add",
+     "team": 10,
+     "name": "Mack Hollins",
+     "pos": "WR",
+     "nfl": "NE"
+    }
+   ]
+  },
+  {
+   "id": "60b5deff-adb5-4e68-bfe3-7b1c00e9389f",
+   "date": 1791130380706,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4040761,
+     "action": "drop",
+     "team": 10,
+     "name": "Devin Singletary",
+     "pos": "RB",
+     "nfl": "NYG",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "a0af48a1-a765-4b22-a5d0-bc8d2d38688c",
+   "date": 1791128152258,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 2576925,
+     "action": "add",
+     "team": 1,
+     "name": "Darren Waller",
+     "pos": "TE",
+     "nfl": "CAR"
+    },
+    {
+     "player": 4429023,
+     "action": "drop",
+     "team": 1,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "nfl": "GB",
+     "since": 26.6
+    }
+   ]
+  },
+  {
+   "id": "94d9408f-7586-4f29-8948-b14becd880a4",
+   "date": 1791059270217,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4429835,
+     "action": "add",
+     "team": 3,
+     "name": "George Holani",
+     "pos": "RB",
+     "nfl": "SEA"
+    }
+   ]
+  },
+  {
+   "id": "24ba8e5d-105d-4bf3-80a2-6167bc7754c5",
+   "date": 1791057609199,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4887558,
+     "action": "add",
+     "team": 6,
+     "name": "Emanuel Wilson",
+     "pos": "RB",
+     "nfl": "SEA"
+    },
+    {
+     "player": 3116406,
+     "action": "drop",
+     "team": 6,
+     "name": "Tyreek Hill",
+     "pos": "WR",
+     "nfl": "FA",
+     "since": null
+    }
+   ]
+  },
+  {
+   "id": "5dd7b106-fd4f-4b26-b955-1356453d5a4c",
+   "date": 1791031962011,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4596334,
+     "action": "add",
+     "team": 8,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC"
+    },
+    {
+     "player": 4373626,
+     "action": "drop",
+     "team": 8,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI",
+     "since": 16.5
+    }
+   ]
+  },
+  {
+   "id": "b5c546d1-bd1e-45c5-9616-de8bb6002bf9",
+   "date": 1790941025228,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16030,
+     "action": "add",
+     "team": 10,
+     "name": "Jaguars D/ST",
+     "pos": "D/ST",
+     "nfl": "JAX"
+    },
+    {
+     "player": -16017,
+     "action": "drop",
+     "team": 10,
+     "name": "Patriots D/ST",
+     "pos": "D/ST",
+     "nfl": "NE",
+     "since": 11.0
+    }
+   ]
+  },
+  {
+   "id": "87168458-0ee8-4264-90b2-47c34070bfac",
+   "date": 1790895326812,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4599739,
+     "action": "add",
+     "team": 4,
+     "name": "Kendre Miller",
+     "pos": "RB",
+     "nfl": "NO"
+    }
+   ]
+  },
+  {
+   "id": "682a6fc2-8e89-47ac-8ba3-976543b2ee59",
+   "date": 1790882791593,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16002,
+     "action": "add",
+     "team": 9,
+     "name": "Bills D/ST",
+     "pos": "D/ST",
+     "nfl": "BUF"
+    },
+    {
+     "player": -16021,
+     "action": "drop",
+     "team": 9,
+     "name": "Eagles D/ST",
+     "pos": "D/ST",
+     "nfl": "PHI",
+     "since": 3.0
+    }
+   ]
+  },
+  {
+   "id": "c914ce77-47f5-4746-82ac-6e945e0166e7",
+   "date": 1790817948133,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4361432,
+     "action": "drop",
+     "team": 9,
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "nfl": "NE",
+     "since": 26.4
+    },
+    {
+     "player": 2973405,
+     "action": "add",
+     "team": 9,
+     "name": "Kalif Raymond",
+     "pos": "WR",
+     "nfl": "CHI"
+    }
+   ]
+  },
+  {
+   "id": "943f2be7-9dc3-4ea9-8280-e429f8d67e02",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3116406,
+     "action": "add",
+     "team": 6,
+     "name": "Tyreek Hill",
+     "pos": "WR",
+     "nfl": "FA"
+    },
+    {
+     "player": 3117256,
+     "action": "drop",
+     "team": 6,
+     "name": "Dalton Schultz",
+     "pos": "TE",
+     "nfl": "HOU",
+     "since": 8.9
+    }
+   ]
+  },
+  {
+   "id": "6ff6d8fa-0b76-430f-885a-c9fe154a29ac",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16016,
+     "action": "add",
+     "team": 8,
+     "name": "Vikings D/ST",
+     "pos": "D/ST",
+     "nfl": "MIN"
+    },
+    {
+     "player": -16004,
+     "action": "drop",
+     "team": 8,
+     "name": "Bengals D/ST",
+     "pos": "D/ST",
+     "nfl": "CIN",
+     "since": 13.0
+    }
+   ]
+  },
+  {
+   "id": "70184052-ffa8-4f3b-a9e1-a1ff2b2370c3",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3116165,
+     "action": "drop",
+     "team": 6,
+     "name": "Chris Godwin Jr.",
+     "pos": "WR",
+     "nfl": "TB",
+     "since": 16.1
+    },
+    {
+     "player": 15818,
+     "action": "add",
+     "team": 6,
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "nfl": "IND"
+    }
+   ]
+  },
+  {
+   "id": "4ae60d5c-d85e-4a33-9d91-24c0570c790a",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3929645,
+     "action": "add",
+     "team": 8,
+     "name": "Juwan Johnson",
+     "pos": "TE",
+     "nfl": "NO"
+    },
+    {
+     "player": 4570037,
+     "action": "drop",
+     "team": 8,
+     "name": "Terrance Ferguson",
+     "pos": "TE",
+     "nfl": "LAR",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "bbfbaf02-99d2-48f0-b53a-fe1eab16236a",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4429025,
+     "action": "drop",
+     "team": 6,
+     "name": "Quentin Johnston",
+     "pos": "WR",
+     "nfl": "LAC",
+     "since": 5.0
+    },
+    {
+     "player": 4682745,
+     "action": "add",
+     "team": 6,
+     "name": "Jaylen Wright",
+     "pos": "RB",
+     "nfl": "MIA"
+    }
+   ]
+  },
+  {
+   "id": "0178185a-4a3e-4aa8-825b-aa544ce76c5c",
+   "date": 1790751688713,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4887558,
+     "action": "drop",
+     "team": 9,
+     "name": "Emanuel Wilson",
+     "pos": "RB",
+     "nfl": "SEA",
+     "since": 40.2
+    },
+    {
+     "player": 4711533,
+     "action": "add",
+     "team": 9,
+     "name": "Ollie Gordon II",
+     "pos": "RB",
+     "nfl": "MIA"
+    }
+   ]
+  },
+  {
+   "id": "9b462877-3347-424d-8808-8576ec3eec12",
+   "date": 1790751688713,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4685247,
+     "action": "add",
+     "team": 8,
+     "name": "Braelon Allen",
+     "pos": "RB",
+     "nfl": "NYJ"
+    }
+   ]
+  },
+  {
+   "id": "9ada53cc-dcf6-41f0-9b2c-7d6aa445bfc6",
+   "date": 1790683244547,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4431452,
+     "action": "drop",
+     "team": 8,
+     "name": "Drake Maye",
+     "pos": "QB",
+     "nfl": "NE",
+     "since": 65.62
+    }
+   ]
+  },
+  {
+   "id": "fcbc35eb-a9d9-4843-95c0-ca37e081d450",
+   "date": 1790520745273,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4570037,
+     "action": "add",
+     "team": 8,
+     "name": "Terrance Ferguson",
+     "pos": "TE",
+     "nfl": "LAR"
+    }
+   ]
+  },
+  {
+   "id": "de830f8e-e029-4971-a697-420b38dda68f",
+   "date": 1790520508671,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4429013,
+     "action": "drop",
+     "team": 8,
+     "name": "Tank Bigsby",
+     "pos": "RB",
+     "nfl": "PHI",
+     "since": 5.0
+    },
+    {
+     "player": 4373626,
+     "action": "add",
+     "team": 8,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI"
+    }
+   ]
+  },
+  {
+   "id": "1972afed-5eaf-4f0f-bf90-74f4c502ec95",
+   "date": 1790340612149,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4569587,
+     "action": "add",
+     "team": 2,
+     "name": "Wan'Dale Robinson",
+     "pos": "WR",
+     "nfl": "TEN"
+    }
+   ]
+  },
+  {
+   "id": "1ed2587f-8c4b-49b3-a726-325685ce0e6c",
+   "date": 1790319852456,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4360078,
+     "action": "add",
+     "team": 2,
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "nfl": "IND"
+    }
+   ]
+  },
+  {
+   "id": "453bce6e-b899-4ecf-b09f-e122f06b7619",
+   "date": 1790255631892,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16012,
+     "action": "add",
+     "team": 1,
+     "name": "Chiefs D/ST",
+     "pos": "D/ST",
+     "nfl": "KC"
+    },
+    {
+     "player": -16008,
+     "action": "drop",
+     "team": 1,
+     "name": "Lions D/ST",
+     "pos": "D/ST",
+     "nfl": "DET",
+     "since": 13.0
+    }
+   ]
+  },
+  {
+   "id": "5e2677f0-d4d5-402f-bb0b-b199e32b8f10",
+   "date": 1790205055764,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4887558,
+     "action": "add",
+     "team": 9,
+     "name": "Emanuel Wilson",
+     "pos": "RB",
+     "nfl": "SEA"
+    }
+   ]
+  },
+  {
+   "id": "f32df68a-0b53-4ab8-a18e-3fdb03f511b9",
+   "date": 1790196046827,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3046779,
+     "action": "add",
+     "team": 5,
+     "name": "Jared Goff",
+     "pos": "QB",
+     "nfl": "DET"
+    },
+    {
+     "player": 4360078,
+     "action": "drop",
+     "team": 5,
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "nfl": "IND",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "665ba2f2-6569-42b6-90ec-15fd4f139561",
+   "date": 1790182671854,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4432773,
+     "action": "add",
+     "team": 7,
+     "name": "Brian Thomas Jr.",
+     "pos": "WR",
+     "nfl": "JAX"
+    }
+   ]
+  },
+  {
+   "id": "4552b388-15ef-4bdc-9c30-efa3d2f8e2e4",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4362619,
+     "action": "drop",
+     "team": 6,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAX",
+     "since": 21.3
+    },
+    {
+     "player": 4360689,
+     "action": "add",
+     "team": 6,
+     "name": "Tyler Shough",
+     "pos": "QB",
+     "nfl": "NO"
+    }
+   ]
+  },
+  {
+   "id": "a50caefa-3bf7-4703-a709-90830d356fac",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4569587,
+     "action": "drop",
+     "team": 2,
+     "name": "Wan'Dale Robinson",
+     "pos": "WR",
+     "nfl": "TEN",
+     "since": 41.0
+    },
+    {
+     "player": 4595342,
+     "action": "add",
+     "team": 2,
+     "name": "Oronde Gadsden",
+     "pos": "TE",
+     "nfl": "LAC"
+    }
+   ]
+  },
+  {
+   "id": "93b9a281-68fd-4e42-abae-343d0bb1af51",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16027,
+     "action": "drop",
+     "team": 8,
+     "name": "Buccaneers D/ST",
+     "pos": "D/ST",
+     "nfl": "TB",
+     "since": 20.0
+    },
+    {
+     "player": -16004,
+     "action": "add",
+     "team": 8,
+     "name": "Bengals D/ST",
+     "pos": "D/ST",
+     "nfl": "CIN"
+    }
+   ]
+  },
+  {
+   "id": "97998a58-c22c-445e-a901-3c212ee6ecf2",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3117256,
+     "action": "add",
+     "team": 6,
+     "name": "Dalton Schultz",
+     "pos": "TE",
+     "nfl": "HOU"
+    },
+    {
+     "player": 3045523,
+     "action": "drop",
+     "team": 6,
+     "name": "Kendrick Bourne",
+     "pos": "WR",
+     "nfl": "ARI",
+     "since": 16.2
+    }
+   ]
+  },
+  {
+   "id": "f7390dc7-5b9b-4fc8-955a-d9111181c73c",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4362249,
+     "action": "drop",
+     "team": 2,
+     "name": "Jayden Reed",
+     "pos": "WR",
+     "nfl": "GB",
+     "since": 0.0
+    },
+    {
+     "player": 4685720,
+     "action": "add",
+     "team": 2,
+     "name": "Bryce Young",
+     "pos": "QB",
+     "nfl": "CAR"
+    }
+   ]
+  },
+  {
+   "id": "19e4f7f3-07a0-4c71-b084-c5ab0d0d7247",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3139477,
+     "action": "add",
+     "team": 1,
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "nfl": "KC"
+    },
+    {
+     "player": 4038941,
+     "action": "drop",
+     "team": 1,
+     "name": "Justin Herbert",
+     "pos": "QB",
+     "nfl": "LAC",
+     "since": 32.54
+    }
+   ]
+  },
+  {
+   "id": "5ef46e29-4b6b-48b8-85c6-17602ed2e271",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4686612,
+     "action": "drop",
+     "team": 4,
+     "name": "Tre' Harris",
+     "pos": "WR",
+     "nfl": "LAC",
+     "since": 26.2
+    },
+    {
+     "player": 4597500,
+     "action": "add",
+     "team": 4,
+     "name": "Adonai Mitchell",
+     "pos": "WR",
+     "nfl": "NYJ"
+    }
+   ]
+  },
+  {
+   "id": "91b63684-f9b7-4fa0-95a6-df3a643abfb9",
+   "date": 1790147070439,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4373626,
+     "action": "drop",
+     "team": 8,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI",
+     "since": 21.4
+    },
+    {
+     "player": 4429013,
+     "action": "add",
+     "team": 8,
+     "name": "Tank Bigsby",
+     "pos": "RB",
+     "nfl": "PHI"
+    }
+   ]
+  },
+  {
+   "id": "2c6da95c-bb85-4648-af41-b00f3097d849",
+   "date": 1789696611323,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4697745,
+     "action": "add",
+     "team": 3,
+     "name": "Tyler Loop",
+     "pos": "K",
+     "nfl": "BAL"
+    },
+    {
+     "player": 4574716,
+     "action": "drop",
+     "team": 3,
+     "name": "Harrison Mevis",
+     "pos": "K",
+     "nfl": "FA",
+     "since": null
+    }
+   ]
+  },
+  {
+   "id": "79538cef-bb0f-472c-81bf-a759f7db50cb",
+   "date": 1789696262829,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4361741,
+     "action": "add",
+     "team": 3,
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "nfl": "SF"
+    },
+    {
+     "player": 12483,
+     "action": "drop",
+     "team": 3,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR",
+     "since": 84.88
+    }
+   ]
+  },
+  {
+   "id": "a48d9e1a-1695-4674-ac42-051cd770977a",
+   "date": 1789669953401,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4428557,
+     "action": "drop",
+     "team": 10,
+     "name": "Tyjae Spears",
+     "pos": "RB",
+     "nfl": "TEN",
+     "since": 20.9
+    },
+    {
+     "player": 4040761,
+     "action": "add",
+     "team": 10,
+     "name": "Devin Singletary",
+     "pos": "RB",
+     "nfl": "NYG"
+    }
+   ]
+  },
+  {
+   "id": "5b7b2f8f-ebf6-46a2-bb14-33f4809afc4a",
+   "date": 1789669879812,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 5081432,
+     "action": "add",
+     "team": 10,
+     "name": "Antonio Williams",
+     "pos": "WR",
+     "nfl": "WSH"
+    },
+    {
+     "player": 4432773,
+     "action": "drop",
+     "team": 10,
+     "name": "Brian Thomas Jr.",
+     "pos": "WR",
+     "nfl": "JAX",
+     "since": 18.5
+    }
+   ]
+  },
+  {
+   "id": "7346e721-be57-409b-8c07-7bf32d12317a",
+   "date": 1789597662574,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16027,
+     "action": "add",
+     "team": 8,
+     "name": "Buccaneers D/ST",
+     "pos": "D/ST",
+     "nfl": "TB"
+    },
+    {
+     "player": -16007,
+     "action": "drop",
+     "team": 8,
+     "name": "Broncos D/ST",
+     "pos": "D/ST",
+     "nfl": "DEN",
+     "since": 33.0
+    }
+   ]
+  },
+  {
+   "id": "3057f20e-ad11-4dc3-8a67-392e6bf9ccc1",
+   "date": 1789589148479,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4428850,
+     "action": "add",
+     "team": 4,
+     "name": "Dontayvion Wicks",
+     "pos": "WR",
+     "nfl": "PHI"
+    }
+   ]
+  },
+  {
+   "id": "fbd831be-e5e0-4c33-af97-36dc8202740c",
+   "date": 1789588831640,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4686612,
+     "action": "add",
+     "team": 4,
+     "name": "Tre' Harris",
+     "pos": "WR",
+     "nfl": "LAC"
+    }
+   ]
+  },
+  {
+   "id": "c77b85ea-ae33-4466-8d8f-0acf0b2870d6",
+   "date": 1789585890160,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3045523,
+     "action": "add",
+     "team": 6,
+     "name": "Kendrick Bourne",
+     "pos": "WR",
+     "nfl": "ARI"
+    }
+   ]
+  },
+  {
+   "id": "107fc64e-389f-45a0-b552-fd52cfc1a626",
+   "date": 1789585791229,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 3045147,
+     "action": "drop",
+     "team": 6,
+     "name": "James Conner",
+     "pos": "RB",
+     "nfl": "ARI",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "f70671ac-da01-429f-82ec-bbeab69c4b42",
+   "date": 1789556847657,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16025,
+     "action": "add",
+     "team": 4,
+     "name": "49ers D/ST",
+     "pos": "D/ST",
+     "nfl": "SF"
+    },
+    {
+     "player": -16024,
+     "action": "drop",
+     "team": 4,
+     "name": "Chargers D/ST",
+     "pos": "D/ST",
+     "nfl": "LAC",
+     "since": 28.0
+    }
+   ]
+  },
+  {
+   "id": "30c6c0bc-5dd8-465e-883a-a0e25c8951a2",
+   "date": 1789542717542,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4689936,
+     "action": "drop",
+     "team": 6,
+     "name": "Jake Bates",
+     "pos": "K",
+     "nfl": "DET",
+     "since": 42.0
+    },
+    {
+     "player": 4360234,
+     "action": "add",
+     "team": 6,
+     "name": "Evan McPherson",
+     "pos": "K",
+     "nfl": "CIN"
+    }
+   ]
+  },
+  {
+   "id": "e8c65060-f8e9-4f1f-a223-03846fee0337",
+   "date": 1789542717542,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4569559,
+     "action": "add",
+     "team": 6,
+     "name": "Devaughn Vele",
+     "pos": "WR",
+     "nfl": "NO"
+    }
+   ]
+  },
+  {
+   "id": "729648ad-3ee8-4a40-9401-d3280f8038bf",
+   "date": 1789542717542,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4385690,
+     "action": "add",
+     "team": 1,
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "nfl": "BUF"
+    },
+    {
+     "player": 4686658,
+     "action": "drop",
+     "team": 1,
+     "name": "Mike Washington Jr.",
+     "pos": "RB",
+     "nfl": "LV",
+     "since": 16.8
+    }
+   ]
+  },
+  {
+   "id": "79a22b6c-f71f-4f0d-8c65-bb06fdbad799",
+   "date": 1789306401726,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3116389,
+     "action": "add",
+     "team": 7,
+     "name": "Samaje Perine",
+     "pos": "RB",
+     "nfl": "CIN"
+    }
+   ]
+  },
+  {
+   "id": "ba3423cc-0cc5-422a-b0f1-69e8fe2a7e02",
+   "date": 1788811077248,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4702555,
+     "action": "add",
+     "team": 8,
+     "name": "Jonah Coleman",
+     "pos": "RB",
+     "nfl": "DEN"
+    },
+    {
+     "player": 4819231,
+     "action": "drop",
+     "team": 8,
+     "name": "Kaleb Johnson",
+     "pos": "RB",
+     "nfl": "GB",
+     "since": 10.6
+    }
+   ]
+  },
+  {
+   "id": "6763e581-4e7b-4160-8c70-80351b862d6d",
+   "date": 1788658582313,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4695883,
+     "action": "add",
+     "team": 10,
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "nfl": "CAR"
+    }
+   ]
+  },
+  {
+   "id": "99616637-0059-4c0b-842b-441d8134fa26",
+   "date": 1788573061934,
+   "types": [
+    "trade"
+   ],
+   "moves": [
+    {
+     "player": 4567104,
+     "action": "trade",
+     "from": 6,
+     "to": 1,
+     "name": "Will Reichard",
+     "pos": "K",
+     "nfl": "MIN"
+    },
+    {
+     "player": 4689936,
+     "action": "trade",
+     "from": 1,
+     "to": 6,
+     "name": "Jake Bates",
+     "pos": "K",
+     "nfl": "DET"
+    }
+   ]
+  },
+  {
+   "id": "141ec85f-a6c6-4015-a8ee-72dadae26815",
+   "date": 1788539095168,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4362619,
+     "action": "add",
+     "team": 6,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAX"
+    }
+   ]
+  },
+  {
+   "id": "ab0205fb-6490-4768-afe2-f42f803d17b5",
+   "date": 1788538956306,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3045147,
+     "action": "add",
+     "team": 6,
+     "name": "James Conner",
+     "pos": "RB",
+     "nfl": "ARI"
+    },
+    {
+     "player": 4596334,
+     "action": "drop",
+     "team": 6,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC",
+     "since": 36.7
+    }
+   ]
+  },
+  {
+   "id": "71bc133b-a97f-44db-8218-cbd590b5ab63",
+   "date": 1788246622759,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4695883,
+     "action": "drop",
+     "team": 6,
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "nfl": "CAR",
+     "since": 52.2
+    },
+    {
+     "player": 4870653,
+     "action": "add",
+     "team": 6,
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "nfl": "CLE"
+    }
+   ]
+  },
+  {
+   "id": "6731387c-57e2-4051-af1c-249b37ad6fe6",
+   "date": 1788129735552,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4034949,
+     "action": "add",
+     "team": 10,
+     "name": "Eddy Pineiro",
+     "pos": "K",
+     "nfl": "SF"
+    },
+    {
+     "player": 4569923,
+     "action": "drop",
+     "team": 10,
+     "name": "Andy Borregales",
+     "pos": "K",
+     "nfl": "NE",
+     "since": 32.0
+    }
+   ]
+  },
+  {
+   "id": "d1190725-389c-4148-adcf-43d3fa86bfa2",
+   "date": 1788128890647,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4596334,
+     "action": "add",
+     "team": 6,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC"
+    }
+   ]
+  },
+  {
+   "id": "4e1983d7-4b89-43b6-8c95-713cb0e45286",
+   "date": 1788127635336,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4819231,
+     "action": "add",
+     "team": 8,
+     "name": "Kaleb Johnson",
+     "pos": "RB",
+     "nfl": "GB"
+    },
+    {
+     "player": 4870653,
+     "action": "drop",
+     "team": 8,
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "nfl": "CLE",
+     "since": 31.8
+    }
+   ]
+  },
+  {
+   "id": "cc0435eb-16eb-4e41-9c9f-37663fdae728",
+   "date": 1787922785580,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16024,
+     "action": "add",
+     "team": 4,
+     "name": "Chargers D/ST",
+     "pos": "D/ST",
+     "nfl": "LAC"
+    },
+    {
+     "player": -16019,
+     "action": "drop",
+     "team": 4,
+     "name": "Giants D/ST",
+     "pos": "D/ST",
+     "nfl": "NYG",
+     "since": 32.0
+    }
+   ]
+  },
+  {
+   "id": "a37a5574-9d0a-4b36-a85a-dcb6e97bb087",
+   "date": 1787838947814,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4429023,
+     "action": "add",
+     "team": 1,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "nfl": "GB"
+    },
+    {
+     "player": 4362619,
+     "action": "drop",
+     "team": 1,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAX",
+     "since": 24.9
+    }
+   ]
+  },
+  {
+   "id": "4a782b31-f5a6-4258-8a20-fa165ba82c4f",
+   "date": 1787743185567,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4870612,
+     "action": "drop",
+     "team": 4,
+     "name": "Zachariah Branch",
+     "pos": "WR",
+     "nfl": "ATL",
+     "since": 11.6
+    },
+    {
+     "player": 4428718,
+     "action": "add",
+     "team": 4,
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "nfl": "LV"
+    }
+   ]
+  },
+  {
+   "id": "2d436801-2a09-49a6-bda7-dd8161dd0b7c",
+   "date": 1787641432622,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4596334,
+     "action": "drop",
+     "team": 8,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC",
+     "since": 36.7
+    },
+    {
+     "player": 4697815,
+     "action": "add",
+     "team": 8,
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WSH"
+    }
+   ]
+  },
+  {
+   "id": "6f1c0294-1d47-44a4-9e30-c1032cfd8322",
+   "date": 1787617099582,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16017,
+     "action": "add",
+     "team": 10,
+     "name": "Patriots D/ST",
+     "pos": "D/ST",
+     "nfl": "NE"
+    },
+    {
+     "player": -16006,
+     "action": "drop",
+     "team": 10,
+     "name": "Cowboys D/ST",
+     "pos": "D/ST",
+     "nfl": "DAL",
+     "since": -1.0
+    }
+   ]
+  },
+  {
+   "id": "695e69e7-2b0a-46b6-bc8a-62de7970c81f",
+   "date": 1787555188119,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3886598,
+     "action": "drop",
+     "team": 10,
+     "name": "Jauan Jennings",
+     "pos": "WR",
+     "nfl": "MIN",
+     "since": 2.9
+    },
+    {
+     "player": 4426338,
+     "action": "add",
+     "team": 10,
+     "name": "Bo Nix",
+     "pos": "QB",
+     "nfl": "DEN"
+    }
+   ]
+  },
+  {
+   "id": "7c6953a0-3d9d-405a-b8b1-991dcc5569d1",
+   "date": 1787555188119,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4596334,
+     "action": "add",
+     "team": 8,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC"
+    },
+    {
+     "player": 4697815,
+     "action": "drop",
+     "team": 8,
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WSH",
+     "since": 33.1
+    }
+   ]
+  },
+  {
+   "id": "6c61eb11-94cc-45bd-8692-de964cd4bbbc",
+   "date": 1787555188119,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4686658,
+     "action": "add",
+     "team": 1,
+     "name": "Mike Washington Jr.",
+     "pos": "RB",
+     "nfl": "LV"
+    }
+   ]
+  },
+  {
+   "id": "ce9edc8b-8235-4540-8bcc-b018ee97f825",
+   "date": 1786578894318,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4432577,
+     "action": "drop",
+     "team": 1,
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "nfl": "HOU",
+     "since": 89.18
+    }
+   ]
+  },
+  {
+   "id": "68770c3b-86ea-4e6d-ae15-f5b9c97dd448",
+   "date": 1786578887668,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4432577,
+     "action": "add",
+     "team": 1,
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "nfl": "HOU"
     }
    ]
   }
