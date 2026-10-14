@@ -2,9 +2,24 @@
   "_help": "Named rivalries, shown as featured cards on the Rivalries page in this order. managers: two manager IDs from managers.json. name is optional; description is one or two sentences.",
   "rivalries": [
     {
-      "managers": ["kyle", "cody"],
-      "name": "Kyle Only Hate",
-      "description": "Cody named his 2026 team KYLE ONLY HATE. Kyle has not forgotten."
+      "managers": ["keith", "kyle"],
+      "description": "One title each, in back-to-back years: Keith in 2022, Kyle in 2023. Keith took the first ESPN meeting by 6.94 in week 5, so Kyle lost the tiebreaker by less than one decent kicker game."
+    },
+    {
+      "managers": ["reis", "brandon"],
+      "description": "In 2023 Brandon went 2-12 and still finished three spots ahead of Reis. Reis got revenge with a 43.64-point win in week 1, the biggest margin in the series, which is also the entire series."
+    },
+    {
+      "managers": ["tyler", "brad"],
+      "description": "Eight playoff trips between them, three runner-up finishes, zero titles. Tyler won the first meeting 186.28 to 127.90, so the bridesmaid pecking order is settled, for now."
+    },
+    {
+      "managers": ["josh", "noah"],
+      "description": "Josh's best finish is 5th, Noah's is 6th, and both have a last-place season on the resume. Josh won the first meeting 130.64 to 99.34, so for once OMM is ahead of somebody."
+    },
+    {
+      "managers": ["cody", "brett"],
+      "description": "In 2025 Cody went 10-4 and finished 5th while Brett went 7-7 and won the whole thing. Cody hung 180.28 on the commissioner in week 3, which doesn't get the banner back but is a start."
     }
   ]
 }

@@ -11,7 +11,7 @@
 :root{
   --bg:#F1F4EE; --surface:#FFFFFF; --text:#141C2B; --muted:#535E70; --line:#D5DCD1; --row:#EBF0E7;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#D50A0A; --gold-text:#B0080A; --gold-soft:#FBE1E1;
-  --btn:#D50A0A; --field:#FFFFFF; --up:#13773A; --bar-a:#013369; --shadow:0 12px 32px rgba(1,35,74,.18);
+  --btn:#D50A0A; --champ:#B8860B; --field:#FFFFFF; --up:#13773A; --bar-a:#013369; --shadow:0 12px 32px rgba(1,35,74,.18);
   color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -21,14 +21,14 @@
   :root:not([data-theme="light"]){
     --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
     --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-    --btn:#C8102E; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
+    --btn:#C8102E; --champ:#F2C230; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-  --btn:#C8102E; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
+  --btn:#C8102E; --champ:#F2C230; --field:#0A1628; --up:#5CD08F; --bar-a:#5B8BD9; --shadow:0 12px 32px rgba(0,0,0,.45);
   color-scheme:dark;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -606,6 +606,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
 .pairs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:14px 22px}
 .pairs-grid h3{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;margin:0 0 8px}
 .pairs{display:grid;gap:8px}
+.pairs.making{grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:8px 22px}
 .pair{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
 .pair:hover{border-color:var(--gold)}
 .pair .pf{display:flex}
@@ -1205,12 +1206,12 @@ function chart(s){
   g+=YEARS.map(y=>`<text x="${x(y)}" y="${H-8}" text-anchor="middle" font-size="12" fill="var(--muted)">${y}</text>`).join("");
   const path=pts.length>1?`<polyline points="${pts.map(p=>p[0]+","+p[1]).join(" ")}" fill="none" stroke="var(--text)" stroke-width="2" opacity=".55"/>`:"";
   const dots=pts.map(([px,py,r])=>{
-    const fill=r.place===1?"var(--gold)":r.po?"var(--turf)":"var(--surface)";
-    const stroke=r.place===1?"var(--gold)":"var(--text)";
+    const fill=r.place===1?"var(--champ)":r.po?"var(--gold)":"var(--surface)";
+    const stroke=r.place===1?"var(--champ)":r.po?"var(--gold)":"var(--text)";
     return `<circle cx="${px}" cy="${py}" r="${r.place===1?8:6}" fill="${fill}" stroke="${stroke}" stroke-width="2"><title>${r.year}: ${ord(r.place)}, ${r.w}-${r.l}</title></circle>`;
   }).join("");
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Final finish by season">${g}${path}${dots}</svg>
-    <div class="legend"><span><i style="background:var(--gold)"></i>Champion</span><span><i style="background:var(--turf);border:2px solid var(--text)"></i>Made playoffs</span><span><i style="background:var(--surface);border:2px solid var(--text)"></i>Missed playoffs</span></div></div>`;
+    <div class="legend"><span><i style="background:var(--champ);width:12px;height:12px;vertical-align:-2px"></i>Champion</span><span><i style="background:var(--gold)"></i>Made playoffs</span><span><i style="background:var(--surface);border:2px solid var(--text)"></i>Missed playoffs</span></div></div>`;
 }
 
 /* ---------- Manager profile ---------- */
@@ -1407,6 +1408,8 @@ function profile(id){
 const LEDGER={trophies:[],rivalries:[],money:{},bad:[]};
 const H2H_FROM=2026;   // first ESPN season: head-to-head, points and streak stats start here
 const RIVAL_MIN=3;     // meetings before a pair can show up as closest or most lopsided
+const CLOSE_PTS=10, CLOSE_SHARE=2/3;   // "Rivalries in the making": this share of meetings decided by under CLOSE_PTS
+const KNOCKOUTS=2;     // ... or one manager knocked the other out of the playoffs this many times
 const ledgerLoad=Promise.all(["trophies","rivalries","money"].map(n=>fetch(`ledger/${n}.json`,{cache:"no-store"})
     .then(r=>r.ok?r.json().catch(()=>{ LEDGER.bad.push(`ledger/${n}.json`); return null; }):null).catch(()=>null)))
   .then(([t,r,m])=>{ LEDGER.trophies=t&&t.trophies||[]; LEDGER.rivalries=r&&r.rivalries||[]; LEDGER.money=m&&m.seasons||{}; });
@@ -1426,7 +1429,7 @@ function sides(){
   LIVES.forEach(d=>d.weeks.forEach(w=>w.matchups.forEach(m=>{
     if(!m.final) return;
     const kind=!m.playoff?"":/WINNER/.test(m.type||"")?"Playoffs":"Consolation";
-    [[m.home,m.away],[m.away,m.home]].forEach(([s,o])=>SIDES.push({season:d.season,week:w.week,kind,
+    [[m.home,m.away],[m.away,m.home]].forEach(([s,o])=>SIDES.push({season:d.season,week:w.week,kind,type:m.type||"",
       id:M[s.manager]?s.manager:null,team:s.name||"",pts:s.score,oid:M[o.manager]?o.manager:null,oteam:o.name||"",opts:o.score,
       res:s.score>o.score?"W":s.score<o.score?"L":"T",margin:s.score-o.score}));
   })));
@@ -1590,10 +1593,29 @@ function rivalriesPage(){
   const row=p=>`<a class="pair" href="#/ledger/versus/${p.a}/${p.b}"><span class="pf">${avatar(p.a)}${avatar(p.b)}</span>
     <span class="pn"><b>${esc(M[p.a].name)} vs ${esc(M[p.b].name)}</b><small>${plural(p.s.n,"meeting")} · avg margin ${f1(avgM(p.s))}</small></span>
     <span class="pr">${seriesRec(p.s)}</span></a>`;
+  // Suggestions only: pairs that keep playing close, or where one keeps ending the other's playoffs. Named rivalries are left out.
+  const key=(a,b)=>[a,b].sort().join("|"), named=new Set(feat.map(r=>key(...r.managers))), cand={};
+  ok.forEach(p=>{const c=p.s.g.filter(x=>Math.abs(x.margin)<CLOSE_PTS).length;
+    if(c/p.s.n>=CLOSE_SHARE) cand[key(p.a,p.b)]={a:p.a,b:p.b,s:p.s,close:c};});
+  const ko={};
+  sides().filter(x=>x.type==="WINNERS_BRACKET"&&x.res==="W"&&x.id&&x.oid).forEach(x=>{const k=x.id+"|"+x.oid; (ko[k]=ko[k]||[]).push(x.season);});
+  Object.entries(ko).filter(([,ys])=>ys.length>=KNOCKOUTS).forEach(([k,ys])=>{const [a,b]=k.split("|"), c=cand[key(a,b)];
+    cand[key(a,b)]={...c,a,b,s:seriesOf(a,b),ko:ys};});
+  const making=Object.entries(cand).filter(([k])=>!named.has(k)).map(([,c])=>c)
+    .sort((x,y)=>(y.ko?y.ko.length:0)-(x.ko?x.ko.length:0)||(y.close||0)/y.s.n-(x.close||0)/x.s.n||avgM(x.s)-avgM(y.s));
+  const why=c=>[c.ko&&`${esc(M[c.a].name)} knocked ${esc(M[c.b].name)} out of the playoffs ${c.ko.length} times (${c.ko.join(", ")})`,
+    c.close&&`${c.close} of ${c.s.n} meetings decided by under ${CLOSE_PTS} points`].filter(Boolean).join(" · ");
+  const sugg=c=>`<a class="pair" href="#/ledger/versus/${c.a}/${c.b}"><span class="pf">${avatar(c.a)}${avatar(c.b)}</span>
+    <span class="pn"><b>${esc(M[c.a].name)} vs ${esc(M[c.b].name)}</b><small>${why(c)}</small></span>
+    <span class="pr">${seriesRec(c.s)}</span></a>`;
   return `<section>${ledgerHead("Rivalries","The grudges that matter, with the receipts to back them up. Head-to-head games only exist from "+H2H_FROM+" on, when the league moved to ESPN.")}
     ${ledgerTypo("ledger/rivalries.json")}
     ${feat.length?`<div class="rivals">${feat.map(card).join("")}</div>`
       :`<div class="empty"><h3>No named rivalries yet</h3><p>Add them to ledger/rivalries.json: two manager IDs and a short description.</p></div>`}</section>
+  <section><h2>Rivalries in the making</h2>
+    <p class="lede">Suggestions from the games, not official rivalries: series of ${RIVAL_MIN} or more meetings where at least ${CLOSE_SHARE===2/3?"two-thirds":Math.round(CLOSE_SHARE*100)+"%"} were decided by under ${CLOSE_PTS} points, and pairs where one manager has knocked the other out of the playoffs ${KNOCKOUTS===2?"more than once":KNOCKOUTS+" or more times"}. Playoff games count from ${H2H_FROM} on.</p>
+    ${making.length?`<div class="pairs making">${making.map(sugg).join("")}</div>`
+      :`<div class="empty"><h3>Nothing brewing yet</h3><p>Pairs show up here once a series has ${RIVAL_MIN} or more meetings that keep coming down to the wire, or someone ends the same manager's playoffs ${KNOCKOUTS===2?"twice":KNOCKOUTS+" times"}. ${most?`So far no pair has met more than ${most===1?"once":most+" times"}.`:""}</p></div>`}</section>
   <section><h2>By the numbers</h2>
     <p class="lede">Every head-to-head series with at least ${RIVAL_MIN} meetings, closest and most one-sided first.</p>
     ${ok.length?`<div class="pairs-grid"><div><h3>Closest series</h3><div class="pairs">${closest.map(row).join("")}</div></div>
