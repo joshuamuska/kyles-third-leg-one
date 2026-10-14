@@ -23,8 +23,8 @@ CFG = json.loads((ROOT / "league.json").read_text())
 
 # Manager id -> (first name, last name if known). Used to match ESPN owners.
 MANAGERS = {
-    "josh": ("Josh", None),
-    "brett": ("Brett", None),
+    "josh": ("Josh", "Muska"),
+    "brett": ("Brett", "Reuter"),
     "kyle": ("Kyle", None),
     "brandon": ("Brandon", "Chojnacki"),
     "keith": ("Keith", "Sheridan"),
