@@ -72,9 +72,23 @@ nav .ledger-menu a{display:block;padding:9px 12px;border:0;border-radius:8px;col
 nav .ledger-menu a small{display:block;font-weight:500;font-size:.82rem;color:var(--muted)}
 nav .ledger-menu a:hover{background:var(--row)}
 nav .ledger-menu a[aria-current="page"]{background:var(--gold-soft);color:var(--gold-text)}
+/* Managers: the word goes to the Managers page, the arrow next to it opens the list. */
+.nav-split{flex:none;display:inline-flex;align-items:stretch;border-bottom:3px solid transparent}
+.nav-split.cur{border-bottom-color:var(--gold)}
+nav .nav-split a{border-bottom:0;padding-right:2px}
+nav .nav-split .nav-dd{border-bottom:0;padding:12px 10px 10px 6px}
+.mgr-menu{width:400px}
+.mgr-menu .mm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+nav .mgr-menu a{display:flex;align-items:center;gap:10px;padding:7px 10px}
+.mgr-menu .ava{width:36px;flex:none;border-radius:50%;border:2px solid var(--line)}
+nav .mgr-menu a:hover .ava,nav .mgr-menu a[aria-current="page"] .ava{border-color:var(--gold)}
+.mgr-menu .mm-n{min-width:0}
+nav .mgr-menu a .mm-n small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:600px){
   .ledger-menu{left:16px!important;right:16px;width:auto}
   nav .ledger-menu a{padding:11px 12px}
+  nav .mgr-menu a{padding:8px}
+  .mgr-menu .ava{width:32px}
 }
 
 main.wrap{padding:34px 20px 60px}
@@ -146,24 +160,113 @@ tr.champ td:first-child{box-shadow:inset 4px 0 var(--gold)}
 .ava span{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:38cqw;line-height:1;letter-spacing:.01em}
 .ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 
-.hero{display:grid;grid-template-columns:200px 1fr;grid-template-areas:"ava id" "ava bio";grid-template-rows:auto 1fr;gap:12px 28px;align-items:start}
-.hero .ava{grid-area:ava;border-radius:12px;border:1px solid var(--line);border-bottom:4px solid var(--gold)}
-.hero .id{grid-area:id;align-self:end}
-.hero h2{font-size:clamp(2.6rem,7vw,4rem);margin:0}
-.hero .sub{margin:4px 0 0;color:var(--muted)}
-.hero .bio{grid-area:bio;margin:0;font-size:1.08rem;line-height:1.6;max-width:64ch}
-.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .badge{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.8rem;font-weight:700;color:var(--muted)}
 .badge.gold{background:var(--gold-soft);border-color:transparent;color:var(--gold-text)}
-.records.hl{margin-top:12px}
-.records.hl .v{font-size:2rem}
 .res{display:inline-block;min-width:2.2em;text-align:center;padding:1px 8px;border-radius:999px;font-size:.8rem;font-weight:700;border:1px solid var(--line);color:var(--muted)}
 .res.w{background:var(--turf);border-color:var(--turf);color:var(--on-turf)}
 .res.live{color:var(--gold-text);border-color:var(--gold-text)}
+.res.up{border-style:dashed}
 @media (max-width:600px){
-  .hero{grid-template-columns:110px 1fr;grid-template-areas:"ava id" "bio bio";gap:16px}
   .mgrs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .mgr .n{font-size:1.35rem}
+}
+
+/* Manager profile: hero */
+.mp{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.mp::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--gold)}
+.mp-photo{display:grid;place-items:center;padding:34px;background:var(--mc);
+  background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.08) 59px 61px),linear-gradient(160deg,var(--mc),color-mix(in srgb,var(--mc) 50%,#000))}
+.mp-photo .ava{width:100%;max-width:330px;border-radius:14px;border:4px solid rgba(255,255,255,.92);box-shadow:0 18px 40px rgba(0,0,0,.35);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--mc) 80%,#fff),color-mix(in srgb,var(--mc) 70%,#000))}
+.mp-id{position:relative;display:flex;flex-direction:column;justify-content:center;padding:32px 34px 38px;color:var(--on-turf);
+  background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.06) 79px 81px),linear-gradient(160deg,var(--turf),var(--turf-deep) 75%)}
+.mp-id .kicker{color:var(--on-turf)}
+.mp-id .back{color:rgba(243,245,239,.75);margin-bottom:18px;align-self:flex-start}
+.mp-id .back:hover{color:var(--on-turf)}
+.mp-id h2{font-size:clamp(3.2rem,8vw,5.6rem);line-height:.86;margin:10px 0 8px}
+.mp-team{margin:0;font-size:1.25rem;font-weight:700;line-height:1.3;overflow-wrap:anywhere}
+.mp-sub{margin:2px 0 0;color:rgba(243,245,239,.75);font-size:.95rem}
+.mp-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.mp-b{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.32);font-size:.82rem;font-weight:700;color:var(--on-turf)}
+.mp-b svg{width:14px;height:14px;fill:currentColor}
+.mp-b.champ{background:var(--gold);border-color:var(--gold);color:#fff;font-size:.9rem;padding:6px 14px}
+.mp-b.dim{color:rgba(243,245,239,.72)}
+.mp-id .bio{margin:20px 0 0;font-size:1.04rem;line-height:1.6;color:rgba(243,245,239,.9);max-width:60ch}
+@media (max-width:760px){
+  .mp{grid-template-columns:1fr}
+  .mp-photo{padding:22px}
+  .mp-photo .ava{max-width:210px}
+  .mp-id{padding:24px 20px 28px}
+}
+
+/* Manager profile: stats, accolades, trophy shelf, season history */
+.big-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.big-stats div{background:var(--surface);padding:16px 18px 14px}
+.big-stats b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:clamp(2.3rem,5vw,3.3rem);line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.big-stats span{display:block;margin-top:4px;color:var(--muted);font-size:.86rem;font-weight:600}
+.big-stats .gold b{color:var(--gold-text)}
+.small-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:10px;margin-top:12px}
+.small-stats div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px 11px}
+.small-stats span{display:block;color:var(--muted);font-size:.8rem;font-weight:600}
+.small-stats b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.65rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.small-stats small{display:block;color:var(--muted);font-size:.78rem;line-height:1.3}
+@media (max-width:700px){
+  .big-stats{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .big-stats div{grid-column:span 2;padding:12px 12px 10px}
+  .big-stats div:nth-child(n+4){grid-column:span 3}
+  .small-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.acc{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:10px}
+.ac{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.ac i{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--turf);color:var(--on-turf);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.ac.bad i{background:var(--gold-soft);color:var(--gold-text);box-shadow:none}
+.ac svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ac .al{font-weight:700;line-height:1.2}
+.ac .al small{display:block;margin-top:2px;color:var(--muted);font-size:.78rem;font-weight:500;line-height:1.3}
+.ac b{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.2rem;line-height:1;font-variant-numeric:tabular-nums}
+.ac.zero{opacity:.55}
+.ac.zero b{color:var(--muted)}
+.shelf{background:linear-gradient(180deg,var(--row),var(--surface));border:1px solid var(--line);border-radius:14px;padding:4px 0 14px}
+.shelf .car-stage{border-radius:0}
+.cs .tn{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1.05}
+.cs .tt{margin-top:3px;font-size:.82rem;color:var(--muted);line-height:1.25;overflow-wrap:anywhere}
+.mp-chart .chart{max-width:760px}
+table.sh{min-width:0}
+.sh tbody tr:nth-child(even){background:none}
+.sh tr.sh-row{cursor:pointer}
+.sh tr.sh-row:hover td,.sh tr.sh-row.open td{background:var(--row)}
+.sh tr.sh-row.open td{border-bottom-color:transparent}
+.sh tr.champ td{background:var(--gold-soft)}
+.sh td.yr{white-space:normal}
+.sh td.yr small{display:block;color:var(--muted);font-size:.84rem;line-height:1.25;margin-left:18px;overflow-wrap:anywhere}
+.sh-tog{all:unset;display:inline-flex;align-items:center;gap:8px;font-weight:700;cursor:pointer}
+.sh-tog:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.sh-tog svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.sh-tog[aria-expanded="true"] svg{transform:rotate(180deg)}
+.sh tr.sh-more>td{white-space:normal;padding:2px 14px 18px;background:var(--row)}
+.sh .miss{color:var(--muted)}
+.ros2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ros{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.ros h4{margin:0;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.4rem;line-height:1.05}
+.ros h4+small{display:block;color:var(--muted);font-size:.82rem}
+.ros ul{list-style:none;margin:8px 0 0;padding:0}
+.ros li{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 0;border-top:1px solid var(--line);font-size:.9rem}
+.ros li.grp{display:block;padding:10px 0 3px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ros li.grp:first-child{padding-top:0;border-top:0}
+.ros .sl{color:var(--muted);font-weight:600;font-size:.78rem}
+.ros .plyr small{color:var(--muted);font-size:.78rem;margin-left:4px}
+.ros li.bn .nm{color:var(--muted)}
+.acq{font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.acq.waiver{background:var(--turf);border-color:var(--turf);color:var(--on-turf)}
+.acq.fa{color:var(--text)}
+.acq.trade{background:var(--gold-soft);border-color:transparent;color:var(--gold-text)}
+@media (max-width:700px){
+  .ros2{grid-template-columns:1fr}
+  /* The table scrolls sideways like the others; the rosters stay pinned to the visible width. */
+  table.sh{min-width:600px}
+  .sh td.yr{min-width:150px}
+  .sh tr.sh-more>td{padding:2px 8px 14px}
+  .sh-more .ros2,.sh-more>td>.note{position:sticky;left:8px;width:calc(100vw - 58px)}
 }
 .back{display:inline-block;margin-bottom:16px;text-decoration:none;font-weight:600;color:var(--muted)}
 .back:hover{color:var(--text)}
@@ -175,16 +278,6 @@ tr.champ td:first-child{box-shadow:inset 4px 0 var(--gold)}
 .chart svg{display:block;width:100%;height:auto}
 .legend{display:flex;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:.85rem;padding:4px 4px 8px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
-
-/* Records */
-.records{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-.rec{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
-.rec h3{color:var(--muted);font-weight:600;font-size:.95rem}
-.rec .v{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:2.2rem;line-height:1.05;margin:2px 0 6px}
-.rec ul{list-style:none;margin:0;padding:0}
-.rec li{padding:2px 0}
-.rec li a{font-weight:600;text-decoration:none}
-.rec li a:hover{text-decoration:underline}
 
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:10px;padding:28px 24px;max-width:640px}
 .empty p{margin:6px 0 0;color:var(--muted)}
@@ -283,6 +376,17 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
 .tx .bid{font-weight:700;font-variant-numeric:tabular-nums}
 .tx .since{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
 .tx .since.hot{color:var(--gold-text);font-weight:700}
+/* Player headshots from ESPN (team logos for D/ST). The silhouette shows when there's no image. */
+.pimg{position:relative;flex:none;display:inline-grid;place-items:end center;width:26px;height:26px;border-radius:50%;overflow:hidden;background:var(--row);color:var(--muted);vertical-align:middle}
+.pimg svg{width:86%;height:86%;fill:currentColor;opacity:.45}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;background:var(--row)}
+.pimg.logo img{object-fit:contain;padding:9%}
+.pimg.md{width:36px;height:36px}
+.plyr{display:flex;align-items:center;gap:8px;min-width:0}
+.plyr>.nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lineups .pimg,.roster .pimg{width:22px;height:22px}
+.tx .pimg{align-self:center}
+
 /* Front page */
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-text)}
 .kicker::before{content:"";width:18px;height:3px;background:var(--gold);flex:none}
@@ -702,10 +806,10 @@ tr.out td a{color:var(--text)}
 .bh .t{margin-top:2px;font-size:.78rem;font-weight:500;line-height:1.25;color:rgba(255,255,255,.85);overflow-wrap:anywhere}
 .bc{position:relative;padding:9px 9px 10px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
 .board tr>.bc:last-child,.board tr>.bh:last-child{border-right:0}
-.bc .hs{position:relative;width:58px;aspect-ratio:96/70;border-radius:6px;overflow:hidden;background:var(--row);display:grid;place-items:center}
-.bc .hs span{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.1rem;color:var(--muted)}
-.bc .hs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.bc .hs.logo img{object-fit:contain;padding:3px}
+.bc .pimg{width:58px;height:auto;aspect-ratio:96/70;border-radius:6px}
+.bc .pimg svg{width:60%;height:90%}
+.bc .pimg img{object-position:center top}
+.bc .pimg.logo img{padding:3px}
 .bc .ov{position:absolute;top:8px;right:9px;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.05rem;line-height:1;color:var(--muted);font-variant-numeric:tabular-nums}
 .bc .pn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:6px;font-size:.86rem;font-weight:700;line-height:1.2}
 .bc .bm{display:block;font-size:.76rem;color:var(--muted);line-height:1.3}
@@ -792,7 +896,9 @@ table.pts td.neg{color:var(--gold-text)}
       <a href="#/articles">Articles</a>
       <a href="#/rankings">Power rankings</a>
       <a href="#/seasons/2025">Seasons</a>
-      <a href="#/managers">Managers</a>
+      <span class="nav-split" id="mgr-nav"><a href="#/managers">Managers</a><button type="button" class="nav-dd" id="mgr-btn" aria-expanded="false" aria-controls="mgr-menu" aria-label="Show managers"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg></button></span>
+      <!-- Filled in from managers.json by mgrMenuHtml(). -->
+      <div class="ledger-menu mgr-menu" id="mgr-menu" hidden></div>
       <button type="button" class="nav-dd" id="ledger-btn" aria-expanded="false" aria-controls="ledger-menu">Ledger<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg></button>
       <!-- Fixed-position so the scrolling nav doesn't clip it; placed under the button by placeLedgerMenu(). -->
       <div class="ledger-menu" id="ledger-menu" hidden>
@@ -908,7 +1014,7 @@ function rebuild(){
       d.teams.forEach(t=>{ if(t.manager && M[t.manager]) S.push({year:d.season,id:t.manager,team:t.name,w:t.w,l:t.l,place:t.final,po:t.seed<=d.playoffTeams}); });
   });
   YEARS=[...new Set(S.map(r=>r.year))].sort();
-  SIDES=null;
+  SIDES=null; PIDS=null;
   ALL=Object.keys(M).filter(id=>S.some(r=>r.id===id)).map(stats);
 }
 const who = s => s.manager&&M[s.manager] ? mlink(s.manager) : esc(s.owner||s.name||"Unknown");
@@ -916,14 +1022,47 @@ const liveOpen = () => LIVE && !LIVE.seasonOver ? LIVE : null;
 const SLOT_ORDER=["QB","RB","WR","TE","FLEX","D/ST","K"];
 const slotName=s=>s==="RB/WR/TE"||s==="WR/TE"||s==="RB/WR"?"FLEX":s;
 const slotRank=s=>{const i=SLOT_ORDER.indexOf(slotName(s));return i<0?SLOT_ORDER.length:i;};
+
+/* Player headshots, linked straight from ESPN (nothing is stored in the repo), and ESPN team logos
+   for D/ST. A neutral silhouette sits underneath and shows if there's no image or it fails to load. */
+const ESPN_IMG="https://a.espncdn.com/combiner/i?img=/i/";
+// ESPN pro team ids, for a D/ST saved without its team (its player id is -16000 minus the team id).
+const NFL_ABBR={1:"ATL",2:"BUF",3:"CHI",4:"CIN",5:"CLE",6:"DAL",7:"DEN",8:"DET",9:"GB",10:"TEN",11:"IND",12:"KC",13:"LV",14:"LAR",15:"MIA",16:"MIN",
+  17:"NE",18:"NO",19:"NYG",20:"NYJ",21:"PHI",22:"ARI",23:"PIT",24:"LAC",25:"SF",26:"SEA",27:"TB",28:"WSH",29:"CAR",30:"JAX",33:"BAL",34:"HOU"};
+const SILHOUETTE=`<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="15" r="7.5"/><path d="M5 40c1-9 7-14 15-14s14 5 15 14z"/></svg>`;
+let PIDS=null;   // player name -> {id, nfl}, for lineups saved before player ids were. Cleared by rebuild().
+function playerByName(name){
+  if(!PIDS){
+    PIDS={};
+    const add=(n,id,nfl)=>{ if(n&&id!=null&&!PIDS[n]) PIDS[n]={id,nfl}; };
+    LIVES.forEach(d=>{
+      [...(d.rosters||[]),...(d.finalRosters||[]),...(d.draftRosters||[])].forEach(r=>r.players.forEach(p=>add(p.name,p.id,p.nfl)));
+      ((d.draft||{}).picks||[]).forEach(p=>add(p.player,p.playerId,p.nfl));
+      (d.transactions||[]).forEach(x=>x.moves.forEach(m=>add(m.name,m.player,m.nfl)));
+    });
+  }
+  return PIDS[name];
+}
+// p: {id, name, pos, nfl}. cls: "md" for the bigger size.
+function pimg(p,cls=""){
+  let id=p.id, nfl=p.nfl;
+  if(id==null){ const k=playerByName(p.name); if(k){ id=k.id; nfl=nfl||k.nfl; } }
+  const dst=p.pos==="D/ST"||id<0;
+  if(dst&&(!nfl||nfl==="FA")&&id<0) nfl=NFL_ABBR[-16000-id];
+  const src=dst?(nfl&&nfl!=="FA"?`${ESPN_IMG}teamlogos/nfl/500/${nfl.toLowerCase()}.png&w=80&h=80`:"")
+    :id!=null?`${ESPN_IMG}headshots/nfl/players/full/${id}.png&w=96&h=70&scale=crop`:"";
+  return `<span class="pimg${dst?" logo":""}${cls?" "+cls:""}">${SILHOUETTE}${src?`<img src="${src}" alt="" loading="lazy" onerror="this.remove()">`:""}</span>`;
+}
+// Headshot and name on one line, the name cut off with an ellipsis if it runs long.
+const plabel=(p,extra="")=>`<span class="plyr">${pimg(p)}<span class="nm" title="${esc(p.name)}">${esc(p.name)}${extra}</span></span>`;
 function matchCard(m, opts={}){
   const fin=m.final, hiScore=Math.max(m.home.score,m.away.score);
   const line=s=>`<div class="line ${fin&&s.score===hiScore&&m.home.score!==m.away.score?"won":""}">
     <div class="nm">${who(s)}<small>${esc(s.name||"")}</small></div><div class="sc">${s.score.toFixed(2)}</div></div>`;
   const lu=s=>`<div><h4>${s.manager&&M[s.manager]?esc(M[s.manager].name):esc(s.name||"")}</h4><table><tbody>
-    ${[...s.starters].sort((a,b)=>slotRank(a.slot)-slotRank(b.slot)).map(p=>`<tr><td>${esc(slotName(p.slot))}</td><td title="${esc(p.name)}">${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
+    ${[...s.starters].sort((a,b)=>slotRank(a.slot)-slotRank(b.slot)).map(p=>`<tr><td>${esc(slotName(p.slot))}</td><td>${plabel(p)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
     <tr class="tot"><td></td><td>Total</td><td class="num">${s.score.toFixed(1)}</td></tr>
-    ${s.bench.map(p=>`<tr class="bn"><td>BN</td><td title="${esc(p.name)}">${esc(p.name)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
+    ${s.bench.map(p=>`<tr class="bn"><td>BN</td><td>${plabel(p)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`).join("")}
   </tbody></table></div>`;
   return `<div class="mc">${m.playoff?`<span class="tag">${m.type&&/WINNER/.test(m.type)?"Playoffs":"Consolation"}</span>`:""}
     ${line(m.away)}${line(m.home)}
@@ -1074,24 +1213,151 @@ function chart(s){
     <div class="legend"><span><i style="background:var(--gold)"></i>Champion</span><span><i style="background:var(--turf);border:2px solid var(--text)"></i>Made playoffs</span><span><i style="background:var(--surface);border:2px solid var(--text)"></i>Missed playoffs</span></div></div>`;
 }
 
-function highlights(s){
-  const sp=r=>pct(r.w,r.l);
-  const yrs=rows=>rows.map(r=>r.year).join(", ");
-  const extreme=(f,tie)=>{const v=Math.max(...s.rows.map(f)); return s.rows.filter(r=>f(r)===v).sort(tie);};
-  const best=extreme(sp,(a,b)=>a.place-b.place), worst=extreme(r=>-sp(r),(a,b)=>b.place-a.place);
-  const champs=s.rows.filter(r=>r.place===1), pos=s.rows.filter(r=>r.po), bestF=s.rows.filter(r=>r.place===s.bestFinish);
-  const line=r=>`<li><a href="#/seasons/${r.year}">${r.year}</a> <span class="team">${esc(r.team)}, ${ord(r.place)}</span></li>`;
-  const runs=[]; s.rows.forEach((r,i)=>{ if(i&&r.team===s.rows[i-1].team) runs[runs.length-1].n++; else runs.push({team:r.team,n:1}); });
-  const run=runs.sort((a,b)=>b.n-a.n)[0];
-  const cards=[
-    {h:"Championships",v:s.titles?`${"🏆".repeat(s.titles)}`:"0",li:champs.length?champs.map(line):[`<li class="team">${M[s.id].former?"None":"Still waiting"}</li>`]},
-    {h:"Playoff trips",v:`${s.po} of ${s.seasons}`,li:[`<li class="team">${pos.length?yrs(pos):"None"}</li>`]},
-    {h:"Best finish",v:ord(s.bestFinish),li:bestF.map(line)},
-    {h:"Best season",v:`${best[0].w}-${best[0].l}`,li:best.map(line)},
-    {h:"Worst season",v:`${worst[0].w}-${worst[0].l}`,li:worst.map(line)},
-    {h:"Team names",v:s.names,li:[`<li class="team">${run.n>1?`Longest run: ${esc(run.team)}, ${run.n} seasons`:"A new name every season"}</li>`]}
-  ];
-  return `<div class="records hl">${cards.map(o=>`<div class="rec"><h3>${o.h}</h3><div class="v">${o.v}</div><ul>${o.li.join("")}</ul></div>`).join("")}</div>`;
+/* ---------- Manager profile ---------- */
+const CUP=`<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5h8v1.5h2.5v1.8a3.2 3.2 0 0 1-3 3.2A4 4 0 0 1 9 10.6v1.9h2.5V15h-7v-2.5H7v-1.9A4 4 0 0 1 4.5 8 3.2 3.2 0 0 1 1.5 4.8V3H4zM3 4.5v.3c0 .8.5 1.5 1.2 1.8A9 9 0 0 1 4 4.5zm9 0c0 .7 0 1.4-.2 2.1.7-.3 1.2-1 1.2-1.8v-.3z"/></svg>`;
+
+function profileHero(id){
+  const m=M[id], c=careerOf(id), rows=S.filter(r=>r.id===id).sort((a,b)=>a.year-b.year);
+  const first=rows.length?rows[0].year:LIVE&&LIVE.season, last=rows[rows.length-1];
+  const team=m.former?(last?`Last played as ${last.team} (${last.year})`:""):teamNow(id);
+  const sub=[m.full,m.nickname&&`“${m.nickname}”`].filter(Boolean).map(esc).join(" · ");
+  const badges=[
+    c.titles?`<span class="mp-b champ">${CUP}${c.titles}x CHAMP</span>`:`<span class="mp-b dim">${m.former?"No titles":"Still chasing a title"}</span>`,
+    m.role&&`<span class="mp-b">${esc(m.role)}</span>`,
+    m.former&&`<span class="mp-b dim">${esc(m.former)}</span>`].filter(Boolean).join("");
+  return `<section class="mp" style="--mc:${esc(m.color||"#013369")}">
+    <div class="mp-photo">${avatar(id,`Photo of ${m.name}`)}</div>
+    <div class="mp-id"><a class="back" href="#/managers">← All managers</a>
+      <span class="kicker">${m.former?"Former manager":"Manager"}${first?` · On record since ${first}`:""}</span>
+      <h2>${esc(m.name)}</h2>
+      ${team?`<p class="mp-team">${esc(team)}</p>`:""}
+      ${sub?`<p class="mp-sub">${sub}</p>`:""}
+      <div class="mp-badges">${badges}</div>
+      ${m.bio?`<p class="bio">${esc(m.bio)}</p>`:""}
+    </div></section>`;
+}
+
+function profileStats(id){
+  const c=careerOf(id), done=S.filter(r=>r.id===id).length;
+  const sd=sides().filter(x=>x.id===id), po=sd.filter(x=>x.kind==="Playoffs");
+  const poRec={w:po.filter(x=>x.res==="W").length,l:po.filter(x=>x.res==="L").length,t:po.filter(x=>x.res==="T").length};
+  const cons=LEDGER.trophies.find(t=>t&&t.place==="consolation");
+  const bowls=cons&&YEARS.filter(y=>{const w=trophyWinner(cons,y); return w&&w.id===id;}).length;
+  const lo=pick(sd,x=>x.pts,-1), run=pick(streaks().filter(r=>r.id===id&&r.res==="W"),r=>r.n);
+  const money=moneyRows(), mine=money&&money.find(x=>x.id===id);
+  const since=`Since ${H2H_FROM}`, vs=x=>`${wkLabel(x)} vs ${nameOfId(x.oid)}`;
+  const big=[[c.seasons,"Seasons"],[recStr(c),"Record"],[fmtPct(c.p),"Win %"],[c.titles,c.titles===1?"Championship":"Championships",c.titles?"gold":""],[c.last,"Last-place finishes"]];
+  const small=[
+    ["Playoff appearances",c.po,`In ${plural(done,"finished season")}`],
+    ["Playoff record",po.length?recStr(poRec):"—",`Winners' bracket games, since ${H2H_FROM}`],
+    cons&&["Toilet bowls",bowls,"Consolation bracket titles"],
+    ["Avg points for",c.pf==null?"—":f2(c.pf),`Per game, since ${H2H_FROM}`],
+    ["Avg points against",c.pa==null?"—":f2(c.pa),`Per game, since ${H2H_FROM}`],
+    ["Longest win streak",run?plural(run.n,"game"):"—",run?streakSpan(run):since],
+    ["Biggest blowout",c.bl?"+"+f2(c.bl.margin):"—",c.bl?vs(c.bl):since],
+    ["Highest score",c.hi?f2(c.hi.pts):"—",c.hi?vs(c.hi):since],
+    ["Lowest score",lo?f2(lo.pts):"—",lo?vs(lo):since],
+    mine&&["Earnings",cash(mine.net),`$${mine.won.toLocaleString()} won, $${mine.paid.toLocaleString()} paid in`]
+  ].filter(Boolean);
+  return `<section><span class="kicker">Career</span><h2>By the numbers</h2>
+    <p class="lede">Records, titles and finishes go back to 2021${inProgress()&&liveTeam(id)?`, with the ${LIVE.season} season so far in seasons, record and win %`:""}. Points, playoff games and streaks count from ${H2H_FROM}, the first ESPN season.</p>
+    <div class="big-stats">${big.map(([v,l,cls])=>`<div class="${cls||""}"><b>${v}</b><span>${l}</span></div>`).join("")}</div>
+    <div class="small-stats">${small.map(([l,v,s])=>`<div><span>${l}</span><b>${v}</b>${s?`<small>${esc(s)}</small>`:""}</div>`).join("")}</div></section>`;
+}
+
+function trophyShelf(id){
+  const list=LEDGER.trophies.filter(t=>t&&t.name);
+  const won=YEARS.flatMap(y=>list.map(t=>({t,y,r:trophyWinner(t,y)})).filter(x=>x.r&&x.r.id===id));
+  const how=(t,y)=>placeLabel(y<H2H_FROM&&t.historicPlace!=null?t.historicPlace:t.place);
+  return `<section><span class="kicker">Hardware</span><h2>Trophy shelf</h2>
+    ${won.length?`<p class="lede">Every trophy ${esc(M[id].name)} has taken home, good and bad. The full set is on the <a href="#/ledger/trophies">Trophies</a> page.</p>
+      ${carousel(`${M[id].name}'s trophies`,won.map(({t,y,r})=>({label:`${y}: ${t.name}`,dot:`${y}, ${t.name}`,
+        html:`<div class="yr">${y}</div>${trophyArt(t.art)}<div class="tn">${esc(t.name)}</div><div class="tt">${esc(how(t,y))} · ${esc(r.team)}</div>`})),"shelf")}`
+    :`<div class="empty"><h3>Nothing on the shelf yet</h3><p>Trophies come from final places. ${M[id].former?"None came home before leaving.":"There's always next season."}</p></div>`}</section>`;
+}
+
+// Weekly awards, worked out by scripts/update.py for each finished week (data/<season>.json, weeks[].awards).
+const ACCOLADES=[
+  {k:"high",n:"High Score",d:"Top score of the week",i:'<path d="M12 3c.6 3.6 5 5.6 5 10.4a5 5 0 0 1-10 0c0-2.6 1.4-4.2 2.6-5.2.2 2 1.2 3.2 2.4 3.4-.6-3 .2-5.9 0-8.6z"/>'},
+  {k:"low",n:"Low Score",d:"Bottom score of the week",bad:1,i:'<path d="M12 4v12.5M6.5 11 12 16.5 17.5 11M5 20.5h14"/>'},
+  {k:"blowout",n:"Blowout",d:"Biggest win of the week",i:'<path d="M13 2.5 4.5 13.5H11l-1 8 8.5-11H12z"/>'},
+  {k:"close",n:"Close Win",d:"Narrowest win of the week",i:'<circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M9.5 2.5h5M18.5 6.5 20 5"/>'},
+  {k:"lucky",n:"Lucky",d:"Won while scoring below the league median",i:'<path d="M6.5 4v7.5a5.5 5.5 0 0 0 11 0V4"/><path d="M4.5 4h4M15.5 4h4M6.5 8h2M15.5 8h2"/>'},
+  {k:"unlucky",n:"Unlucky",d:"Lost while scoring above the median",bad:1,i:'<path d="M7 15a4 4 0 0 1-.6-7.95A5.5 5.5 0 0 1 17 7.5a3.75 3.75 0 0 1 .5 7.5z"/><path d="M9 18.5 8 21M13 18.5 12 21M17 18.5 16 21"/>'},
+  {k:"over",n:"Overachiever",d:"Furthest above projection",i:'<path d="m3 17 6-6 4 4 8-8M15 7h6v6"/>'},
+  {k:"under",n:"Underachiever",d:"Furthest below projection",bad:1,i:'<path d="m3 7 6 6 4-4 8 8M15 17h6v-6"/>'},
+  {k:"best",n:"Best Manager",d:"Closest to their best possible lineup",i:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2.5h6v3H9zM8.5 13l2.5 2.5 4.5-5"/>'},
+  {k:"worst",n:"Worst Manager",d:"Furthest from their best possible lineup",bad:1,i:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2.5h6v3H9zM9.5 10.5l5 5M14.5 10.5l-5 5"/>'}
+];
+function accolades(id){
+  const n=Object.fromEntries(ACCOLADES.map(a=>[a.k,0])); let weeks=0;
+  LIVES.filter(d=>d.season>=H2H_FROM).forEach(d=>{
+    const mine=new Set(d.teams.filter(t=>t.manager===id).map(t=>t.espnId)); if(!mine.size) return;
+    d.weeks.forEach(w=>{ if(!w.final||!w.awards) return; weeks++;
+      ACCOLADES.forEach(a=>{ if((w.awards[a.k]||[]).some(t=>mine.has(t))) n[a.k]++; }); });
+  });
+  return `<section><span class="kicker">Weekly awards</span><h2>Accolades</h2>
+    <p class="lede">${weeks?`Handed out after every finished week from ${H2H_FROM} on, ${plural(weeks,"week")} so far. Ties share the award. Best and Worst Manager compare the lineup with the best one that could have been started from the same roster.`
+      :M[id].former?`Weekly awards started in ${H2H_FROM}, after ${esc(M[id].name)} left.`:`Handed out after every finished week from ${H2H_FROM} on. The first ones land after week 1.`}</p>
+    <div class="acc">${ACCOLADES.map(a=>`<div class="ac${a.bad?" bad":""}${n[a.k]?"":" zero"}"><i><svg viewBox="0 0 24 24" aria-hidden="true">${a.i}</svg></i>
+      <span class="al">${a.n}<small>${a.d}</small></span><b>${n[a.k]}</b></div>`).join("")}</div></section>`;
+}
+
+const ACQ={draft:"Draft",waiver:"Waivers",fa:"Free agent",trade:"Trade"};
+// One roster column: starters by slot, then bench and IR. tag(p) is the label on the right.
+function rosterList(title,sub,players,tag,benchOrder){
+  const out=s=>s==="BE"||s==="IR";
+  const head=`<h4>${title}</h4><small>${sub}</small>`;
+  if(!players||!players.length) return `<div class="ros">${head}<p class="note">Not saved for this season.</p></div>`;
+  const groups=[["Starters",players.filter(p=>!out(p.slot)).sort((a,b)=>slotRank(a.slot)-slotRank(b.slot))],
+    ["Bench",players.filter(p=>p.slot==="BE").sort(benchOrder)],["IR",players.filter(p=>p.slot==="IR").sort(benchOrder)]];
+  const row=p=>`<li class="${out(p.slot)?"bn":""}"><span class="sl">${esc(out(p.slot)?p.pos:slotName(p.slot))}</span>
+    ${plabel(p,`<small>${esc([p.pos,p.nfl].filter(Boolean).join(" · "))}</small>`)}${tag(p)}</li>`;
+  return `<div class="ros">${head}<ul>${groups.filter(g=>g[1].length).map(([g,ps])=>`<li class="grp">${g}</li>${ps.map(row).join("")}`).join("")}</ul></div>`;
+}
+// How the season's roster started (out of the draft) and ended (final week), saved by scripts/update.py.
+function seasonRosters(id,y){
+  const d=LIVES.find(d=>d.season===y), t=d&&d.teams.find(t=>t.manager===id);
+  if(!t) return `<p class="note">Roster data isn't available for ${y}. Only final standings survive from 2021–2025; rosters start with the ${H2H_FROM} ESPN season.</p>`;
+  const get=list=>((list||[]).find(r=>r.espnId===t.espnId)||{}).players, end=d.seasonOver;
+  return `<div class="ros2">
+    ${rosterList("How it started","Starting lineup right after the draft",get(d.draftRosters),
+      p=>p.round?`<span class="acq">R${p.round} · P${p.pick}</span>`:"",(a,b)=>a.round-b.round)}
+    ${rosterList(end?"How it ended":"How it's going",end?"Roster in the final week":`Current roster, week ${d.currentWeek}`,get(d.finalRosters),
+      p=>p.how?`<span class="acq ${p.how}">${ACQ[p.how]}${p.how==="draft"&&p.round?` · R${p.round}`:""}</span>`:"",(a,b)=>slotRank(a.pos)-slotRank(b.pos)||b.pts-a.pts)}
+  </div>`;
+}
+
+function seasonHistory(id){
+  const s=stats(id), lt=inProgress()&&liveTeam(id);
+  const rows=[...s.rows].reverse();
+  if(lt) rows.unshift({year:LIVE.season,team:lt.name,w:lt.w,l:lt.l,t:lt.t,live:lt});
+  if(!rows.length) return "";
+  const per=(y,k)=>{const d=LIVES.find(d=>d.season===y), t=d&&d.teams.find(t=>t.manager===id), g=t&&t.w+t.l+(t.t||0); return g?f1(t[k]/g):"—";};
+  return `<section><span class="kicker">Year by year</span><h2>Season history</h2>
+    <p class="lede">Final place every season, then the numbers. Points per game are regular-season games, ${H2H_FROM} on. Open a season to see how the roster started and how it ended.</p>
+    ${s.rows.length>1?`<div class="mp-chart">${chart(s)}</div>`:""}
+    <div class="scroll"><table class="sh"><thead><tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win %</th>
+      <th class="num pg">PF/G</th><th class="num pg">PA/G</th><th>Playoffs</th><th class="num">Finish</th></tr></thead>
+    <tbody>${rows.map(r=>`<tr class="sh-row${r.place===1?" champ":""}">
+      <td class="yr"><button class="sh-tog" type="button" aria-expanded="false" aria-controls="sh-${r.year}"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg>${r.year}</button><small>${esc(r.team)}</small></td>
+      <td class="num">${r.w}</td><td class="num">${r.l}${r.t?`<span class="team">, ${r.t} T</span>`:""}</td>
+      <td class="num">${fmtPct(pct(r.w+(r.t||0)/2,r.l+(r.t||0)/2))}</td>
+      <td class="num pg">${per(r.year,"pf")}</td><td class="num pg">${per(r.year,"pa")}</td>
+      <td>${r.live?`<span class="team">Seed ${r.live.seed}</span>`:r.po?'<span class="po">Made it</span>':'<span class="miss">Missed</span>'}</td>
+      <td class="num">${r.live?'<span class="team">In progress</span>':`${ord(r.place)}${r.place===1?" 🏆":""}`}</td></tr>
+      <tr class="sh-more" id="sh-${r.year}" hidden><td colspan="8">${seasonRosters(id,r.year)}</td></tr>`).join("")}</tbody></table></div></section>`;
+}
+
+function setupProfile(){
+  setupCarousels();
+  const t=document.querySelector("table.sh"); if(!t) return;
+  t.addEventListener("click",e=>{
+    const row=e.target.closest("tr.sh-row"); if(!row||e.target.closest("a")) return;
+    const b=row.querySelector(".sh-tog"), open=b.getAttribute("aria-expanded")!=="true";
+    b.setAttribute("aria-expanded",String(open)); row.classList.toggle("open",open);
+    document.getElementById(b.getAttribute("aria-controls")).hidden=!open;
+  });
 }
 
 function thisSeason(id){
@@ -1104,9 +1370,11 @@ function thisSeason(id){
   const done=games.filter(g=>g.m.final);
   const scores=done.map(g=>g.me.score);
   const pfRank=[...d.teams].sort((a,b)=>b.pf-a.pf).indexOf(t)+1;
-  const res=g=>!g.m.final?["live","Live"]:g.me.score>g.op.score?["w","W"]:g.me.score<g.op.score?["l","L"]:["t","T"];
+  // A week that hasn't kicked off is Upcoming (no score) until either side has points on the board.
+  const started=g=>g.m.final||g.me.score!==0||g.op.score!==0;
+  const res=g=>!started(g)?["up","Upcoming"]:!g.m.final?["live","Live"]:g.me.score>g.op.score?["w","W"]:g.me.score<g.op.score?["l","L"]:["t","T"];
   const opName=s=>s.manager&&M[s.manager]?M[s.manager].name:(s.name||"Unknown");
-  return `<section>
+  return `<section><span class="kicker">Current season</span>
     <h2>${d.season} season</h2>
     <p class="lede">Playing as ${esc(t.name)}. ${d.seasonOver?"Final results":`Through week ${done.length?done[done.length-1].week:0}`} from ESPN.</p>
     <div class="strip">
@@ -1121,7 +1389,7 @@ function thisSeason(id){
     <tbody>${games.map(g=>{const [c,l]=res(g), mg=g.me.score-g.op.score;
       return `<tr><td><a href="#/live/${g.week}">${g.m.playoff?"Playoffs, wk ":"Week "}${g.week}</a></td>
       <td>${g.op.manager&&M[g.op.manager]?mlink(g.op.manager):esc(opName(g.op))} <span class="team">${esc(g.op.name||"")}</span></td>
-      <td class="num">${g.me.score.toFixed(2)} – ${g.op.score.toFixed(2)}</td>
+      <td class="num">${started(g)?`${g.me.score.toFixed(2)} – ${g.op.score.toFixed(2)}`:""}</td>
       <td><span class="res ${c}">${l}</span></td>
       <td class="num">${g.m.final?(mg>0?"+":"")+mg.toFixed(2):""}</td></tr>`;}).join("")}
     </tbody></table></div>`:`<p class="note">No games played yet.</p>`}
@@ -1130,43 +1398,7 @@ function thisSeason(id){
 
 function profile(id){
   const m=M[id]; if(!m) return managers();
-  const s=stats(id), now=statsNow(id), live=now.seasons>s.seasons;
-  const sub=[m.full, m.nickname&&`“${m.nickname}”`, m.former||(teamNow(id)&&`Now playing as ${teamNow(id)}`)].filter(Boolean).map(esc).join(" · ");
-  return `<section>
-    <a class="back" href="#/managers">All managers</a>
-    <div class="hero">
-      ${avatar(id,`Photo of ${m.name}`)}
-      <div class="id">
-        <h2>${esc(m.name)}</h2>
-        <p class="sub">${sub}</p>
-        <div class="badges">${m.role?`<span class="badge gold">${esc(m.role)}</span>`:""}<span class="badge">${m.former?"Former manager":"Active"}</span>${s.titles?`<span class="badge gold">${s.titles}× champion</span>`:""}</div>
-      </div>
-      ${m.bio?`<p class="bio">${esc(m.bio)}</p>`:""}
-    </div>
-  </section>
-  ${s.seasons?`<section>
-    <h2>Career highlights</h2>
-    <p class="lede">${YEARS[0]}–${YEARS[YEARS.length-1]}${live?`, plus the ${LIVE.season} season so far in the record, win % and seasons`:""}. League records before 2021 were lost in the move from NFL.com.</p>
-    <div class="strip">
-      <div><b>${recStr(now)}</b><span>Career record</span></div>
-      <div><b>${fmtPct(now.p)}</b><span>Win %</span></div>
-      <div><b>${now.seasons}</b><span>Seasons</span></div>
-      <div><b>${s.avg.toFixed(1)}</b><span>Average finish</span></div>
-    </div>
-    ${highlights(s)}
-  </section>
-  <section>
-    <h2>Season by season</h2>
-    ${chart(s)}
-    <div class="scroll"><table><thead><tr><th>Season</th><th>Team</th><th class="num">Record</th><th class="num">Finish</th><th>Playoffs</th></tr></thead>
-    <tbody>${s.rows.map(r=>`<tr class="${r.place===1?"champ":""}">
-      <td><a href="#/seasons/${r.year}">${r.year}</a></td>
-      <td class="team">${esc(r.team)}</td>
-      <td class="num">${r.w}-${r.l}</td>
-      <td class="num">${ord(r.place)}${r.place===1?" 🏆":""}</td>
-      <td>${r.po?'<span class="po">Made it</span>':""}</td></tr>`).join("")}</tbody></table></div>
-  </section>`:""}
-  ${m.former?"":thisSeason(id)}`;
+  return profileHero(id)+profileStats(id)+(m.former?"":thisSeason(id))+trophyShelf(id)+accolades(id)+seasonHistory(id);
 }
 
 /* ---------- The Ledger: Versus, Rivalries, Trophies, Records ---------- */
@@ -1437,24 +1669,30 @@ function trophyArt(kind){
     <ellipse cx="82.8" cy="15" rx="4" ry="2.8" fill="#1E2430" stroke="#7A8699" stroke-width=".6"/></svg>`;
 }
 
+// A swipeable carousel (wired up by setupCarousels). slides: [{html, label (read out), dot (dot button's name)}].
+// Used by the Trophies page and the trophy shelf on manager pages.
+function carousel(label,slides,cls=""){
+  const chev=d=>`<svg viewBox="0 0 16 16"><path d="${d}"/></svg>`;
+  return `<div class="car${cls?" "+cls:""}" data-car>
+    <div class="car-stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="${esc(label)}">
+      ${slides.map((s,i)=>`<div class="cs" data-i="${i}" data-label="${esc(s.label)}">${s.html}</div>`).join("")}
+    </div>
+    ${slides.length>1?`<div class="car-nav"><button class="car-btn" type="button" data-go="-1" aria-label="Previous">${chev("M10 3 5 8l5 5")}</button>
+      <div class="dots">${slides.map((s,i)=>`<button type="button" data-to="${i}" aria-label="${esc(s.dot)}"></button>`).join("")}</div>
+      <button class="car-btn" type="button" data-go="1" aria-label="Next">${chev("m6 3 5 5-5 5")}</button></div>`:""}
+    <p class="sr-only" aria-live="polite"></p></div>`;
+}
+
 function trophiesPage(){
   const list=LEDGER.trophies.filter(t=>t&&t.name);
-  const chev=d=>`<svg viewBox="0 0 16 16"><path d="${d}"/></svg>`;
-  const carousel=(t,wins)=>`<div class="car" data-car>
-    <div class="car-stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="${esc(t.name)} winners by year">
-      ${wins.map(({y,r},i)=>`<div class="cs" data-i="${i}" data-label="${y}: ${esc(M[r.id].name)}, ${esc(r.team)}">
-        <div class="yr">${y}</div>${trophyArt(t.art)}
-        <div class="who">${avatar(r.id)}<div><a class="n" href="#/managers/${r.id}">${esc(M[r.id].name)}</a><div class="t">${esc(r.team)}</div></div></div></div>`).join("")}
-    </div>
-    ${wins.length>1?`<div class="car-nav"><button class="car-btn" type="button" data-go="-1" aria-label="Previous year">${chev("M10 3 5 8l5 5")}</button>
-      <div class="dots">${wins.map(({y},i)=>`<button type="button" data-to="${i}" aria-label="${y}"></button>`).join("")}</div>
-      <button class="car-btn" type="button" data-go="1" aria-label="Next year">${chev("m6 3 5 5-5 5")}</button></div>`:""}
-    <p class="sr-only" aria-live="polite"></p></div>`;
+  const winners=(t,wins)=>carousel(`${t.name} winners by year`,wins.map(({y,r})=>({label:`${y}: ${M[r.id].name}, ${r.team}`,dot:String(y),
+    html:`<div class="yr">${y}</div>${trophyArt(t.art)}
+      <div class="who">${avatar(r.id)}<div><a class="n" href="#/managers/${r.id}">${esc(M[r.id].name)}</a><div class="t">${esc(r.team)}</div></div></div>`})));
   return `<section>${ledgerHead("Trophies","Every season's hardware, and the other kind.")}${ledgerTypo("ledger/trophies.json")}
     ${list.length?"":`<div class="empty"><h3>No trophies set up</h3><p>Add them to ledger/trophies.json.</p></div>`}</section>
     ${list.map((t,i)=>{const wins=YEARS.map(y=>({y,r:trophyWinner(t,y)})).filter(x=>x.r&&M[x.r.id]);
       return `<section class="tro${i%2?" flip":""}"><div class="tro-tx"><span class="kicker">${esc(placeLabel(t.place))}</span><h2>${esc(t.name)}</h2>${t.line?`<p>${esc(t.line)}</p>`:""}</div>
-        ${wins.length?carousel(t,wins):`<div class="empty"><p>Nobody has earned this one yet.</p></div>`}</section>`;}).join("")}`;
+        ${wins.length?winners(t,wins):`<div class="empty"><p>Nobody has earned this one yet.</p></div>`}</section>`;}).join("")}`;
 }
 
 function setupCarousels(){
@@ -1525,6 +1763,9 @@ function streaks(){
   });
   return out.filter(r=>r.res!=="T"&&r.n>=2);
 }
+const streakSpan=r=>(r.start.season===r.end.season?`Weeks ${r.start.week}–${r.end.week}, ${r.end.season}`
+  :`Week ${r.start.week}, ${r.start.season} – week ${r.end.week}, ${r.end.season}`)+(r.current?" · active":"");
+const cash=v=>(v<0?"−$":v>0?"+$":"$")+Math.abs(v).toLocaleString();
 
 function recordsPage(){
   const espnWait=`Starts counting in ${H2H_FROM}, the first ESPN season.`;
@@ -1605,14 +1846,11 @@ function recordsPage(){
   ];
 
   const st=streaks();
-  const span=r=>(r.start.season===r.end.season?`Weeks ${r.start.week}–${r.end.week}, ${r.end.season}`
-    :`Week ${r.start.week}, ${r.start.season} – week ${r.end.week}, ${r.end.season}`)+(r.current?" · active":"");
-  const stE=res=>st.filter(r=>r.res===res).map(r=>({id:r.id,team:r.end.team,v:r.n,show:r.n,when:span(r),tb:-r.end.season*100-r.end.week}));
+  const stE=res=>st.filter(r=>r.res===res).map(r=>({id:r.id,team:r.end.team,v:r.n,show:r.n,when:streakSpan(r),tb:-r.end.season*100-r.end.week}));
   const stWait=sides().length?"No streaks of 2 or more yet.":espnWait;
   const streakCards=[recCard("Longest win streak",stE("W"),{wait:stWait}),recCard("Longest losing streak",stE("L"),{wait:stWait})];
 
   const money=moneyRows();
-  const cash=v=>(v<0?"−$":v>0?"+$":"$")+Math.abs(v).toLocaleString();
   const mE=money&&money.map(x=>({id:x.id,team:careerTeam(x.id),v:x.net,show:cash(x.net),when:`$${x.won.toLocaleString()} won, $${x.paid.toLocaleString()} paid in`}));
 
   return `<section>${ledgerHead("Records","Season and career records go back to 2021. Game-by-game records start with the "+H2H_FROM+" ESPN season, and playoff and consolation games count. A season in progress counts toward career and scoring records, not single-season ones.")}${ledgerTypo("ledger/trophies.json")}</section>
@@ -1792,12 +2030,7 @@ const posRank=(p,k)=>`${esc(p.pos)}${p[k]}`;
 // Team color from managers.json ("color"), or a fixed fallback for an unmatched team.
 const TEAM_COLORS=["#0B5CAD","#B3261E","#2E7D32","#6A1B9A","#B45309","#00796B","#37474F","#AD1457","#5D4037","#283593"];
 const teamColor=t=>t.manager&&M[t.manager]&&M[t.manager].color||TEAM_COLORS[Math.abs(t.espnId||0)%TEAM_COLORS.length];
-const ESPN_IMG="https://a.espncdn.com/combiner/i?img=/i/";
-// ESPN headshot, or the team logo for a defense. Initials show if the image is missing.
-const headshot=p=>{const dst=p.playerId<0||p.pos==="D/ST", ini=p.player.split(/\s+/).map(w=>w[0]).slice(0,2).join("");
-  const src=dst?(p.nfl&&p.nfl!=="FA"?`${ESPN_IMG}teamlogos/nfl/500/${p.nfl.toLowerCase()}.png&w=80&h=80`:"")
-    :`${ESPN_IMG}headshots/nfl/players/full/${p.playerId}.png&w=96&h=70&scale=crop`;
-  return `<div class="hs${dst?" logo":""}"><span aria-hidden="true">${esc(ini)}</span>${src?`<img src="${src}" alt="" loading="lazy" onerror="this.remove()">`:""}</div>`;};
+const pickPlayer=p=>({id:p.playerId,name:p.player,pos:p.pos,nfl:p.nfl});
 const draftSeasons=()=>LIVES.filter(d=>d.draft&&d.draft.picks&&d.draft.picks.length).map(d=>d.season);
 
 // One column per team in first-round order, one row per round.
@@ -1809,7 +2042,7 @@ function draftBoard(d){
   const vals=new Set(dr.values), busts=new Set(dr.busts);
   const rounds=[...new Set(dr.picks.map(p=>p.round))].sort((a,b)=>a-b);
   const dir=r=>{const p=dr.picks.find(p=>p.round===r&&p.pick===1); return p&&order.indexOf(p.espnId)>order.length/2?"←":"→";};
-  const cell=p=>p?`<td class="bc">${headshot(p)}<span class="ov" title="Overall pick">#${p.overall}</span>
+  const cell=p=>p?`<td class="bc">${pimg(pickPlayer(p))}<span class="ov" title="Overall pick">#${p.overall}</span>
       <b class="pn">${esc(p.player)}</b><span class="bm">${esc([p.pos,p.nfl].filter(Boolean).join(" · "))}</span>
       ${vals.has(p.overall)?`<span class="res w">Value</span>`:busts.has(p.overall)?`<span class="res bust">Bust</span>`:""}</td>`:`<td class="bc empty-cell"></td>`;
   return `<div class="scroll"><table class="board" style="--cols:${order.length}"><caption class="sr-only">The ${d.season} draft by team and round</caption>
@@ -1832,14 +2065,14 @@ function draftPage(y){
   const thru=lastFinal(d), top=pick(dr.picks,p=>p.pts);
   const date=d.settings&&d.settings.draftDate?new Date(d.settings.draftDate):null;
   const pl=(p,extra)=>`<span class="dp-p"><b>${esc(p.player)}</b> <span class="team">${esc([p.pos,p.nfl].filter(Boolean).join(", "))}</span><small>Round ${p.round}, pick ${p.pick} · ${extra}</small></span>`;
-  const row=(p,cls)=>`<li class="dp">${face(tm(p.espnId))}${pl(p,`${esc(nameOf(tm(p.espnId)))} · drafted ${posRank(p,"posDraft")}, now ${posRank(p,"posFinish")}`)}<span class="dp-v ${cls}">${p.pts.toFixed(1)}<small>pts</small></span></li>`;
+  const row=(p,cls)=>`<li class="dp">${pimg(pickPlayer(p),"md")}${pl(p,`${esc(nameOf(tm(p.espnId)))} · drafted ${posRank(p,"posDraft")}, now ${posRank(p,"posFinish")}`)}<span class="dp-v ${cls}">${p.pts.toFixed(1)}<small>pts</small></span></li>`;
   const roast=t=>dr.roasts&&dr.roasts[String(t.espnId)]||"";
   const grades=dr.teams.map(t=>{const T=tm(t.espnId), b=pk[t.best], w=pk[t.worst];
     return `<div class="dg"><div class="dg-top">${face(T)}<div class="dg-id"><div class="n">${who(T)}</div><div class="t">${esc(T.name||"")}</div></div>
         <div class="dg-gr" aria-label="Grade ${esc(t.grade)}">${esc(t.grade)}</div></div>
       <div class="dg-body"><div class="dg-st"><b>${t.total.toFixed(1)}</b> pts from drafted players · ${ord(t.rank)} of ${dr.teams.length}</div>
-        ${b?`<p><span class="lbl">Best pick</span>${esc(b.player)}, round ${b.round} · ${b.pts.toFixed(1)} pts</p>`:""}
-        ${w&&w!==b?`<p><span class="lbl">Worst early pick</span>${esc(w.player)}, round ${w.round} · ${w.pts.toFixed(1)} pts</p>`:""}
+        ${b?`<p><span class="lbl">Best pick</span><span class="plyr">${pimg(pickPlayer(b))}<span>${esc(b.player)}, round ${b.round} · ${b.pts.toFixed(1)} pts</span></span></p>`:""}
+        ${w&&w!==b?`<p><span class="lbl">Worst early pick</span><span class="plyr">${pimg(pickPlayer(w))}<span>${esc(w.player)}, round ${w.round} · ${w.pts.toFixed(1)} pts</span></span></p>`:""}
         ${roast(t)?`<p class="roast">${esc(roast(t))}</p>`:""}</div></div>`;}).join("");
   return `<section>${head}
     <div class="strip">
@@ -1958,29 +2191,60 @@ function rulesPage(){
 }
 
 
-/* Ledger menu in the nav */
-const ledgerBtn=document.getElementById("ledger-btn"), ledgerMenu=document.getElementById("ledger-menu");
-function placeLedgerMenu(){
-  const r=ledgerBtn.getBoundingClientRect(), vw=document.documentElement.clientWidth;
-  ledgerMenu.style.top=r.bottom+"px";
-  ledgerMenu.style.left=Math.max(16,Math.min(r.left,vw-ledgerMenu.offsetWidth-16))+"px";
+/* Dropdown menus in the nav (Managers and Ledger). Fixed-position so the scrolling nav doesn't clip them. */
+const MENUS=[];
+// btn toggles the menu; anchor is what the menu lines up under; hover opens it on devices with a mouse.
+function navMenu(btn,menu,{anchor=btn,hover=false}={}){
+  let timer=null, pinned=false;
+  const place=()=>{
+    const r=anchor.getBoundingClientRect(), vw=document.documentElement.clientWidth;
+    menu.style.top=r.bottom+"px";
+    menu.style.left=Math.max(16,Math.min(r.left,vw-menu.offsetWidth-16))+"px";
+  };
+  const m={menu,btn,place,set(open,focus){
+    clearTimeout(timer);
+    if(!open) pinned=false;
+    menu.hidden=!open; btn.setAttribute("aria-expanded",String(open));
+    if(open){ MENUS.forEach(o=>o!==m&&o.set(false)); place(); if(focus) menu.querySelector("a").focus(); }
+  }};
+  btn.addEventListener("click",e=>{
+    // Clicking the arrow of a menu that hovering opened keeps it open instead of closing it.
+    if(!menu.hidden&&!pinned&&hover&&canHover.matches){ pinned=true; return; }
+    m.set(menu.hidden,e.detail===0); pinned=!menu.hidden;
+  });
+  menu.addEventListener("click",e=>{ if(e.target.closest("a")) m.set(false); });
+  menu.addEventListener("focusout",e=>{ if(!menu.contains(e.relatedTarget)&&e.relatedTarget!==btn&&e.relatedTarget) m.set(false); });
+  if(hover){
+    const enter=()=>{ if(!canHover.matches) return; clearTimeout(timer); if(menu.hidden) m.set(true); };
+    const leave=()=>{ if(!canHover.matches||pinned) return; clearTimeout(timer); timer=setTimeout(()=>m.set(false),200); };
+    [anchor,menu].forEach(el=>{ el.addEventListener("mouseenter",enter); el.addEventListener("mouseleave",leave); });
+  }
+  MENUS.push(m);
+  return m;
 }
-function setLedgerMenu(open,focus){
-  ledgerMenu.hidden=!open; ledgerBtn.setAttribute("aria-expanded",String(open));
-  if(open){ placeLedgerMenu(); if(focus) ledgerMenu.querySelector("a").focus(); }
-}
-ledgerBtn.addEventListener("click",e=>setLedgerMenu(ledgerMenu.hidden,e.detail===0));
-ledgerMenu.addEventListener("click",e=>{ if(e.target.closest("a")) setLedgerMenu(false); });
-document.addEventListener("click",e=>{ if(!ledgerMenu.hidden&&!e.target.closest("#ledger-menu,#ledger-btn")) setLedgerMenu(false); });
+const canHover=matchMedia("(hover:hover) and (pointer:fine)");
+const closeMenus=()=>MENUS.forEach(m=>m.set(false));
+const ledgerBtn=document.getElementById("ledger-btn");
+navMenu(ledgerBtn,document.getElementById("ledger-menu"));
+const mgrNav=document.getElementById("mgr-nav"), mgrMenu=document.getElementById("mgr-menu");
+navMenu(document.getElementById("mgr-btn"),mgrMenu,{anchor:mgrNav,hover:true});
+document.addEventListener("click",e=>MENUS.forEach(m=>{ if(!m.menu.hidden&&!m.menu.contains(e.target)&&!m.btn.contains(e.target)) m.set(false); }));
 document.addEventListener("keydown",e=>{
-  if(ledgerMenu.hidden) return;
-  if(e.key==="Escape"){ setLedgerMenu(false); ledgerBtn.focus(); }
-  const links=[...ledgerMenu.querySelectorAll("a")], i=links.indexOf(document.activeElement);
+  const m=MENUS.find(m=>!m.menu.hidden); if(!m) return;
+  if(e.key==="Escape"){ m.set(false); m.btn.focus(); }
+  const links=[...m.menu.querySelectorAll("a")], i=links.indexOf(document.activeElement);
   if(e.key==="ArrowDown"||e.key==="ArrowUp"){ e.preventDefault(); links[(i+(e.key==="ArrowDown"?1:links.length-1))%links.length].focus(); }
 });
-ledgerMenu.addEventListener("focusout",e=>{ if(!ledgerMenu.contains(e.relatedTarget)&&e.relatedTarget!==ledgerBtn&&e.relatedTarget) setLedgerMenu(false); });
-["scroll","resize"].forEach(ev=>window.addEventListener(ev,()=>{ if(!ledgerMenu.hidden) placeLedgerMenu(); },{passive:true}));
-document.getElementById("nav").addEventListener("scroll",()=>{ if(!ledgerMenu.hidden) placeLedgerMenu(); },{passive:true});
+const placeMenus=()=>MENUS.forEach(m=>{ if(!m.menu.hidden) m.place(); });
+["scroll","resize"].forEach(ev=>window.addEventListener(ev,placeMenus,{passive:true}));
+document.getElementById("nav").addEventListener("scroll",placeMenus,{passive:true});
+
+// Every current manager, photo (or initials) and name. Former managers stay on the Managers page.
+function mgrMenuHtml(){
+  const ids=Object.keys(M).filter(id=>!M[id].former).sort((a,b)=>M[a].name.localeCompare(M[b].name));
+  return `<div class="mm-grid">${ids.map(id=>`<a href="#/managers/${id}" ${location.hash===`#/managers/${id}`?'aria-current="page"':""}>${avatar(id)}
+    <span class="mm-n">${esc(M[id].name)}<small>${esc(teamNow(id))}</small></span></a>`).join("")}</div>`;
+}
 
 /* ---------- Articles and power rankings (data/articles/<season>.json) ---------- */
 const articles=()=>LIVES.flatMap(d=>(d.articles||[]).filter(a=>a.headline).map(a=>({...a,season:d.season})))
@@ -2190,7 +2454,7 @@ function rosterCard(r){
   const groups=[...new Set([...POS_ORDER,...start.map(p=>p.pos)])].map(g=>[g,start.filter(p=>p.pos===g),0])
     .concat([["Bench",r.players.filter(p=>p.slot==="BE").sort(by),1],["IR",r.players.filter(p=>p.slot==="IR").sort(by),1]]);
   const row=(p,bn)=>`<tr class="${bn?"bn":""}"><td class="sl">${esc(bn?p.pos:slotName(p.slot))}</td>
-    <td title="${esc(p.name)}">${esc(p.name)}${injTag(p.injury)}</td><td class="nfl">${esc(p.nfl)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`;
+    <td>${plabel(p,injTag(p.injury))}</td><td class="nfl">${esc(p.nfl)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`;
   return `<div class="roster"><div class="n">${who(t)}</div><div class="t">${esc(t.name||"")}</div>
     <table><colgroup><col class="c-sl"><col><col class="c-nfl"><col class="c-pt"></colgroup><tbody>${groups.filter(g=>g[1].length).map(([g,ps,bn],i)=>
       `<tr class="grp"><td colspan="3">${esc(g)}</td><td class="num">${i?"":"Pts"}</td></tr>${ps.map(p=>row(p,bn)).join("")}`).join("")}
@@ -2199,7 +2463,7 @@ function rosterCard(r){
 
 function txCard(x){
   const kind=["trade","waiver","fa","drop"].find(k=>x.types.includes(k));
-  const pl=m=>`<span class="pn">${esc(m.name)}</span>${m.pos||m.nfl?` <span class="team">${esc([m.pos,m.nfl].filter(Boolean).join(", "))}</span>`:""}`;
+  const pl=m=>`${pimg({id:m.player,name:m.name,pos:m.pos,nfl:m.nfl})}<span class="pn">${esc(m.name)}</span>${m.pos||m.nfl?` <span class="team">${esc([m.pos,m.nfl].filter(Boolean).join(", "))}</span>`:""}`;
   const date=x.date?new Date(x.date):null;
   let by, lines;
   if(kind==="trade"){
@@ -2388,7 +2652,7 @@ function route(){
     case "articles": app.innerHTML=parts[2]?articlePage(parts[1],parts[2]):articlesPage(); tab="#/articles"; break;
     case "rankings": app.innerHTML=rankingsPage(parts[1]); tab="#/rankings"; break;
     case "seasons": app.innerHTML=season(parts[1]); tab="#/seasons/2025"; break;
-    case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; break;
+    case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; if(parts[1]) setupProfile(); break;
     case "records": location.replace("#/ledger/records"); return;   // old link, now under the Ledger
     case "ledger":
       app.innerHTML=ledger(parts.slice(1)); tab="#/ledger";
@@ -2404,7 +2668,9 @@ function route(){
   const here=tab==="#/ledger"?`#/ledger/${parts[1]||"versus"}`:tab;
   document.querySelectorAll("#nav a").forEach(a=>a.getAttribute("href")===here?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
   tab==="#/ledger"?ledgerBtn.setAttribute("aria-current","page"):ledgerBtn.removeAttribute("aria-current");
-  setLedgerMenu(false);
+  mgrNav.classList.toggle("cur",tab==="#/managers");
+  mgrMenu.innerHTML=mgrMenuHtml();
+  closeMenus();
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route);

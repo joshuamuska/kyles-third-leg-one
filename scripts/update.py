@@ -10,6 +10,8 @@ Each finished week also gets power rankings and a Claude-written roundup article
 in data/articles/<season>.json. Those are written once and never redone.
 It also saves the league settings (for the Rules page) and the draft with each pick's
 points so far; Claude's draft-grade roasts are rewritten at most once per NFL week.
+Each finished week gets its weekly awards (high score, lucky win and so on) for the manager
+pages, and each season keeps its roster straight out of the draft and its final roster.
 """
 import datetime
 import hashlib
@@ -733,6 +735,121 @@ def draft_roasts(draft, by_id, week):
     return roasts
 
 
+# Positions each lineup slot takes. Any other slot (QB, RB, D/ST ...) takes only its own position.
+FLEX_SLOTS = {"FLEX": {"RB", "WR", "TE"}, "RB/WR/TE": {"RB", "WR", "TE"}, "RB/WR": {"RB", "WR"},
+              "WR/TE": {"WR", "TE"}, "OP": {"QB", "RB", "WR", "TE"}}
+DEFAULT_SLOTS = [("QB", 1), ("RB", 2), ("WR", 2), ("TE", 1), ("FLEX", 1), ("D/ST", 1), ("K", 1)]
+
+
+def fits(slot, pos):
+    return pos in FLEX_SLOTS.get(slot, {slot})
+
+
+def by_strictness(slots):
+    """Single-position slots first, then the flex slots from narrowest to widest."""
+    return sorted(slots, key=lambda s: len(FLEX_SLOTS.get(s, {s})))
+
+
+def best_lineup(side):
+    """Most points the team could have scored with the same starting slots, picking from its
+    starters and bench (not IR). Filling the narrow slots first makes the greedy pick optimal."""
+    pool = sorted((p for p in side["starters"] + side["bench"] if p["slot"] != "IR"), key=lambda p: -p["pts"])
+    used, total = set(), 0.0
+    for slot in by_strictness([p["slot"] for p in side["starters"]]):
+        i = next((i for i, p in enumerate(pool) if i not in used and fits(slot, p["pos"])), None)
+        if i is not None:
+            used.add(i)
+            total += pool[i]["pts"]
+    return round(total, 2)
+
+
+def week_awards(wk):
+    """A finished week's awards as {award: [ESPN team ids]}. Ties share an award.
+    high/low: top and bottom score. blowout/close: winner of the biggest and smallest margin.
+    lucky: won while scoring below the league median; unlucky: lost while scoring above it.
+    over/under: furthest above and below the starters' projection.
+    best/worst: highest and lowest share of the best lineup the team could have started."""
+    rows = []
+    for m in wk["matchups"]:
+        for s, o in ((m["home"], m["away"]), (m["away"], m["home"])):
+            best = best_lineup(s)
+            rows.append({"id": s["espnId"], "score": s["score"], "margin": s["score"] - o["score"],
+                         "vsProj": s["score"] - sum(p.get("proj") or 0 for p in s["starters"]),
+                         "share": s["score"] / best if best else 1})
+    if not rows:
+        return {}
+    scores = sorted(r["score"] for r in rows)
+    median = (scores[(len(scores) - 1) // 2] + scores[len(scores) // 2]) / 2
+    wins = [r for r in rows if r["margin"] > 0]
+
+    def extreme(key, among=rows, high=True):
+        vals = [round(r[key], 4) for r in among]
+        if not vals:
+            return []
+        want = max(vals) if high else min(vals)
+        return sorted({r["id"] for r, v in zip(among, vals) if v == want})
+
+    return {
+        "high": extreme("score"), "low": extreme("score", high=False),
+        "blowout": extreme("margin", wins), "close": extreme("margin", wins, high=False),
+        "lucky": sorted(r["id"] for r in wins if r["score"] < median),
+        "unlucky": sorted(r["id"] for r in rows if r["margin"] < 0 and r["score"] > median),
+        "over": extreme("vsProj"), "under": extreme("vsProj", high=False),
+        "best": extreme("share"), "worst": extreme("share", high=False),
+    }
+
+
+def draft_rosters(draft, settings, team_count):
+    """Each team's roster straight out of the draft, with round and pick. Picks fill the starting
+    lineup in draft order (his own position's slot first, then a flex slot); the rest sit on the
+    bench. None until the draft is complete."""
+    picks = (draft or {}).get("picks") or []
+    if not picks or len(picks) < (draft.get("rounds") or 0) * team_count:
+        return None
+    slots = [(s["slot"], s["count"]) for s in (settings or {}).get("slots") or []
+             if s["slot"] not in BENCH_SLOTS] or DEFAULT_SLOTS
+    out = []
+    for tid in dict.fromkeys(p["espnId"] for p in picks):
+        empty, players = [s for s, n in slots for _ in range(n)], []
+        for p in sorted((p for p in picks if p["espnId"] == tid), key=lambda p: p["overall"]):
+            slot = next((s for s in by_strictness(empty) if fits(s, p["pos"])), "BE")
+            if slot != "BE":
+                empty.remove(slot)
+            players.append({"id": p["playerId"], "name": p["player"], "pos": p["pos"], "nfl": p["nfl"],
+                            "slot": slot, "round": p["round"], "pick": p["pick"]})
+        out.append({"espnId": tid, "players": players})
+    return out
+
+
+def final_rosters(rosters, transactions, draft):
+    """Current rosters (the final roster once the season is over), with how each player got
+    there: draft, waiver, fa (free agent) or trade, from the newest move that brought him in."""
+    drafted = {(p["playerId"], p["espnId"]): p for p in (draft or {}).get("picks") or []}
+
+    def how(pid, tid):
+        for x in transactions:  # newest first
+            for m in x["moves"]:
+                if m["player"] != pid:
+                    continue
+                if m["action"] == "add" and m.get("team") == tid:
+                    return "waiver" if "waiver" in x["types"] else "fa"
+                if m["action"] == "trade" and m.get("to") == tid:
+                    return "trade"
+        return "draft" if (pid, tid) in drafted else None
+
+    out = []
+    for r in rosters:
+        players = []
+        for p in r["players"]:
+            row = {**p, "how": how(p["id"], r["espnId"])}
+            pk = drafted.get((p["id"], r["espnId"]))
+            if pk:
+                row["round"], row["pick"] = pk["round"], pk["pick"]
+            players.append(row)
+        out.append({"espnId": r["espnId"], "players": players})
+    return out
+
+
 def main():
     s2, swid = os.environ.get("ESPN_S2"), os.environ.get("ESPN_SWID")
     if not s2 or not swid:
@@ -780,8 +897,9 @@ def main():
         info = by_id.get(tid, {})
         starters, bench = [], []
         for p in lineup:
-            row = {"name": p.name, "pos": p.position, "slot": p.slot_position,
-                   "pts": round(p.points or 0, 2), "proj": round(p.projected_points or 0, 2)}
+            row = {"id": p.playerId, "name": p.name, "pos": p.position, "nfl": nfl_team(p),
+                   "slot": p.slot_position, "pts": round(p.points or 0, 2),
+                   "proj": round(p.projected_points or 0, 2)}
             (bench if p.slot_position in BENCH_SLOTS else starters).append(row)
         return {"espnId": tid, "manager": info.get("manager"), "name": info.get("name"),
                 "score": round(score or 0, 2), "starters": starters, "bench": bench}
@@ -825,8 +943,10 @@ def main():
                 m["recap"], m["recapBy"] = prev["recap"], "claude"
             else:
                 m["recap"], m["recapBy"] = base, "auto"
-        weeks.append({"week": wk, "final": done, "playoff": any(m["playoff"] for m in matchups),
-                      "matchups": matchups})
+        week = {"week": wk, "final": done, "playoff": any(m["playoff"] for m in matchups), "matchups": matchups}
+        if done:
+            week["awards"] = week_awards(week)
+        weeks.append(week)
 
     # Rosters and transactions are extras: if ESPN balks, keep the last saved copy.
     rosters, transactions = saved.get("rosters", []), saved.get("transactions", [])
@@ -862,6 +982,19 @@ def main():
                 draft["roasts"], draft["roastWeek"], draft["roastStyle"] = got, current, DRAFT_STYLE_ID
                 print("Wrote this week's draft roasts.")
 
+    # Manager pages show how each season started and ended. The post-draft roster is saved once
+    # the draft is complete and never redone; the final roster follows the current one, so it
+    # stops changing when the season ends (and this file stops updating once league.json moves on).
+    start_rosters, end_rosters = saved.get("draftRosters"), saved.get("finalRosters")
+    try:
+        start_rosters = start_rosters or draft_rosters(draft, settings, len(teams))
+    except Exception as e:
+        print(f"::warning::Couldn't build the post-draft rosters ({e}); trying again next run.")
+    try:
+        end_rosters = final_rosters(rosters, transactions, draft)
+    except Exception as e:
+        print(f"::warning::Couldn't work out how each player was acquired ({e}); keeping the last saved rosters.")
+
     data = {
         "season": season,
         "updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes"),
@@ -876,6 +1009,8 @@ def main():
         "transactions": transactions,
         "settings": settings,
         "draft": draft,
+        "draftRosters": start_rosters,
+        "finalRosters": end_rosters,
     }
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(json.dumps(data, indent=1))
