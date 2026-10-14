@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-14T00:37+00:00",
+ "updated": "2026-10-14T14:21+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -6950,7 +6950,7 @@
         "pos": "TE",
         "slot": "TE",
         "pts": 0,
-        "proj": 9.63
+        "proj": 9.65
        },
        {
         "name": "Cameron Dicker",
@@ -6994,7 +6994,7 @@
         "pos": "WR",
         "slot": "BE",
         "pts": 0,
-        "proj": 16.03
+        "proj": 16.04
        },
        {
         "name": "Jonathon Brooks",
@@ -7018,11 +7018,11 @@
         "proj": 6.92
        },
        {
-        "name": "Keon Coleman",
-        "pos": "WR",
+        "name": "Brenton Strange",
+        "pos": "TE",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.12
+        "proj": 9.75
        }
       ]
      },
@@ -7072,14 +7072,14 @@
         "pos": "TE",
         "slot": "TE",
         "pts": 0,
-        "proj": 14.83
+        "proj": 14.82
        },
        {
         "name": "Denzel Boston",
         "pos": "WR",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 12.2
+        "proj": 12.29
        },
        {
         "name": "Steelers D/ST",
@@ -7147,11 +7147,11 @@
         "proj": 9.55
        },
        {
-        "name": "Jacoby Brissett",
-        "pos": "QB",
+        "name": "Kimani Vidal",
+        "pos": "RB",
         "slot": "BE",
         "pts": 0,
-        "proj": 15.25
+        "proj": 5.92
        }
       ]
      },
@@ -7340,13 +7340,6 @@
         "proj": 11.18
        },
        {
-        "name": "Evan McPherson",
-        "pos": "K",
-        "slot": "K",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "name": "Emanuel Wilson",
         "pos": "RB",
         "slot": "RB",
@@ -7354,11 +7347,18 @@
         "proj": 14.86
        },
        {
-        "name": "Bengals D/ST",
+        "name": "Chiefs D/ST",
         "pos": "D/ST",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 0
+        "proj": 7.01
+       },
+       {
+        "name": "Dominic Zvada",
+        "pos": "K",
+        "slot": "K",
+        "pts": 0,
+        "proj": 10.91
        }
       ],
       "bench": [
@@ -7381,7 +7381,7 @@
         "pos": "TE",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.29
+        "proj": 10.3
        },
        {
         "name": "Jordan Mason",
@@ -7402,7 +7402,7 @@
         "pos": "WR",
         "slot": "BE",
         "pts": 0,
-        "proj": 0.11
+        "proj": 0
        },
        {
         "name": "Tyreek Hill",
@@ -7419,11 +7419,11 @@
         "proj": 6.66
        },
        {
-        "name": "Will Shipley",
-        "pos": "RB",
+        "name": "Kendrick Bourne",
+        "pos": "WR",
         "slot": "BE",
         "pts": 0,
-        "proj": 0
+        "proj": 6.11
        }
       ]
      },
@@ -7566,7 +7566,7 @@
         "pos": "RB",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.04
+        "proj": 9.07
        },
        {
         "name": "Romeo Doubs",
@@ -7586,7 +7586,7 @@
        {
         "name": "Puka Nacua",
         "pos": "WR",
-        "slot": "WR",
+        "slot": "RB/WR/TE",
         "pts": 0,
         "proj": 22.78
        },
@@ -7595,7 +7595,7 @@
         "pos": "WR",
         "slot": "WR",
         "pts": 0,
-        "proj": 15.99
+        "proj": 16.0
        },
        {
         "name": "Bhayshul Tuten",
@@ -7633,13 +7633,6 @@
         "proj": 0
        },
        {
-        "name": "Keaton Mitchell",
-        "pos": "RB",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 7.66
-       },
-       {
         "name": "Matthew Stafford",
         "pos": "QB",
         "slot": "QB",
@@ -7652,6 +7645,13 @@
         "slot": "K",
         "pts": 0,
         "proj": 10.99
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0,
+        "proj": 9.43
        }
       ],
       "bench": [
@@ -7684,13 +7684,6 @@
         "proj": 5.64
        },
        {
-        "name": "Jake Ferguson",
-        "pos": "TE",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 6.82
-       },
-       {
         "name": "Jonah Coleman",
         "pos": "RB",
         "slot": "IR",
@@ -7703,6 +7696,13 @@
         "slot": "BE",
         "pts": 0,
         "proj": 6.76
+       },
+       {
+        "name": "Keaton Mitchell",
+        "pos": "RB",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 7.66
        }
       ]
      },
@@ -7734,11 +7734,18 @@
         "proj": 19.34
        },
        {
-        "name": "Quinshon Judkins",
-        "pos": "RB",
+        "name": "DeVonta Smith",
+        "pos": "WR",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 13.26
+        "proj": 14.62
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 0,
+        "proj": 13.36
        },
        {
         "name": "Matthew Golden",
@@ -7755,20 +7762,6 @@
         "proj": 8.52
        },
        {
-        "name": "Aaron Jones Sr.",
-        "pos": "RB",
-        "slot": "RB",
-        "pts": 0,
-        "proj": 0
-       },
-       {
-        "name": "Will Reichard",
-        "pos": "K",
-        "slot": "K",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "name": "Dalton Kincaid",
         "pos": "TE",
         "slot": "TE",
@@ -7783,21 +7776,21 @@
         "proj": 20.24
        },
        {
-        "name": "Browns D/ST",
+        "name": "Matt Gay",
+        "pos": "K",
+        "slot": "K",
+        "pts": 0,
+        "proj": 10.71
+       },
+       {
+        "name": "Patriots D/ST",
         "pos": "D/ST",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 3.53
+        "proj": 6.76
        }
       ],
       "bench": [
-       {
-        "name": "DeVonta Smith",
-        "pos": "WR",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 14.62
-       },
        {
         "name": "Ladd McConkey",
         "pos": "WR",
@@ -7827,6 +7820,13 @@
         "proj": 6.36
        },
        {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
+       },
+       {
         "name": "Zach Charbonnet",
         "pos": "RB",
         "slot": "IR",
@@ -7853,7 +7853,7 @@
         "pos": "RB",
         "slot": "RB",
         "pts": 0,
-        "proj": 23.07
+        "proj": 23.08
        },
        {
         "name": "Garrett Wilson",
@@ -7905,18 +7905,18 @@
         "proj": 8.97
        },
        {
-        "name": "Jaguars D/ST",
-        "pos": "D/ST",
-        "slot": "D/ST",
-        "pts": 0,
-        "proj": 6.21
-       },
-       {
         "name": "MarShawn Lloyd",
         "pos": "RB",
         "slot": "RB/WR/TE",
         "pts": 0,
         "proj": 10.85
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "D/ST",
+        "slot": "D/ST",
+        "pts": 0,
+        "proj": 7.02
        }
       ],
       "bench": [
@@ -8010,7 +8010,7 @@
         "pos": "WR",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 16.3
+        "proj": 16.34
        },
        {
         "name": "DJ Moore",
@@ -8118,6 +8118,13 @@
         "slot": "BE",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "name": "Germie Bernard",
+        "pos": "WR",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.55
        }
       ]
      },
@@ -8247,6 +8254,13 @@
         "slot": "BE",
         "pts": 0,
         "proj": 8.92
+       },
+       {
+        "name": "Pat Freiermuth",
+        "pos": "TE",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.27
        }
       ]
      },
@@ -8285,7 +8299,7 @@
      "id": 4241478,
      "name": "DeVonta Smith",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "PHI",
      "injury": "QUESTIONABLE",
      "pts": 48.5
@@ -8303,7 +8317,7 @@
      "id": 4685702,
      "name": "Quinshon Judkins",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "RB",
      "nfl": "CLE",
      "injury": "QUESTIONABLE",
      "pts": 56.3
@@ -8357,7 +8371,7 @@
      "id": 3042519,
      "name": "Aaron Jones Sr.",
      "pos": "RB",
-     "slot": "RB",
+     "slot": "BE",
      "nfl": "MIN",
      "injury": null,
      "pts": 70.2
@@ -8370,15 +8384,6 @@
      "nfl": "SEA",
      "injury": "OUT",
      "pts": 0
-    },
-    {
-     "id": 4567104,
-     "name": "Will Reichard",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "MIN",
-     "injury": null,
-     "pts": 68.0
     },
     {
      "id": 4385690,
@@ -8408,13 +8413,22 @@
      "pts": 87.22
     },
     {
-     "id": -16005,
-     "name": "Browns D/ST",
+     "id": 4249087,
+     "name": "Matt Gay",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "LV",
+     "injury": null,
+     "pts": 51.0
+    },
+    {
+     "id": -16017,
+     "name": "Patriots D/ST",
      "pos": "D/ST",
      "slot": "D/ST",
-     "nfl": "CLE",
+     "nfl": "NE",
      "injury": null,
-     "pts": 27.0
+     "pts": 38.0
     }
    ]
   },
@@ -8573,6 +8587,15 @@
      "nfl": "TEN",
      "injury": null,
      "pts": 51.7
+    },
+    {
+     "id": 4361411,
+     "name": "Pat Freiermuth",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "PIT",
+     "injury": null,
+     "pts": 60.3
     }
    ]
   },
@@ -8724,13 +8747,13 @@
      "pts": 53.0
     },
     {
-     "id": 2578570,
-     "name": "Jacoby Brissett",
-     "pos": "QB",
+     "id": 4430968,
+     "name": "Kimani Vidal",
+     "pos": "RB",
      "slot": "BE",
-     "nfl": "ARI",
+     "nfl": "LAC",
      "injury": null,
-     "pts": 84.3
+     "pts": 27.2
     }
    ]
   },
@@ -9180,15 +9203,6 @@
      "pts": 62.2
     },
     {
-     "id": 4360234,
-     "name": "Evan McPherson",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "CIN",
-     "injury": null,
-     "pts": 54.0
-    },
-    {
      "id": 4887558,
      "name": "Emanuel Wilson",
      "pos": "RB",
@@ -9216,22 +9230,31 @@
      "pts": 34.3
     },
     {
-     "id": -16004,
-     "name": "Bengals D/ST",
+     "id": -16012,
+     "name": "Chiefs D/ST",
      "pos": "D/ST",
      "slot": "D/ST",
-     "nfl": "CIN",
+     "nfl": "KC",
      "injury": null,
-     "pts": 40.0
+     "pts": 23.0
     },
     {
-     "id": 4431545,
-     "name": "Will Shipley",
-     "pos": "RB",
+     "id": 5082424,
+     "name": "Dominic Zvada",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 48.0
+    },
+    {
+     "id": 3045523,
+     "name": "Kendrick Bourne",
+     "pos": "WR",
      "slot": "BE",
-     "nfl": "PHI",
-     "injury": "DOUBTFUL",
-     "pts": 19.8
+     "nfl": "ARI",
+     "injury": null,
+     "pts": 34.8
     }
    ]
   },
@@ -9399,6 +9422,15 @@
      "nfl": "JAX",
      "injury": null,
      "pts": 25.5
+    },
+    {
+     "id": 4685261,
+     "name": "Germie Bernard",
+     "pos": "WR",
+     "slot": "BE",
+     "nfl": "PIT",
+     "injury": null,
+     "pts": 27.4
     }
    ]
   },
@@ -9418,7 +9450,7 @@
      "id": 4426515,
      "name": "Puka Nacua",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "RB/WR/TE",
      "nfl": "LAR",
      "injury": null,
      "pts": 77.8
@@ -9487,15 +9519,6 @@
      "pts": 15.1
     },
     {
-     "id": 4242355,
-     "name": "Jake Ferguson",
-     "pos": "TE",
-     "slot": "BE",
-     "nfl": "DAL",
-     "injury": null,
-     "pts": 41.2
-    },
-    {
      "id": 4702555,
      "name": "Jonah Coleman",
      "pos": "RB",
@@ -9535,7 +9558,7 @@
      "id": 4596334,
      "name": "Keaton Mitchell",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "LAC",
      "injury": null,
      "pts": 36.7
@@ -9557,6 +9580,15 @@
      "nfl": "IND",
      "injury": null,
      "pts": 75.0
+    },
+    {
+     "id": 15818,
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "IND",
+     "injury": null,
+     "pts": 38.5
     }
    ]
   },
@@ -9699,15 +9731,6 @@
      "pts": 48.0
     },
     {
-     "id": 4635008,
-     "name": "Keon Coleman",
-     "pos": "WR",
-     "slot": "BE",
-     "nfl": "BUF",
-     "injury": null,
-     "pts": 49.4
-    },
-    {
      "id": -16007,
      "name": "Broncos D/ST",
      "pos": "D/ST",
@@ -9715,6 +9738,15 @@
      "nfl": "DEN",
      "injury": null,
      "pts": 35.0
+    },
+    {
+     "id": 4430539,
+     "name": "Brenton Strange",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "JAX",
+     "injury": null,
+     "pts": 50.5
     }
    ]
   },
@@ -9839,15 +9871,6 @@
      "pts": 52.2
     },
     {
-     "id": -16030,
-     "name": "Jaguars D/ST",
-     "pos": "D/ST",
-     "slot": "D/ST",
-     "nfl": "JAX",
-     "injury": null,
-     "pts": 36.0
-    },
-    {
      "id": 2991662,
      "name": "Mack Hollins",
      "pos": "WR",
@@ -9882,11 +9905,297 @@
      "nfl": "GB",
      "injury": null,
      "pts": 42.7
+    },
+    {
+     "id": -16014,
+     "name": "Rams D/ST",
+     "pos": "D/ST",
+     "slot": "D/ST",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 23.0
     }
    ]
   }
  ],
  "transactions": [
+  {
+   "id": "3c73604b-6e03-436e-ba10-205a5696eb9e",
+   "date": 1791983703398,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": -16005,
+     "action": "drop",
+     "team": 1,
+     "name": "Browns D/ST",
+     "pos": "D/ST",
+     "nfl": "CLE",
+     "since": 0.0
+    },
+    {
+     "player": -16017,
+     "action": "add",
+     "team": 1,
+     "name": "Patriots D/ST",
+     "pos": "D/ST",
+     "nfl": "NE"
+    }
+   ]
+  },
+  {
+   "id": "8f76e3de-7252-4637-b1af-3fb9115a4d28",
+   "date": 1791983674608,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4567104,
+     "action": "drop",
+     "team": 1,
+     "name": "Will Reichard",
+     "pos": "K",
+     "nfl": "MIN",
+     "since": 0.0
+    },
+    {
+     "player": 4249087,
+     "action": "add",
+     "team": 1,
+     "name": "Matt Gay",
+     "pos": "K",
+     "nfl": "LV"
+    }
+   ]
+  },
+  {
+   "id": "474aa438-6fcc-45d6-998a-85796f1ed72e",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3045523,
+     "action": "add",
+     "team": 6,
+     "name": "Kendrick Bourne",
+     "pos": "WR",
+     "nfl": "ARI"
+    },
+    {
+     "player": 4431545,
+     "action": "drop",
+     "team": 6,
+     "name": "Will Shipley",
+     "pos": "RB",
+     "nfl": "PHI",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "a0739ad3-9c82-476d-8828-aff2f7d6123f",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 5082424,
+     "action": "add",
+     "team": 6,
+     "name": "Dominic Zvada",
+     "pos": "K",
+     "nfl": "NYG"
+    },
+    {
+     "player": 4360234,
+     "action": "drop",
+     "team": 6,
+     "name": "Evan McPherson",
+     "pos": "K",
+     "nfl": "CIN",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "6ac73a61-73ed-4b3e-a0ea-bf2e742fc977",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16012,
+     "action": "add",
+     "team": 6,
+     "name": "Chiefs D/ST",
+     "pos": "D/ST",
+     "nfl": "KC"
+    },
+    {
+     "player": -16004,
+     "action": "drop",
+     "team": 6,
+     "name": "Bengals D/ST",
+     "pos": "D/ST",
+     "nfl": "CIN",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "b99270cd-10c9-4ff3-856f-72c3300743a4",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 2578570,
+     "action": "drop",
+     "team": 3,
+     "name": "Jacoby Brissett",
+     "pos": "QB",
+     "nfl": "ARI",
+     "since": 0.0
+    },
+    {
+     "player": 4430968,
+     "action": "add",
+     "team": 3,
+     "name": "Kimani Vidal",
+     "pos": "RB",
+     "nfl": "LAC"
+    }
+   ]
+  },
+  {
+   "id": "62485e5e-eef3-433d-9478-326b7be96987",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": -16030,
+     "action": "drop",
+     "team": 10,
+     "name": "Jaguars D/ST",
+     "pos": "D/ST",
+     "nfl": "JAX",
+     "since": 0.0
+    },
+    {
+     "player": -16014,
+     "action": "add",
+     "team": 10,
+     "name": "Rams D/ST",
+     "pos": "D/ST",
+     "nfl": "LAR"
+    }
+   ]
+  },
+  {
+   "id": "b3ea0b25-faf7-455d-ae87-a964ddaa6bc7",
+   "date": 1791964646862,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4361411,
+     "action": "add",
+     "team": 2,
+     "name": "Pat Freiermuth",
+     "pos": "TE",
+     "nfl": "PIT"
+    }
+   ]
+  },
+  {
+   "id": "022392d7-bbf5-441a-8957-5a230f197723",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4430539,
+     "action": "add",
+     "team": 9,
+     "name": "Brenton Strange",
+     "pos": "TE",
+     "nfl": "JAX"
+    },
+    {
+     "player": 4635008,
+     "action": "drop",
+     "team": 9,
+     "name": "Keon Coleman",
+     "pos": "WR",
+     "nfl": "BUF",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "71d0a2cf-4405-43d0-aa01-3808470d1b72",
+   "date": 1791964646862,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 15818,
+     "action": "add",
+     "team": 8,
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "nfl": "IND"
+    },
+    {
+     "player": 4242355,
+     "action": "drop",
+     "team": 8,
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "nfl": "DAL",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "b5962dd7-90bb-42e8-8908-4b313803f59d",
+   "date": 1791964646862,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4685261,
+     "action": "add",
+     "team": 7,
+     "name": "Germie Bernard",
+     "pos": "WR",
+     "nfl": "PIT"
+    }
+   ]
+  },
   {
    "id": "6cf4b657-7240-46d4-9ea2-55bffbe8962d",
    "date": 1791729787047,
