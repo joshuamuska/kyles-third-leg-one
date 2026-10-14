@@ -550,11 +550,11 @@ section.tro+section.tro{margin-top:64px}
 
 /* Ledger records */
 .rcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px;align-items:start}
-.rc{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .rc-top{position:relative;padding:14px 16px 18px;color:var(--on-turf);
   background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.06) 59px 61px),linear-gradient(160deg,var(--turf),var(--turf-deep) 80%)}
 .rc-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
-.rc h3{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,245,239,.8)}
+.rcard h3{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,245,239,.8)}
 .rc-hold{display:grid;grid-template-columns:68px minmax(0,1fr);align-items:center;gap:14px}
 .rc-hold .ava{border-radius:50%;border:3px solid var(--gold)}
 .rc-v{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.7rem;line-height:.9;font-variant-numeric:tabular-nums}
@@ -1311,12 +1311,12 @@ function setupCarousels(){
 // A record card: the holder big at the top, then places 2-5. Entries: {id, v, show, when, team, tb}.
 function recCard(title,list,o={}){
   list=list.filter(x=>x&&M[x.id]);
-  if(!list.length) return `<div class="rc"><div class="rc-top"><h3>${title}</h3><p class="rc-wait">${o.wait}</p></div></div>`;
+  if(!list.length) return `<div class="rcard"><div class="rc-top"><h3>${title}</h3><p class="rc-wait">${o.wait}</p></div></div>`;
   const L=[...list].sort((a,b)=>(o.asc?a.v-b.v:b.v-a.v)||(a.tb||0)-(b.tb||0));
   const rank=i=>L.findIndex(x=>x.v===L[i].v)+1, tied=i=>L.filter(x=>x.v===L[i].v).length>1;
   const sub=x=>[x.team,x.when].filter(Boolean).map(esc).join(" · ");
   const top=L[0];
-  return `<div class="rc"><div class="rc-top"><h3>${title}</h3>
+  return `<div class="rcard"><div class="rc-top"><h3>${title}</h3>
     <div class="rc-hold">${avatar(top.id)}<div>
       <div class="rc-v">${top.show}${tied(0)?` <span class="tie">Tied</span>`:""}</div>
       ${top.when?`<div class="rc-when">${esc(top.when)}</div>`:""}
