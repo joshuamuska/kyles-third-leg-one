@@ -1,13 +1,13 @@
 # Kyle's 3rd Leg
 
-The league website. `index.html` is the site, and `scripts/update.py` pulls the current season from ESPN every Tuesday and Wednesday through GitHub Actions.
+The league website. `index.html` is the site, and `scripts/update.py` pulls the current season from ESPN every morning through GitHub Actions: standings, scores, recaps, rosters and transactions. Recaps already written are reused, so the daily runs only call Claude for games that just finished or had a stat correction.
 
 ## Files
 - `index.html`: the site, including all 2021–2025 history.
 - `league.json`: ESPN league ID, the season to pull, and optional team-to-manager fixes.
 - `scripts/update.py`: the ESPN update script.
 - `requirements.txt`: what the script needs installed.
-- `setup/update.yml`: the weekly schedule. Its contents go in `.github/workflows/update.yml` (see setup).
+- `setup/update.yml`: the daily schedule. Its contents go in `.github/workflows/update.yml` (see setup).
 - `supabase/forum.sql`: the forum's database setup, run once in the Supabase SQL Editor.
 
 ## Forum
@@ -27,7 +27,7 @@ Posts are stored in Supabase (project `uppbazlahrfbjjxpfuzl`). The publishable k
 - `ANTHROPIC_API_KEY`: optional. With it, Claude writes the weekly recaps. Without it, the script writes shorter recaps itself.
 
 ## Things to know
-- **Running it by hand:** Actions tab > Weekly ESPN update > Run workflow.
+- **Running it by hand:** Actions tab > Daily ESPN update > Run workflow.
 - **If the update fails** with an ESPN error, the cookies have probably expired. Copy fresh `espn_s2` and `SWID` values into the secrets.
 - **If a team shows an ESPN name instead of a manager**, the script couldn't match the owner's name. The workflow log shows the ESPN team number. Add it to `managers` in `league.json`, for example `"managers": {"7": "cody"}`.
 - **New season:** change `season` in `league.json` (for example to 2027). Finished seasons are added to the all-time history automatically.

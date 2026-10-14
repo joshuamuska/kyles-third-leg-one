@@ -189,6 +189,49 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
 .linkbtn:hover{color:var(--text)}
 .reply-form{margin-top:12px}
 .reply-form textarea{min-height:64px}
+/* Rosters and transactions */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 20px;overflow-x:auto;scrollbar-width:none}
+.tabs a{flex:none;text-decoration:none;padding:10px 14px 11px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs a:hover{color:var(--text)}
+.tabs a[aria-current="page"]{color:var(--text);border-bottom-color:var(--gold)}
+.filters{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 16px;margin:0 0 18px}
+.filters label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--muted);flex:0 1 240px}
+.filters select{font:inherit;font-size:1rem;color:var(--text);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
+.tx-count{color:var(--muted);font-size:.9rem;margin:-6px 0 12px}
+.rosters{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.roster{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.roster .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.6rem;line-height:1.05}
+.roster .n a{text-decoration:none}
+.roster .n a:hover{text-decoration:underline}
+.roster .t{color:var(--muted);font-size:.92rem;margin-bottom:6px}
+.roster table{min-width:0;font-size:.9rem;table-layout:fixed}
+.roster td{padding:4px 6px;border:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.roster tbody tr:nth-child(even){background:none}
+.roster col.c-sl{width:50px}
+.roster col.c-nfl{width:48px}
+.roster col.c-pt{width:56px}
+.roster td.sl{color:var(--muted);font-weight:600;font-size:.8rem}
+.roster td.nfl{color:var(--muted);font-size:.85rem}
+.roster tr.grp td{padding:12px 6px 3px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+.roster tr.grp:first-child td{padding-top:4px}
+.roster tr.bn td:not(.sl){color:var(--muted)}
+.inj{display:inline-block;margin-left:6px;padding:0 5px;border-radius:4px;background:var(--gold-soft);color:var(--gold-text);font-size:.72rem;font-weight:700;line-height:1.5;vertical-align:1px}
+.txs{display:grid;gap:10px;max-width:760px}
+.tx{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.tx .meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.tx .kind{font-size:.8rem;font-weight:700;color:var(--gold-text)}
+.tx .by{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;line-height:1.1}
+.tx .by a{text-decoration:none}
+.tx .by a:hover{text-decoration:underline}
+.tx time{margin-left:auto;color:var(--muted);font-size:.85rem}
+.tx ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:3px}
+.tx li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.tx .mv{flex:none;min-width:44px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.tx .mv.add{color:var(--text)}
+.tx .pn{font-weight:600}
+.tx .bid{font-weight:700;font-variant-numeric:tabular-nums}
+.tx .since{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.tx .since.hot{color:var(--gold-text);font-weight:700}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 @media (max-width:600px){
@@ -216,6 +259,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
       <a href="#/managers">Managers</a>
       <a href="#/records">Records</a>
       <a href="#/live">This season</a>
+      <a href="#/rosters">Rosters</a>
       <a href="#/forum">Forum</a>
     </nav>
   </div>
@@ -550,7 +594,7 @@ function live(week){
   if(!LIVE) return `<section><h2>This season</h2>
     <p class="lede">Standings, scores and recaps load here from ESPN.</p>
     <div class="empty"><h3>No ESPN data yet</h3>
-      <p>Run the "Weekly ESPN update" workflow from the Actions tab on GitHub. This page fills in once it finishes. After that it updates every Tuesday and Wednesday.</p></div></section>`;
+      <p>Run the "Daily ESPN update" workflow from the Actions tab on GitHub. This page fills in once it finishes. After that it updates every morning.</p></div></section>`;
   const d=LIVE, over=d.seasonOver;
   const teams=[...d.teams].sort((a,b)=>over?a.final-b.final:a.seed-b.seed);
   const wks=d.weeks; const fin=wks.filter(w=>w.final);
@@ -567,6 +611,92 @@ function live(week){
   ${sel?`<section><h2>Week ${sel.week}${sel.playoff?" playoffs":""}</h2>
     <div class="chips">${wks.map(w=>`<a href="#/live/${w.week}" ${w===sel?'aria-current="page"':""}>${w.week}</a>`).join("")}</div>
     <div class="matchups">${sel.matchups.map(m=>matchCard(m)).join("")}</div></section>`:""}`;
+}
+
+/* ---------- Rosters ---------- */
+const POS_ORDER=["QB","RB","WR","TE","D/ST","K"];
+const INJ={QUESTIONABLE:"Q",DOUBTFUL:"D",OUT:"O",INJURY_RESERVE:"IR",SUSPENSION:"SSPD",PROBABLE:"P",DAY_TO_DAY:"DTD"};
+const TX_KINDS={waiver:"Waiver claim",fa:"Free agent add",drop:"Drop",trade:"Trade"};
+let rosterTeam="all", txKind="all", txTeam="all";   // picks reset on reload, so the page opens on all teams
+const teamById=id=>LIVE&&LIVE.teams.find(t=>t.espnId===id);
+const teamWho=id=>{const t=teamById(id); return t?who(t):"Unknown";};
+const teamLabel=t=>t.manager&&M[t.manager]?M[t.manager].name:(t.owner||t.name);
+const teamsByName=()=>[...LIVE.teams].sort((a,b)=>teamLabel(a).localeCompare(teamLabel(b)));
+const injTag=s=>s?` <span class="inj" title="${esc(s.replace(/_/g," ").toLowerCase())}">${esc(INJ[s]||s.slice(0,4))}</span>`:"";
+
+function rosterCard(r){
+  const t=teamById(r.espnId)||{espnId:r.espnId,name:""};
+  const rank=p=>{const i=POS_ORDER.indexOf(p.pos);return i<0?POS_ORDER.length:i;};
+  const by=(a,b)=>rank(a)-rank(b)||b.pts-a.pts;
+  const bench=s=>s==="BE"||s==="IR";
+  const start=r.players.filter(p=>!bench(p.slot)).sort(by);
+  const groups=[...new Set([...POS_ORDER,...start.map(p=>p.pos)])].map(g=>[g,start.filter(p=>p.pos===g),0])
+    .concat([["Bench",r.players.filter(p=>p.slot==="BE").sort(by),1],["IR",r.players.filter(p=>p.slot==="IR").sort(by),1]]);
+  const row=(p,bn)=>`<tr class="${bn?"bn":""}"><td class="sl">${esc(bn?p.pos:slotName(p.slot))}</td>
+    <td title="${esc(p.name)}">${esc(p.name)}${injTag(p.injury)}</td><td class="nfl">${esc(p.nfl)}</td><td class="num">${p.pts.toFixed(1)}</td></tr>`;
+  return `<div class="roster"><div class="n">${who(t)}</div><div class="t">${esc(t.name||"")}</div>
+    <table><colgroup><col class="c-sl"><col><col class="c-nfl"><col class="c-pt"></colgroup><tbody>${groups.filter(g=>g[1].length).map(([g,ps,bn],i)=>
+      `<tr class="grp"><td colspan="3">${esc(g)}</td><td class="num">${i?"":"Pts"}</td></tr>${ps.map(p=>row(p,bn)).join("")}`).join("")}
+    </tbody></table></div>`;
+}
+
+function txCard(x){
+  const kind=["trade","waiver","fa","drop"].find(k=>x.types.includes(k));
+  const pl=m=>`<span class="pn">${esc(m.name)}</span>${m.pos||m.nfl?` <span class="team">${esc([m.pos,m.nfl].filter(Boolean).join(", "))}</span>`:""}`;
+  const date=x.date?new Date(x.date):null;
+  let by, lines;
+  if(kind==="trade"){
+    const sides=[...new Set(x.moves.map(m=>m.to))];
+    by=sides.map(teamWho).join(" &amp; ");
+    lines=sides.map(id=>`<li><span class="mv add">${esc(teamById(id)?teamLabel(teamById(id)):"Unknown")} gets</span><span>${x.moves.filter(m=>m.to===id).map(pl).join(", ")}</span></li>`);
+  }else{
+    by=[...new Set(x.moves.map(m=>m.team))].map(teamWho).join(" &amp; ");
+    lines=[...x.moves].sort((a,b)=>(a.action==="drop")-(b.action==="drop")).map(m=>m.action==="add"
+      ?`<li><span class="mv add">Add</span>${pl(m)}${LIVE.faab&&m.bid!=null?` <span class="bid">$${m.bid}</span>`:""}</li>`
+      :`<li><span class="mv">Drop</span>${pl(m)}${m.since!=null?` <span class="since${m.since>=20?" hot":""}">${m.since.toFixed(1)} pts since</span>`:""}</li>`);
+  }
+  return `<article class="tx"><div class="meta"><span class="kind">${TX_KINDS[kind]}</span><span class="by">${by}</span>
+    ${date?`<time datetime="${date.toISOString()}" title="${esc(date.toLocaleString())}">${date.toLocaleDateString([], {weekday:"short",month:"short",day:"numeric"})}</time>`:""}</div>
+    <ul>${lines.join("")}</ul></article>`;
+}
+
+function rosterBody(tab){
+  if(tab==="transactions"){
+    const touches=(x,id)=>x.moves.some(m=>m.team===id||m.from===id||m.to===id);
+    const list=LIVE.transactions.filter(x=>(txKind==="all"||x.types.includes(txKind))&&(txTeam==="all"||touches(x,+txTeam)));
+    return `<p class="tx-count">${list.length} ${list.length===1?"transaction":"transactions"}</p>
+      ${list.length?`<div class="txs">${list.map(txCard).join("")}</div>`:`<div class="empty"><h3>Nothing here</h3><p>No transactions match those filters.</p></div>`}`;
+  }
+  const rs=LIVE.rosters.filter(r=>rosterTeam==="all"||r.espnId===+rosterTeam)
+    .sort((a,b)=>teamLabel(teamById(a.espnId)||{name:""}).localeCompare(teamLabel(teamById(b.espnId)||{name:""})));
+  return `<div class="rosters">${rs.map(rosterCard).join("")}</div>`;
+}
+
+function rosters(tab){
+  tab=tab==="transactions"?"transactions":"rosters";
+  const tabs=`<div class="tabs">${[["rosters","Rosters"],["transactions","Transactions"]].map(([k,l])=>
+    `<a href="#/rosters${k==="rosters"?"":"/"+k}" ${k===tab?'aria-current="page"':""}>${l}</a>`).join("")}</div>`;
+  const head=`<h2>Rosters</h2><p class="lede">${tab==="rosters"
+    ?"Every team's current roster with season fantasy points."
+    :`Waiver claims, free agent adds, drops and trades, newest first.${LIVE&&LIVE.faab?" Waiver bids are FAAB dollars.":""} Dropped players show what they've scored since.`}</p>`;
+  if(!LIVE||!LIVE.rosters||!LIVE.transactions) return `<section>${head}${tabs}<div class="empty"><h3>No roster data yet</h3>
+    <p>Rosters and transactions load from ESPN with the daily update. Run the "Daily ESPN update" workflow from the Actions tab to fill this in now.</p></div></section>`;
+  const opts=(cur,list)=>list.map(([v,l])=>`<option value="${v}" ${String(v)===String(cur)?"selected":""}>${esc(l)}</option>`).join("");
+  const teamOpts=teamsByName().map(t=>[t.espnId,t.manager&&M[t.manager]?`${M[t.manager].name}: ${t.name}`:t.name]);
+  const filters=tab==="rosters"
+    ?`<label>Team<select id="rs-team">${opts(rosterTeam,[["all","All teams"],...teamOpts])}</select></label>`
+    :`<label>Type<select id="tx-kind">${opts(txKind,[["all","All types"],...Object.entries(TX_KINDS).map(([k,l])=>[k,l+"s"])])}</select></label>
+      <label>Manager<select id="tx-team">${opts(txTeam,[["all","All managers"],...teamsByName().map(t=>[t.espnId,teamLabel(t)])])}</select></label>`;
+  return `<section>${head}${tabs}
+    <p class="live-note">Last updated from ESPN ${new Date(LIVE.updated).toLocaleString([], {weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}</p>
+    <div class="filters">${filters}</div>
+    <div id="rs-body">${rosterBody(tab)}</div></section>`;
+}
+
+function setupRosters(tab){
+  const body=document.getElementById("rs-body"); if(!body) return;
+  const bind=(id,set)=>{const el=document.getElementById(id); if(el) el.onchange=()=>{set(el.value); body.innerHTML=rosterBody(tab);};};
+  bind("rs-team",v=>rosterTeam=v); bind("tx-kind",v=>txKind=v); bind("tx-team",v=>txTeam=v);
 }
 
 /* ---------- Forum ---------- */
@@ -681,6 +811,7 @@ function route(){
     case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; break;
     case "records": app.innerHTML=records(); tab="#/records"; break;
     case "live": app.innerHTML=live(parts[1]); tab="#/live"; break;
+    case "rosters": app.innerHTML=rosters(parts[1]); setupRosters(parts[1]); tab="#/rosters"; break;
     case "forum": app.innerHTML=forum(); setupForum(); tab="#/forum"; break;
     default: app.innerHTML=home(); renderAllTime();
   }

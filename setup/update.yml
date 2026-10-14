@@ -1,13 +1,15 @@
-name: Weekly ESPN update
+name: Daily ESPN update
 
 on:
   schedule:
-    - cron: "0 14 * * 2"   # Tuesdays, about 10am Eastern
-    - cron: "0 14 * * 3"   # Wednesdays, picks up stat corrections
+    - cron: "0 14 * * *"   # every day, about 10am Eastern (9am in winter); saved recaps are reused
   workflow_dispatch:       # adds a "Run workflow" button
 
 permissions:
   contents: write
+
+concurrency:
+  group: espn-update
 
 jobs:
   update:

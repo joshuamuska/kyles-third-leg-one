@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Pulls the current season from ESPN and saves it to data/<season>.json for the site.
 
-Runs on GitHub Actions every week. Needs two secrets for a private league:
+Runs on GitHub Actions every day. Needs two secrets for a private league:
 ESPN_S2 and ESPN_SWID. ANTHROPIC_API_KEY is optional: with it, recaps are
 written by Claude; without it, the script writes its own short recaps.
+Saved Claude recaps are reused, so daily runs only call Claude for newly
+finished games or games whose score changed (ESPN stat corrections).
 """
 import datetime
 import hashlib
@@ -197,6 +199,124 @@ def ai_recap(m, week, fallback):
     return None
 
 
+INJURY_OK = {None, "", "ACTIVE", "NORMAL"}
+
+
+def nfl_team(p):
+    team = getattr(p, "proTeam", None)
+    return team if team and team != "None" else "FA"
+
+
+def roster_rows(league):
+    """Each team's current roster: lineup slot, NFL team, injury and season points per player."""
+    out = []
+    for t in league.teams:
+        players = []
+        for p in t.roster:
+            injury = getattr(p, "injuryStatus", None)
+            players.append({"id": p.playerId, "name": p.name, "pos": p.position, "slot": p.lineupSlot,
+                            "nfl": nfl_team(p), "injury": None if injury in INJURY_OK else injury,
+                            "pts": round(p.total_points or 0, 2)})
+        out.append({"espnId": t.team_id, "players": players})
+    return out
+
+
+# ESPN activity message types: 178 free agent add, 180 waiver add, 179/181/239 drop, 244 trade.
+ADD_TYPES = {178: "fa", 180: "waiver"}
+DROP_TYPES = {179, 181, 239}
+TRADE_TYPE = 244
+
+
+def fetch_activity(league, page=50, max_pages=40):
+    """Every transaction topic this season, newest first. Reads ESPN's feed directly because
+    league.recent_activity() makes a separate request for each player no longer on a roster."""
+    topics, seen = [], set()
+    for n in range(max_pages):
+        filters = {"topics": {
+            "filterType": {"value": ["ACTIVITY_TRANSACTIONS"]},
+            "limit": page, "limitPerMessageSet": {"value": 25}, "offset": n * page,
+            "sortMessageDate": {"sortPriority": 1, "sortAsc": False},
+            "sortFor": {"sortPriority": 2, "sortAsc": False},
+            "filterIncludeMessageTypeIds": {"value": [*ADD_TYPES, *DROP_TYPES, TRADE_TYPE]},
+        }}
+        data = league.espn_request.league_get(extend="/communication/",
+                                              params={"view": "kona_league_communication"},
+                                              headers={"x-fantasy-filter": json.dumps(filters)})
+        batch = data.get("topics", [])
+        for topic in batch:
+            if topic.get("id") not in seen:
+                seen.add(topic.get("id"))
+                topics.append(topic)
+        if len(batch) < page:
+            break
+    return topics
+
+
+def player_cards(league, ids):
+    """Full ESPN player cards (weekly stats and NFL schedule), 50 players per request."""
+    ids, cards = list(ids), {}
+    for i in range(0, len(ids), 50):
+        got = league.player_info(playerId=ids[i:i + 50])
+        for p in got if isinstance(got, list) else [got] if got else []:
+            cards[p.playerId] = p
+    return cards
+
+
+def points_since(card, when_ms, last_week):
+    """Fantasy points from the player's games that kicked off after when_ms."""
+    when = datetime.datetime.fromtimestamp(when_ms / 1000)  # naive local time, like card.schedule
+    schedule = getattr(card, "schedule", None) or {}
+    if not schedule:
+        return None
+    total = 0.0
+    for wk in range(1, last_week + 1):
+        game = schedule.get(str(wk)) or schedule.get(wk)
+        if game and game["date"] > when:
+            total += (card.stats.get(wk) or {}).get("points") or 0
+    return round(total, 2)
+
+
+def transaction_rows(league, team_ids, last_week):
+    faab = bool(getattr(league.settings, "faab", False))
+    rows = []
+    for topic in fetch_activity(league):
+        moves, kinds = [], set()
+        for msg in topic.get("messages", []):
+            mt, pid = msg.get("messageTypeId"), msg.get("targetId")
+            if pid is None:
+                continue
+            move = {"player": pid}
+            if mt == TRADE_TYPE:
+                move.update(action="trade", **{"from": msg.get("from"), "to": msg.get("to")})
+                kinds.add("trade")
+            elif mt in ADD_TYPES:
+                move.update(action="add", team=msg.get("to"))
+                kinds.add(ADD_TYPES[mt])
+                if mt == 180 and faab:
+                    move["bid"] = msg.get("from") or 0
+            elif mt in DROP_TYPES:
+                team = msg.get("for") if mt == 239 else msg.get("to")
+                move.update(action="drop", team=team if team in team_ids else msg.get("from"))
+                kinds.add("drop")
+            else:
+                continue
+            moves.append(move)
+        if moves:
+            rows.append({"id": str(topic.get("id")), "date": topic.get("date"),
+                         "types": sorted(kinds), "moves": moves})
+
+    cards = player_cards(league, {m["player"] for r in rows for m in r["moves"]})
+    for r in rows:
+        for m in r["moves"]:
+            card = cards.get(m["player"])
+            m["name"] = (card.name if card else None) or league.player_map.get(m["player"]) or f"Player {m['player']}"
+            m["pos"], m["nfl"] = (card.position, nfl_team(card)) if card else ("", "")
+            if m["action"] == "drop" and card and r["date"]:
+                m["since"] = points_since(card, r["date"], last_week)
+    rows.sort(key=lambda r: r["date"] or 0, reverse=True)
+    return faab, rows
+
+
 def main():
     s2, swid = os.environ.get("ESPN_S2"), os.environ.get("ESPN_SWID")
     if not s2 or not swid:
@@ -229,10 +349,11 @@ def main():
 
     # Reuse Claude-written recaps for games whose scores and recap style haven't changed.
     out_path = ROOT / "data" / f"{season}.json"
-    old = {}
+    old, saved = {}, {}
     if out_path.exists():
         try:
-            for wk in json.loads(out_path.read_text()).get("weeks", []):
+            saved = json.loads(out_path.read_text())
+            for wk in saved.get("weeks", []):
                 for m in wk["matchups"]:
                     old[m["key"]] = m
         except Exception:
@@ -291,6 +412,18 @@ def main():
         weeks.append({"week": wk, "final": done, "playoff": any(m["playoff"] for m in matchups),
                       "matchups": matchups})
 
+    # Rosters and transactions are extras: if ESPN balks, keep the last saved copy.
+    rosters, transactions = saved.get("rosters", []), saved.get("transactions", [])
+    faab = saved.get("faab", False)
+    try:
+        rosters = roster_rows(league)
+    except Exception as e:
+        print(f"::warning::Couldn't read rosters ({e}); keeping the last saved ones.")
+    try:
+        faab, transactions = transaction_rows(league, set(by_id), last)
+    except Exception as e:
+        print(f"::warning::Couldn't read transactions ({e}); keeping the last saved ones.")
+
     data = {
         "season": season,
         "updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes"),
@@ -300,12 +433,16 @@ def main():
         "seasonOver": season_over,
         "teams": teams,
         "weeks": weeks,
+        "faab": faab,
+        "rosters": rosters,
+        "transactions": transactions,
     }
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(json.dumps(data, indent=1))
     seasons = sorted(int(f.stem) for f in out_path.parent.glob("*.json") if f.stem.isdigit())
     (out_path.parent / "index.json").write_text(json.dumps({"seasons": seasons}))
-    print(f"Saved {out_path.name}: {len(teams)} teams, {len(weeks)} weeks, season over: {season_over}")
+    print(f"Saved {out_path.name}: {len(teams)} teams, {len(weeks)} weeks, {len(transactions)} transactions, "
+          f"season over: {season_over}")
 
 
 if __name__ == "__main__":
