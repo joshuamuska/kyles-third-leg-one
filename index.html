@@ -103,17 +103,46 @@ tr.champ td:first-child{box-shadow:inset 4px 0 var(--gold)}
 .note{color:var(--muted);font-size:.92rem;margin:12px 0 0;max-width:70ch}
 
 /* Managers */
-.mgrs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
-.mgr{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mgrs{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.mgr{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .mgr:hover{border-color:var(--gold)}
+.mgr:hover .n{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.mgr .ava{border-bottom:3px solid var(--gold)}
+.mgr.is-former .ava img{filter:grayscale(1)}
+.mgr .body{padding:12px 14px 14px}
 .mgr .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.6rem;line-height:1.05}
-.mgr .t{color:var(--muted);font-size:.92rem}
+.mgr .n .tag{font-family:"Barlow",system-ui,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-text);vertical-align:4px;margin-left:2px}
+.mgr .t{color:var(--muted);font-size:.92rem;overflow-wrap:anywhere}
 .mgr .s{margin-top:8px;font-weight:600;font-size:.92rem}
 .trophies{color:var(--gold-text)}
 
-.profile-head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 20px;margin-bottom:20px}
-.profile-head h2{font-size:clamp(2.6rem,7vw,4rem);margin:0}
-.profile-head p{margin:0 0 6px;color:var(--muted)}
+/* Photo, or initials on turf when there's no photo */
+.ava{position:relative;aspect-ratio:1;overflow:hidden;container-type:inline-size;display:grid;place-items:center;color:var(--on-turf);
+  background:
+    repeating-linear-gradient(90deg,transparent 0 23%,rgba(255,255,255,.07) 23% 24%),
+    linear-gradient(180deg,var(--turf),var(--turf-deep))}
+.ava span{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:38cqw;line-height:1;letter-spacing:.01em}
+.ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+
+.hero{display:grid;grid-template-columns:200px 1fr;grid-template-areas:"ava id" "ava bio";grid-template-rows:auto 1fr;gap:12px 28px;align-items:start}
+.hero .ava{grid-area:ava;border-radius:12px;border:1px solid var(--line);border-bottom:4px solid var(--gold)}
+.hero .id{grid-area:id;align-self:end}
+.hero h2{font-size:clamp(2.6rem,7vw,4rem);margin:0}
+.hero .sub{margin:4px 0 0;color:var(--muted)}
+.hero .bio{grid-area:bio;margin:0;font-size:1.08rem;line-height:1.6;max-width:64ch}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.8rem;font-weight:700;color:var(--muted)}
+.badge.gold{background:var(--gold-soft);border-color:transparent;color:var(--gold-text)}
+.records.hl{margin-top:12px}
+.records.hl .v{font-size:2rem}
+.res{display:inline-block;min-width:2.2em;text-align:center;padding:1px 8px;border-radius:999px;font-size:.8rem;font-weight:700;border:1px solid var(--line);color:var(--muted)}
+.res.w{background:var(--turf);border-color:var(--turf);color:var(--on-turf)}
+.res.live{color:var(--gold-text);border-color:var(--gold-text)}
+@media (max-width:600px){
+  .hero{grid-template-columns:110px 1fr;grid-template-areas:"ava id" "bio bio";gap:16px}
+  .mgrs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .mgr .n{font-size:1.35rem}
+}
 .back{display:inline-block;margin-bottom:16px;text-decoration:none;font-weight:600;color:var(--muted)}
 .back:hover{color:var(--text)}
 .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:24px}
@@ -270,20 +299,14 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
 </footer>
 
 <script>
-const M = {
-  josh:{name:"Josh", full:"Josh Muska", now:"OMM"},
-  brett:{name:"Brett", full:"Brett Reuter", now:"Spencer James Squad", role:"Commissioner"},
-  kyle:{name:"Kyle", now:"WE GOT A SITUATION"},
-  brandon:{name:"Brandon", full:"Brandon Chojnacki", now:"Bobby Light"},
-  keith:{name:"Keith", full:"Keith Sheridan", now:"Taylor Swift"},
-  brad:{name:"Brad", full:"Brad Trott", now:"Free Josh Jacobs"},
-  reis:{name:"Reis", full:"Reis Bailey", now:"Snooki"},
-  noah:{name:"Noah", full:"Noah Florias", now:"Gno'msayin Mah-fkah"},
-  tyler:{name:"Tyler", full:"Tyler Call", now:"Ashton 3:16"},
-  cody:{name:"Cody", full:"Cody Jackson", now:"KYLE ONLY HATE"},
-  twan:{name:"Twan", former:"Left after 2024"},
-  dylan:{name:"Dylan", former:"Left after 2021"}
-};
+// Manager names, photos and bios live in managers.json. Loaded before the first render.
+let M = {};
+function loadManagers(raw){
+  M={};
+  Object.entries(raw).forEach(([id,m])=>{
+    M[id]={...m, former:m.status==="former"?(m.left||"Former manager"):null};
+  });
+}
 
 // [year, manager, team name, wins, losses, final place, made playoffs]
 const S = [
@@ -473,17 +496,31 @@ function season(y){
   </section>`;
 }
 
+const initials=m=>(m.full||m.name).split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+// Photo if the file exists, otherwise the initials underneath show through.
+const avatar=(id,alt="")=>{const m=M[id];
+  return `<div class="ava"><span aria-hidden="true">${esc(initials(m))}</span>${m.photo?`<img src="${esc(m.photo)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">`:""}</div>`;};
+const liveTeam=id=>LIVE&&LIVE.teams.find(t=>t.manager===id);
+const teamNow=id=>{const t=liveTeam(id); if(t) return t.name; const r=S.filter(r=>r.id===id).sort((a,b)=>b.year-a.year)[0]; return r?r.team:"";};
+const recStr=t=>`${t.w}-${t.l}${t.t?"-"+t.t:""}`;
+
 function managers(){
-  const active=ALL.filter(s=>!M[s.id].former).sort((a,b)=>b.titles-a.titles||b.p-a.p);
-  const former=ALL.filter(s=>M[s.id].former);
-  const card=s=>`<a class="mgr" href="#/managers/${s.id}">
-    <div class="n">${esc(M[s.id].name)}</div>
-    <div class="t">${M[s.id].former?esc(M[s.id].former):esc(M[s.id].now)}</div>
-    <div class="s">${s.w}-${s.l} career${s.titles?` <span class="trophies">${"🏆".repeat(s.titles)}</span>`:""}</div></a>`;
-  return `<section><h2>Managers</h2><p class="lede">Current team names, career records and titles.</p>
+  const all=Object.keys(M).map(stats);
+  const active=all.filter(s=>!M[s.id].former).sort((a,b)=>b.titles-a.titles||b.p-a.p);
+  const former=all.filter(s=>M[s.id].former&&s.seasons);
+  const card=s=>{const m=M[s.id], t=!m.former&&liveTeam(s.id);
+    return `<a class="mgr${m.former?" is-former":""}" href="#/managers/${s.id}">
+    ${avatar(s.id)}
+    <div class="body">
+      <div class="n">${esc(m.name)}${m.role?` <span class="tag">${esc(m.role)}</span>`:""}</div>
+      <div class="t">${m.former?esc(m.former):esc(teamNow(s.id))}</div>
+      <div class="s">${s.seasons?`${s.w}-${s.l} career`:"New this season"}${s.titles?` <span class="trophies">${"🏆".repeat(s.titles)}</span>`:""}</div>
+      ${t?`<div class="t">${LIVE.season}: ${recStr(t)}, ${LIVE.seasonOver?ord(t.final):`seed ${t.seed}`}</div>`:""}
+    </div></a>`;};
+  return `<section><h2>Managers</h2><p class="lede">Current team names, career records and titles. Pick a manager for their full history.</p>
     <div class="mgrs">${active.map(card).join("")}</div></section>
-    <section><h2>Former managers</h2><p class="lede">Their seasons still count in the all-time stats.</p>
-    <div class="mgrs">${former.map(card).join("")}</div></section>`;
+    ${former.length?`<section><h2>Former managers</h2><p class="lede">Their seasons still count in the all-time stats.</p>
+    <div class="mgrs">${former.map(card).join("")}</div></section>`:""}`;
 }
 
 function chart(s){
@@ -505,22 +542,89 @@ function chart(s){
     <div class="legend"><span><i style="background:var(--gold)"></i>Champion</span><span><i style="background:var(--turf);border:2px solid var(--text)"></i>Made playoffs</span><span><i style="background:var(--surface);border:2px solid var(--text)"></i>Missed playoffs</span></div></div>`;
 }
 
+function highlights(s){
+  const sp=r=>pct(r.w,r.l);
+  const yrs=rows=>rows.map(r=>r.year).join(", ");
+  const extreme=(f,tie)=>{const v=Math.max(...s.rows.map(f)); return s.rows.filter(r=>f(r)===v).sort(tie);};
+  const best=extreme(sp,(a,b)=>a.place-b.place), worst=extreme(r=>-sp(r),(a,b)=>b.place-a.place);
+  const champs=s.rows.filter(r=>r.place===1), pos=s.rows.filter(r=>r.po), bestF=s.rows.filter(r=>r.place===s.bestFinish);
+  const line=r=>`<li><a href="#/seasons/${r.year}">${r.year}</a> <span class="team">${esc(r.team)}, ${ord(r.place)}</span></li>`;
+  const runs=[]; s.rows.forEach((r,i)=>{ if(i&&r.team===s.rows[i-1].team) runs[runs.length-1].n++; else runs.push({team:r.team,n:1}); });
+  const run=runs.sort((a,b)=>b.n-a.n)[0];
+  const cards=[
+    {h:"Championships",v:s.titles?`${"🏆".repeat(s.titles)}`:"0",li:champs.length?champs.map(line):[`<li class="team">${M[s.id].former?"None":"Still waiting"}</li>`]},
+    {h:"Playoff trips",v:`${s.po} of ${s.seasons}`,li:[`<li class="team">${pos.length?yrs(pos):"None"}</li>`]},
+    {h:"Best finish",v:ord(s.bestFinish),li:bestF.map(line)},
+    {h:"Best season",v:`${best[0].w}-${best[0].l}`,li:best.map(line)},
+    {h:"Worst season",v:`${worst[0].w}-${worst[0].l}`,li:worst.map(line)},
+    {h:"Team names",v:s.names,li:[`<li class="team">${run.n>1?`Longest run: ${esc(run.team)}, ${run.n} seasons`:"A new name every season"}</li>`]}
+  ];
+  return `<div class="records hl">${cards.map(o=>`<div class="rec"><h3>${o.h}</h3><div class="v">${o.v}</div><ul>${o.li.join("")}</ul></div>`).join("")}</div>`;
+}
+
+function thisSeason(id){
+  const d=LIVE, t=liveTeam(id); if(!t) return "";
+  const games=[];
+  d.weeks.forEach(w=>w.matchups.forEach(m=>{
+    const me=[m.home,m.away].find(x=>x.espnId===t.espnId); if(!me) return;
+    games.push({week:w.week,m,me,op:me===m.home?m.away:m.home});
+  }));
+  const done=games.filter(g=>g.m.final);
+  const scores=done.map(g=>g.me.score);
+  const pfRank=[...d.teams].sort((a,b)=>b.pf-a.pf).indexOf(t)+1;
+  const res=g=>!g.m.final?["live","Live"]:g.me.score>g.op.score?["w","W"]:g.me.score<g.op.score?["l","L"]:["t","T"];
+  const opName=s=>s.manager&&M[s.manager]?M[s.manager].name:(s.name||"Unknown");
+  return `<section>
+    <h2>${d.season} season</h2>
+    <p class="lede">Playing as ${esc(t.name)}. ${d.seasonOver?"Final results":`Through week ${done.length?done[done.length-1].week:0}`} from ESPN.</p>
+    <div class="strip">
+      <div><b>${recStr(t)}</b><span>Record</span></div>
+      <div><b>${d.seasonOver?ord(t.final):t.seed}</b><span>${d.seasonOver?"Finish":"Seed"}</span></div>
+      <div><b>${t.pf.toFixed(1)}</b><span>Points for (${ord(pfRank)})</span></div>
+      <div><b>${t.pa.toFixed(1)}</b><span>Points against</span></div>
+      ${scores.length?`<div><b>${(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1)}</b><span>Points per week</span></div>
+      <div><b>${Math.max(...scores).toFixed(1)}</b><span>Best week</span></div>`:""}
+    </div>
+    ${games.length?`<div class="scroll"><table class="weekly"><thead><tr><th>Week</th><th>Opponent</th><th class="num">Score</th><th>Result</th><th class="num">Margin</th></tr></thead>
+    <tbody>${games.map(g=>{const [c,l]=res(g), mg=g.me.score-g.op.score;
+      return `<tr><td><a href="#/live/${g.week}">${g.m.playoff?"Playoffs, wk ":"Week "}${g.week}</a></td>
+      <td>${g.op.manager&&M[g.op.manager]?mlink(g.op.manager):esc(opName(g.op))} <span class="team">${esc(g.op.name||"")}</span></td>
+      <td class="num">${g.me.score.toFixed(2)} – ${g.op.score.toFixed(2)}</td>
+      <td><span class="res ${c}">${l}</span></td>
+      <td class="num">${g.m.final?(mg>0?"+":"")+mg.toFixed(2):""}</td></tr>`;}).join("")}
+    </tbody></table></div>`:`<p class="note">No games played yet.</p>`}
+  </section>`;
+}
+
 function profile(id){
   const m=M[id]; if(!m) return managers();
-  const s=ALL.find(x=>x.id===id); if(!s) return managers();
-  const sub=[m.full, m.role, m.former?m.former:`Now playing as ${m.now}`].filter(Boolean).map(esc).join(". ");
+  const s=stats(id);
+  const sub=[m.full, m.nickname&&`“${m.nickname}”`, m.former||(teamNow(id)&&`Now playing as ${teamNow(id)}`)].filter(Boolean).map(esc).join(" · ");
   return `<section>
     <a class="back" href="#/managers">All managers</a>
-    <div class="profile-head"><h2>${esc(m.name)}</h2><p>${sub}</p></div>
+    <div class="hero">
+      ${avatar(id,`Photo of ${m.name}`)}
+      <div class="id">
+        <h2>${esc(m.name)}</h2>
+        <p class="sub">${sub}</p>
+        <div class="badges">${m.role?`<span class="badge gold">${esc(m.role)}</span>`:""}<span class="badge">${m.former?"Former manager":"Active"}</span>${s.titles?`<span class="badge gold">${s.titles}× champion</span>`:""}</div>
+      </div>
+      ${m.bio?`<p class="bio">${esc(m.bio)}</p>`:""}
+    </div>
+  </section>
+  ${s.seasons?`<section>
+    <h2>Career highlights</h2>
+    <p class="lede">${YEARS[0]}–${YEARS[YEARS.length-1]}. League records before 2021 were lost in the move from NFL.com.</p>
     <div class="strip">
       <div><b>${s.w}-${s.l}</b><span>Career record</span></div>
       <div><b>${fmtPct(s.p)}</b><span>Win %</span></div>
-      <div><b>${s.titles}</b><span>Championships</span></div>
-      <div><b>${s.po}</b><span>Playoff trips</span></div>
+      <div><b>${s.seasons}</b><span>Seasons</span></div>
       <div><b>${s.avg.toFixed(1)}</b><span>Average finish</span></div>
-      <div><b>${ord(s.bestFinish)}</b><span>Best finish</span></div>
     </div>
-    <h3>Finish by season</h3>
+    ${highlights(s)}
+  </section>
+  <section>
+    <h2>Season by season</h2>
     ${chart(s)}
     <div class="scroll"><table><thead><tr><th>Season</th><th>Team</th><th class="num">Record</th><th class="num">Finish</th><th>Playoffs</th></tr></thead>
     <tbody>${s.rows.map(r=>`<tr class="${r.place===1?"champ":""}">
@@ -528,10 +632,9 @@ function profile(id){
       <td class="team">${esc(r.team)}</td>
       <td class="num">${r.w}-${r.l}</td>
       <td class="num">${ord(r.place)}${r.place===1?" 🏆":""}</td>
-      <td>${r.po?'<span class="po">Made it</span>':""}</td></tr>`).join("")}${(()=>{
-        const d=liveOpen(); const t=d&&d.teams.find(t=>t.manager===id); if(!t) return "";
-        return `<tr><td><a href="#/live">${d.season}</a></td><td class="team">${esc(t.name)}</td><td class="num">${t.w}-${t.l}${t.t?"-"+t.t:""}</td><td class="num">Seed ${t.seed}</td><td class="team">In progress</td></tr>`;})()}</tbody></table></div>
-  </section>`;
+      <td>${r.po?'<span class="po">Made it</span>':""}</td></tr>`).join("")}</tbody></table></div>
+  </section>`:""}
+  ${m.former?"":thisSeason(id)}`;
 }
 
 function records(){
@@ -703,7 +806,7 @@ function setupRosters(tab){
 // The publishable (anon) key is safe to have here: it can only read posts and call forum_post(),
 // which checks the passcode inside Supabase. See supabase/forum.sql.
 const FORUM={url:"https://uppbazlahrfbjjxpfuzl.supabase.co", key:"sb_publishable_HL-D0PiQE5VKQaCdWP91rg_YajYa-WD", max:1000};
-const POSTERS=Object.keys(M).filter(id=>!M[id].former);
+const posters=()=>Object.keys(M).filter(id=>!M[id].former);
 const clen=s=>[...s.trim()].length;
 const store={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
 
@@ -733,7 +836,7 @@ function forum(){
     <p class="lede">Trash talk goes here. Anyone with the link can read it. Posting takes the league passcode.</p>
     ${FORUM.key?`<form class="compose" id="f-new">
       <div class="who-row">
-        <label>Posting as<select id="f-name"><option value="">Pick your name</option>${POSTERS.map(id=>`<option value="${id}">${esc(M[id].name)}</option>`).join("")}</select></label>
+        <label>Posting as<select id="f-name"><option value="">Pick your name</option>${posters().map(id=>`<option value="${id}">${esc(M[id].name)}</option>`).join("")}</select></label>
         <label>League passcode<input id="f-pass" type="password" autocomplete="current-password"></label>
       </div>
       <label class="sr-only" for="f-body">New thread</label>
@@ -819,13 +922,16 @@ function route(){
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route);
-rebuild(); route();
-fetch("data/index.json",{cache:"no-store"}).then(r=>r.ok?r.json():null)
+const seasonsLoad=fetch("data/index.json",{cache:"no-store"}).then(r=>r.ok?r.json():null)
   .then(ix=>ix?Promise.all(ix.seasons.map(y=>fetch(`data/${y}.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null))):[])
+  .catch(()=>[]);
+fetch("managers.json",{cache:"no-store"})
+  .then(r=>{ if(!r.ok) throw new Error("managers.json is missing."); return r.json().catch(()=>{ throw new Error("managers.json has a typo in it (often a missing comma or quote)."); }); })
+  .then(raw=>{ loadManagers(raw); rebuild(); route(); return seasonsLoad; })
   .then(list=>{ LIVES=(list||[]).filter(Boolean).sort((a,b)=>a.season-b.season); LIVE=LIVES[LIVES.length-1]||null;
     // The forum doesn't use ESPN data, so don't redraw it (that would wipe a half-written post).
     if(LIVES.length){ rebuild(); if(!/^#\/forum/.test(location.hash)) route(); } })
-  .catch(()=>{});
+  .catch(e=>{ document.getElementById("app").innerHTML=`<div class="empty"><h3>Couldn't load the managers</h3><p>${esc(e.message)}</p></div>`; });
 </script>
 </body>
 </html>

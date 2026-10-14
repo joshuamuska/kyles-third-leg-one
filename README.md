@@ -4,6 +4,8 @@ The league website. `index.html` is the site, and `scripts/update.py` pulls the 
 
 ## Files
 - `index.html`: the site, including all 2021–2025 history.
+- `managers.json`: each manager's name, full name, nickname, photo, bio and active/former status. Edit this instead of `index.html` to change a profile. Check commas and quotes after editing; a typo here stops the site from loading and says so on the page.
+- `images/managers/`: manager photos, named by manager ID (`josh.jpg`). Square, 600 × 600 JPG. Anyone without one gets an initials placeholder.
 - `league.json`: ESPN league ID, the season to pull, and optional team-to-manager fixes.
 - `scripts/update.py`: the ESPN update script.
 - `requirements.txt`: what the script needs installed.
