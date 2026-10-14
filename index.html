@@ -682,9 +682,30 @@ tr.out td a{color:var(--text)}
 .dp-v small{display:block;font-family:"Barlow",system-ui,sans-serif;font-size:.7rem;font-weight:600;color:var(--muted)}
 .dp-v.up{color:var(--up)}
 .dp-v.down{color:var(--gold-text)}
-.dboard td small.ov{display:block;font-size:.74rem;color:var(--muted)}
-.dboard .pn{font-weight:600}
-.dboard tr.grp td{padding:14px 14px 4px;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+.board{table-layout:fixed;border-collapse:separate;border-spacing:0;min-width:calc(var(--cols) * 124px + 58px)}
+.board th,.board td{padding:0;white-space:normal;vertical-align:top;border-bottom:0}
+.board tbody tr:nth-child(even){background:none}
+.board .rd{position:sticky;left:0;z-index:2;width:58px;background:var(--surface);border-right:1px solid var(--line);text-align:center;color:var(--muted)}
+.board tbody .rd{border-top:1px solid var(--line);padding:12px 4px;vertical-align:middle}
+.board .rn{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;line-height:1;color:var(--text)}
+.board .rl{display:block;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.board .sd{display:block;font-size:.9rem;line-height:1.2}
+.bh{background:var(--c);color:#fff;padding:12px 10px 13px;border-right:1px solid rgba(255,255,255,.2);border-bottom:4px solid rgba(0,0,0,.25)}
+.bh .ava{width:40px;border-radius:50%;border:2px solid rgba(255,255,255,.85);background:rgba(0,0,0,.22);margin-bottom:8px;color:#fff}
+.bh .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.25rem;line-height:1.05;color:#fff}
+.bh .n a{color:inherit;text-decoration:none;font-weight:inherit}
+.bh .n a:hover{text-decoration:underline}
+.bh .t{margin-top:2px;font-size:.78rem;font-weight:500;line-height:1.25;color:rgba(255,255,255,.85);overflow-wrap:anywhere}
+.bc{position:relative;padding:9px 9px 10px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.board tr>.bc:last-child,.board tr>.bh:last-child{border-right:0}
+.bc .hs{position:relative;width:58px;aspect-ratio:96/70;border-radius:6px;overflow:hidden;background:var(--row);display:grid;place-items:center}
+.bc .hs span{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.1rem;color:var(--muted)}
+.bc .hs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.bc .hs.logo img{object-fit:contain;padding:3px}
+.bc .ov{position:absolute;top:8px;right:9px;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.05rem;line-height:1;color:var(--muted);font-variant-numeric:tabular-nums}
+.bc .pn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:6px;font-size:.86rem;font-weight:700;line-height:1.2}
+.bc .bm{display:block;font-size:.76rem;color:var(--muted);line-height:1.3}
+.bc .res{margin-top:5px;padding:0 7px;font-size:.7rem}
 .res.bust{background:var(--gold-soft);border-color:transparent;color:var(--gold-text)}
 
 /* Rules */
@@ -776,7 +797,7 @@ table.pts td.neg{color:var(--gold-text)}
         <a href="#/ledger/trophies">Trophies<small>Hardware, and the other kind</small></a>
         <a href="#/ledger/records">Records<small>Bests, worsts and streaks</small></a>
         <a href="#/ledger/brackets">Brackets<small>Playoffs, consolation and final places</small></a>
-        <a href="#/ledger/draft">Draft Recap<small>Report cards, steals and busts</small></a>
+        <a href="#/ledger/draft">Draft Recap<small>Draft board, report cards, steals and busts</small></a>
       </div>
       <a href="#/live">This season</a>
       <a href="#/rosters">Rosters</a>
@@ -1763,28 +1784,44 @@ function bracketsPage(y){
 }
 
 /* Draft recap */
-let draftTeam="all", draftSort="pick";
-const pickNo=p=>`${p.round}.${String(p.pick).padStart(2,"0")}`;
 const posRank=(p,k)=>`${esc(p.pos)}${p[k]}`;
+// Team color from managers.json ("color"), or a fixed fallback for an unmatched team.
+const TEAM_COLORS=["#0B5CAD","#B3261E","#2E7D32","#6A1B9A","#B45309","#00796B","#37474F","#AD1457","#5D4037","#283593"];
+const teamColor=t=>t.manager&&M[t.manager]&&M[t.manager].color||TEAM_COLORS[Math.abs(t.espnId||0)%TEAM_COLORS.length];
+const ESPN_IMG="https://a.espncdn.com/combiner/i?img=/i/";
+// ESPN headshot, or the team logo for a defense. Initials show if the image is missing.
+const headshot=p=>{const dst=p.playerId<0||p.pos==="D/ST", ini=p.player.split(/\s+/).map(w=>w[0]).slice(0,2).join("");
+  const src=dst?(p.nfl&&p.nfl!=="FA"?`${ESPN_IMG}teamlogos/nfl/500/${p.nfl.toLowerCase()}.png&w=80&h=80`:"")
+    :`${ESPN_IMG}headshots/nfl/players/full/${p.playerId}.png&w=96&h=70&scale=crop`;
+  return `<div class="hs${dst?" logo":""}"><span aria-hidden="true">${esc(ini)}</span>${src?`<img src="${src}" alt="" loading="lazy" onerror="this.remove()">`:""}</div>`;};
+const draftSeasons=()=>LIVES.filter(d=>d.draft&&d.draft.picks&&d.draft.picks.length).map(d=>d.season);
 
+// One column per team in first-round order, one row per round.
 function draftBoard(d){
   const dr=d.draft, tm=id=>d.teams.find(t=>t.espnId===id)||{espnId:id,name:""};
+  const order=dr.picks.filter(p=>p.round===1).sort((a,b)=>a.pick-b.pick).map(p=>p.espnId);
+  dr.picks.forEach(p=>{ if(!order.includes(p.espnId)) order.push(p.espnId); });
+  const at={}; dr.picks.forEach(p=>at[`${p.round}-${p.espnId}`]=p);
   const vals=new Set(dr.values), busts=new Set(dr.busts);
-  let list=dr.picks.filter(p=>draftTeam==="all"||p.espnId===+draftTeam);
-  if(draftSort==="pts") list=[...list].sort((a,b)=>b.pts-a.pts);
-  return `<div class="scroll"><table class="dboard"><thead><tr><th class="num">Pick</th><th>Manager</th><th>Player</th><th class="num">Points</th><th>Position rank</th></tr></thead>
-    <tbody>${list.map((p,i)=>`${draftSort==="pick"&&draftTeam==="all"&&(i===0||list[i-1].round!==p.round)?`<tr class="grp"><td colspan="5">Round ${p.round}</td></tr>`:""}<tr>
-      <td class="num">${pickNo(p)}<small class="ov">#${p.overall}</small></td>
-      <td>${who(tm(p.espnId))}</td>
-      <td><b class="pn">${esc(p.player)}</b> <span class="team">${esc([p.pos,p.nfl].filter(Boolean).join(", "))}</span>
-        ${vals.has(p.overall)?` <span class="res w">Value</span>`:""}${busts.has(p.overall)?` <span class="res bust">Bust</span>`:""}${p.kept?"":` <span class="res" title="No longer on this team">Gone</span>`}</td>
-      <td class="num">${p.pts.toFixed(1)}</td>
-      <td class="team">Drafted ${posRank(p,"posDraft")}, now ${posRank(p,"posFinish")}</td></tr>`).join("")}</tbody></table></div>`;
+  const rounds=[...new Set(dr.picks.map(p=>p.round))].sort((a,b)=>a-b);
+  const dir=r=>{const p=dr.picks.find(p=>p.round===r&&p.pick===1); return p&&order.indexOf(p.espnId)>order.length/2?"←":"→";};
+  const cell=p=>p?`<td class="bc">${headshot(p)}<span class="ov" title="Overall pick">#${p.overall}</span>
+      <b class="pn">${esc(p.player)}</b><span class="bm">${esc([p.pos,p.nfl].filter(Boolean).join(" · "))}</span>
+      ${vals.has(p.overall)?`<span class="res w">Value</span>`:busts.has(p.overall)?`<span class="res bust">Bust</span>`:""}</td>`:`<td class="bc empty-cell"></td>`;
+  return `<div class="scroll"><table class="board" style="--cols:${order.length}"><caption class="sr-only">The ${d.season} draft by team and round</caption>
+    <thead><tr><th class="rd" scope="col"><span class="sr-only">Round</span></th>${order.map(id=>{const T=tm(id);
+      return `<th class="bh" scope="col" style="--c:${teamColor(T)}">${face(T)}<div class="n">${who(T)}</div><div class="t">${esc(T.name||"")}</div></th>`;}).join("")}</tr></thead>
+    <tbody>${rounds.map(r=>`<tr><th class="rd" scope="row"><span class="rn">${r}</span><span class="rl">Round</span><span class="sd" aria-hidden="true">${dir(r)}</span></th>
+      ${order.map(id=>cell(at[`${r}-${id}`])).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
 
-function draftPage(){
-  const d=LIVE, dr=d&&d.draft;
-  const head=ledgerHead("Draft Recap",d?`The ${d.season} draft, pick by pick, graded on what each player has scored this season.`:"");
+function draftPage(y){
+  const ys=draftSeasons(), want=+y;
+  const d=ys.includes(want)?LIVES.find(x=>x.season===want):(LIVES.find(x=>x.season===ys[ys.length-1])||LIVE), dr=d&&d.draft;
+  const gap=YEARS.length?`Drafts from ${YEARS[0]}–${YEARS[YEARS.length-1]} aren't available; only final standings survive from those seasons.`:"";
+  const chips=ys.length>1?`<div class="chips">${ys.map(x=>`<a href="#/ledger/draft/${x}" ${x===d.season?'aria-current="page"':""}>${x}</a>`).join("")}</div>`:"";
+  const old=YEARS.includes(want)?`<p class="note" style="margin:-4px 0 20px">The ${want} draft isn't available${d?`, so this is the ${d.season} draft`:""}.</p>`:"";
+  const head=ledgerHead("Draft Recap",d?`The ${d.season} draft board, graded on what each player has scored this season. ${gap}`:gap)+chips+old;
   if(!dr||!dr.picks||!dr.picks.length) return `<section>${head}<div class="empty"><h3>No draft yet</h3><p>The draft loads from ESPN with the daily update once it's done. Run the "Daily ESPN update" workflow from the Actions tab to pull it now.</p></div></section>`;
   const tm=id=>d.teams.find(t=>t.espnId===id)||{espnId:id,name:"Unknown"};
   const pk={}; dr.picks.forEach(p=>pk[p.overall]=p);
@@ -1800,7 +1837,6 @@ function draftPage(){
         ${b?`<p><span class="lbl">Best pick</span>${esc(b.player)}, round ${b.round} · ${b.pts.toFixed(1)} pts</p>`:""}
         ${w&&w!==b?`<p><span class="lbl">Worst early pick</span>${esc(w.player)}, round ${w.round} · ${w.pts.toFixed(1)} pts</p>`:""}
         ${roast(t)?`<p class="roast">${esc(roast(t))}</p>`:""}</div></div>`;}).join("");
-  const teamOpts=[...d.teams].sort((a,b)=>teamLabel(a).localeCompare(teamLabel(b))).map(t=>`<option value="${t.espnId}" ${String(t.espnId)===String(draftTeam)?"selected":""}>${esc(teamLabel(t))}</option>`).join("");
   return `<section>${head}
     <div class="strip">
       <div><b>${dr.rounds}</b><span>Rounds</span></div>
@@ -1808,25 +1844,16 @@ function draftPage(){
       ${date?`<div><b>${date.toLocaleDateString([], {month:"short",day:"numeric"})}</b><span>Draft day</span></div>`:""}
       <div><b>${thru?thru.week:0}</b><span>Weeks of points</span></div>
       ${top&&top.pts?`<div><b>${top.pts.toFixed(1)}</b><span>Top scorer: ${esc(top.player)}</span></div>`:""}
-    </div></section>
+    </div>
+    ${draftBoard(d)}
+    <p class="note">Columns run in first-round order; arrows show which way each round snaked. Value and Bust tags match the lists below.</p></section>
   <section class="ledger-sec"><h2>Report cards</h2>
     <p class="lede">Graded on the points every drafted player has scored so far, wherever he plays now, against the league average.${dr.roastWeek?` Roasts were last written in week ${dr.roastWeek} and get rewritten once a week.`:""}</p>
     <div class="dgs">${grades}</div></section>
   <section class="ledger-sec"><h2>Steals and busts</h2>
     <p class="lede">Where a player was drafted at his position against where he ranks there in points now. Steals come from round 3 on; busts from the first half of the draft.</p>
     <div class="pairs-grid"><div><h3>Best value picks</h3>${dr.values.length?`<ol class="dps">${dr.values.map(n=>row(pk[n],"up")).join("")}</ol>`:`<p class="note">Nobody has outplayed his draft spot yet.</p>`}</div>
-      <div><h3>Biggest busts</h3>${dr.busts.length?`<ol class="dps">${dr.busts.map(n=>row(pk[n],"down")).join("")}</ol>`:`<p class="note">No busts yet. Give it time.</p>`}</div></div></section>
-  <section class="ledger-sec"><h2>Every pick</h2>
-    <p class="lede">Points are the player's season total so far, for whoever had him. Gone means he's no longer on the team that drafted him.</p>
-    <div class="filters"><label>Manager<select id="dr-team"><option value="all">All managers</option>${teamOpts}</select></label>
-      <label>Order<select id="dr-sort"><option value="pick" ${draftSort==="pick"?"selected":""}>Draft order</option><option value="pts" ${draftSort==="pts"?"selected":""}>Most points</option></select></label></div>
-    <div id="dr-board">${draftBoard(d)}</div></section>`;
-}
-
-function setupDraft(){
-  const body=document.getElementById("dr-board"); if(!body) return;
-  const bind=(id,set)=>{const el=document.getElementById(id); if(el) el.onchange=()=>{set(el.value); body.innerHTML=draftBoard(LIVE);};};
-  bind("dr-team",v=>draftTeam=v); bind("dr-sort",v=>draftSort=v);
+      <div><h3>Biggest busts</h3>${dr.busts.length?`<ol class="dps">${dr.busts.map(n=>row(pk[n],"down")).join("")}</ol>`:`<p class="note">No busts yet. Give it time.</p>`}</div></div></section>`;
 }
 
 function ledger(p){
@@ -1835,7 +1862,7 @@ function ledger(p){
     case "trophies": return trophiesPage();
     case "records": return recordsPage();
     case "brackets": return bracketsPage(p[1]);
-    case "draft": return draftPage();
+    case "draft": return draftPage(p[1]);
     default: return versusPage(p[1],p[2],p[3]);
   }
 }
@@ -2341,7 +2368,6 @@ function route(){
     case "ledger":
       app.innerHTML=ledger(parts.slice(1)); tab="#/ledger";
       if(parts[1]==="trophies") setupCarousels();
-      if(parts[1]==="draft") setupDraft();
       if(!parts[1]||parts[1]==="versus") setupVersus(parts[2],parts[3],parts[4]);
       break;
     case "live": app.innerHTML=live(parts[1]); tab="#/live"; break;

@@ -1,5 +1,6 @@
 {
   "josh": {
+    "color": "#0B5CAD",
     "name": "Josh",
     "full": "Josh Muska",
     "nickname": "",
@@ -8,6 +9,7 @@
     "bio": "The only manager to keep one team name, OMM, through all five seasons on record, a loyalty his rosters have never repaid. Made the playoffs in 2021 at 8-7 and still finished 8th, then went 8th, 10th and 9th from 2023 on, including dead last in 2024. Career best: 5th. OMM can stand for whatever you like, as long as it isn't \"champion\"."
   },
   "brett": {
+    "color": "#B3261E",
     "name": "Brett",
     "full": "Brett Reuter",
     "nickname": "",
@@ -17,6 +19,7 @@
     "bio": "The commissioner, and the league's only multi-time champion, which is a sentence that should worry everyone. Won back-to-back titles in 2024 and 2025 at exactly 7-7 both times, the worst record of any champion on record. Missed the playoffs in 2022 and 2023 and has never used the same team name twice, yet owns two of the five banners. Nothing to see here."
   },
   "kyle": {
+    "color": "#2E7D32",
     "name": "Kyle",
     "full": "Kyle Waskin",
     "nickname": "",
@@ -25,6 +28,7 @@
     "bio": "The league has his name on it, and lately he's played like it: four straight playoff trips from 2022 to 2025. Won the 2023 title as The Somoan Bulldozer (spelling his) at 11-3, tied for the best regular season on record. That came two years after a 5-10 season as Byron. Cody's 2026 team is called KYLE ONLY HATE, so the respect is clearly mutual."
   },
   "brandon": {
+    "color": "#6A1B9A",
     "name": "Brandon",
     "full": "Brandon Chojnacki",
     "nickname": "",
@@ -33,6 +37,7 @@
     "bio": "Owns the worst regular season on record: 2-12 as Booyaka Booyaka in 2023. Followed it with 7-7 and a 2nd-place finish in 2024, then 10-4 in 2025, the league's most dramatic glow-up. Still 29-43 for his career. His 2025 team, Huhhhhhhsawwwwwwkiiiiii, is the only name in league history that needs both a spell-check and an inhaler."
   },
   "keith": {
+    "color": "#B45309",
     "name": "Keith",
     "full": "Keith Sheridan",
     "nickname": "",
@@ -41,6 +46,7 @@
     "bio": "The only manager to make the playoffs in all five seasons on record, with the best career win percentage (.625) and the 2022 title as Half Chubb. Also the most predictable slide in the league: 11 wins, then 11, 9, 7 and 7. Went 11-4 in 2021 and finished 4th. His team names have gone from Half Chubb to FALCON PUNCH to Taylor Swift, which tells its own story."
   },
   "brad": {
+    "color": "#00796B",
     "name": "Brad",
     "full": "Brad Trott",
     "nickname": "",
@@ -49,6 +55,7 @@
     "bio": "Played as Ree for four straight seasons and made the playoffs every time, without ever finishing higher than 2nd. Peaked at 11-3 in 2024, tied for the best regular season on record, and turned it into 4th place. Then he retired the name and went 3-11 in 2025. Ree was clearly doing most of the work."
   },
   "reis": {
+    "color": "#37474F",
     "name": "Reis",
     "full": "Reis Bailey",
     "nickname": "",
@@ -57,6 +64,7 @@
     "bio": "First appears in the records in 2022, going 8-7 and finishing 3rd. That's still his only playoff trip. Since then: 4-10, 6-8 and 4-10, with last-place finishes in 2023 and 2025. Named his 2025 team Going Dark and then did exactly that."
   },
   "noah": {
+    "color": "#AD1457",
     "name": "Noah",
     "full": "Noah Florias",
     "nickname": "",
@@ -65,6 +73,7 @@
     "bio": "Has finished exactly 6th three times and never higher, which is its own kind of consistency. Bottomed out at 3-12 in 2022 as LLLLLLLLLLLeonard: eleven Ls, which was almost enough to cover the losses. Named his 2025 team Patiently Waiting and went 5-9. Still waiting."
   },
   "tyler": {
+    "color": "#5D4037",
     "name": "Tyler",
     "full": "Tyler Call",
     "nickname": "",
@@ -73,6 +82,7 @@
     "bio": "The league's bridesmaid: 3rd in 2021, 4th in 2022, 2nd in 2023, 2nd again in 2025, and no titles. Four playoff trips and a .597 career win percentage, second only to Keith among managers with three or more seasons. Meanwhile, Twan won the 2021 title with a team called Tcall. Tyler has yet to win one as Tyler."
   },
   "cody": {
+    "color": "#283593",
     "name": "Cody",
     "full": "Cody Jackson",
     "nickname": "",
@@ -81,6 +91,7 @@
     "bio": "One season on record and it was a good one: 10-4 as Chun-Li in 2025, tied for the best record in the league. That got him 5th place. Came back for 2026 with the team name KYLE ONLY HATE, so we know where his focus is."
   },
   "twan": {
+    "color": "#6B6B0F",
     "name": "Twan",
     "full": "",
     "nickname": "",
@@ -90,6 +101,7 @@
     "bio": "Won the first title on record, 9-6 as Tcall in 2021, then went 6-9 and finished 9th the next year. Bounced to 10-4 in 2023, crashed to 4-10 in 2024, and left after that season. Finished with an exactly .500 career at 29-29: every high came with a matching low."
   },
   "dylan": {
+    "color": "#455A64",
     "name": "Dylan",
     "full": "",
     "nickname": "",
