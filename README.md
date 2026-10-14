@@ -7,6 +7,8 @@ The league website. `index.html` is the site, and `scripts/update.py` pulls the 
 - `managers.json`: each manager's name, full name, nickname, photo, bio and active/former status. Edit this instead of `index.html` to change a profile. Check commas and quotes after editing; a typo here stops the site from loading and says so on the page.
 - `images/managers/`: manager photos, named by manager ID (`josh.jpg`). Square, 600 × 600 JPG. Anyone without one gets an initials placeholder.
 - `league.json`: ESPN league ID, the season to pull, and optional team-to-manager fixes.
+- `data/articles/<season>.json`: each finished week's power rankings and Claude's roundup article, with a one-line roast per team. Written once per week by the update and never redone, so reruns don't spend API credits. To have a week rewritten, delete its entry from this file (deleting its `headline` keeps the rankings and rewrites only the article). Without `ANTHROPIC_API_KEY`, rankings still appear and the article waits for a run that has the key.
+- Power rankings: 40% all-play record (each week's score against every other team's), 35% points per week, 25% average over the last three weeks.
 - `scripts/update.py`: the ESPN update script.
 - `requirements.txt`: what the script needs installed.
 - `setup/update.yml`: the daily schedule. Its contents go in `.github/workflows/update.yml` (see setup).

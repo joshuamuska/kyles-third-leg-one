@@ -11,7 +11,7 @@
 :root{
   --bg:#F1F4EE; --surface:#FFFFFF; --text:#141C2B; --muted:#535E70; --line:#D5DCD1; --row:#EBF0E7;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#D50A0A; --gold-text:#B0080A; --gold-soft:#FBE1E1;
-  --btn:#D50A0A; --field:#FFFFFF;
+  --btn:#D50A0A; --field:#FFFFFF; --up:#13773A;
   color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -21,14 +21,14 @@
   :root:not([data-theme="light"]){
     --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
     --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-    --btn:#C8102E; --field:#0A1628;
+    --btn:#C8102E; --field:#0A1628; --up:#5CD08F;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0A1628; --surface:#112139; --text:#E8EDF5; --muted:#A3B1C6; --line:#263A5A; --row:#162A47;
   --turf:#013369; --turf-deep:#00234A; --on-turf:#F3F5EF; --gold:#E8302F; --gold-text:#FF7A78; --gold-soft:#3F1A22;
-  --btn:#C8102E; --field:#0A1628;
+  --btn:#C8102E; --field:#0A1628; --up:#5CD08F;
   color-scheme:dark;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -261,6 +261,134 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
 .tx .bid{font-weight:700;font-variant-numeric:tabular-nums}
 .tx .since{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
 .tx .since.hot{color:var(--gold-text);font-weight:700}
+/* Front page */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-text)}
+.kicker::before{content:"";width:18px;height:3px;background:var(--gold);flex:none}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:14px}
+.sec-head h2{margin:2px 0 0}
+.more{font-weight:700;text-decoration:none;color:var(--gold-text);white-space:nowrap}
+.more:hover{text-decoration:underline;text-underline-offset:3px}
+.front{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:18px;align-items:start}
+.feature{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cover{position:relative;color:var(--on-turf);padding:24px 26px 26px;min-height:330px;display:flex;flex-direction:column;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.06) 79px 81px),
+    linear-gradient(160deg,var(--turf),var(--turf-deep) 75%)}
+.cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--gold)}
+.cover .kicker{color:var(--on-turf)}
+.cover .issue{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.cover .vol{font-size:.8rem;font-weight:600;color:rgba(243,245,239,.7);margin-top:6px}
+.cover h3{margin:auto 0 0;padding-top:28px;font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:900;
+  font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:.9;letter-spacing:-.005em;max-width:15ch;text-wrap:balance}
+.feature:hover .cover h3{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:8px}
+.star{flex:none;width:92px;text-align:center}
+.star .ava{border-radius:50%;border:3px solid var(--gold);background:linear-gradient(180deg,var(--turf-deep),#001A38)}
+.star small{display:block;margin-top:6px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(243,245,239,.8);line-height:1.25}
+.deck{padding:18px 24px 22px}
+.deck .sub{margin:0;font-weight:700;font-size:1.15rem;line-height:1.35}
+.deck .ex{margin:10px 0 0;font-size:1.05rem;line-height:1.6}
+.deck .ex+.ex{color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.deck .lead::first-letter{float:left;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:3.6em;line-height:.8;margin:.08em .08em 0 0;color:var(--gold-text)}
+.deck .more{display:inline-block;margin-top:12px}
+.rail{display:grid;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.panel h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:800;font-size:1.6rem;line-height:1;margin:4px 0 10px}
+.panel .more{display:inline-block;margin-top:10px;font-size:.92rem}
+.games{list-style:none;margin:0;padding:0}
+.games li{padding:9px 0;border-top:1px solid var(--line)}
+.games li:first-child{border-top:0;padding-top:2px}
+.games .sl{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.games .sl.l{color:var(--muted);font-weight:500}
+.games .sl b{font-variant-numeric:tabular-nums;font-weight:700}
+.games p{margin:3px 0 0;font-size:.88rem;line-height:1.4;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tally{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.tally div{background:var(--surface);padding:8px 10px;text-align:center}
+.tally b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.7rem;line-height:1}
+.tally span{font-size:.78rem;color:var(--muted);font-weight:600}
+.digest{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:.92rem;line-height:1.4}
+.digest .lbl{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* Power rankings */
+.move{display:inline-flex;align-items:center;gap:2px;font-size:.82rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.move.up{color:var(--up)}
+.move.down{color:var(--gold-text)}
+.pr-top{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.pr-card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 16px;overflow:hidden}
+.pr-card:hover{border-color:var(--gold)}
+.pr-card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.pr-card .rk{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:3.6rem;line-height:.8;color:var(--text)}
+.pr-card .ava{width:56px;border-radius:50%;border:2px solid var(--gold);flex:none}
+.pr-card .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;line-height:1.05;margin-top:12px}
+.pr-card .t{color:var(--muted);font-size:.86rem;line-height:1.3;overflow-wrap:anywhere}
+.pr-card .st{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:.86rem;font-weight:600}
+.pr-card .roast{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:.9rem;line-height:1.4}
+.pr-card.no1{background:linear-gradient(170deg,var(--turf),var(--turf-deep));border-color:var(--turf);color:var(--on-turf)}
+.pr-card.no1 .rk{color:var(--on-turf)}
+.pr-card.no1 .t,.pr-card.no1 .move{color:rgba(243,245,239,.78)}
+.pr-card.no1 .move.up{color:#7DE0A6}
+.pr-card.no1 .roast{border-top-color:rgba(255,255,255,.2)}
+.pr-card.no1::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--gold)}
+.pr-list{display:grid;gap:10px}
+.pr-row{display:grid;grid-template-columns:54px 64px minmax(0,1fr) auto;gap:6px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.pr-row:first-child{border-left:5px solid var(--gold)}
+.pr-row .rk{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.8rem;line-height:.9;text-align:center}
+.pr-row .rk .move{display:flex;justify-content:center;margin-top:4px}
+.pr-row .ava{border-radius:50%;border:2px solid var(--gold)}
+.pr-row .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.5rem;line-height:1.05}
+.pr-row .n a{text-decoration:none}
+.pr-row .n a:hover{text-decoration:underline}
+.pr-row .t{color:var(--muted);font-size:.9rem}
+.pr-row .roast{margin:4px 0 0;font-size:.95rem;line-height:1.45}
+.pr-stats{display:grid;grid-template-columns:repeat(5,auto);gap:2px 18px;text-align:right;font-variant-numeric:tabular-nums}
+.pr-stats b{display:block;font-size:1.02rem}
+.pr-stats span{font-size:.75rem;color:var(--muted);font-weight:600;white-space:nowrap}
+.pr-stats .sc b{font-family:"Big Shoulders Display",Impact,sans-serif;font-size:1.5rem;line-height:1;color:var(--gold-text)}
+
+/* Articles */
+.arts{display:grid;gap:12px;max-width:820px}
+.art{display:grid;grid-template-columns:96px minmax(0,1fr);text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.art:hover{border-color:var(--gold)}
+.art:hover h3{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.art .wk{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--on-turf);border-right:4px solid var(--gold);
+  background:repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.07) 23px 25px),linear-gradient(180deg,var(--turf),var(--turf-deep))}
+.art .wk span{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.art .wk b{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:3rem;line-height:.9}
+.art .tx{padding:14px 18px 16px}
+.art h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:800;font-size:1.75rem;line-height:1.02;margin:6px 0 6px}
+.art p{margin:0;color:var(--muted)}
+.story{max-width:720px}
+.story h2{font-size:clamp(2.6rem,7vw,4.6rem);line-height:.92;margin:10px 0 12px;text-wrap:balance}
+.story .sub{font-size:1.25rem;line-height:1.4;font-weight:600;margin:0 0 14px}
+.story .byline{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted);font-size:.9rem;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.story .body p{font-size:1.12rem;line-height:1.7;margin:0 0 1.1em}
+.story .body p:first-child::first-letter{float:left;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:4.6em;line-height:.8;margin:.06em .1em 0 0;color:var(--gold-text)}
+.story+section{margin-top:44px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap}
+.pager a{flex:1 1 220px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.pager a:hover{border-color:var(--gold)}
+.pager span{display:block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pager b{display:block;margin-top:2px;line-height:1.3}
+.pager .nx{text-align:right}
+
+@media (max-width:900px){
+  .front{grid-template-columns:1fr}
+  .pr-top{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .pr-row{grid-template-columns:48px 56px minmax(0,1fr)}
+  .pr-stats{grid-column:1/-1;grid-template-columns:repeat(5,1fr);text-align:left;padding-top:8px;border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .cover{padding:20px 18px 22px;min-height:290px}
+  .star{width:72px}
+  .deck{padding:16px 18px 18px}
+  .deck .ex+.ex{display:none}
+  .pr-top{grid-template-columns:1fr}
+  .pr-row{grid-template-columns:40px 48px minmax(0,1fr);gap:6px 12px;padding:12px}
+  .pr-row .rk{font-size:2.2rem}
+  .pr-stats{gap:2px 10px}
+  .art{grid-template-columns:72px minmax(0,1fr)}
+  .art .wk b{font-size:2.4rem}
+  .art h3{font-size:1.5rem}
+}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 @media (max-width:600px){
@@ -284,6 +412,8 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padd
     </div>
     <nav id="nav" aria-label="Sections">
       <a href="#/">Home</a>
+      <a href="#/articles">Articles</a>
+      <a href="#/rankings">Power rankings</a>
       <a href="#/seasons/2025">Seasons</a>
       <a href="#/managers">Managers</a>
       <a href="#/records">Records</a>
@@ -417,8 +547,11 @@ function matchCard(m, opts={}){
 function home(){
   const champs = YEARS.map(y=>S.find(r=>r.year===y&&r.place===1));
   return `
+  ${frontPage()}
+  ${rankingsTop()}
   <section>
-    <h2>Champions</h2>
+    <span class="kicker">Banners in the rafters</span>
+    <h2>Hall of Champions</h2>
     <p class="lede">Every title since 2021. Seasons before that were lost in the move from NFL.com.</p>
     <div class="rafters"><div class="rod"></div>
       <div class="banners">${champs.map(c=>`
@@ -431,8 +564,8 @@ function home(){
       </div>
     </div>
   </section>
-  ${latestWeek()}
   <section>
+    <span class="kicker">The record books</span>
     <h2>All-time standings</h2>
     <p class="lede">Regular-season records, ${YEARS[0]}–${YEARS[YEARS.length-1]}. Select a column to sort.</p>
     <div id="alltime"></div>
@@ -685,12 +818,169 @@ function scoringRecords(){
     <div class="records">${out.map(o=>`<div class="rec"><h3>${o.h}</h3><div class="v">${o.v}</div><ul>${o.li.join("")}</ul></div>`).join("")}</div></section>`;
 }
 
-function latestWeek(){
-  const d=liveOpen(); if(!d) return "";
-  const wk=[...d.weeks].reverse().find(w=>w.final); if(!wk) return "";
-  return `<section><h2>Week ${wk.week} results</h2>
-    <p class="lede"><a href="#/live/${wk.week}">Full recaps and lineups</a></p>
-    <div class="matchups">${wk.matchups.map(m=>matchCard(m,{short:1})).join("")}</div></section>`;
+/* ---------- Articles and power rankings (data/articles/<season>.json) ---------- */
+const articles=()=>LIVES.flatMap(d=>(d.articles||[]).filter(a=>a.headline).map(a=>({...a,season:d.season})))
+  .sort((a,b)=>b.season-a.season||b.week-a.week);
+const rankedWeeks=d=>(d&&d.articles||[]).filter(a=>a.rankings&&a.rankings.length);
+const artHref=a=>`#/articles/${a.season}/${a.week}`;
+const lastFinal=d=>d&&[...d.weeks].reverse().find(w=>w.final);
+const firstSentence=s=>(s||"").split(/(?<=[.!?])\s/)[0];
+const nameOf=r=>r.manager&&M[r.manager]?M[r.manager].name:(r.owner||r.name||"Unknown");
+// Manager photo, or initials (from the team name for an unmatched team).
+const face=r=>r.manager&&M[r.manager]?avatar(r.manager)
+  :`<div class="ava"><span aria-hidden="true">${esc((r.name||"?").split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase())}</span></div>`;
+function moveTag(r){
+  if(r.prev==null) return `<span class="move" title="First week ranked">New</span>`;
+  const d=r.prev-r.rank;
+  return d>0?`<span class="move up" title="Up ${d} from ${ord(r.prev)}">▲${d}</span>`
+    :d<0?`<span class="move down" title="Down ${-d} from ${ord(r.prev)}">▼${-d}</span>`
+    :`<span class="move" title="Same as last week">–</span>`;
+}
+// Escaped headline that never breaks a score like 5-0 across lines.
+const hed=s=>esc(s).replace(/\d+(?:\.\d+)?-\d+(?:\.\d+)?/g,m=>`<span style="white-space:nowrap">${m}</span>`);
+const roastFor=(a,r)=>a&&a.roasts&&a.roasts[String(r.espnId)]||"";
+
+function frontPage(){
+  const d=LIVE, wk=lastFinal(d), a=articles()[0];
+  if(!a&&!wk) return "";
+  let feature;
+  if(a){
+    const no1=(a.rankings||[])[0];
+    feature=`<a class="feature" href="${artHref(a)}">
+      <div class="cover">
+        <div class="issue">
+          <div><span class="kicker">Week ${a.week} roundup</span><div class="vol">${a.season} season</div></div>
+          ${no1?`<div class="star">${face(no1)}<small>No. 1<br>${esc(nameOf(no1))}</small></div>`:""}
+        </div>
+        <h3>${hed(a.headline)}</h3>
+      </div>
+      <div class="deck">
+        ${a.subtitle?`<p class="sub">${esc(a.subtitle)}</p>`:""}
+        ${a.paragraphs.slice(0,2).map((p,i)=>`<p class="ex${i?"":" lead"}">${esc(p)}</p>`).join("")}
+        <span class="more">Read the full story →</span>
+      </div></a>`;
+  }else{
+    feature=`<a class="feature" href="#/live/${wk.week}">
+      <div class="cover">
+        <div class="issue"><div><span class="kicker">Week ${wk.week}</span><div class="vol">${d.season} season</div></div></div>
+        <h3>Week ${wk.week} is in the books</h3>
+      </div>
+      <div class="deck"><p class="sub">The roundup lands with the next update.</p>
+        <p class="ex">Until then, every recap and lineup from the week is up.</p><span class="more">See the recaps →</span></div></a>`;
+  }
+  return `<section><div class="front">${feature}<div class="rail">${recapsPanel()}${txPanel()}</div></div></section>`;
+}
+
+function recapsPanel(){
+  const wk=lastFinal(LIVE); if(!wk) return "";
+  const nm=s=>esc(nameOf(s));
+  return `<div class="panel"><span class="kicker">Recaps</span><h3>Week ${wk.week}${wk.playoff?" playoffs":""}</h3>
+    <ul class="games">${wk.matchups.map(m=>{
+      const [W,L]=m.home.score>=m.away.score?[m.home,m.away]:[m.away,m.home];
+      return `<li><div class="sl"><span>${nm(W)}</span><b>${W.score.toFixed(2)}</b></div>
+        <div class="sl l"><span>${nm(L)}</span><b>${L.score.toFixed(2)}</b></div>
+        ${m.recap?`<p>${esc(firstSentence(m.recap))}</p>`:""}</li>`;}).join("")}</ul>
+    <a class="more" href="#/live/${wk.week}">Full recaps and lineups →</a></div>`;
+}
+
+function txPanel(){
+  const d=LIVE; if(!d||!d.transactions||!d.transactions.length) return "";
+  const now=new Date(d.updated).getTime();
+  let list=d.transactions.filter(x=>x.date&&now-x.date<=7*864e5);
+  const fresh=list.length>0; if(!fresh) list=d.transactions.slice(0,5);
+  const moves=list.flatMap(x=>x.moves);
+  const adds=moves.filter(m=>m.action==="add").length, drops=moves.filter(m=>m.action==="drop").length;
+  const trades=list.filter(x=>x.types.includes("trade")).length;
+  const count={}; list.forEach(x=>new Set(x.moves.map(m=>m.team??m.to)).forEach(id=>count[id]=(count[id]||0)+1));
+  const busy=Object.entries(count).sort((a,b)=>b[1]-a[1])[0];
+  const regret=d.transactions.flatMap(x=>x.moves.filter(m=>m.action==="drop"&&m.since!=null).map(m=>({...m,date:x.date})))
+    .sort((a,b)=>b.since-a.since)[0];
+  const bid=d.faab&&moves.filter(m=>m.bid).sort((a,b)=>b.bid-a.bid)[0];
+  const latest=list[0], kind=["trade","waiver","fa","drop"].find(k=>latest.types.includes(k));
+  const lmove=m=>`${m.action==="add"?"added":"dropped"} ${esc(m.name)}`;
+  const latestLine=kind==="trade"
+    ?`${[...new Set(latest.moves.map(m=>m.to))].map(teamWho).join(" and ")} made a trade`
+    :`${teamWho(latest.moves[0].team)} ${latest.moves.map(lmove).join(", ")}`;
+  const items=[
+    [`Latest move`,latestLine],
+    busy&&busy[1]>1&&[`Busiest manager`,`${teamWho(+busy[0])}, ${busy[1]} moves`],
+    bid&&[`Biggest bid`,`${teamWho(bid.team)} paid $${bid.bid} for ${esc(bid.name)}`],
+    regret&&regret.since>=10&&[`Drop of the year`,`${teamWho(regret.team)} cut ${esc(regret.name)}, who has scored ${regret.since.toFixed(1)} since`]
+  ].filter(Boolean);
+  return `<div class="panel"><span class="kicker">Wire report</span><h3>Transactions</h3>
+    <div class="tally"><div><b>${adds}</b><span>Adds</span></div><div><b>${drops}</b><span>Drops</span></div><div><b>${trades}</b><span>${trades===1?"Trade":"Trades"}</span></div></div>
+    <p class="note" style="margin:-4px 0 10px;font-size:.82rem">${fresh?"Last 7 days":"Latest moves"}</p>
+    <ul class="digest">${items.map(([l,t])=>`<li><span class="lbl">${l}</span>${t}</li>`).join("")}</ul>
+    <a class="more" href="#/rosters/transactions">Every transaction →</a></div>`;
+}
+
+function rankingsTop(){
+  const wks=rankedWeeks(LIVE); if(!wks.length) return "";
+  const a=wks[wks.length-1];
+  return `<section><div class="sec-head"><div><span class="kicker">After week ${a.week}</span><h2>Power rankings</h2></div>
+    <a class="more" href="#/rankings">Full power rankings →</a></div>
+    <div class="pr-top">${a.rankings.slice(0,5).map(r=>`<a class="pr-card${r.rank===1?" no1":""}" href="#/rankings/${a.week}">
+      <div class="top"><span class="rk">${r.rank}</span>${face(r)}</div>
+      <div class="n">${esc(nameOf(r))}</div><div class="t">${esc(r.name||"")}</div>
+      <div class="st">${recStr(r)} ${moveTag(r)}</div>
+      ${roastFor(a,r)?`<p class="roast">${esc(roastFor(a,r))}</p>`:""}</a>`).join("")}</div></section>`;
+}
+
+function rankingRows(a){
+  return `<div class="pr-list">${a.rankings.map(r=>`<div class="pr-row">
+    <div class="rk">${r.rank}${moveTag(r)}</div>
+    ${face(r)}
+    <div><div class="n">${who(r)}</div><div class="t">${esc(r.name||"")}</div>
+      ${roastFor(a,r)?`<p class="roast">${esc(roastFor(a,r))}</p>`:""}</div>
+    <div class="pr-stats">
+      <div><b>${recStr(r)}</b><span>Record</span></div>
+      <div><b>${r.allPlay.join("-").replace(/-0$/,"")}</b><span>All-play</span></div>
+      <div><b>${r.ppg.toFixed(1)}</b><span>Per week</span></div>
+      <div><b>${r.last3.toFixed(1)}</b><span>Last 3</span></div>
+      <div class="sc"><b>${r.score.toFixed(1)}</b><span>Score</span></div>
+    </div></div>`).join("")}</div>`;
+}
+
+function rankingsPage(week){
+  const wks=rankedWeeks(LIVE);
+  if(!wks.length) return `<section><h2>Power rankings</h2>
+    <div class="empty"><h3>No rankings yet</h3><p>Power rankings show up after the first week of the season is final.</p></div></section>`;
+  const a=wks.find(w=>w.week===+week)||wks[wks.length-1];
+  const story=articles().find(x=>x.season===LIVE.season&&x.week===a.week);
+  return `<section><span class="kicker">${LIVE.season} season</span><h2>Power rankings after week ${a.week}</h2>
+    <p class="lede">Built from every week so far: 40% all-play record (each week's score against every other team), 35% points per week and 25% average over the last three weeks.${story?` Read the <a href="${artHref(story)}">week ${a.week} roundup</a>.`:""}</p>
+    <div class="chips">${wks.map(w=>`<a href="#/rankings/${w.week}" ${w===a?'aria-current="page"':""}>Week ${w.week}</a>`).join("")}</div>
+    ${rankingRows(a)}
+    <p class="note">Movement compares with the week before. Score is out of 100.</p></section>`;
+}
+
+function articlesPage(){
+  const list=articles();
+  return `<section><span class="kicker">The league desk</span><h2>Articles</h2>
+    <p class="lede">A roundup after every week of the season, newest first. Nobody is safe.</p>
+    ${list.length?`<div class="arts">${list.map(a=>`<a class="art" href="${artHref(a)}">
+      <div class="wk"><span>Week</span><b>${a.week}</b></div>
+      <div class="tx"><span class="kicker">${a.season} · Week ${a.week} roundup</span><h3>${hed(a.headline)}</h3>${a.subtitle?`<p>${esc(a.subtitle)}</p>`:""}</div></a>`).join("")}</div>`
+    :`<div class="empty"><h3>No articles yet</h3><p>A roundup is written after each week of the season is final.</p></div>`}</section>`;
+}
+
+function articlePage(season,week){
+  const list=articles(), i=list.findIndex(a=>a.season===+season&&a.week===+week);
+  if(i<0) return articlesPage();
+  const a=list[i], newer=list[i-1], older=list[i+1];
+  const d=LIVES.find(x=>x.season===a.season);
+  const pn=(x,cls,l)=>x?`<a class="${cls}" href="${artHref(x)}"><span>${l}</span><b>${esc(x.headline)}</b></a>`:"";
+  return `<article class="story">
+    <a class="back" href="#/articles">All articles</a><br>
+    <span class="kicker">Week ${a.week} roundup · ${a.season} season</span>
+    <h2>${hed(a.headline)}</h2>
+    ${a.subtitle?`<p class="sub">${esc(a.subtitle)}</p>`:""}
+    <div class="byline"><span>The league desk</span>${d&&d.weeks.some(w=>w.week===a.week)?`<a href="#/live/${a.week}">Week ${a.week} scores and recaps</a>`:""}</div>
+    <div class="body">${a.paragraphs.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+  </article>
+  ${a.rankings&&a.rankings.length?`<section><div class="sec-head"><div><span class="kicker">After week ${a.week}</span><h2>Power rankings</h2></div>
+    ${a.season===LIVE.season?`<a class="more" href="#/rankings/${a.week}">Full power rankings →</a>`:""}</div>${rankingRows(a)}</section>`:""}
+  <div class="pager">${pn(older,"pv","← Previous week")}${pn(newer,"nx","Next week →")}</div>`;
 }
 
 function live(week){
@@ -910,6 +1200,8 @@ function route(){
   const app=document.getElementById("app");
   let tab="#/";
   switch(parts[0]){
+    case "articles": app.innerHTML=parts[2]?articlePage(parts[1],parts[2]):articlesPage(); tab="#/articles"; break;
+    case "rankings": app.innerHTML=rankingsPage(parts[1]); tab="#/rankings"; break;
     case "seasons": app.innerHTML=season(parts[1]); tab="#/seasons/2025"; break;
     case "managers": app.innerHTML=parts[1]?profile(parts[1]):managers(); tab="#/managers"; break;
     case "records": app.innerHTML=records(); tab="#/records"; break;
@@ -923,7 +1215,11 @@ function route(){
 }
 window.addEventListener("hashchange",route);
 const seasonsLoad=fetch("data/index.json",{cache:"no-store"}).then(r=>r.ok?r.json():null)
-  .then(ix=>ix?Promise.all(ix.seasons.map(y=>fetch(`data/${y}.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null))):[])
+  .then(ix=>ix?Promise.all(ix.seasons.map(y=>Promise.all([
+    fetch(`data/${y}.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null),
+    // Weekly articles and power rankings are optional: a season without them still loads.
+    fetch(`data/articles/${y}.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)
+  ]).then(([d,a])=>{ if(d) d.articles=a&&a.weeks||[]; return d; }))):[])
   .catch(()=>[]);
 fetch("managers.json",{cache:"no-store"})
   .then(r=>{ if(!r.ok) throw new Error("managers.json is missing."); return r.json().catch(()=>{ throw new Error("managers.json has a typo in it (often a missing comma or quote)."); }); })

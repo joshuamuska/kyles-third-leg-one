@@ -1,0 +1,195 @@
+{
+ "season": 2026,
+ "weeks": [
+  {
+   "week": 1,
+   "rankings": [
+    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 1, "l": 0, "t": 0, "pf": 165.6, "ppg": 165.6, "last3": 165.6, "allPlay": [9, 0, 0], "rank": 1, "prev": null, "score": 100.0},
+    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 1, "l": 0, "t": 0, "pf": 160.66, "ppg": 160.66, "last3": 160.66, "allPlay": [8, 1, 0], "rank": 2, "prev": null, "score": 91.7},
+    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 1, "l": 0, "t": 0, "pf": 157.46, "ppg": 157.46, "last3": 157.46, "allPlay": [7, 2, 0], "rank": 3, "prev": null, "score": 84.7},
+    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 0, "t": 0, "pf": 143.26, "ppg": 143.26, "last3": 143.26, "allPlay": [6, 3, 0], "rank": 4, "prev": null, "score": 69.1},
+    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 0, "l": 1, "t": 0, "pf": 142.3, "ppg": 142.3, "last3": 142.3, "allPlay": [5, 4, 0], "rank": 5, "prev": null, "score": 63.9},
+    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 1, "t": 0, "pf": 138.46, "ppg": 138.46, "last3": 138.46, "allPlay": [4, 5, 0], "rank": 6, "prev": null, "score": 56.5},
+    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 1, "t": 0, "pf": 117.02, "ppg": 117.02, "last3": 117.02, "allPlay": [3, 6, 0], "rank": 7, "prev": null, "score": 35.2},
+    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 1, "t": 0, "pf": 117.0, "ppg": 117.0, "last3": 117.0, "allPlay": [2, 7, 0], "rank": 8, "prev": null, "score": 30.7},
+    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 1, "l": 0, "t": 0, "pf": 109.86, "ppg": 109.86, "last3": 109.86, "allPlay": [1, 8, 0], "rank": 9, "prev": null, "score": 20.7},
+    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 0, "l": 1, "t": 0, "pf": 89.16, "ppg": 89.16, "last3": 89.16, "allPlay": [0, 9, 0], "rank": 10, "prev": null, "score": 0.0}
+   ],
+   "headline": "Keith's Opening Win Was a Gift From Cody's Bench",
+   "subtitle": "Week 1 crowns a 9-0 all-play king, buries the champ at 89 points, and Brad starts 0-1 with a negative defense.",
+   "paragraphs": [
+    "Keith posted the week's high score, 165.6, and he would like you to believe that was skill. It was Cody. KYLE ONLY HATE left Christian Watson and his 32.7 points on the bench to start Tee Higgins, who scored 8.9. That's a 23.8-point blunder in a game Cody lost by 23.30. One correct click and Keith's opener goes in the loss column. Instead he sits on top of the first power rankings with a perfect 9-0 all-play record, which is exactly the kind of thing that happens to a man right before the fall.",
+    "Brett, your commissioner and two-time defending champion, opened the title defense with 89.16 points, the lowest score in the league, and lost to Josh. Josh started Jaylen Waddle for 1.2 points over Deebo Samuel's 18 and still won by 20.70. Brett's tight end Colston Loveland put up a zero while Kenyon Sadiq scored 11.4 on his bench. An 0-9 all-play record for the man with two banners. Somebody check those banners for forgery.",
+    "Reis delivered the blowout of the week, 160.66-117.02 over Brandon, a 43.64-point beating that somehow included Reis benching Jalen Coker's 33.8 to start Courtland Sutton's 3.1. He left 30.7 points on the pine and still won by more than 40, which says less about Snooki than it does about Bobby Light. Brandon's Chargers defense chipped in a zero.",
+    "Brad, meanwhile, started Dak Prescott for 14.4 while Jaxson Dart scored 26.6 on his bench, then topped it off with a Texans defense that scored -4. He lost to Kyle 143.26-117. A team called Free Josh Jacobs is 0-1 and ranked 8th, and nobody is coming to free Brad.",
+    "Tyler handled Noah 157.46-138.46 behind Caleb Williams (37.26) and Derrick Henry (35.3), despite starting a Kyle Pitts who scored exactly nothing. Noah got 31.2 from Justin Jefferson and still lost by 19. One week in, Keith, Reis, Tyler, Kyle and Josh are 1-0. Josh is 1-0 with the ninth-best score in the league. Enjoy it while it lasts."
+   ],
+   "roasts": {
+    "1": "The two-time champ opened with 89.16, the worst score in the league, and went 0-9 in all-play; the banners are getting nervous.",
+    "2": "1-0 after Jaylen Waddle gave him 1.2 points; ranked ninth because the math saw what happened.",
+    "3": "Benched 32.7 points of Christian Watson to lose by 23.3; the team name says Kyle Only Hate, but the lineup says Cody hates Cody.",
+    "4": "Lost by 43.64 to a guy who was actively trying to start Courtland Sutton.",
+    "5": "Won comfortably while starting a tight end who scored zero, so imagine the damage with a full roster.",
+    "6": "Ranked first because Cody benched 32.7 points against him; enjoy the view, it's rented.",
+    "7": "Started Dak over a 26.6-point Jaxson Dart and rode a -4 defense into the abyss; Free Josh Jacobs, imprison Brad.",
+    "8": "Got 31.2 from Justin Jefferson and still lost by 19, which takes real commitment.",
+    "9": "Beat Brad, which counts as a win the same way a scrimmage counts as a game.",
+    "10": "Left 30.7 points on the bench and still won by 43, which is less a flex than an indictment of Brandon."
+   },
+   "by": "claude",
+   "written": "2026-10-14T15:00+00:00"
+  },
+  {
+   "week": 2,
+   "rankings": [
+    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 2, "l": 0, "t": 0, "pf": 329.16, "ppg": 164.58, "last3": 164.58, "allPlay": [17, 1, 0], "rank": 1, "prev": 1, "score": 97.8},
+    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 2, "l": 0, "t": 0, "pf": 328.28, "ppg": 164.14, "last3": 164.14, "allPlay": [17, 1, 0], "rank": 2, "prev": 2, "score": 97.3},
+    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 1, "l": 1, "t": 0, "pf": 274.58, "ppg": 137.29, "last3": 137.29, "allPlay": [11, 7, 0], "rank": 3, "prev": 5, "score": 55.7},
+    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 1, "t": 0, "pf": 272.04, "ppg": 136.02, "last3": 136.02, "allPlay": [11, 7, 0], "rank": 4, "prev": 4, "score": 54.4},
+    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 1, "l": 1, "t": 0, "pf": 253.58, "ppg": 126.79, "last3": 126.79, "allPlay": [8, 10, 0], "rank": 5, "prev": 3, "score": 38.0},
+    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 2, "l": 0, "t": 0, "pf": 244.7, "ppg": 122.35, "last3": 122.35, "allPlay": [8, 10, 0], "rank": 6, "prev": 9, "score": 33.4},
+    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 2, "t": 0, "pf": 236.18, "ppg": 118.09, "last3": 118.09, "allPlay": [6, 12, 0], "rank": 7, "prev": 7, "score": 24.4},
+    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 2, "t": 0, "pf": 231.66, "ppg": 115.83, "last3": 115.83, "allPlay": [4, 14, 0], "rank": 8, "prev": 6, "score": 17.6},
+    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 2, "t": 0, "pf": 230.66, "ppg": 115.33, "last3": 115.33, "allPlay": [4, 14, 0], "rank": 9, "prev": 8, "score": 17.1},
+    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 1, "l": 1, "t": 0, "pf": 215.04, "ppg": 107.52, "last3": 107.52, "allPlay": [4, 14, 0], "rank": 10, "prev": 10, "score": 8.9}
+   ],
+   "headline": "Kyle Benches the Win, Brad Gets Lapped, Josh Is Somehow 2-0",
+   "subtitle": "Reis drops 167 on Brad, Keith keeps cashing other people's mistakes, and Noah's second-best player was a kicker.",
+   "paragraphs": [
+    "The game of the week was decided on Kyle's bench. Stefon Diggs scored 21.7 there while Malik Nabers started and produced 1.1, a 20.6-point swing in a game Kyle lost to Josh by 6.06. Amon-Ra St. Brown gave him 35.2. Kyle gave it right back. Josh is now 2-0 with the sixth-best scoring average in the league, 122.35 a week, which is what a soft schedule looks like when it puts on a jersey.",
+    "Reis hung 167.62 on Brad, the week's top score and its biggest blowout at 53.96. Josh Allen threw in 40.82, Davante Adams added 39.5, and Reis still found time to bench Travis Kelce's 25.1 for Dallas Goedert's 1.4. Brad's DJ Moore scored -0.1. Not zero. Negative. Brad is 0-2 and 9th in the power rankings, and that feels generous.",
+    "Keith beat Brandon 163.56-119.16 behind 42.5 from Jaxon Smith-Njigba, and fine, that one was real. It doesn't change the story. Keith is first in the power rankings by half a point over Reis, both of them 17-1 in all-play, and only one of them needed an opponent to bench 32.7 points to stay unbeaten.",
+    "Brett got off the mat with 125.88 against Noah, which only took CeeDee Lamb going for 35.3 and Noah posting the league's lowest score, 93.2. Noah started Puka Nacua for a zero, and his second-best player was Harrison Butker at 16 points. When your kicker is your WR1, that's not a slump, it's a cry for help. Brett is still 10th in the power rankings after the win, a sentence that should follow the defending champion around for a while.",
+    "Cody bounced back by beating Tyler 132.28-96.12 even with Saquon Barkley scoring 3 in his lineup, which moved Cody from 5th to 3rd in the rankings and dropped Tyler from 3rd to 5th. Tyler's top scorer was Derrick Henry at 17.7. Two weeks in, Keith, Reis and Josh are 2-0, and Brandon, Noah and Brad are 0-2. One of those groups is about to get a lot more crowded."
+   ],
+   "roasts": {
+    "1": "Won a game and stayed 10th, the power rankings' way of noting that the opponent was Noah.",
+    "2": "2-0 with the sixth-best scoring average, and the power rankings see right through it.",
+    "3": "Won while Saquon scored 3 in his lineup; the bar for Cody's lineup decisions is now 'better than last week'.",
+    "4": "Lost by 44 and is somehow still 7th, which says everything about the three teams below him.",
+    "5": "Derrick Henry led the team with 17.7 in a 96-point dud; Stone Cold would have stunned this lineup.",
+    "6": "Two wins, 17-1 in all-play, and clinging to first by half a point like it's the last seat on the lifeboat.",
+    "7": "Gave up 167 and got -0.1 from DJ Moore; 0-2, and the best defense of his lineup is that there isn't one.",
+    "8": "Started Puka Nacua for a zero and leaned on his kicker as his second-best player; 93.2 was the floor of the league and he found it.",
+    "9": "Started Malik Nabers (1.1) over Stefon Diggs (21.7) and lost by six; the league has his name on it, and so does the blunder.",
+    "10": "Scored 167.62 and benched Travis Kelce's 25.1 for Goedert's 1.4, because winning by 54 wasn't humiliating enough for Brad."
+   },
+   "by": "claude",
+   "written": "2026-10-14T15:00+00:00"
+  },
+  {
+   "week": 3,
+   "rankings": [
+    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 3, "l": 0, "t": 0, "pf": 469.54, "ppg": 156.51, "last3": 156.51, "allPlay": [25, 2, 0], "rank": 1, "prev": 2, "score": 97.0},
+    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 3, "l": 0, "t": 0, "pf": 469.4, "ppg": 156.47, "last3": 156.47, "allPlay": [24, 3, 0], "rank": 2, "prev": 1, "score": 95.5},
+    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 2, "l": 1, "t": 0, "pf": 454.86, "ppg": 151.62, "last3": 151.62, "allPlay": [20, 7, 0], "rank": 3, "prev": 3, "score": 83.3},
+    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 0, "t": 0, "pf": 375.34, "ppg": 125.11, "last3": 125.11, "allPlay": [13, 14, 0], "rank": 4, "prev": 6, "score": 38.5},
+    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 2, "t": 0, "pf": 373.42, "ppg": 124.47, "last3": 124.47, "allPlay": [13, 14, 0], "rank": 5, "prev": 4, "score": 37.6},
+    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 2, "l": 1, "t": 0, "pf": 365.94, "ppg": 121.98, "last3": 121.98, "allPlay": [11, 16, 0], "rank": 6, "prev": 5, "score": 31.4},
+    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 3, "t": 0, "pf": 359.0, "ppg": 119.67, "last3": 119.67, "allPlay": [8, 19, 0], "rank": 7, "prev": 9, "score": 24.0},
+    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 1, "l": 2, "t": 0, "pf": 351.38, "ppg": 117.13, "last3": 117.13, "allPlay": [10, 17, 0], "rank": 8, "prev": 10, "score": 23.6},
+    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 3, "t": 0, "pf": 332.0, "ppg": 110.67, "last3": 110.67, "allPlay": [6, 21, 0], "rank": 9, "prev": 7, "score": 9.3},
+    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 3, "t": 0, "pf": 331.0, "ppg": 110.33, "last3": 110.33, "allPlay": [5, 22, 0], "rank": 10, "prev": 8, "score": 7.4}
+   ],
+   "headline": "Keith Survives Brad, Brad Survives Nothing",
+   "subtitle": "Brad benches the points that would have beaten Keith, Cody drops 180, and Reis takes over the top spot.",
+   "paragraphs": [
+    "For the second time in three weeks, Keith is unbeaten because of somebody else's lineup. Brad left Jordan Addison's 20 points on the bench to start Brian Thomas Jr., who scored 1.8. That's an 18.2-point mistake in a game Brad lost 140.24-128.34, by 11.90. Brad handed it over personally. Keith, for his part, started Dalton Schultz (6) over Harold Fannin Jr. (24.1) and won anyway, because when you're playing Brad, you can do that. Keith is 3-0 and still lost first place in the power rankings, which tells you what the math thinks.",
+    "The new No. 1 is Reis, who beat Kyle 141.26-101.38 while benching Bo Nix's 24.14 to start Josh Allen's 17.46. Reis is 3-0, 25-2 in all-play, and has left real points on his bench in all three weeks without it costing him once. Kyle is 1-2 after his 101.38 and slid to 5th.",
+    "Cody went off: 180.28 points, the week's high, behind 41.4 from Jahmyr Gibbs and 31.28 from Brock Purdy, and Brett ate all of it in a 43.94-point loss, the biggest margin of the week. Brett actually scored 136.34, the best losing score of the week, and it wasn't close to enough. It also didn't help that Kenyon Sadiq scored 23.5 on his bench while Dalton Kincaid started for 3.8. The defending champion is 1-2.",
+    "Brandon lost to Tyler 112.36-95.82 in a game decided on Brandon's bench, where Michael Wilson scored 25.9 while Dontayvion Wicks started for 5.2. That's a 20.7-point swap in a 16.54-point loss, and Brandon's 95.82 was the lowest score of the week. Noah wasn't far behind at 99.34 in a 31.30-point loss to Josh, who is now 3-0 with a scoring average of 125.11 and a losing all-play record. Nobody has ever looked less undefeated.",
+    "After three weeks the 3-0 club is Reis, Keith and Josh, and the 0-3 club is Brad, Brandon and Noah. Brad did climb from 9th to 7th in the power rankings while losing, the closest thing to progress his franchise has seen all year."
+   ],
+   "roasts": {
+    "1": "Scored 136.34 and lost by 44; the defending champ is 1-2 and losing even on the weeks he shows up.",
+    "2": "3-0 with a 125-point average and a 13-14 all-play record; the most fraudulent unbeaten team in the league, and that's saying something with Keith around.",
+    "3": "Scored a league-best 180.28 and still sits third, stuck behind two guys who haven't lost yet.",
+    "4": "Benched Michael Wilson's 25.9 to start Wicks for 5.2, then lost by 16.54 with the week's lowest score; that's not bad luck, that's authorship.",
+    "5": "Won with 112.36 because Brandon benched 25.9 points, which is the only kind of win Tyler is getting right now.",
+    "6": "3-0 with Brad's bench doing the heavy lifting; fell out of first while undefeated, which takes a special kind of fraud.",
+    "7": "Moved up to seventh by losing again after benching Jordan Addison's 20 for Brian Thomas Jr.'s 1.8; his bench outscored his excuse.",
+    "8": "0-3, last in the rankings, and held to 99.34 by Josh, a team that exists mainly to make other teams look worse.",
+    "9": "Scored 101.38 and fell to 1-2; the league with his name on it has started looking the other way.",
+    "10": "New No. 1 after benching Bo Nix's 24.14 for Josh Allen; three weeks, three bench blunders, three wins, zero consequences."
+   },
+   "by": "claude",
+   "written": "2026-10-14T15:00+00:00"
+  },
+  {
+   "week": 4,
+   "rankings": [
+    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 3, "l": 1, "t": 0, "pf": 619.18, "ppg": 154.8, "last3": 158.96, "allPlay": [27, 9, 0], "rank": 1, "prev": 3, "score": 90.0},
+    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 4, "l": 0, "t": 0, "pf": 592.68, "ppg": 148.17, "last3": 142.36, "allPlay": [28, 8, 0], "rank": 2, "prev": 2, "score": 78.1},
+    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 3, "l": 1, "t": 0, "pf": 560.66, "ppg": 140.17, "last3": 133.33, "allPlay": [25, 11, 0], "rank": 3, "prev": 1, "score": 64.0},
+    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 2, "l": 2, "t": 0, "pf": 554.14, "ppg": 138.54, "last3": 136.96, "allPlay": [21, 15, 0], "rank": 4, "prev": 5, "score": 59.9},
+    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 3, "l": 1, "t": 0, "pf": 552.22, "ppg": 138.06, "last3": 131.59, "allPlay": [20, 16, 0], "rank": 5, "prev": 6, "score": 55.9},
+    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 2, "l": 2, "t": 0, "pf": 482.78, "ppg": 120.7, "last3": 131.21, "allPlay": [16, 20, 0], "rank": 6, "prev": 8, "score": 37.0},
+    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 1, "t": 0, "pf": 493.5, "ppg": 123.38, "last3": 127.88, "allPlay": [15, 21, 0], "rank": 7, "prev": 4, "score": 36.6},
+    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 4, "t": 0, "pf": 486.9, "ppg": 121.73, "last3": 123.3, "allPlay": [13, 23, 0], "rank": 8, "prev": 7, "score": 30.9},
+    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 4, "t": 0, "pf": 448.72, "ppg": 112.18, "last3": 110.57, "allPlay": [7, 29, 0], "rank": 9, "prev": 9, "score": 10.6},
+    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 4, "t": 0, "pf": 451.78, "ppg": 112.95, "last3": 104.44, "allPlay": [8, 28, 0], "rank": 10, "prev": 10, "score": 9.5}
+   ],
+   "headline": "Keith Goes 4-0 With the Week's Sixth-Best Score",
+   "subtitle": "Tyler hangs 186 on Brad, Kyle buries Noah by 60, and Cody takes over the power rankings.",
+   "paragraphs": [
+    "Keith is the league's last unbeaten team, and this week he stayed that way by scoring 123.28 points, the sixth-best total of the week. He would have lost to five teams. Instead he drew Reis, who picked this exact week to post the league's lowest score, 91.12. Keith even benched Emanuel Wilson's 27 points to start D'Andre Swift for 7.4 and still won by 32.16. He's 4-0, first in the standings and second in the power rankings, and the gap between those two numbers is the whole story of his season.",
+    "The new power-ranking No. 1 is Cody, up from 3rd after a 164.32-118.16 win over Josh. Cody's 154.8 points a week lead the league, and his 158.96 average over the last three weeks is the best in the league by more than 16 points. Josh, the 3-0 mirage, finally lost and fell from 4th to 7th, helped along by benching Kyle Monangai's 28 to start Jeremiyah Love for 6.5.",
+    "There were two blowouts of nearly 60. Tyler put up 186.28, the week's top score, and beat Brad by 58.38 behind 36.7 from Kyren Williams. Brad, never one to lose quietly, benched Brian Robinson Jr.'s 25.7 to start TreVeyon Henderson for 4.2. That's his second straight week leaving 18 or more points on the bench. He's 0-4.",
+    "Kyle had the other one, 180.72-120.78 over Noah, a 59.94-point beating and the biggest margin of the week, with Tetairoa McMillan's 45.2 as the best single game in the league. Noah is 0-4 and last in the power rankings for the second straight week.",
+    "Brett beat Brandon 131.4-116.72 to get to 2-2, which happened mostly because CeeDee Lamb scored 41.3 and Brandon started Rashee Rice for a zero. Brett also started Ladd McConkey for a zero, so call it even on the zeros. Brett climbed to 6th in the power rankings. Brandon, Brad and Noah are all 0-4, a combined zero wins in twelve tries."
+   ],
+   "roasts": {
+    "1": "Back to .500 and up to sixth, which is the defending champion's idea of a hot streak.",
+    "2": "The 3-0 mirage evaporated, helped along by benching Kyle Monangai's 28 for Jeremiyah Love's 6.5.",
+    "3": "New No. 1 with the league's best scoring average, which has somehow bought him a 3-1 record and second place.",
+    "4": "Started Rashee Rice for a zero and fell to 0-4, the quietest member of a winless trio nobody wants to join.",
+    "5": "Scored the week's best 186.28 against Brad, the fantasy equivalent of setting a record against a scarecrow.",
+    "6": "4-0 on the week's sixth-best score because Reis picked the right week to put up 91; the luckiest unbeaten record in the league.",
+    "7": "0-4, gave up 186, and benched Brian Robinson Jr.'s 25.7 for 4.2 of TreVeyon Henderson; Brad isn't managing a team, he's donating one.",
+    "8": "Lost by 59.94 and stayed last; the only thing he's beaten all season is the over on losses.",
+    "9": "Beat Noah by 59.94, which is what passes for a statement game when the opponent is 0-4.",
+    "10": "Fell from first to third by scoring 91.12, the league's lowest, against the one team that needs help to beat anybody."
+   },
+   "by": "claude",
+   "written": "2026-10-14T15:00+00:00"
+  },
+  {
+   "week": 5,
+   "rankings": [
+    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 4, "l": 1, "t": 0, "pf": 818.56, "ppg": 163.71, "last3": 181.33, "allPlay": [36, 9, 0], "rank": 1, "prev": 1, "score": 92.0},
+    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 5, "l": 0, "t": 0, "pf": 739.72, "ppg": 147.94, "last3": 136.85, "allPlay": [34, 11, 0], "rank": 2, "prev": 2, "score": 61.2},
+    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 4, "l": 1, "t": 0, "pf": 717.56, "ppg": 143.51, "last3": 129.76, "allPlay": [32, 13, 0], "rank": 3, "prev": 3, "score": 53.4},
+    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 2, "l": 3, "t": 0, "pf": 694.24, "ppg": 138.85, "last3": 140.73, "allPlay": [25, 20, 0], "rank": 4, "prev": 4, "score": 47.9},
+    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 3, "l": 2, "t": 0, "pf": 681.46, "ppg": 136.29, "last3": 142.63, "allPlay": [20, 25, 0], "rank": 5, "prev": 5, "score": 42.3},
+    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 3, "l": 2, "t": 0, "pf": 629.54, "ppg": 125.91, "last3": 138.17, "allPlay": [21, 24, 0], "rank": 6, "prev": 6, "score": 33.6},
+    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 5, "t": 0, "pf": 631.3, "ppg": 126.26, "last3": 133.21, "allPlay": [16, 29, 0], "rank": 7, "prev": 10, "score": 27.5},
+    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 2, "t": 0, "pf": 628.76, "ppg": 125.75, "last3": 128.02, "allPlay": [16, 29, 0], "rank": 8, "prev": 7, "score": 25.2},
+    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 5, "t": 0, "pf": 622.74, "ppg": 124.55, "last3": 130.69, "allPlay": [15, 30, 0], "rank": 9, "prev": 8, "score": 24.4},
+    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 1, "l": 4, "t": 0, "pf": 585.6, "ppg": 117.12, "last3": 116.47, "allPlay": [10, 35, 0], "rank": 10, "prev": 9, "score": 8.9}
+   ],
+   "headline": "Keith Goes 5-0, Brad Goes 0-5, and Both Owe It to the Bench",
+   "subtitle": "Kyle benches the win against Keith, Cody hangs 199 on Noah, and Brandon finally wins one by 1.62.",
+   "paragraphs": [
+    "Same script, fifth week. Keith beat Kyle 147.04-140.10 to go 5-0, and once again the margin was sitting on the other guy's bench: Kyle started Alvin Kamara for 2.6 while Jacory Croskey-Merritt scored 14.2 in reserve, an 11.6-point swing in a 6.94-point loss. That makes three of Keith's five wins, against Cody, Brad and now Kyle, where his opponent benched enough points to beat him. He's unbeaten in the standings, second in the power rankings, and 5th in the league over the last three weeks. Undefeated, and not even the best team.",
+    "Then there's Brad, now 0-5, who lost to Brett 146.76-135.84. Brad started TreVeyon Henderson for 4.8 while Samaje Perine scored 15.8 on his bench, an 11-point gap in a 10.92-point loss. Start Perine and Brad wins by 0.08. DJ Moore scored zero for him, again, and the most reliable player on the roster is his kicker, Jason Myers, tied for the team lead with 23. It's the second time this season Brad's bench alone would have won him the game.",
+    "Cody hit 199.38, the highest score of the season so far, behind Jahmyr Gibbs (37.7) and Jaylen Warren (36.8), and he needed almost all of it. Noah scored 179.52, the second-best total of the week, and lost by 19.86. Noah would have beaten eight teams this week. He is 0-5. He did jump from 10th to 7th in the power rankings, which is the smallest consolation ever handed to a grown man.",
+    "The closest game of the week went to Brandon, 136.88-135.26 over Josh, for his first win of the season. Josh benched Emeka Egbuka's 17.2 to start Deebo Samuel Sr. for 2.5 and lost by 1.62. Brandon's reward for winning is a drop to 10th in the power rankings, because his 116.47 average over the last three weeks is the worst in the league by more than 11 points.",
+    "Reis beat Tyler 156.9-129.24, handing Tyler the week's lowest score and moving to 4-1. Five weeks in, the top of the standings is Keith at 5-0 with Cody and Reis at 4-1, and the bottom is Noah and Brad at 0-5. One of those records looks earned. It isn't Keith's."
+   ],
+   "roasts": {
+    "1": "Beat Brad by 10.92, which only took Drake Maye's 39.46 and Brad forgetting how lineups work.",
+    "2": "Benched Egbuka's 17.2 for Deebo's 2.5 and lost by 1.62; OMM now officially stands for Obviously Mismanaged Matchup.",
+    "3": "Season-high 199.38 and still a game behind Keith in the standings; turns out the schedule hates Cody too.",
+    "4": "Won his first game and fell to last anyway, because a 116.47 three-week average doesn't get a parade.",
+    "5": "Posted the week's lowest score and still sits fifth, propped up by the 186 he dropped on Brad a week ago.",
+    "6": "5-0 with three wins handed over by his opponents' benches; the only unbeaten team that should be sending thank-you cards.",
+    "7": "0-5 after his bench outscored his losing margin for the second time this season; Free Josh Jacobs has become a hostage situation.",
+    "8": "Scored 179.52, the second-best total of the week, and lost; 0-5 isn't bad luck anymore, it's a brand.",
+    "9": "Benched 14.2 points to start Kamara for 2.6 and lost to Keith by 6.94; at 2-3 he's the latest donor to the Keith fund.",
+    "10": "4-1 with a three-week average that ranks eighth in the league; coasting on September like it's a pension."
+   },
+   "by": "claude",
+   "written": "2026-10-14T15:00+00:00"
+  }
+ ]
+}

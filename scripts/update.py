@@ -6,6 +6,8 @@ ESPN_S2 and ESPN_SWID. ANTHROPIC_API_KEY is optional: with it, recaps are
 written by Claude; without it, the script writes its own short recaps.
 Saved Claude recaps are reused, so daily runs only call Claude for newly
 finished games or games whose score changed (ESPN stat corrections).
+Each finished week also gets power rankings and a Claude-written roundup article
+in data/articles/<season>.json. Those are written once and never redone.
 """
 import datetime
 import hashlib
@@ -146,9 +148,44 @@ ROAST_TARGETS = ("keith", "brad")
 RECAP_STYLE_ID = hashlib.md5((RECAP_STYLE + TARGETS_NOTE + ",".join(ROAST_TARGETS)).encode()).hexdigest()[:10]
 
 
-def ai_recap(m, week, fallback):
+def ask_claude(prompt, label, max_tokens=1500):
+    """Claude's reply as text, or None if there's no key or it fails (it retries when busy)."""
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
+        return None
+    for attempt in range(5):
+        try:
+            r = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                         "content-type": "application/json"},
+                json={"model": CFG.get("recapModel", "claude-sonnet-5-5"), "max_tokens": max_tokens,
+                      "messages": [{"role": "user", "content": prompt}]},
+                timeout=180,
+            )
+            if r.status_code in (429, 500, 502, 503, 529):
+                # Rate limited or busy: wait and try again.
+                wait = float(r.headers.get("retry-after") or 0) or 10 * (attempt + 1)
+                print(f"Claude busy for {label} ({r.status_code}), retrying in {wait:.0f}s")
+                time.sleep(min(wait, 90))
+                continue
+            r.raise_for_status()
+            body = r.json()
+            if body.get("stop_reason") == "max_tokens":
+                print(f"::warning::Claude's {label} was cut off; it will try again next run.")
+                return None
+            text = "".join(b.get("text", "") for b in body.get("content", []) if b.get("type") == "text")
+            time.sleep(2)  # stay well under new-account rate limits
+            return text.strip() or None
+        except Exception as e:  # never let Claude break the update
+            print(f"::warning::Claude failed on {label}: {e}")
+            return None
+    print(f"::warning::Claude was too busy to write {label}; it will try again next run.")
+    return None
+
+
+def ai_recap(m, week, fallback):
+    if not os.environ.get("ANTHROPIC_API_KEY"):
         return None
     targets = [MANAGERS[s["manager"]][0] for s in (m["home"], m["away"])
                if s.get("manager") in ROAST_TARGETS]
@@ -168,35 +205,189 @@ def ai_recap(m, week, fallback):
                                       verb="both play" if len(targets) > 1 else "plays",
                                       gets="get" if len(targets) > 1 else "gets")
     prompt += "\n\n" + json.dumps(facts)
-    for attempt in range(5):
+    return ask_claude(prompt, f"recap for {m['key']}")
+
+
+def records_through(weeks, upto):
+    """Regular-season W-L-T and points for each team (by ESPN id) through week `upto`."""
+    rec = {}
+    for wk in weeks:
+        if wk["week"] > upto or not wk["final"]:
+            continue
+        for m in wk["matchups"]:
+            for s, o in ((m["home"], m["away"]), (m["away"], m["home"])):
+                r = rec.setdefault(s["espnId"], {"w": 0, "l": 0, "t": 0, "pf": 0.0})
+                if m["playoff"]:
+                    continue
+                r["pf"] = round(r["pf"] + s["score"], 2)
+                r["w" if s["score"] > o["score"] else "l" if s["score"] < o["score"] else "t"] += 1
+    return rec
+
+
+def standings_order(rec):
+    """ESPN ids ranked by wins, then points for."""
+    return sorted(rec, key=lambda t: (-(rec[t]["w"] + rec[t]["t"] / 2), -rec[t]["pf"]))
+
+
+def power_rankings(weeks, upto, prev):
+    """Power rankings after week `upto`, from every final week so far: 40% all-play win %
+    (each week's score against every other team's), 35% points per game and 25% average
+    over the last three weeks. Points are scaled 0-1 across the league before weighting."""
+    scores, allplay, info = {}, {}, {}
+    for wk in weeks:
+        if wk["week"] > upto or not wk["final"]:
+            continue
+        sides = [s for m in wk["matchups"] for s in (m["home"], m["away"])]
+        everyone = [s["score"] for s in sides]
+        for s in sides:
+            tid = s["espnId"]
+            info[tid] = s
+            scores.setdefault(tid, []).append(s["score"])
+            ap = allplay.setdefault(tid, [0, 0, 0])
+            ap[0] += sum(x < s["score"] for x in everyone)
+            ap[1] += sum(x > s["score"] for x in everyone)
+            ap[2] += sum(x == s["score"] for x in everyone) - 1
+    if not scores:
+        return []
+    rec = records_through(weeks, upto)
+    ppg = {t: sum(v) / len(v) for t, v in scores.items()}
+    last3 = {t: sum(v[-3:]) / len(v[-3:]) for t, v in scores.items()}
+
+    def scaled(d):
+        lo, hi = min(d.values()), max(d.values())
+        return {t: (x - lo) / (hi - lo) if hi > lo else 0.5 for t, x in d.items()}
+
+    sp, sl = scaled(ppg), scaled(last3)
+    rows = []
+    for t in scores:
+        w, l, ti = allplay[t]
+        ap_pct = (w + ti / 2) / (w + l + ti) if w + l + ti else 0
+        r = rec.get(t, {"w": 0, "l": 0, "t": 0})
+        rows.append({"espnId": t, "manager": info[t].get("manager"), "name": info[t].get("name"),
+                     "raw": 0.40 * ap_pct + 0.35 * sp[t] + 0.25 * sl[t],
+                     "w": r["w"], "l": r["l"], "t": r["t"], "pf": round(sum(scores[t]), 2),
+                     "ppg": round(ppg[t], 2), "last3": round(last3[t], 2), "allPlay": [w, l, ti]})
+    rows.sort(key=lambda r: (-r["raw"], -r["pf"]))
+    for i, r in enumerate(rows, 1):
+        r["rank"], r["prev"], r["score"] = i, prev.get(r["espnId"]), round(100 * r.pop("raw"), 1)
+    return rows
+
+
+ARTICLE_STYLE = (
+    "You write the weekly front-page roundup for a friends' fantasy football league website. "
+    "Using the data below, write a league-wide article about this week: the biggest stories, "
+    "blowouts, close games, bad lineup decisions (points left on the bench), and how the standings "
+    "and power rankings moved. Then write a one-sentence roast for every team in the power rankings. "
+    "These are close friends who love roasting each other, so be ruthless: savage, specific trash "
+    "talk. Even the winners get roasted for something. Keep it PG-13: no slurs, nothing about race, "
+    "religion, sexuality, family or health, and no explicit sexual content. Use only facts in the "
+    "data; don't invent injuries, trades or history. Refer to people by manager name. "
+    "{names} get extra heat in the article and their roasts no matter how their week went: if they "
+    "won, make it sound like luck or an embarrassment anyway; if they lost, bury them.\n\n"
+    "Reply with only a JSON object, no other text:\n"
+    '{{"headline": "short and punchy, under 12 words", "subtitle": "one line", '
+    '"paragraphs": ["4 to 6 paragraphs of plain text"], "roasts": {{"<team id>": "one sentence"}}}}\n'
+    "Include a roast for every team id in power_rankings."
+)
+
+
+def ai_article(wk, weeks, rankings):
+    """Claude's roundup and power-ranking roasts for a finished week, or None."""
+    if not os.environ.get("ANTHROPIC_API_KEY") or not rankings:
+        return None
+    n = wk["week"]
+    before, after = records_through(weeks, n - 1), records_through(weeks, n)
+    order_before, order_after = standings_order(before), standings_order(after)
+    names = {r["espnId"]: who(r) for r in rankings}
+
+    def side(s):
+        top = sorted(s["starters"], key=lambda p: -p["pts"])
+        swap = best_bench_swap(s)
+        return {"id": s["espnId"], "manager": who(s), "team_name": s["name"], "score": s["score"],
+                "best_starters": [f"{p['name']} ({p['pos']}) {p['pts']}" for p in top[:2]],
+                "worst_starter": f"{top[-1]['name']} ({top[-1]['pos']}) {top[-1]['pts']}" if top else None,
+                "bench_points": round(sum(p["pts"] for p in s["bench"] if p["slot"] != "IR"), 2),
+                "worst_lineup_call": swap and {
+                    "benched": f"{swap[1]['name']} {swap[1]['pts']}",
+                    "started_instead": f"{swap[2]['name']} {swap[2]['pts']}",
+                    "points_lost": round(swap[0], 2)}}
+
+    games = []
+    for m in wk["matchups"]:
+        h, a = m["home"], m["away"]
+        W, L = (h, a) if h["score"] >= a["score"] else (a, h)
+        games.append({"winner": side(W), "loser": side(L), "margin": round(W["score"] - L["score"], 2),
+                      "tie": h["score"] == a["score"], "playoff_game": m["playoff"]})
+
+    def rec_str(r):
+        return f"{r['w']}-{r['l']}" + (f"-{r['t']}" if r["t"] else "")
+
+    facts = {
+        "week": n,
+        "games": games,
+        "standings": [{"id": t, "manager": names.get(t), "place_now": i + 1,
+                       "place_last_week": order_before.index(t) + 1 if t in before else None,
+                       "record_now": rec_str(after[t]), "points_for": after[t]["pf"]}
+                      for i, t in enumerate(order_after)],
+        "power_rankings": [{"id": r["espnId"], "manager": names[r["espnId"]], "team_name": r["name"],
+                            "rank": r["rank"], "last_week_rank": r["prev"], "record": rec_str(r),
+                            "points_per_game": r["ppg"], "last_3_weeks_avg": r["last3"],
+                            "all_play_record": "-".join(map(str, r["allPlay"]))} for r in rankings],
+    }
+    targets = " and ".join(MANAGERS[t][0] for t in ROAST_TARGETS)
+    prompt = ARTICLE_STYLE.format(names=targets) + "\n\n" + json.dumps(facts)
+    text = ask_claude(prompt, f"week {n} article", max_tokens=6000)
+    if not text:
+        return None
+    try:
+        got = json.loads(text[text.index("{"):text.rindex("}") + 1])
+        paragraphs = [p.strip() for p in got.get("paragraphs") or [] if isinstance(p, str) and p.strip()]
+        roasts = {str(k): str(v).strip() for k, v in (got.get("roasts") or {}).items() if v}
+        missing = [r["espnId"] for r in rankings if str(r["espnId"]) not in roasts]
+        if not str(got.get("headline") or "").strip() or len(paragraphs) < 3 or missing:
+            raise ValueError(f"incomplete article (missing roasts for {missing})" if missing else "incomplete article")
+    except (ValueError, AttributeError, TypeError) as e:
+        print(f"::warning::Claude's week {n} article couldn't be used ({e}); it will try again next run.")
+        return None
+    return {"headline": str(got["headline"]).strip(), "subtitle": str(got.get("subtitle") or "").strip(),
+            "paragraphs": paragraphs, "roasts": roasts, "by": "claude",
+            "written": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes")}
+
+
+def update_articles(season, weeks):
+    """Power rankings and Claude's roundup for each finished week, saved to data/articles/.
+    Both are written once per week and never redone, so reruns don't spend API credits."""
+    path = ROOT / "data" / "articles" / f"{season}.json"
+    saved = {}
+    if path.exists():
         try:
-            r = requests.post(
-                "https://api.anthropic.com/v1/messages",
-                headers={"x-api-key": key, "anthropic-version": "2023-06-01",
-                         "content-type": "application/json"},
-                json={"model": CFG.get("recapModel", "claude-sonnet-5-5"), "max_tokens": 1500,
-                      "messages": [{"role": "user", "content": prompt}]},
-                timeout=90,
-            )
-            if r.status_code in (429, 500, 502, 503, 529):
-                # Rate limited or busy: wait and try again.
-                wait = float(r.headers.get("retry-after") or 0) or 10 * (attempt + 1)
-                print(f"Claude busy for {m['key']} ({r.status_code}), retrying in {wait:.0f}s")
-                time.sleep(min(wait, 90))
-                continue
-            r.raise_for_status()
-            body = r.json()
-            if body.get("stop_reason") == "max_tokens":
-                print(f"::warning::Claude recap for {m['key']} was cut off; keeping the short recap for now.")
-                return None
-            text = "".join(b.get("text", "") for b in body.get("content", []) if b.get("type") == "text")
-            time.sleep(2)  # stay well under new-account rate limits
-            return text.strip() or None
-        except Exception as e:  # never let a recap break the update
-            print(f"::warning::Claude recap failed for {m['key']}: {e}")
-            return None
-    print(f"::warning::Claude was too busy to write {m['key']}; it will try again next run.")
-    return None
+            saved = {e["week"]: e for e in json.loads(path.read_text(encoding="utf-8")).get("weeks", [])}
+        except Exception as e:
+            print(f"::warning::Couldn't read {path.name} ({e}); leaving articles alone this run.")
+            return
+    prev, wrote = {}, 0
+
+    def save():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({"season": season, "weeks": [saved[k] for k in sorted(saved)]}, indent=1),
+                        encoding="utf-8")
+
+    for wk in weeks:
+        if not wk["final"]:
+            continue
+        entry = saved.get(wk["week"])
+        if not entry:
+            entry = saved[wk["week"]] = {"week": wk["week"], "rankings": power_rankings(weeks, wk["week"], prev)}
+            save()
+        if not entry.get("headline"):
+            got = ai_article(wk, weeks, entry["rankings"])
+            if got:
+                entry.update(got)
+                wrote += 1
+                save()
+        prev = {r["espnId"]: r["rank"] for r in entry["rankings"]}
+    if wrote:
+        print(f"Wrote {wrote} new weekly {'article' if wrote == 1 else 'articles'}.")
 
 
 INJURY_OK = {None, "", "ACTIVE", "NORMAL"}
@@ -439,6 +630,10 @@ def main():
     }
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(json.dumps(data, indent=1))
+    try:
+        update_articles(season, weeks)
+    except Exception as e:  # articles are extras: never let them break the update
+        print(f"::warning::Couldn't update the weekly articles ({e}).")
     seasons = sorted(int(f.stem) for f in out_path.parent.glob("*.json") if f.stem.isdigit())
     (out_path.parent / "index.json").write_text(json.dumps({"seasons": seasons}))
     print(f"Saved {out_path.name}: {len(teams)} teams, {len(weeks)} weeks, {len(transactions)} transactions, "
