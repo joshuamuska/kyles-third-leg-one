@@ -8,3 +8,4 @@ Drop one photo per manager in this folder, named after their ID in `managers.jso
 - **Framing:** face roughly centered, with a little room above the head.
 
 To use a different file name or format, change that manager's `photo` in `managers.json`.
+
