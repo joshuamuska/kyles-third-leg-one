@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-17T14:15+00:00",
+ "updated": "2026-10-18T14:14+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 6,
@@ -8773,7 +8773,7 @@
       "espnId": 9,
       "manager": "kyle",
       "name": "WE GOT A SITUATION",
-      "score": 0,
+      "score": 5.4,
       "starters": [
        {
         "id": 4567048,
@@ -8782,7 +8782,7 @@
         "nfl": "KC",
         "slot": "RB",
         "pts": 0,
-        "proj": 23.3
+        "proj": 23.31
        },
        {
         "id": 4595348,
@@ -8791,7 +8791,7 @@
         "nfl": "NYG",
         "slot": "WR",
         "pts": 0,
-        "proj": 17.36
+        "proj": 17.35
        },
        {
         "id": 4685472,
@@ -8821,13 +8821,13 @@
         "proj": 14.86
        },
        {
-        "id": 4575131,
-        "name": "Jacory Croskey-Merritt",
+        "id": 3054850,
+        "name": "Alvin Kamara",
         "pos": "RB",
-        "nfl": "WSH",
+        "nfl": "NO",
         "slot": "RB",
         "pts": 0,
-        "proj": 6.93
+        "proj": 10.08
        },
        {
         "id": 4430539,
@@ -8835,7 +8835,7 @@
         "pos": "TE",
         "nfl": "JAX",
         "slot": "TE",
-        "pts": 0,
+        "pts": 5.4,
         "proj": 9.43
        },
        {
@@ -8854,7 +8854,7 @@
         "nfl": "GB",
         "slot": "QB",
         "pts": 0,
-        "proj": 20.88
+        "proj": 20.9
        },
        {
         "id": -16029,
@@ -8863,7 +8863,7 @@
         "nfl": "CAR",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 5.61
+        "proj": 5.66
        }
       ],
       "bench": [
@@ -8910,16 +8910,16 @@
         "nfl": "WSH",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.63
+        "proj": 10.61
        },
        {
-        "id": 3054850,
-        "name": "Alvin Kamara",
+        "id": 4575131,
+        "name": "Jacory Croskey-Merritt",
         "pos": "RB",
-        "nfl": "NO",
+        "nfl": "WSH",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.08
+        "proj": 0
        },
        {
         "id": 4711533,
@@ -8936,7 +8936,7 @@
       "espnId": 3,
       "manager": "cody",
       "name": "KYLE ONLY HATE",
-      "score": 0,
+      "score": 5.2,
       "starters": [
        {
         "id": 4258173,
@@ -8944,7 +8944,7 @@
         "pos": "WR",
         "nfl": "HOU",
         "slot": "WR",
-        "pts": 0,
+        "pts": 5.2,
         "proj": 16.28
        },
        {
@@ -8963,7 +8963,7 @@
         "nfl": "GB",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 16.34
+        "proj": 16.33
        },
        {
         "id": 4569987,
@@ -9073,7 +9073,7 @@
         "nfl": "GB",
         "slot": "BE",
         "pts": 0,
-        "proj": 12.12
+        "proj": 12.11
        },
        {
         "id": 4688813,
@@ -9106,7 +9106,7 @@
       "espnId": 5,
       "manager": "tyler",
       "name": "Ashton 3:16",
-      "score": 0,
+      "score": 1.0,
       "starters": [
        {
         "id": 3043078,
@@ -9115,7 +9115,7 @@
         "nfl": "BAL",
         "slot": "RB",
         "pts": 0,
-        "proj": 18.32
+        "proj": 18.3
        },
        {
         "id": 4430737,
@@ -9142,7 +9142,7 @@
         "nfl": "WSH",
         "slot": "WR",
         "pts": 0,
-        "proj": 12.36
+        "proj": 12.34
        },
        {
         "id": 4360248,
@@ -9151,7 +9151,7 @@
         "nfl": "ATL",
         "slot": "TE",
         "pts": 0,
-        "proj": 8.7
+        "proj": 8.69
        },
        {
         "id": 4047650,
@@ -9186,7 +9186,7 @@
         "pos": "K",
         "nfl": "HOU",
         "slot": "K",
-        "pts": 0,
+        "pts": 1.0,
         "proj": 10.48
        },
        {
@@ -9234,7 +9234,7 @@
         "nfl": "PHI",
         "slot": "BE",
         "pts": 0,
-        "proj": 5.6
+        "proj": 5.59
        },
        {
         "id": 4429059,
@@ -9242,7 +9242,7 @@
         "pos": "RB",
         "nfl": "HOU",
         "slot": "BE",
-        "pts": 0,
+        "pts": 1.1,
         "proj": 10.64
        },
        {
@@ -9260,7 +9260,7 @@
       "espnId": 6,
       "manager": "keith",
       "name": " Taylor Swift",
-      "score": 30.6,
+      "score": 34.76,
       "starters": [
        {
         "id": 4242335,
@@ -9295,7 +9295,7 @@
         "pos": "WR",
         "nfl": "JAX",
         "slot": "WR",
-        "pts": 0,
+        "pts": 1.8,
         "proj": 14.84
        },
        {
@@ -9304,8 +9304,8 @@
         "pos": "QB",
         "nfl": "JAX",
         "slot": "QB",
-        "pts": 0,
-        "proj": 17.11
+        "pts": 2.36,
+        "proj": 17.12
        },
        {
         "id": 3040151,
@@ -9314,7 +9314,7 @@
         "nfl": "SF",
         "slot": "TE",
         "pts": 0,
-        "proj": 14.9
+        "proj": 14.91
        },
        {
         "id": 4569559,
@@ -9574,7 +9574,7 @@
         "name": "Jalen Hurts",
         "pos": "QB",
         "nfl": "PHI",
-        "slot": "BE",
+        "slot": "IR",
         "pts": 0,
         "proj": 0
        },
@@ -9583,9 +9583,9 @@
         "name": "Ja'Kobi Lane",
         "pos": "WR",
         "nfl": "BAL",
-        "slot": "IR",
+        "slot": "BE",
         "pts": 0,
-        "proj": 0
+        "proj": 4.66
        },
        {
         "id": 4428850,
@@ -9629,7 +9629,7 @@
       "espnId": 8,
       "manager": "noah",
       "name": "Gno'msayin Mah-fkah",
-      "score": 0,
+      "score": 9.4,
       "starters": [
        {
         "id": 4426515,
@@ -9647,7 +9647,7 @@
         "nfl": "ATL",
         "slot": "WR",
         "pts": 0,
-        "proj": 15.78
+        "proj": 15.76
        },
        {
         "id": 4882093,
@@ -9655,8 +9655,8 @@
         "pos": "RB",
         "nfl": "JAX",
         "slot": "RB",
-        "pts": 0,
-        "proj": 13.08
+        "pts": 1.4,
+        "proj": 13.07
        },
        {
         "id": 4696981,
@@ -9665,7 +9665,7 @@
         "nfl": "NYG",
         "slot": "RB",
         "pts": 0,
-        "proj": 12.53
+        "proj": 8.99
        },
        {
         "id": 4685247,
@@ -9718,7 +9718,7 @@
         "pos": "D/ST",
         "nfl": "JAX",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 8.0,
         "proj": 6.13
        }
       ],
@@ -9757,7 +9757,7 @@
         "nfl": "SF",
         "slot": "BE",
         "pts": 0,
-        "proj": 5.64
+        "proj": 5.65
        },
        {
         "id": 4702555,
@@ -9784,7 +9784,7 @@
         "nfl": "LAC",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.68
+        "proj": 7.67
        }
       ]
      },
@@ -9820,6 +9820,15 @@
         "proj": 19.28
        },
        {
+        "id": 4241478,
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "nfl": "PHI",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 13.5
+       },
+       {
         "id": 4685702,
         "name": "Quinshon Judkins",
         "pos": "RB",
@@ -9835,16 +9844,7 @@
         "nfl": "GB",
         "slot": "WR",
         "pts": 0,
-        "proj": 15.67
-       },
-       {
-        "id": 4723086,
-        "name": "Colston Loveland",
-        "pos": "TE",
-        "nfl": "CHI",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 8.62
+        "proj": 15.66
        },
        {
         "id": 4385690,
@@ -9894,28 +9894,19 @@
       ],
       "bench": [
        {
-        "id": 4241478,
-        "name": "DeVonta Smith",
-        "pos": "WR",
-        "nfl": "PHI",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 13.51
-       },
-       {
         "id": 4612826,
         "name": "Ladd McConkey",
         "pos": "WR",
         "nfl": "LAC",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.4
+        "proj": 10.42
        },
        {
         "id": 4432708,
         "name": "Marvin Harrison Jr.",
         "pos": "WR",
-        "nfl": "ARI",
+        "nfl": "HOU",
         "slot": "BE",
         "pts": 0,
         "proj": 3.41
@@ -9928,6 +9919,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 6.37
+       },
+       {
+        "id": 4723086,
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "nfl": "CHI",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 8.62
        },
        {
         "id": 3042519,
@@ -9971,7 +9971,7 @@
         "nfl": "ATL",
         "slot": "RB",
         "pts": 0,
-        "proj": 23.0
+        "proj": 22.99
        },
        {
         "id": 4569618,
@@ -10025,7 +10025,7 @@
         "nfl": "PHI",
         "slot": "TE",
         "pts": 0,
-        "proj": 10.12
+        "proj": 10.11
        },
        {
         "id": 4034949,
@@ -10072,7 +10072,7 @@
         "nfl": "KC",
         "slot": "BE",
         "pts": 0,
-        "proj": 11.43
+        "proj": 11.44
        },
        {
         "id": 4361529,
@@ -10141,7 +10141,7 @@
       "espnId": 7,
       "manager": "brad",
       "name": "Free Josh Jacobs",
-      "score": 7.0,
+      "score": 15.0,
       "starters": [
        {
         "id": 3117251,
@@ -10212,8 +10212,8 @@
         "pos": "D/ST",
         "nfl": "HOU",
         "slot": "D/ST",
-        "pts": 0,
-        "proj": 5.21
+        "pts": 8.0,
+        "proj": 5.2
        },
        {
         "id": 4241474,
@@ -10358,7 +10358,7 @@
         "nfl": "WSH",
         "slot": "QB",
         "pts": 0,
-        "proj": 19.86
+        "proj": 19.94
        },
        {
         "id": 4569173,
@@ -10394,7 +10394,7 @@
         "nfl": "KC",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 11.05
+        "proj": 11.06
        },
        {
         "id": -16026,
@@ -10525,7 +10525,7 @@
      "id": 4241478,
      "name": "DeVonta Smith",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "PHI",
      "injury": null,
      "pts": 48.5
@@ -10579,7 +10579,7 @@
      "id": 4723086,
      "name": "Colston Loveland",
      "pos": "TE",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 24.0
@@ -10820,7 +10820,7 @@
      "pos": "TE",
      "slot": "TE",
      "nfl": "PIT",
-     "injury": null,
+     "injury": "QUESTIONABLE",
      "pts": 60.3
     }
    ]
@@ -10853,7 +10853,7 @@
      "slot": "WR",
      "nfl": "HOU",
      "injury": null,
-     "pts": 62.6
+     "pts": 67.8
     },
     {
      "id": 4361370,
@@ -11035,9 +11035,9 @@
      "id": 4040715,
      "name": "Jalen Hurts",
      "pos": "QB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "PHI",
-     "injury": "OUT",
+     "injury": "INJURY_RESERVE",
      "pts": 80.02
     },
     {
@@ -11071,9 +11071,9 @@
      "id": 4870847,
      "name": "Ja'Kobi Lane",
      "pos": "WR",
-     "slot": "IR",
+     "slot": "BE",
      "nfl": "BAL",
-     "injury": "INJURY_RESERVE",
+     "injury": "QUESTIONABLE",
      "pts": 2.1
     },
     {
@@ -11195,7 +11195,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 42.3
     },
     {
@@ -11222,7 +11222,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "PIT",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 48.6
     },
     {
@@ -11268,7 +11268,7 @@
      "slot": "BE",
      "nfl": "HOU",
      "injury": null,
-     "pts": 43.3
+     "pts": 44.4
     },
     {
      "id": -16033,
@@ -11286,7 +11286,7 @@
      "slot": "K",
      "nfl": "HOU",
      "injury": null,
-     "pts": 53.0
+     "pts": 54.0
     },
     {
      "id": 3046779,
@@ -11335,7 +11335,7 @@
      "pos": "WR",
      "slot": "IR",
      "nfl": "NE",
-     "injury": "INJURY_RESERVE",
+     "injury": "QUESTIONABLE",
      "pts": 5.6
     },
     {
@@ -11363,7 +11363,7 @@
      "slot": "WR",
      "nfl": "JAX",
      "injury": null,
-     "pts": 81.5
+     "pts": 83.3
     },
     {
      "id": 5083076,
@@ -11381,7 +11381,7 @@
      "slot": "QB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 86.86
+     "pts": 89.22
     },
     {
      "id": 4360569,
@@ -11611,7 +11611,7 @@
      "slot": "D/ST",
      "nfl": "HOU",
      "injury": null,
-     "pts": 31.0
+     "pts": 39.0
     },
     {
      "id": 4689114,
@@ -11697,7 +11697,7 @@
      "slot": "RB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 63.7
+     "pts": 65.1
     },
     {
      "id": 4035538,
@@ -11814,7 +11814,7 @@
      "slot": "D/ST",
      "nfl": "JAX",
      "injury": null,
-     "pts": 36.0
+     "pts": 44.0
     }
    ]
   },
@@ -11915,16 +11915,16 @@
      "id": 4575131,
      "name": "Jacory Croskey-Merritt",
      "pos": "RB",
-     "slot": "RB",
+     "slot": "BE",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 44.9
     },
     {
      "id": 3054850,
      "name": "Alvin Kamara",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB",
      "nfl": "NO",
      "injury": "QUESTIONABLE",
      "pts": 37.7
@@ -11945,7 +11945,7 @@
      "slot": "TE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 50.5
+     "pts": 55.9
     },
     {
      "id": 4259619,
@@ -12195,7 +12195,7 @@
      "name": "C.J. Stroud",
      "pos": "QB",
      "nfl": "HOU",
-     "since": 0.0
+     "since": 6.16
     }
    ]
   },
@@ -12627,7 +12627,7 @@
      "name": "Jaguars D/ST",
      "pos": "D/ST",
      "nfl": "JAX",
-     "since": 0.0
+     "since": 8.0
     },
     {
      "player": -16014,
@@ -13429,7 +13429,7 @@
      "name": "Dalton Schultz",
      "pos": "TE",
      "nfl": "HOU",
-     "since": 8.9
+     "since": 10.0
     }
    ]
   },
@@ -13784,7 +13784,7 @@
      "name": "Chris Rodriguez Jr.",
      "pos": "RB",
      "nfl": "JAX",
-     "since": 21.3
+     "since": 25.2
     },
     {
      "player": 4360689,
@@ -14567,7 +14567,7 @@
      "name": "Chris Rodriguez Jr.",
      "pos": "RB",
      "nfl": "JAX",
-     "since": 24.9
+     "since": 28.8
     }
    ]
   },
@@ -14737,7 +14737,7 @@
      "name": "C.J. Stroud",
      "pos": "QB",
      "nfl": "HOU",
-     "since": 89.18
+     "since": 95.34
     }
    ]
   },
@@ -15242,8 +15242,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 2,
-    "posFinish": 21,
-    "value": -19
+    "posFinish": 22,
+    "value": -20
    },
    {
     "overall": 4,
@@ -15422,8 +15422,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 16,
-    "value": -8
+    "posFinish": 17,
+    "value": -9
    },
    {
     "overall": 14,
@@ -15651,13 +15651,13 @@
     "playerId": 4258173,
     "pos": "WR",
     "nfl": "HOU",
-    "pts": 62.6,
+    "pts": 67.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 10,
-    "posFinish": 22,
-    "value": -12
+    "posFinish": 20,
+    "value": -10
    },
    {
     "overall": 27,
@@ -15854,8 +15854,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 17,
-    "posFinish": 8,
-    "value": 9
+    "posFinish": 9,
+    "value": 8
    },
    {
     "overall": 38,
@@ -15957,13 +15957,13 @@
     "playerId": 4882093,
     "pos": "RB",
     "nfl": "JAX",
-    "pts": 63.7,
+    "pts": 65.1,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 19,
-    "posFinish": 17,
-    "value": 2
+    "posFinish": 16,
+    "value": 3
    },
    {
     "overall": 44,
@@ -16034,8 +16034,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 20,
-    "posFinish": 29,
-    "value": -9
+    "posFinish": 30,
+    "value": -10
    },
    {
     "overall": 48,
@@ -16137,13 +16137,13 @@
     "playerId": 4432620,
     "pos": "WR",
     "nfl": "JAX",
-    "pts": 81.5,
+    "pts": 83.3,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 27,
-    "posFinish": 9,
-    "value": 18
+    "posFinish": 8,
+    "value": 19
    },
    {
     "overall": 54,
@@ -16214,8 +16214,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 24,
-    "posFinish": 38,
-    "value": -14
+    "posFinish": 39,
+    "value": -15
    },
    {
     "overall": 58,
@@ -16322,8 +16322,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 4,
-    "posFinish": 5,
-    "value": -1
+    "posFinish": 6,
+    "value": -2
    },
    {
     "overall": 64,
@@ -16520,8 +16520,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 38,
-    "posFinish": 20,
-    "value": 18
+    "posFinish": 21,
+    "value": 17
    },
    {
     "overall": 75,
@@ -16736,8 +16736,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 4,
-    "value": 4
+    "posFinish": 5,
+    "value": 3
    },
    {
     "overall": 87,
@@ -16767,13 +16767,13 @@
     "playerId": 4360310,
     "pos": "QB",
     "nfl": "JAX",
-    "pts": 86.86,
+    "pts": 89.22,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 9,
-    "posFinish": 6,
-    "value": 3
+    "posFinish": 4,
+    "value": 5
    },
    {
     "overall": 89,
@@ -16988,8 +16988,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 34,
-    "posFinish": 37,
-    "value": -3
+    "posFinish": 38,
+    "value": -4
    },
    {
     "overall": 101,
@@ -17348,8 +17348,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 43,
-    "posFinish": 39,
-    "value": 4
+    "posFinish": 40,
+    "value": 3
    },
    {
     "overall": 121,
@@ -17523,13 +17523,13 @@
     "playerId": 4362619,
     "pos": "RB",
     "nfl": "JAX",
-    "pts": 24.9,
+    "pts": 28.8,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 47,
-    "posFinish": 40,
-    "value": 7
+    "posFinish": 37,
+    "value": 10
    },
    {
     "overall": 131,
@@ -17559,13 +17559,13 @@
     "playerId": 4429059,
     "pos": "RB",
     "nfl": "HOU",
-    "pts": 43.3,
+    "pts": 44.4,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 49,
-    "posFinish": 30,
-    "value": 19
+    "posFinish": 29,
+    "value": 20
    },
    {
     "overall": 133,
@@ -17649,13 +17649,13 @@
     "playerId": -16034,
     "pos": "D/ST",
     "nfl": "HOU",
-    "pts": 31.0,
+    "pts": 39.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 1,
-    "posFinish": 5,
-    "value": -4
+    "posFinish": 3,
+    "value": -2
    },
    {
     "overall": 138,
@@ -17816,8 +17816,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 5,
-    "posFinish": 3,
-    "value": 2
+    "posFinish": 4,
+    "value": 1
    },
    {
     "overall": 147,
@@ -17834,8 +17834,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 4,
-    "value": 2
+    "posFinish": 5,
+    "value": 1
    },
    {
     "overall": 148,
@@ -17919,7 +17919,7 @@
     "playerId": 2971573,
     "pos": "K",
     "nfl": "HOU",
-    "pts": 53.0,
+    "pts": 54.0,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -18077,7 +18077,7 @@
     "espnId": 3,
     "manager": "cody",
     "rank": 1,
-    "total": 1084.08,
+    "total": 1089.28,
     "grade": "A+",
     "best": 135,
     "worst": 15
@@ -18086,7 +18086,7 @@
     "espnId": 6,
     "manager": "keith",
     "rank": 2,
-    "total": 917.42,
+    "total": 921.58,
     "grade": "A-",
     "best": 133,
     "worst": 28
@@ -18113,7 +18113,7 @@
     "espnId": 5,
     "manager": "tyler",
     "rank": 5,
-    "total": 861.08,
+    "total": 863.18,
     "grade": "B+",
     "best": 109,
     "worst": 49
@@ -18122,7 +18122,7 @@
     "espnId": 8,
     "manager": "noah",
     "rank": 6,
-    "total": 821.6,
+    "total": 823.0,
     "grade": "B",
     "best": 83,
     "worst": 3
@@ -18140,8 +18140,8 @@
     "espnId": 7,
     "manager": "brad",
     "rank": 8,
-    "total": 741.54,
-    "grade": "C",
+    "total": 749.54,
+    "grade": "C+",
     "best": 157,
     "worst": 24
    },
@@ -18149,7 +18149,7 @@
     "espnId": 1,
     "manager": "brett",
     "rank": 9,
-    "total": 728.48,
+    "total": 732.38,
     "grade": "C",
     "best": 71,
     "worst": 31
@@ -19717,7 +19717,7 @@
      "id": 4241478,
      "name": "DeVonta Smith",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "PHI",
      "injury": null,
      "pts": 48.5,
@@ -19789,7 +19789,7 @@
      "id": 4723086,
      "name": "Colston Loveland",
      "pos": "TE",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 24.0,
@@ -20092,7 +20092,7 @@
      "pos": "TE",
      "slot": "TE",
      "nfl": "PIT",
-     "injury": null,
+     "injury": "QUESTIONABLE",
      "pts": 60.3,
      "how": "waiver"
     }
@@ -20132,7 +20132,7 @@
      "slot": "WR",
      "nfl": "HOU",
      "injury": null,
-     "pts": 62.6,
+     "pts": 67.8,
      "how": "draft",
      "round": 3,
      "pick": 6
@@ -20368,9 +20368,9 @@
      "id": 4040715,
      "name": "Jalen Hurts",
      "pos": "QB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "PHI",
-     "injury": "OUT",
+     "injury": "INJURY_RESERVE",
      "pts": 80.02,
      "how": "draft",
      "round": 7,
@@ -20416,9 +20416,9 @@
      "id": 4870847,
      "name": "Ja'Kobi Lane",
      "pos": "WR",
-     "slot": "IR",
+     "slot": "BE",
      "nfl": "BAL",
-     "injury": "INJURY_RESERVE",
+     "injury": "QUESTIONABLE",
      "pts": 2.1,
      "how": "draft",
      "round": 11,
@@ -20563,7 +20563,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 42.3,
      "how": "draft",
      "round": 5,
@@ -20599,7 +20599,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "PIT",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 48.6,
      "how": "draft",
      "round": 8,
@@ -20660,7 +20660,7 @@
      "slot": "BE",
      "nfl": "HOU",
      "injury": null,
-     "pts": 43.3,
+     "pts": 44.4,
      "how": "draft",
      "round": 14,
      "pick": 2
@@ -20684,7 +20684,7 @@
      "slot": "K",
      "nfl": "HOU",
      "injury": null,
-     "pts": 53.0,
+     "pts": 54.0,
      "how": "draft",
      "round": 16,
      "pick": 2
@@ -20744,7 +20744,7 @@
      "pos": "WR",
      "slot": "IR",
      "nfl": "NE",
-     "injury": "INJURY_RESERVE",
+     "injury": "QUESTIONABLE",
      "pts": 5.6,
      "how": "draft",
      "round": 3,
@@ -20781,7 +20781,7 @@
      "slot": "WR",
      "nfl": "JAX",
      "injury": null,
-     "pts": 81.5,
+     "pts": 83.3,
      "how": "draft",
      "round": 6,
      "pick": 3
@@ -20805,7 +20805,7 @@
      "slot": "QB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 86.86,
+     "pts": 89.22,
      "how": "draft",
      "round": 9,
      "pick": 8
@@ -21094,7 +21094,7 @@
      "slot": "D/ST",
      "nfl": "HOU",
      "injury": null,
-     "pts": 31.0,
+     "pts": 39.0,
      "how": "draft",
      "round": 14,
      "pick": 7
@@ -21201,7 +21201,7 @@
      "slot": "RB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 63.7,
+     "pts": 65.1,
      "how": "draft",
      "round": 5,
      "pick": 3
@@ -21341,7 +21341,7 @@
      "slot": "D/ST",
      "nfl": "JAX",
      "injury": null,
-     "pts": 36.0,
+     "pts": 44.0,
      "how": "fa"
     }
    ]
@@ -21473,9 +21473,9 @@
      "id": 4575131,
      "name": "Jacory Croskey-Merritt",
      "pos": "RB",
-     "slot": "RB",
+     "slot": "BE",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 44.9,
      "how": "draft",
      "round": 11,
@@ -21485,7 +21485,7 @@
      "id": 3054850,
      "name": "Alvin Kamara",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB",
      "nfl": "NO",
      "injury": "QUESTIONABLE",
      "pts": 37.7,
@@ -21510,7 +21510,7 @@
      "slot": "TE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 50.5,
+     "pts": 55.9,
      "how": "waiver"
     },
     {
