@@ -4,16 +4,196 @@
   {
    "week": 1,
    "rankings": [
-    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 1, "l": 0, "t": 0, "pf": 165.6, "ppg": 165.6, "last3": 165.6, "allPlay": [9, 0, 0], "rank": 1, "prev": null, "score": 100.0},
-    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 1, "l": 0, "t": 0, "pf": 160.66, "ppg": 160.66, "last3": 160.66, "allPlay": [8, 1, 0], "rank": 2, "prev": null, "score": 91.7},
-    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 1, "l": 0, "t": 0, "pf": 157.46, "ppg": 157.46, "last3": 157.46, "allPlay": [7, 2, 0], "rank": 3, "prev": null, "score": 84.7},
-    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 0, "t": 0, "pf": 143.26, "ppg": 143.26, "last3": 143.26, "allPlay": [6, 3, 0], "rank": 4, "prev": null, "score": 69.1},
-    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 0, "l": 1, "t": 0, "pf": 142.3, "ppg": 142.3, "last3": 142.3, "allPlay": [5, 4, 0], "rank": 5, "prev": null, "score": 63.9},
-    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 1, "t": 0, "pf": 138.46, "ppg": 138.46, "last3": 138.46, "allPlay": [4, 5, 0], "rank": 6, "prev": null, "score": 56.5},
-    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 1, "t": 0, "pf": 117.02, "ppg": 117.02, "last3": 117.02, "allPlay": [3, 6, 0], "rank": 7, "prev": null, "score": 35.2},
-    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 1, "t": 0, "pf": 117.0, "ppg": 117.0, "last3": 117.0, "allPlay": [2, 7, 0], "rank": 8, "prev": null, "score": 30.7},
-    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 1, "l": 0, "t": 0, "pf": 109.86, "ppg": 109.86, "last3": 109.86, "allPlay": [1, 8, 0], "rank": 9, "prev": null, "score": 20.7},
-    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 0, "l": 1, "t": 0, "pf": 89.16, "ppg": 89.16, "last3": 89.16, "allPlay": [0, 9, 0], "rank": 10, "prev": null, "score": 0.0}
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 1,
+     "l": 0,
+     "t": 0,
+     "pf": 165.6,
+     "ppg": 165.6,
+     "last3": 165.6,
+     "allPlay": [
+      9,
+      0,
+      0
+     ],
+     "rank": 1,
+     "prev": null,
+     "score": 100.0
+    },
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 1,
+     "l": 0,
+     "t": 0,
+     "pf": 160.66,
+     "ppg": 160.66,
+     "last3": 160.66,
+     "allPlay": [
+      8,
+      1,
+      0
+     ],
+     "rank": 2,
+     "prev": null,
+     "score": 91.7
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 1,
+     "l": 0,
+     "t": 0,
+     "pf": 157.46,
+     "ppg": 157.46,
+     "last3": 157.46,
+     "allPlay": [
+      7,
+      2,
+      0
+     ],
+     "rank": 3,
+     "prev": null,
+     "score": 84.7
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 1,
+     "l": 0,
+     "t": 0,
+     "pf": 143.26,
+     "ppg": 143.26,
+     "last3": 143.26,
+     "allPlay": [
+      6,
+      3,
+      0
+     ],
+     "rank": 4,
+     "prev": null,
+     "score": 69.1
+    },
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 0,
+     "l": 1,
+     "t": 0,
+     "pf": 142.3,
+     "ppg": 142.3,
+     "last3": 142.3,
+     "allPlay": [
+      5,
+      4,
+      0
+     ],
+     "rank": 5,
+     "prev": null,
+     "score": 63.9
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 1,
+     "t": 0,
+     "pf": 138.46,
+     "ppg": 138.46,
+     "last3": 138.46,
+     "allPlay": [
+      4,
+      5,
+      0
+     ],
+     "rank": 6,
+     "prev": null,
+     "score": 56.5
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 0,
+     "l": 1,
+     "t": 0,
+     "pf": 117.02,
+     "ppg": 117.02,
+     "last3": 117.02,
+     "allPlay": [
+      3,
+      6,
+      0
+     ],
+     "rank": 7,
+     "prev": null,
+     "score": 35.2
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 0,
+     "l": 1,
+     "t": 0,
+     "pf": 117.0,
+     "ppg": 117.0,
+     "last3": 117.0,
+     "allPlay": [
+      2,
+      7,
+      0
+     ],
+     "rank": 8,
+     "prev": null,
+     "score": 30.7
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 1,
+     "l": 0,
+     "t": 0,
+     "pf": 109.86,
+     "ppg": 109.86,
+     "last3": 109.86,
+     "allPlay": [
+      1,
+      8,
+      0
+     ],
+     "rank": 9,
+     "prev": null,
+     "score": 20.7
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 0,
+     "l": 1,
+     "t": 0,
+     "pf": 89.16,
+     "ppg": 89.16,
+     "last3": 89.16,
+     "allPlay": [
+      0,
+      9,
+      0
+     ],
+     "rank": 10,
+     "prev": null,
+     "score": 0.0
+    }
    ],
    "headline": "Keith's Opening Win Was a Gift From Cody's Bench",
    "subtitle": "Week 1 crowns a 9-0 all-play king, buries the champ at 89 points, and Brad starts 0-1 with a negative defense.",
@@ -42,16 +222,196 @@
   {
    "week": 2,
    "rankings": [
-    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 2, "l": 0, "t": 0, "pf": 329.16, "ppg": 164.58, "last3": 164.58, "allPlay": [17, 1, 0], "rank": 1, "prev": 1, "score": 97.8},
-    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 2, "l": 0, "t": 0, "pf": 328.28, "ppg": 164.14, "last3": 164.14, "allPlay": [17, 1, 0], "rank": 2, "prev": 2, "score": 97.3},
-    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 1, "l": 1, "t": 0, "pf": 274.58, "ppg": 137.29, "last3": 137.29, "allPlay": [11, 7, 0], "rank": 3, "prev": 5, "score": 55.7},
-    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 1, "t": 0, "pf": 272.04, "ppg": 136.02, "last3": 136.02, "allPlay": [11, 7, 0], "rank": 4, "prev": 4, "score": 54.4},
-    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 1, "l": 1, "t": 0, "pf": 253.58, "ppg": 126.79, "last3": 126.79, "allPlay": [8, 10, 0], "rank": 5, "prev": 3, "score": 38.0},
-    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 2, "l": 0, "t": 0, "pf": 244.7, "ppg": 122.35, "last3": 122.35, "allPlay": [8, 10, 0], "rank": 6, "prev": 9, "score": 33.4},
-    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 2, "t": 0, "pf": 236.18, "ppg": 118.09, "last3": 118.09, "allPlay": [6, 12, 0], "rank": 7, "prev": 7, "score": 24.4},
-    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 2, "t": 0, "pf": 231.66, "ppg": 115.83, "last3": 115.83, "allPlay": [4, 14, 0], "rank": 8, "prev": 6, "score": 17.6},
-    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 2, "t": 0, "pf": 230.66, "ppg": 115.33, "last3": 115.33, "allPlay": [4, 14, 0], "rank": 9, "prev": 8, "score": 17.1},
-    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 1, "l": 1, "t": 0, "pf": 215.04, "ppg": 107.52, "last3": 107.52, "allPlay": [4, 14, 0], "rank": 10, "prev": 10, "score": 8.9}
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 2,
+     "l": 0,
+     "t": 0,
+     "pf": 329.16,
+     "ppg": 164.58,
+     "last3": 164.58,
+     "allPlay": [
+      17,
+      1,
+      0
+     ],
+     "rank": 1,
+     "prev": 1,
+     "score": 97.8
+    },
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 2,
+     "l": 0,
+     "t": 0,
+     "pf": 328.28,
+     "ppg": 164.14,
+     "last3": 164.14,
+     "allPlay": [
+      17,
+      1,
+      0
+     ],
+     "rank": 2,
+     "prev": 2,
+     "score": 97.3
+    },
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 1,
+     "l": 1,
+     "t": 0,
+     "pf": 274.58,
+     "ppg": 137.29,
+     "last3": 137.29,
+     "allPlay": [
+      11,
+      7,
+      0
+     ],
+     "rank": 3,
+     "prev": 5,
+     "score": 55.7
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 1,
+     "l": 1,
+     "t": 0,
+     "pf": 272.04,
+     "ppg": 136.02,
+     "last3": 136.02,
+     "allPlay": [
+      11,
+      7,
+      0
+     ],
+     "rank": 4,
+     "prev": 4,
+     "score": 54.4
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 1,
+     "l": 1,
+     "t": 0,
+     "pf": 253.58,
+     "ppg": 126.79,
+     "last3": 126.79,
+     "allPlay": [
+      8,
+      10,
+      0
+     ],
+     "rank": 5,
+     "prev": 3,
+     "score": 38.0
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 2,
+     "l": 0,
+     "t": 0,
+     "pf": 244.7,
+     "ppg": 122.35,
+     "last3": 122.35,
+     "allPlay": [
+      8,
+      10,
+      0
+     ],
+     "rank": 6,
+     "prev": 9,
+     "score": 33.4
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 0,
+     "l": 2,
+     "t": 0,
+     "pf": 236.18,
+     "ppg": 118.09,
+     "last3": 118.09,
+     "allPlay": [
+      6,
+      12,
+      0
+     ],
+     "rank": 7,
+     "prev": 7,
+     "score": 24.4
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 2,
+     "t": 0,
+     "pf": 231.66,
+     "ppg": 115.83,
+     "last3": 115.83,
+     "allPlay": [
+      4,
+      14,
+      0
+     ],
+     "rank": 8,
+     "prev": 6,
+     "score": 17.6
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 0,
+     "l": 2,
+     "t": 0,
+     "pf": 230.66,
+     "ppg": 115.33,
+     "last3": 115.33,
+     "allPlay": [
+      4,
+      14,
+      0
+     ],
+     "rank": 9,
+     "prev": 8,
+     "score": 17.1
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 1,
+     "l": 1,
+     "t": 0,
+     "pf": 215.04,
+     "ppg": 107.52,
+     "last3": 107.52,
+     "allPlay": [
+      4,
+      14,
+      0
+     ],
+     "rank": 10,
+     "prev": 10,
+     "score": 8.9
+    }
    ],
    "headline": "Kyle Benches the Win, Brad Gets Lapped, Josh Is Somehow 2-0",
    "subtitle": "Reis drops 167 on Brad, Keith keeps cashing other people's mistakes, and Noah's second-best player was a kicker.",
@@ -80,16 +440,196 @@
   {
    "week": 3,
    "rankings": [
-    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 3, "l": 0, "t": 0, "pf": 469.54, "ppg": 156.51, "last3": 156.51, "allPlay": [25, 2, 0], "rank": 1, "prev": 2, "score": 97.0},
-    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 3, "l": 0, "t": 0, "pf": 469.4, "ppg": 156.47, "last3": 156.47, "allPlay": [24, 3, 0], "rank": 2, "prev": 1, "score": 95.5},
-    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 2, "l": 1, "t": 0, "pf": 454.86, "ppg": 151.62, "last3": 151.62, "allPlay": [20, 7, 0], "rank": 3, "prev": 3, "score": 83.3},
-    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 0, "t": 0, "pf": 375.34, "ppg": 125.11, "last3": 125.11, "allPlay": [13, 14, 0], "rank": 4, "prev": 6, "score": 38.5},
-    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 1, "l": 2, "t": 0, "pf": 373.42, "ppg": 124.47, "last3": 124.47, "allPlay": [13, 14, 0], "rank": 5, "prev": 4, "score": 37.6},
-    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 2, "l": 1, "t": 0, "pf": 365.94, "ppg": 121.98, "last3": 121.98, "allPlay": [11, 16, 0], "rank": 6, "prev": 5, "score": 31.4},
-    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 3, "t": 0, "pf": 359.0, "ppg": 119.67, "last3": 119.67, "allPlay": [8, 19, 0], "rank": 7, "prev": 9, "score": 24.0},
-    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 1, "l": 2, "t": 0, "pf": 351.38, "ppg": 117.13, "last3": 117.13, "allPlay": [10, 17, 0], "rank": 8, "prev": 10, "score": 23.6},
-    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 3, "t": 0, "pf": 332.0, "ppg": 110.67, "last3": 110.67, "allPlay": [6, 21, 0], "rank": 9, "prev": 7, "score": 9.3},
-    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 3, "t": 0, "pf": 331.0, "ppg": 110.33, "last3": 110.33, "allPlay": [5, 22, 0], "rank": 10, "prev": 8, "score": 7.4}
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 3,
+     "l": 0,
+     "t": 0,
+     "pf": 469.54,
+     "ppg": 156.51,
+     "last3": 156.51,
+     "allPlay": [
+      25,
+      2,
+      0
+     ],
+     "rank": 1,
+     "prev": 2,
+     "score": 97.0
+    },
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 3,
+     "l": 0,
+     "t": 0,
+     "pf": 469.4,
+     "ppg": 156.47,
+     "last3": 156.47,
+     "allPlay": [
+      24,
+      3,
+      0
+     ],
+     "rank": 2,
+     "prev": 1,
+     "score": 95.5
+    },
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 2,
+     "l": 1,
+     "t": 0,
+     "pf": 454.86,
+     "ppg": 151.62,
+     "last3": 151.62,
+     "allPlay": [
+      20,
+      7,
+      0
+     ],
+     "rank": 3,
+     "prev": 3,
+     "score": 83.3
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 3,
+     "l": 0,
+     "t": 0,
+     "pf": 375.34,
+     "ppg": 125.11,
+     "last3": 125.11,
+     "allPlay": [
+      13,
+      14,
+      0
+     ],
+     "rank": 4,
+     "prev": 6,
+     "score": 38.5
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 1,
+     "l": 2,
+     "t": 0,
+     "pf": 373.42,
+     "ppg": 124.47,
+     "last3": 124.47,
+     "allPlay": [
+      13,
+      14,
+      0
+     ],
+     "rank": 5,
+     "prev": 4,
+     "score": 37.6
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 2,
+     "l": 1,
+     "t": 0,
+     "pf": 365.94,
+     "ppg": 121.98,
+     "last3": 121.98,
+     "allPlay": [
+      11,
+      16,
+      0
+     ],
+     "rank": 6,
+     "prev": 5,
+     "score": 31.4
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 0,
+     "l": 3,
+     "t": 0,
+     "pf": 359.0,
+     "ppg": 119.67,
+     "last3": 119.67,
+     "allPlay": [
+      8,
+      19,
+      0
+     ],
+     "rank": 7,
+     "prev": 9,
+     "score": 24.0
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 1,
+     "l": 2,
+     "t": 0,
+     "pf": 351.38,
+     "ppg": 117.13,
+     "last3": 117.13,
+     "allPlay": [
+      10,
+      17,
+      0
+     ],
+     "rank": 8,
+     "prev": 10,
+     "score": 23.6
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 0,
+     "l": 3,
+     "t": 0,
+     "pf": 332.0,
+     "ppg": 110.67,
+     "last3": 110.67,
+     "allPlay": [
+      6,
+      21,
+      0
+     ],
+     "rank": 9,
+     "prev": 7,
+     "score": 9.3
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 3,
+     "t": 0,
+     "pf": 331.0,
+     "ppg": 110.33,
+     "last3": 110.33,
+     "allPlay": [
+      5,
+      22,
+      0
+     ],
+     "rank": 10,
+     "prev": 8,
+     "score": 7.4
+    }
    ],
    "headline": "Keith Survives Brad, Brad Survives Nothing",
    "subtitle": "Brad benches the points that would have beaten Keith, Cody drops 180, and Reis takes over the top spot.",
@@ -118,16 +658,196 @@
   {
    "week": 4,
    "rankings": [
-    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 3, "l": 1, "t": 0, "pf": 619.18, "ppg": 154.8, "last3": 158.96, "allPlay": [27, 9, 0], "rank": 1, "prev": 3, "score": 90.0},
-    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 4, "l": 0, "t": 0, "pf": 592.68, "ppg": 148.17, "last3": 142.36, "allPlay": [28, 8, 0], "rank": 2, "prev": 2, "score": 78.1},
-    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 3, "l": 1, "t": 0, "pf": 560.66, "ppg": 140.17, "last3": 133.33, "allPlay": [25, 11, 0], "rank": 3, "prev": 1, "score": 64.0},
-    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 2, "l": 2, "t": 0, "pf": 554.14, "ppg": 138.54, "last3": 136.96, "allPlay": [21, 15, 0], "rank": 4, "prev": 5, "score": 59.9},
-    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 3, "l": 1, "t": 0, "pf": 552.22, "ppg": 138.06, "last3": 131.59, "allPlay": [20, 16, 0], "rank": 5, "prev": 6, "score": 55.9},
-    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 2, "l": 2, "t": 0, "pf": 482.78, "ppg": 120.7, "last3": 131.21, "allPlay": [16, 20, 0], "rank": 6, "prev": 8, "score": 37.0},
-    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 1, "t": 0, "pf": 493.5, "ppg": 123.38, "last3": 127.88, "allPlay": [15, 21, 0], "rank": 7, "prev": 4, "score": 36.6},
-    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 4, "t": 0, "pf": 486.9, "ppg": 121.73, "last3": 123.3, "allPlay": [13, 23, 0], "rank": 8, "prev": 7, "score": 30.9},
-    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 0, "l": 4, "t": 0, "pf": 448.72, "ppg": 112.18, "last3": 110.57, "allPlay": [7, 29, 0], "rank": 9, "prev": 9, "score": 10.6},
-    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 4, "t": 0, "pf": 451.78, "ppg": 112.95, "last3": 104.44, "allPlay": [8, 28, 0], "rank": 10, "prev": 10, "score": 9.5}
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 3,
+     "l": 1,
+     "t": 0,
+     "pf": 619.18,
+     "ppg": 154.8,
+     "last3": 158.96,
+     "allPlay": [
+      27,
+      9,
+      0
+     ],
+     "rank": 1,
+     "prev": 3,
+     "score": 90.0
+    },
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 4,
+     "l": 0,
+     "t": 0,
+     "pf": 592.68,
+     "ppg": 148.17,
+     "last3": 142.36,
+     "allPlay": [
+      28,
+      8,
+      0
+     ],
+     "rank": 2,
+     "prev": 2,
+     "score": 78.1
+    },
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 3,
+     "l": 1,
+     "t": 0,
+     "pf": 560.66,
+     "ppg": 140.17,
+     "last3": 133.33,
+     "allPlay": [
+      25,
+      11,
+      0
+     ],
+     "rank": 3,
+     "prev": 1,
+     "score": 64.0
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 2,
+     "l": 2,
+     "t": 0,
+     "pf": 554.14,
+     "ppg": 138.54,
+     "last3": 136.96,
+     "allPlay": [
+      21,
+      15,
+      0
+     ],
+     "rank": 4,
+     "prev": 5,
+     "score": 59.9
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 3,
+     "l": 1,
+     "t": 0,
+     "pf": 552.22,
+     "ppg": 138.06,
+     "last3": 131.59,
+     "allPlay": [
+      20,
+      16,
+      0
+     ],
+     "rank": 5,
+     "prev": 6,
+     "score": 55.9
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 2,
+     "l": 2,
+     "t": 0,
+     "pf": 482.78,
+     "ppg": 120.7,
+     "last3": 131.21,
+     "allPlay": [
+      16,
+      20,
+      0
+     ],
+     "rank": 6,
+     "prev": 8,
+     "score": 37.0
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 3,
+     "l": 1,
+     "t": 0,
+     "pf": 493.5,
+     "ppg": 123.38,
+     "last3": 127.88,
+     "allPlay": [
+      15,
+      21,
+      0
+     ],
+     "rank": 7,
+     "prev": 4,
+     "score": 36.6
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 0,
+     "l": 4,
+     "t": 0,
+     "pf": 486.9,
+     "ppg": 121.73,
+     "last3": 123.3,
+     "allPlay": [
+      13,
+      23,
+      0
+     ],
+     "rank": 8,
+     "prev": 7,
+     "score": 30.9
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 0,
+     "l": 4,
+     "t": 0,
+     "pf": 448.72,
+     "ppg": 112.18,
+     "last3": 110.57,
+     "allPlay": [
+      7,
+      29,
+      0
+     ],
+     "rank": 9,
+     "prev": 9,
+     "score": 10.6
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 4,
+     "t": 0,
+     "pf": 451.78,
+     "ppg": 112.95,
+     "last3": 104.44,
+     "allPlay": [
+      8,
+      28,
+      0
+     ],
+     "rank": 10,
+     "prev": 10,
+     "score": 9.5
+    }
    ],
    "headline": "Keith Goes 4-0 With the Week's Sixth-Best Score",
    "subtitle": "Tyler hangs 186 on Brad, Kyle buries Noah by 60, and Cody takes over the power rankings.",
@@ -156,16 +876,196 @@
   {
    "week": 5,
    "rankings": [
-    {"espnId": 3, "manager": "cody", "name": "KYLE ONLY HATE", "w": 4, "l": 1, "t": 0, "pf": 818.56, "ppg": 163.71, "last3": 181.33, "allPlay": [36, 9, 0], "rank": 1, "prev": 1, "score": 92.0},
-    {"espnId": 6, "manager": "keith", "name": " Taylor Swift", "w": 5, "l": 0, "t": 0, "pf": 739.72, "ppg": 147.94, "last3": 136.85, "allPlay": [34, 11, 0], "rank": 2, "prev": 2, "score": 61.2},
-    {"espnId": 10, "manager": "reis", "name": "Snooki", "w": 4, "l": 1, "t": 0, "pf": 717.56, "ppg": 143.51, "last3": 129.76, "allPlay": [32, 13, 0], "rank": 3, "prev": 3, "score": 53.4},
-    {"espnId": 9, "manager": "kyle", "name": "WE GOT A SITUATION", "w": 2, "l": 3, "t": 0, "pf": 694.24, "ppg": 138.85, "last3": 140.73, "allPlay": [25, 20, 0], "rank": 4, "prev": 4, "score": 47.9},
-    {"espnId": 5, "manager": "tyler", "name": "Ashton 3:16", "w": 3, "l": 2, "t": 0, "pf": 681.46, "ppg": 136.29, "last3": 142.63, "allPlay": [20, 25, 0], "rank": 5, "prev": 5, "score": 42.3},
-    {"espnId": 1, "manager": "brett", "name": "Spencer James Squad", "w": 3, "l": 2, "t": 0, "pf": 629.54, "ppg": 125.91, "last3": 138.17, "allPlay": [21, 24, 0], "rank": 6, "prev": 6, "score": 33.6},
-    {"espnId": 8, "manager": "noah", "name": "Gno'msayin Mah-fkah", "w": 0, "l": 5, "t": 0, "pf": 631.3, "ppg": 126.26, "last3": 133.21, "allPlay": [16, 29, 0], "rank": 7, "prev": 10, "score": 27.5},
-    {"espnId": 2, "manager": "josh", "name": "OMM", "w": 3, "l": 2, "t": 0, "pf": 628.76, "ppg": 125.75, "last3": 128.02, "allPlay": [16, 29, 0], "rank": 8, "prev": 7, "score": 25.2},
-    {"espnId": 7, "manager": "brad", "name": "Free Josh Jacobs", "w": 0, "l": 5, "t": 0, "pf": 622.74, "ppg": 124.55, "last3": 130.69, "allPlay": [15, 30, 0], "rank": 9, "prev": 8, "score": 24.4},
-    {"espnId": 4, "manager": "brandon", "name": "Bobby Light", "w": 1, "l": 4, "t": 0, "pf": 585.6, "ppg": 117.12, "last3": 116.47, "allPlay": [10, 35, 0], "rank": 10, "prev": 9, "score": 8.9}
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 4,
+     "l": 1,
+     "t": 0,
+     "pf": 818.56,
+     "ppg": 163.71,
+     "last3": 181.33,
+     "allPlay": [
+      36,
+      9,
+      0
+     ],
+     "rank": 1,
+     "prev": 1,
+     "score": 92.0
+    },
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 5,
+     "l": 0,
+     "t": 0,
+     "pf": 739.72,
+     "ppg": 147.94,
+     "last3": 136.85,
+     "allPlay": [
+      34,
+      11,
+      0
+     ],
+     "rank": 2,
+     "prev": 2,
+     "score": 61.2
+    },
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 4,
+     "l": 1,
+     "t": 0,
+     "pf": 717.56,
+     "ppg": 143.51,
+     "last3": 129.76,
+     "allPlay": [
+      32,
+      13,
+      0
+     ],
+     "rank": 3,
+     "prev": 3,
+     "score": 53.4
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 2,
+     "l": 3,
+     "t": 0,
+     "pf": 694.24,
+     "ppg": 138.85,
+     "last3": 140.73,
+     "allPlay": [
+      25,
+      20,
+      0
+     ],
+     "rank": 4,
+     "prev": 4,
+     "score": 47.9
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 3,
+     "l": 2,
+     "t": 0,
+     "pf": 681.46,
+     "ppg": 136.29,
+     "last3": 142.63,
+     "allPlay": [
+      20,
+      25,
+      0
+     ],
+     "rank": 5,
+     "prev": 5,
+     "score": 42.3
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 3,
+     "l": 2,
+     "t": 0,
+     "pf": 629.54,
+     "ppg": 125.91,
+     "last3": 138.17,
+     "allPlay": [
+      21,
+      24,
+      0
+     ],
+     "rank": 6,
+     "prev": 6,
+     "score": 33.6
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 5,
+     "t": 0,
+     "pf": 631.3,
+     "ppg": 126.26,
+     "last3": 133.21,
+     "allPlay": [
+      16,
+      29,
+      0
+     ],
+     "rank": 7,
+     "prev": 10,
+     "score": 27.5
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 3,
+     "l": 2,
+     "t": 0,
+     "pf": 628.76,
+     "ppg": 125.75,
+     "last3": 128.02,
+     "allPlay": [
+      16,
+      29,
+      0
+     ],
+     "rank": 8,
+     "prev": 7,
+     "score": 25.2
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 0,
+     "l": 5,
+     "t": 0,
+     "pf": 622.74,
+     "ppg": 124.55,
+     "last3": 130.69,
+     "allPlay": [
+      15,
+      30,
+      0
+     ],
+     "rank": 9,
+     "prev": 8,
+     "score": 24.4
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 1,
+     "l": 4,
+     "t": 0,
+     "pf": 585.6,
+     "ppg": 117.12,
+     "last3": 116.47,
+     "allPlay": [
+      10,
+      35,
+      0
+     ],
+     "rank": 10,
+     "prev": 9,
+     "score": 8.9
+    }
    ],
    "headline": "Keith Goes 5-0, Brad Goes 0-5, and Both Owe It to the Bench",
    "subtitle": "Kyle benches the win against Keith, Cody hangs 199 on Noah, and Brandon finally wins one by 1.62.",
@@ -190,6 +1090,224 @@
    },
    "by": "claude",
    "written": "2026-10-14T15:00+00:00"
+  },
+  {
+   "week": 6,
+   "rankings": [
+    {
+     "espnId": 3,
+     "manager": "cody",
+     "name": "KYLE ONLY HATE",
+     "w": 4,
+     "l": 2,
+     "t": 0,
+     "pf": 927.72,
+     "ppg": 154.62,
+     "last3": 157.62,
+     "allPlay": [
+      39,
+      15,
+      0
+     ],
+     "rank": 1,
+     "prev": 1,
+     "score": 88.9
+    },
+    {
+     "espnId": 6,
+     "manager": "keith",
+     "name": " Taylor Swift",
+     "w": 6,
+     "l": 0,
+     "t": 0,
+     "pf": 899.26,
+     "ppg": 149.88,
+     "last3": 143.29,
+     "allPlay": [
+      43,
+      11,
+      0
+     ],
+     "rank": 2,
+     "prev": 2,
+     "score": 80.3
+    },
+    {
+     "espnId": 9,
+     "manager": "kyle",
+     "name": "WE GOT A SITUATION",
+     "w": 3,
+     "l": 3,
+     "t": 0,
+     "pf": 839.08,
+     "ppg": 139.85,
+     "last3": 155.22,
+     "allPlay": [
+      32,
+      22,
+      0
+     ],
+     "rank": 3,
+     "prev": 4,
+     "score": 68.4
+    },
+    {
+     "espnId": 1,
+     "manager": "brett",
+     "name": "Spencer James Squad",
+     "w": 4,
+     "l": 2,
+     "t": 0,
+     "pf": 779.34,
+     "ppg": 129.89,
+     "last3": 142.65,
+     "allPlay": [
+      29,
+      25,
+      0
+     ],
+     "rank": 4,
+     "prev": 6,
+     "score": 50.5
+    },
+    {
+     "espnId": 5,
+     "manager": "tyler",
+     "name": "Ashton 3:16",
+     "w": 3,
+     "l": 3,
+     "t": 0,
+     "pf": 797.64,
+     "ppg": 132.94,
+     "last3": 143.9,
+     "allPlay": [
+      24,
+      30,
+      0
+     ],
+     "rank": 5,
+     "prev": 5,
+     "score": 50.3
+    },
+    {
+     "espnId": 10,
+     "manager": "reis",
+     "name": "Snooki",
+     "w": 4,
+     "l": 2,
+     "t": 0,
+     "pf": 789.36,
+     "ppg": 131.56,
+     "last3": 106.61,
+     "allPlay": [
+      32,
+      22,
+      0
+     ],
+     "rank": 6,
+     "prev": 3,
+     "score": 36.6
+    },
+    {
+     "espnId": 7,
+     "manager": "brad",
+     "name": "Free Josh Jacobs",
+     "w": 1,
+     "l": 5,
+     "t": 0,
+     "pf": 750.86,
+     "ppg": 125.14,
+     "last3": 130.62,
+     "allPlay": [
+      21,
+      33,
+      0
+     ],
+     "rank": 7,
+     "prev": 9,
+     "score": 34.1
+    },
+    {
+     "espnId": 8,
+     "manager": "noah",
+     "name": "Gno'msayin Mah-fkah",
+     "w": 0,
+     "l": 6,
+     "t": 0,
+     "pf": 734.28,
+     "ppg": 122.38,
+     "last3": 134.43,
+     "allPlay": [
+      18,
+      36,
+      0
+     ],
+     "rank": 8,
+     "prev": 7,
+     "score": 31.1
+    },
+    {
+     "espnId": 2,
+     "manager": "josh",
+     "name": "OMM",
+     "w": 3,
+     "l": 3,
+     "t": 0,
+     "pf": 728.26,
+     "ppg": 121.38,
+     "last3": 117.64,
+     "allPlay": [
+      17,
+      37,
+      0
+     ],
+     "rank": 9,
+     "prev": 8,
+     "score": 21.1
+    },
+    {
+     "espnId": 4,
+     "manager": "brandon",
+     "name": "Bobby Light",
+     "w": 2,
+     "l": 4,
+     "t": 0,
+     "pf": 708.56,
+     "ppg": 118.09,
+     "last3": 125.52,
+     "allPlay": [
+      15,
+      39,
+      0
+     ],
+     "rank": 10,
+     "prev": 10,
+     "score": 20.4
+    }
+   ],
+   "headline": "Keith Stays Perfect, Reis Gets 78-Point Reality Check",
+   "subtitle": "Week 6 brought one blowout, no close games, and a whole lot of benched points.",
+   "paragraphs": [
+    "Week 6 had no nail-biters. The closest game was Brandon's 122.96-102.98 win over Noah, a 19.98-point margin. That counts as 'close' only because every other game was worse. Noah is now the league's only winless team at 0-6, and he got there by starting a Jaguars D/ST that scored -2.0 and Cam Skattebo, who scored 0 while Kaelon Black sat on the bench with 4.7.",
+    "The week's carnage belongs to Brett and Reis. Brett's 149.8 beat Reis's 71.8 by 78.0 points, the biggest margin of the week, and Reis's score was the lowest. Reis had J.K. Dobbins on the bench for 13.6 while MarShawn Lloyd gave him 1.0 in the lineup. Brett wasn't clean either. He started Quinshon Judkins for a flat zero over Rico Dowdle's 7.9 and still won by 78. Brett climbs to 4th in the standings and jumps two spots in the power rankings. Reis stays 3rd in the standings at 4-2 but plummets from 3rd to 6th in the power rankings, with a last-three-weeks average of 106.61. His record is doing a lot of lying.",
+    "Keith is 6-0 after a league-high 159.54 against Tyler, with Trevor Lawrence (27.34) and Jaxon Smith-Njigba (25.4) doing the heavy lifting. Before the parade starts, note that Cody has scored 927.72 points to Keith's 899.26 and sits ahead of him at No. 1 in the power rankings. Keith's perfect record is real, but his team is not the league's best. He also started Emanuel Wilson for 5.2 and left 25.3 on his bench. Cody, meanwhile, got hammered 144.84-109.16 by Kyle, the manager his own team name is complaining about. Kyle's win moves him from 7th to 5th in the standings and from 4th to 3rd in the power rankings. He did it even after benching Stefon Diggs (16.4) for Rome Odunze (6.9) and playing a kicker who scored 4.0.",
+    "The lineup crimes of the week belong to Tyler, who left a staggering 68.0 points on his bench, more than the 43.36 by which Keith beat him. The headline decision was starting Terry McLaurin (3.7) over Carnell Tate (19.0), a 15.3-point gift. Tyler falls from 4th to 6th in the standings. Cody's own bench held 32.0 points, including RJ Harvey at 14.6 while Kimani Vidal gave him 7.0 in the lineup. Josh lost 128.12-99.5 to Brad, with Brandon Aubrey putting up a 1.0 at kicker and Josh's best two starters combining for 38.8.",
+    "Then there's Brad, who finally won a game. His 128.12 over Josh, powered by Christian McCaffrey (30.7) and Germie Bernard (25.7), lifts him to 1-5 and out of last place to 9th in the standings. He did it with a Texans D/ST that scored -2.0, and he's up two spots in the power rankings to 7th. Congratulations to him for beating a team that scored 99.5. Brad has scored more than Noah, Josh and Brandon this season and is still 1-5. At the bottom of the power rankings, Brandon won this week and still sits 10th, which tells you how the league views the rest of his team."
+   ],
+   "roasts": {
+    "3": "Cody owns the league's most points and the No. 1 power ranking, yet he lost by 35.68 to the guy his own team name is whining about, while 32.0 points rotted on his bench.",
+    "6": "Keith is 6-0 with the week's top score, but Cody has outscored him by 28.46 points and sits above him in the power rankings, so he's an undefeated runner-up who still started Emanuel Wilson for 5.2.",
+    "9": "Kyle moved up on the strength of Malik Nabers and Kenneth Walker III, but he benched Stefon Diggs for Rome Odunze like a man picking lottery numbers from a fortune cookie.",
+    "1": "Brett hung 149.8 while starting Quinshon Judkins for a goose egg and leaving 45.98 on the bench, proof that beating Reis requires no actual effort.",
+    "5": "Tyler left 68.0 points on his bench and started Terry McLaurin for 3.7 over Carnell Tate's 19.0, so he's the only manager who finds ways to beat himself before Keith even shows up.",
+    "10": "Reis posted the league's lowest score at 71.8, started MarShawn Lloyd over J.K. Dobbins, and fell from 3rd to 6th in the power rankings, which is the most accurate thing about his week.",
+    "7": "Brad finally got a win, his first of the season, with a defense that scored -2.0, and he's still 1-5 despite outscoring three teams in the league, which takes real talent.",
+    "8": "Noah is 0-6, the only winless team in the league, and he started Cam Skattebo for 0 and a Jaguars D/ST for -2.0 as if tanking were a lifestyle.",
+    "2": "Josh got 1.0 from his kicker, lost by 28.62, and his best scorer was a 21.0 from Jayden Daniels, so his offense made OMM look like a very sad acronym.",
+    "4": "Brandon won this week and is still dead last in the power rankings, which says everything about a team whose all-play record is 15-39 and whose tight end Tyler Higbee scored 4.2."
+   },
+   "by": "claude",
+   "written": "2026-10-20T14:26+00:00"
   }
  ]
 }
