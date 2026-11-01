@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-10-31T14:26+00:00",
+ "updated": "2026-11-01T14:26+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 8,
@@ -12332,16 +12332,7 @@
         "nfl": "KC",
         "slot": "RB",
         "pts": 0,
-        "proj": 19.86
-       },
-       {
-        "id": 4427366,
-        "name": "Breece Hall",
-        "pos": "RB",
-        "nfl": "NYJ",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 14.5
+        "proj": 19.85
        },
        {
         "id": 4685472,
@@ -12351,6 +12342,15 @@
         "slot": "WR",
         "pts": 11.8,
         "proj": 15.64
+       },
+       {
+        "id": 4431299,
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "nfl": "CHI",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 9.27
        },
        {
         "id": 3915511,
@@ -12418,13 +12418,13 @@
         "proj": 0
        },
        {
-        "id": 4431299,
-        "name": "Rome Odunze",
-        "pos": "WR",
-        "nfl": "CHI",
+        "id": 4427366,
+        "name": "Breece Hall",
+        "pos": "RB",
+        "nfl": "NYJ",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.27
+        "proj": 0
        },
        {
         "id": 16737,
@@ -12454,15 +12454,6 @@
         "proj": 0
        },
        {
-        "id": 3054850,
-        "name": "Alvin Kamara",
-        "pos": "RB",
-        "nfl": "NO",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": 4686468,
         "name": "Seth McGowan",
         "pos": "RB",
@@ -12479,6 +12470,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 5.4
+       },
+       {
+        "id": 4035538,
+        "name": "David Montgomery",
+        "pos": "RB",
+        "nfl": "HOU",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
        }
       ]
      },
@@ -12488,6 +12488,15 @@
       "name": "Bobby Light",
       "score": 0,
       "starters": [
+       {
+        "id": 4428331,
+        "name": "Rashee Rice",
+        "pos": "WR",
+        "nfl": "KC",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 12.65
+       },
        {
         "id": 4426354,
         "name": "George Pickens",
@@ -12525,13 +12534,13 @@
         "proj": 20.11
        },
        {
-        "id": 4428718,
-        "name": "Tre Tucker",
-        "pos": "WR",
-        "nfl": "LV",
-        "slot": "RB/WR/TE",
+        "id": 4431459,
+        "name": "Tyler Warren",
+        "pos": "TE",
+        "nfl": "IND",
+        "slot": "TE",
         "pts": 0,
-        "proj": 10.86
+        "proj": 11.46
        },
        {
         "id": 4723820,
@@ -12540,16 +12549,7 @@
         "nfl": "NYJ",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 10.54
-       },
-       {
-        "id": 3046439,
-        "name": "Hunter Henry",
-        "pos": "TE",
-        "nfl": "NE",
-        "slot": "TE",
-        "pts": 0,
-        "proj": 10.47
+        "proj": 10.6
        },
        {
         "id": 4686361,
@@ -12581,15 +12581,6 @@
       ],
       "bench": [
        {
-        "id": 4428331,
-        "name": "Rashee Rice",
-        "pos": "WR",
-        "nfl": "KC",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 12.65
-       },
-       {
         "id": 4239996,
         "name": "Travis Etienne Jr.",
         "pos": "RB",
@@ -12608,15 +12599,6 @@
         "proj": 0
        },
        {
-        "id": 4431459,
-        "name": "Tyler Warren",
-        "pos": "TE",
-        "nfl": "IND",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 11.46
-       },
-       {
         "id": 4870847,
         "name": "Ja'Kobi Lane",
         "pos": "WR",
@@ -12624,6 +12606,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 7.98
+       },
+       {
+        "id": 4428718,
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "nfl": "LV",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.9
        },
        {
         "id": 4428850,
@@ -12651,6 +12642,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "id": 3046439,
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "nfl": "NE",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.43
        }
       ]
      },
@@ -12684,15 +12684,6 @@
         "slot": "RB",
         "pts": 0,
         "proj": 18.82
-       },
-       {
-        "id": 4241478,
-        "name": "DeVonta Smith",
-        "pos": "WR",
-        "nfl": "PHI",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 0
        },
        {
         "id": 4612826,
@@ -12737,7 +12728,16 @@
         "nfl": "NE",
         "slot": "QB",
         "pts": 0,
-        "proj": 22.48
+        "proj": 22.44
+       },
+       {
+        "id": 3116165,
+        "name": "Chris Godwin Jr.",
+        "pos": "WR",
+        "nfl": "TB",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 10.7
        },
        {
         "id": 17372,
@@ -12759,6 +12759,15 @@
        }
       ],
       "bench": [
+       {
+        "id": 4241478,
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "nfl": "PHI",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
+       },
        {
         "id": 4432708,
         "name": "Marvin Harrison Jr.",
@@ -12793,7 +12802,7 @@
         "nfl": "SEA",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.52
+        "proj": 10.4
        },
        {
         "id": 4385690,
@@ -12803,15 +12812,6 @@
         "slot": "BE",
         "pts": 0,
         "proj": 8.9
-       },
-       {
-        "id": 3116165,
-        "name": "Chris Godwin Jr.",
-        "pos": "WR",
-        "nfl": "TB",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 10.7
        }
       ]
      },
@@ -12837,7 +12837,7 @@
         "nfl": "LAR",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 17.9
+        "proj": 18.02
        },
        {
         "id": 4360248,
@@ -12947,7 +12947,7 @@
         "nfl": "PHI",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.17
+        "proj": 10.18
        },
        {
         "id": 4429059,
@@ -12989,7 +12989,7 @@
         "nfl": "LV",
         "slot": "TE",
         "pts": 0,
-        "proj": 16.09
+        "proj": 16.15
        },
        {
         "id": 4047365,
@@ -13070,7 +13070,7 @@
         "nfl": "KC",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 5.23
+        "proj": 5.07
        }
       ],
       "bench": [
@@ -13090,7 +13090,7 @@
         "nfl": "NE",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.51
+        "proj": 0
        },
        {
         "id": 4035687,
@@ -13179,7 +13179,7 @@
         "nfl": "PHI",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 14.02
+        "proj": 14.03
        },
        {
         "id": 4239993,
@@ -13280,7 +13280,7 @@
         "nfl": "SEA",
         "slot": "IR",
         "pts": 0,
-        "proj": 0
+        "proj": 7.75
        },
        {
         "id": 4688813,
@@ -13305,7 +13305,7 @@
         "name": "RJ Harvey",
         "pos": "RB",
         "nfl": "DEN",
-        "slot": "BE",
+        "slot": "IR",
         "pts": 0,
         "proj": 0
        },
@@ -13340,7 +13340,7 @@
         "nfl": "CIN",
         "slot": "WR",
         "pts": 0,
-        "proj": 21.89
+        "proj": 21.88
        },
        {
         "id": 4870808,
@@ -13367,7 +13367,7 @@
         "nfl": "DEN",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 10.82
+        "proj": 10.85
        },
        {
         "id": 4426388,
@@ -13394,7 +13394,7 @@
         "nfl": "NE",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 13.83
+        "proj": 15.86
        },
        {
         "id": 3953687,
@@ -13412,7 +13412,7 @@
         "nfl": "LAR",
         "slot": "RB",
         "pts": 0,
-        "proj": 11.48
+        "proj": 11.51
        },
        {
         "id": -16026,
@@ -13421,7 +13421,7 @@
         "nfl": "SEA",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 5.82
+        "proj": 5.8
        }
       ],
       "bench": [
@@ -13539,7 +13539,7 @@
         "nfl": "SEA",
         "slot": "WR",
         "pts": 0,
-        "proj": 21.81
+        "proj": 21.47
        },
        {
         "id": 4259545,
@@ -13578,15 +13578,6 @@
         "proj": 9.49
        },
        {
-        "id": 3040151,
-        "name": "George Kittle",
-        "pos": "TE",
-        "nfl": "SF",
-        "slot": "TE",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": 3150744,
         "name": "Chase McLaughlin",
         "pos": "K",
@@ -13603,6 +13594,15 @@
         "slot": "D/ST",
         "pts": 0,
         "proj": 4.46
+       },
+       {
+        "id": 5083076,
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "nfl": "CLE",
+        "slot": "TE",
+        "pts": 0,
+        "proj": 8.88
        }
       ],
       "bench": [
@@ -13611,6 +13611,15 @@
         "name": "A.J. Brown",
         "pos": "WR",
         "nfl": "NE",
+        "slot": "IR",
+        "pts": 0,
+        "proj": 0
+       },
+       {
+        "id": 3040151,
+        "name": "George Kittle",
+        "pos": "TE",
+        "nfl": "SF",
         "slot": "BE",
         "pts": 0,
         "proj": 0
@@ -13649,7 +13658,7 @@
         "nfl": "SEA",
         "slot": "BE",
         "pts": 0,
-        "proj": 8.44
+        "proj": 6.94
        },
        {
         "id": 3116406,
@@ -13700,7 +13709,7 @@
         "nfl": "NYJ",
         "slot": "WR",
         "pts": 0,
-        "proj": 14.04
+        "proj": 14.14
        },
        {
         "id": 3918298,
@@ -13718,7 +13727,7 @@
         "nfl": "TB",
         "slot": "RB",
         "pts": 0,
-        "proj": 17.21
+        "proj": 17.22
        },
        {
         "id": 4241985,
@@ -13727,7 +13736,7 @@
         "nfl": "DEN",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 9.72
+        "proj": 9.03
        },
        {
         "id": 3121023,
@@ -13736,7 +13745,7 @@
         "nfl": "PHI",
         "slot": "TE",
         "pts": 0,
-        "proj": 10.96
+        "proj": 10.97
        },
        {
         "id": 4034949,
@@ -13792,7 +13801,7 @@
         "nfl": "DEN",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.56
+        "proj": 9.58
        },
        {
         "id": 2991662,
@@ -13863,7 +13872,7 @@
         "nfl": "LAR",
         "slot": "WR",
         "pts": 0,
-        "proj": 22.42
+        "proj": 22.8
        },
        {
         "id": 4426502,
@@ -13890,7 +13899,7 @@
         "nfl": "DEN",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 9.82
+        "proj": 9.34
        },
        {
         "id": 4685247,
@@ -13899,7 +13908,7 @@
         "nfl": "NYJ",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 10.83
+        "proj": 17.22
        },
        {
         "id": 4571557,
@@ -13917,7 +13926,7 @@
         "nfl": "LV",
         "slot": "RB",
         "pts": 0,
-        "proj": 16.81
+        "proj": 16.83
        },
        {
         "id": 4036378,
@@ -13935,7 +13944,7 @@
         "nfl": "WSH",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 6.94
+        "proj": 6.86
        },
        {
         "id": 15847,
@@ -14039,7 +14048,7 @@
      "id": 4241478,
      "name": "DeVonta Smith",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": "OUT",
      "pts": 69.0
@@ -14095,7 +14104,7 @@
      "pos": "TE",
      "slot": "TE",
      "nfl": "CHI",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 62.4
     },
     {
@@ -14113,7 +14122,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "SEA",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 0
     },
     {
@@ -14138,7 +14147,7 @@
      "id": 3116165,
      "name": "Chris Godwin Jr.",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "TB",
      "injury": null,
      "pts": 53.1
@@ -14244,7 +14253,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "CHI",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 59.3
     },
     {
@@ -14445,9 +14454,9 @@
      "id": 4568490,
      "name": "RJ Harvey",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "DEN",
-     "injury": "OUT",
+     "injury": "INJURY_RESERVE",
      "pts": 67.4
     },
     {
@@ -14504,7 +14513,7 @@
      "id": 4428331,
      "name": "Rashee Rice",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "KC",
      "injury": null,
      "pts": 38.0
@@ -14567,7 +14576,7 @@
      "id": 4431459,
      "name": "Tyler Warren",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "IND",
      "injury": null,
      "pts": 69.9
@@ -14585,7 +14594,7 @@
      "id": 4428718,
      "name": "Tre Tucker",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "LV",
      "injury": null,
      "pts": 99.8
@@ -14630,7 +14639,7 @@
      "id": 3046439,
      "name": "Hunter Henry",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "NE",
      "injury": null,
      "pts": 67.6
@@ -14838,9 +14847,9 @@
      "id": 4047646,
      "name": "A.J. Brown",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 19.1
     },
     {
@@ -14892,7 +14901,7 @@
      "id": 3040151,
      "name": "George Kittle",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "SF",
      "injury": null,
      "pts": 104.5
@@ -14968,6 +14977,15 @@
      "nfl": "MIN",
      "injury": null,
      "pts": 74.0
+    },
+    {
+     "id": 5083076,
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "CLE",
+     "injury": null,
+     "pts": 66.7
     }
    ]
   },
@@ -15025,7 +15043,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 33.8
     },
     {
@@ -15330,7 +15348,7 @@
      "id": 4427366,
      "name": "Breece Hall",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "NYJ",
      "injury": "QUESTIONABLE",
      "pts": 42.5
@@ -15348,7 +15366,7 @@
      "id": 4431299,
      "name": "Rome Odunze",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "CHI",
      "injury": null,
      "pts": 60.1
@@ -15397,15 +15415,6 @@
      "nfl": "WSH",
      "injury": "INJURY_RESERVE",
      "pts": 44.9
-    },
-    {
-     "id": 3054850,
-     "name": "Alvin Kamara",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "NO",
-     "injury": null,
-     "pts": 65.8
     },
     {
      "id": 4711533,
@@ -15460,6 +15469,15 @@
      "nfl": "JAX",
      "injury": null,
      "pts": 25.5
+    },
+    {
+     "id": 4035538,
+     "name": "David Montgomery",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": "QUESTIONABLE",
+     "pts": 45.5
     }
    ]
   },
@@ -15632,6 +15650,50 @@
   }
  ],
  "transactions": [
+  {
+   "id": "65b03992-921e-4629-9397-ff437dd3840a",
+   "date": 1793523065329,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3054850,
+     "action": "drop",
+     "team": 9,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "nfl": "NO",
+     "since": 0.0
+    },
+    {
+     "player": 4035538,
+     "action": "add",
+     "team": 9,
+     "name": "David Montgomery",
+     "pos": "RB",
+     "nfl": "HOU"
+    }
+   ]
+  },
+  {
+   "id": "4265e703-421c-49b4-86f1-c849780fe180",
+   "date": 1793467399522,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 5083076,
+     "action": "add",
+     "team": 6,
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "nfl": "CLE"
+    }
+   ]
+  },
   {
    "id": "7e5eaa60-69ca-471a-8ff3-697021c151e8",
    "date": 1793430882790,
@@ -21237,7 +21299,7 @@
     "pos": "TE",
     "nfl": "CLE",
     "pts": 66.7,
-    "kept": false,
+    "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 4,
@@ -22011,7 +22073,7 @@
     "pos": "RB",
     "nfl": "NO",
     "pts": 65.8,
-    "kept": true,
+    "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 41,
@@ -24456,7 +24518,7 @@
      "id": 4241478,
      "name": "DeVonta Smith",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": "OUT",
      "pts": 69.0,
@@ -24530,7 +24592,7 @@
      "pos": "TE",
      "slot": "TE",
      "nfl": "CHI",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 62.4,
      "how": "draft",
      "round": 10,
@@ -24554,7 +24616,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "SEA",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 0,
      "how": "draft",
      "round": 14,
@@ -24584,7 +24646,7 @@
      "id": 3116165,
      "name": "Chris Godwin Jr.",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "TB",
      "injury": null,
      "pts": 53.1,
@@ -24717,7 +24779,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "CHI",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 59.3,
      "how": "draft",
      "round": 10,
@@ -24976,9 +25038,9 @@
      "id": 4568490,
      "name": "RJ Harvey",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "DEN",
-     "injury": "OUT",
+     "injury": "INJURY_RESERVE",
      "pts": 67.4,
      "how": "draft",
      "round": 13,
@@ -25049,7 +25111,7 @@
      "id": 4428331,
      "name": "Rashee Rice",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "KC",
      "injury": null,
      "pts": 38.0,
@@ -25133,7 +25195,7 @@
      "id": 4431459,
      "name": "Tyler Warren",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "IND",
      "injury": null,
      "pts": 69.9,
@@ -25157,7 +25219,7 @@
      "id": 4428718,
      "name": "Tre Tucker",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "LV",
      "injury": null,
      "pts": 99.8,
@@ -25207,7 +25269,7 @@
      "id": 3046439,
      "name": "Hunter Henry",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "NE",
      "injury": null,
      "pts": 67.6,
@@ -25471,9 +25533,9 @@
      "id": 4047646,
      "name": "A.J. Brown",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 19.1,
      "how": "draft",
      "round": 3,
@@ -25543,7 +25605,7 @@
      "id": 3040151,
      "name": "George Kittle",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "SF",
      "injury": null,
      "pts": 104.5,
@@ -25632,6 +25694,18 @@
      "injury": null,
      "pts": 74.0,
      "how": "waiver"
+    },
+    {
+     "id": 5083076,
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "slot": "TE",
+     "nfl": "CLE",
+     "injury": null,
+     "pts": 66.7,
+     "how": "fa",
+     "round": 8,
+     "pick": 3
     }
    ]
   },
@@ -25704,7 +25778,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 33.8,
      "how": "draft",
      "round": 6,
@@ -26082,7 +26156,7 @@
      "id": 4427366,
      "name": "Breece Hall",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "NYJ",
      "injury": "QUESTIONABLE",
      "pts": 42.5,
@@ -26106,7 +26180,7 @@
      "id": 4431299,
      "name": "Rome Odunze",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "CHI",
      "injury": null,
      "pts": 60.1,
@@ -26175,18 +26249,6 @@
      "pick": 5
     },
     {
-     "id": 3054850,
-     "name": "Alvin Kamara",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "NO",
-     "injury": null,
-     "pts": 65.8,
-     "how": "draft",
-     "round": 12,
-     "pick": 6
-    },
-    {
      "id": 4711533,
      "name": "Ollie Gordon II",
      "pos": "RB",
@@ -26245,6 +26307,16 @@
      "injury": null,
      "pts": 25.5,
      "how": "fa"
+    },
+    {
+     "id": 4035538,
+     "name": "David Montgomery",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": "QUESTIONABLE",
+     "pts": 45.5,
+     "how": "waiver"
     }
    ]
   },
