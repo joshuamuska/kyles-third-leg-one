@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-11-01T14:26+00:00",
+ "updated": "2026-11-02T14:49+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 8,
@@ -12314,7 +12314,7 @@
       "espnId": 9,
       "manager": "kyle",
       "name": "WE GOT A SITUATION",
-      "score": 11.8,
+      "score": 124.48,
       "starters": [
        {
         "id": 4374302,
@@ -12322,7 +12322,7 @@
         "pos": "WR",
         "nfl": "DET",
         "slot": "WR",
-        "pts": 0,
+        "pts": 12.6,
         "proj": 17.8
        },
        {
@@ -12331,7 +12331,7 @@
         "pos": "RB",
         "nfl": "KC",
         "slot": "RB",
-        "pts": 0,
+        "pts": 12.4,
         "proj": 19.85
        },
        {
@@ -12358,7 +12358,7 @@
         "pos": "QB",
         "nfl": "CIN",
         "slot": "QB",
-        "pts": 0,
+        "pts": 39.48,
         "proj": 22.88
        },
        {
@@ -12367,7 +12367,7 @@
         "pos": "WR",
         "nfl": "WSH",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 12.8,
         "proj": 12.56
        },
        {
@@ -12376,8 +12376,8 @@
         "pos": "RB",
         "nfl": "MIA",
         "slot": "RB",
-        "pts": 0,
-        "proj": 14.39
+        "pts": 6.9,
+        "proj": 14.19
        },
        {
         "id": 4430539,
@@ -12385,8 +12385,8 @@
         "pos": "TE",
         "nfl": "JAX",
         "slot": "TE",
-        "pts": 0,
-        "proj": 9.83
+        "pts": 7.5,
+        "proj": 9.71
        },
        {
         "id": 4567104,
@@ -12403,7 +12403,7 @@
         "pos": "D/ST",
         "nfl": "JAX",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 21.0,
         "proj": 7.41
        }
       ],
@@ -12459,8 +12459,8 @@
         "pos": "RB",
         "nfl": "IND",
         "slot": "BE",
-        "pts": 0,
-        "proj": 3.69
+        "pts": 2.9,
+        "proj": 3.65
        },
        {
         "id": 4432773,
@@ -12468,8 +12468,8 @@
         "pos": "WR",
         "nfl": "JAX",
         "slot": "BE",
-        "pts": 0,
-        "proj": 5.4
+        "pts": 8.2,
+        "proj": 5.32
        },
        {
         "id": 4035538,
@@ -12486,7 +12486,7 @@
       "espnId": 4,
       "manager": "brandon",
       "name": "Bobby Light",
-      "score": 0,
+      "score": 121.0,
       "starters": [
        {
         "id": 4428331,
@@ -12494,7 +12494,7 @@
         "pos": "WR",
         "nfl": "KC",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 18.3,
         "proj": 12.65
        },
        {
@@ -12503,7 +12503,7 @@
         "pos": "WR",
         "nfl": "DAL",
         "slot": "WR",
-        "pts": 0,
+        "pts": 6.8,
         "proj": 13.96
        },
        {
@@ -12512,7 +12512,7 @@
         "pos": "RB",
         "nfl": "TEN",
         "slot": "RB",
-        "pts": 0,
+        "pts": 28.7,
         "proj": 15.02
        },
        {
@@ -12521,7 +12521,7 @@
         "pos": "WR",
         "nfl": "ARI",
         "slot": "WR",
-        "pts": 0,
+        "pts": 26.8,
         "proj": 12.66
        },
        {
@@ -12530,7 +12530,7 @@
         "pos": "RB",
         "nfl": "DAL",
         "slot": "RB",
-        "pts": 0,
+        "pts": 6.7,
         "proj": 20.11
        },
        {
@@ -12539,8 +12539,8 @@
         "pos": "TE",
         "nfl": "IND",
         "slot": "TE",
-        "pts": 0,
-        "proj": 11.46
+        "pts": 5.8,
+        "proj": 11.34
        },
        {
         "id": 4723820,
@@ -12557,8 +12557,8 @@
         "pos": "K",
         "nfl": "JAX",
         "slot": "K",
-        "pts": 0,
-        "proj": 9.14
+        "pts": 6.0,
+        "proj": 9.01
        },
        {
         "id": 3917315,
@@ -12566,7 +12566,7 @@
         "pos": "QB",
         "nfl": "MIN",
         "slot": "QB",
-        "pts": 0,
+        "pts": 19.9,
         "proj": 17.25
        },
        {
@@ -12575,7 +12575,7 @@
         "pos": "D/ST",
         "nfl": "CLE",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 2.0,
         "proj": 6.25
        }
       ],
@@ -12604,7 +12604,7 @@
         "pos": "WR",
         "nfl": "BAL",
         "slot": "BE",
-        "pts": 0,
+        "pts": 2.3,
         "proj": 7.98
        },
        {
@@ -12614,7 +12614,7 @@
         "nfl": "LV",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.9
+        "proj": 10.91
        },
        {
         "id": 4428850,
@@ -12649,8 +12649,8 @@
         "pos": "TE",
         "nfl": "NE",
         "slot": "BE",
-        "pts": 0,
-        "proj": 10.43
+        "pts": 6.0,
+        "proj": 10.34
        }
       ]
      },
@@ -12665,7 +12665,7 @@
       "espnId": 1,
       "manager": "brett",
       "name": "Spencer James Squad",
-      "score": 20.9,
+      "score": 110.76,
       "starters": [
        {
         "id": 4241389,
@@ -12673,8 +12673,8 @@
         "pos": "WR",
         "nfl": "DAL",
         "slot": "WR",
-        "pts": 0,
-        "proj": 20.06
+        "pts": 12.8,
+        "proj": 20.07
        },
        {
         "id": 4379399,
@@ -12682,8 +12682,8 @@
         "pos": "RB",
         "nfl": "BUF",
         "slot": "RB",
-        "pts": 0,
-        "proj": 18.82
+        "pts": 18.1,
+        "proj": 18.81
        },
        {
         "id": 4612826,
@@ -12691,8 +12691,8 @@
         "pos": "WR",
         "nfl": "LAC",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 10.36
+        "pts": 12.6,
+        "proj": 10.37
        },
        {
         "id": 4685702,
@@ -12700,7 +12700,7 @@
         "pos": "RB",
         "nfl": "CLE",
         "slot": "RB",
-        "pts": 0,
+        "pts": 6.9,
         "proj": 11.23
        },
        {
@@ -12727,8 +12727,8 @@
         "pos": "QB",
         "nfl": "NE",
         "slot": "QB",
-        "pts": 0,
-        "proj": 22.44
+        "pts": 22.46,
+        "proj": 22.07
        },
        {
         "id": 3116165,
@@ -12737,7 +12737,7 @@
         "nfl": "TB",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 10.7
+        "proj": 10.58
        },
        {
         "id": 17372,
@@ -12745,7 +12745,7 @@
         "pos": "K",
         "nfl": "PIT",
         "slot": "K",
-        "pts": 0,
+        "pts": 8.0,
         "proj": 10.43
        },
        {
@@ -12754,8 +12754,8 @@
         "pos": "D/ST",
         "nfl": "NE",
         "slot": "D/ST",
-        "pts": 0,
-        "proj": 5.75
+        "pts": 9.0,
+        "proj": 5.81
        }
       ],
       "bench": [
@@ -12783,7 +12783,7 @@
         "pos": "RB",
         "nfl": "PIT",
         "slot": "BE",
-        "pts": 0,
+        "pts": 11.6,
         "proj": 9.33
        },
        {
@@ -12792,7 +12792,7 @@
         "pos": "RB",
         "nfl": "MIN",
         "slot": "BE",
-        "pts": 0,
+        "pts": 6.0,
         "proj": 10.48
        },
        {
@@ -12810,8 +12810,8 @@
         "pos": "TE",
         "nfl": "BUF",
         "slot": "BE",
-        "pts": 0,
-        "proj": 8.9
+        "pts": 18.6,
+        "proj": 8.89
        }
       ]
      },
@@ -12819,7 +12819,7 @@
       "espnId": 5,
       "manager": "tyler",
       "name": "Ashton 3:16",
-      "score": 24.9,
+      "score": 85.1,
       "starters": [
        {
         "id": 3043078,
@@ -12827,7 +12827,7 @@
         "pos": "RB",
         "nfl": "BAL",
         "slot": "RB",
-        "pts": 0,
+        "pts": 14.0,
         "proj": 18.8
        },
        {
@@ -12836,7 +12836,7 @@
         "pos": "RB",
         "nfl": "LAR",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 12.9,
         "proj": 18.02
        },
        {
@@ -12845,8 +12845,8 @@
         "pos": "TE",
         "nfl": "ATL",
         "slot": "TE",
-        "pts": 0,
-        "proj": 10.33
+        "pts": 2.6,
+        "proj": 10.23
        },
        {
         "id": 4047650,
@@ -12854,7 +12854,7 @@
         "pos": "WR",
         "nfl": "PIT",
         "slot": "WR",
-        "pts": 0,
+        "pts": 1.4,
         "proj": 12.2
        },
        {
@@ -12890,7 +12890,7 @@
         "pos": "D/ST",
         "nfl": "BAL",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": -1.0,
         "proj": 3.35
        },
        {
@@ -12899,7 +12899,7 @@
         "pos": "WR",
         "nfl": "MIN",
         "slot": "WR",
-        "pts": 0,
+        "pts": 14.3,
         "proj": 17.88
        },
        {
@@ -12908,7 +12908,7 @@
         "pos": "K",
         "nfl": "BUF",
         "slot": "K",
-        "pts": 0,
+        "pts": 16.0,
         "proj": 10.39
        }
       ],
@@ -12919,7 +12919,7 @@
         "pos": "RB",
         "nfl": "LAC",
         "slot": "BE",
-        "pts": 0,
+        "pts": 4.7,
         "proj": 8.15
        },
        {
@@ -12946,7 +12946,7 @@
         "pos": "WR",
         "nfl": "PHI",
         "slot": "BE",
-        "pts": 0,
+        "pts": 11.7,
         "proj": 10.18
        },
        {
@@ -12980,7 +12980,7 @@
       "espnId": 7,
       "manager": "brad",
       "name": "Free Josh Jacobs",
-      "score": 23.2,
+      "score": 118.3,
       "starters": [
        {
         "id": 4432665,
@@ -12988,8 +12988,8 @@
         "pos": "TE",
         "nfl": "LV",
         "slot": "TE",
-        "pts": 0,
-        "proj": 16.15
+        "pts": 28.2,
+        "proj": 16.16
        },
        {
         "id": 4047365,
@@ -13015,8 +13015,8 @@
         "pos": "WR",
         "nfl": "BUF",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 13.63
+        "pts": 16.6,
+        "proj": 13.61
        },
        {
         "id": 2577417,
@@ -13024,7 +13024,7 @@
         "pos": "QB",
         "nfl": "DAL",
         "slot": "QB",
-        "pts": 0,
+        "pts": 19.8,
         "proj": 19.53
        },
        {
@@ -13033,7 +13033,7 @@
         "pos": "TE",
         "nfl": "DET",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 6.5,
         "proj": 10.74
        },
        {
@@ -13051,7 +13051,7 @@
         "pos": "WR",
         "nfl": "PIT",
         "slot": "WR",
-        "pts": 0,
+        "pts": 8.0,
         "proj": 10.77
        },
        {
@@ -13060,7 +13060,7 @@
         "pos": "RB",
         "nfl": "WSH",
         "slot": "RB",
-        "pts": 0,
+        "pts": 14.0,
         "proj": 12.43
        },
        {
@@ -13069,8 +13069,8 @@
         "pos": "D/ST",
         "nfl": "KC",
         "slot": "D/ST",
-        "pts": 0,
-        "proj": 5.07
+        "pts": 2.0,
+        "proj": 5.01
        }
       ],
       "bench": [
@@ -13107,7 +13107,7 @@
         "pos": "WR",
         "nfl": "MIN",
         "slot": "BE",
-        "pts": 0,
+        "pts": 11.6,
         "proj": 9.79
        },
        {
@@ -13116,8 +13116,8 @@
         "pos": "WR",
         "nfl": "JAX",
         "slot": "BE",
-        "pts": 0,
-        "proj": 10.78
+        "pts": 4.4,
+        "proj": 10.63
        },
        {
         "id": 4366031,
@@ -13161,7 +13161,7 @@
       "espnId": 3,
       "manager": "cody",
       "name": "KYLE ONLY HATE",
-      "score": 34.6,
+      "score": 167.58,
       "starters": [
        {
         "id": 4429795,
@@ -13169,7 +13169,7 @@
         "pos": "RB",
         "nfl": "DET",
         "slot": "RB",
-        "pts": 0,
+        "pts": 24.8,
         "proj": 24.59
        },
        {
@@ -13178,7 +13178,7 @@
         "pos": "RB",
         "nfl": "PHI",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 12.4,
         "proj": 14.03
        },
        {
@@ -13187,7 +13187,7 @@
         "pos": "WR",
         "nfl": "CIN",
         "slot": "WR",
-        "pts": 0,
+        "pts": 37.5,
         "proj": 15.49
        },
        {
@@ -13205,7 +13205,7 @@
         "pos": "RB",
         "nfl": "PIT",
         "slot": "RB",
-        "pts": 0,
+        "pts": 21.3,
         "proj": 15.95
        },
        {
@@ -13223,7 +13223,7 @@
         "pos": "WR",
         "nfl": "CLE",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 9.7,
         "proj": 11.41
        },
        {
@@ -13232,7 +13232,7 @@
         "pos": "D/ST",
         "nfl": "PIT",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 16.0,
         "proj": 8.0
        },
        {
@@ -13241,7 +13241,7 @@
         "pos": "K",
         "nfl": "BAL",
         "slot": "K",
-        "pts": 0,
+        "pts": 3.0,
         "proj": 8.88
        },
        {
@@ -13250,8 +13250,8 @@
         "pos": "QB",
         "nfl": "LAR",
         "slot": "QB",
-        "pts": 0,
-        "proj": 16.94
+        "pts": 8.28,
+        "proj": 16.95
        }
       ],
       "bench": [
@@ -13288,8 +13288,8 @@
         "pos": "WR",
         "nfl": "IND",
         "slot": "BE",
-        "pts": 0,
-        "proj": 8.38
+        "pts": 12.3,
+        "proj": 8.29
        },
        {
         "id": 4361050,
@@ -13317,6 +13317,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "id": 3054850,
+        "name": "Alvin Kamara",
+        "pos": "RB",
+        "nfl": "NO",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
        }
       ]
      },
@@ -13331,7 +13340,7 @@
       "espnId": 2,
       "manager": "josh",
       "name": "OMM",
-      "score": 0,
+      "score": 137.78,
       "starters": [
        {
         "id": 4362628,
@@ -13339,8 +13348,8 @@
         "pos": "WR",
         "nfl": "CIN",
         "slot": "WR",
-        "pts": 0,
-        "proj": 21.88
+        "pts": 31.1,
+        "proj": 21.9
        },
        {
         "id": 4870808,
@@ -13348,7 +13357,7 @@
         "pos": "RB",
         "nfl": "ARI",
         "slot": "RB",
-        "pts": 0,
+        "pts": 2.3,
         "proj": 11.56
        },
        {
@@ -13357,7 +13366,7 @@
         "pos": "TE",
         "nfl": "ARI",
         "slot": "TE",
-        "pts": 0,
+        "pts": 20.2,
         "proj": 17.67
        },
        {
@@ -13366,7 +13375,7 @@
         "pos": "WR",
         "nfl": "DEN",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 14.9,
         "proj": 10.85
        },
        {
@@ -13375,7 +13384,7 @@
         "pos": "WR",
         "nfl": "DET",
         "slot": "WR",
-        "pts": 0,
+        "pts": 17.0,
         "proj": 11.1
        },
        {
@@ -13384,7 +13393,7 @@
         "pos": "QB",
         "nfl": "WSH",
         "slot": "QB",
-        "pts": 0,
+        "pts": 14.98,
         "proj": 22.8
        },
        {
@@ -13393,8 +13402,8 @@
         "pos": "RB",
         "nfl": "NE",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 15.86
+        "pts": 12.0,
+        "proj": 15.72
        },
        {
         "id": 3953687,
@@ -13402,7 +13411,7 @@
         "pos": "K",
         "nfl": "DAL",
         "slot": "K",
-        "pts": 0,
+        "pts": 12.0,
         "proj": 10.0
        },
        {
@@ -13411,7 +13420,7 @@
         "pos": "RB",
         "nfl": "LAR",
         "slot": "RB",
-        "pts": 0,
+        "pts": 13.3,
         "proj": 11.51
        },
        {
@@ -13449,7 +13458,7 @@
         "pos": "WR",
         "nfl": "KC",
         "slot": "BE",
-        "pts": 0,
+        "pts": 4.3,
         "proj": 8.16
        },
        {
@@ -13485,7 +13494,7 @@
         "pos": "WR",
         "nfl": "TEN",
         "slot": "BE",
-        "pts": 0,
+        "pts": 15.7,
         "proj": 9.87
        },
        {
@@ -13503,7 +13512,7 @@
         "pos": "WR",
         "nfl": "WSH",
         "slot": "BE",
-        "pts": 0,
+        "pts": 11.1,
         "proj": 8.96
        }
       ]
@@ -13512,7 +13521,7 @@
       "espnId": 6,
       "manager": "keith",
       "name": " Taylor Swift",
-      "score": 0,
+      "score": 92.9,
       "starters": [
        {
         "id": 4242335,
@@ -13520,8 +13529,8 @@
         "pos": "RB",
         "nfl": "IND",
         "slot": "RB",
-        "pts": 0,
-        "proj": 15.87
+        "pts": 6.7,
+        "proj": 15.63
        },
        {
         "id": 4362238,
@@ -13529,7 +13538,7 @@
         "pos": "RB",
         "nfl": "CIN",
         "slot": "RB",
-        "pts": 0,
+        "pts": 16.1,
         "proj": 16.94
        },
        {
@@ -13539,7 +13548,7 @@
         "nfl": "SEA",
         "slot": "WR",
         "pts": 0,
-        "proj": 21.47
+        "proj": 22.06
        },
        {
         "id": 4259545,
@@ -13556,8 +13565,8 @@
         "pos": "WR",
         "nfl": "JAX",
         "slot": "WR",
-        "pts": 0,
-        "proj": 16.17
+        "pts": 3.6,
+        "proj": 15.95
        },
        {
         "id": 4360310,
@@ -13565,17 +13574,17 @@
         "pos": "QB",
         "nfl": "JAX",
         "slot": "QB",
-        "pts": 0,
-        "proj": 20.85
+        "pts": 19.4,
+        "proj": 20.33
        },
        {
-        "id": 4360569,
-        "name": "Jordan Mason",
-        "pos": "RB",
-        "nfl": "MIN",
+        "id": 4870653,
+        "name": "KC Concepcion",
+        "pos": "WR",
+        "nfl": "CLE",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 9.49
+        "pts": 6.7,
+        "proj": 10.2
        },
        {
         "id": 3150744,
@@ -13583,8 +13592,8 @@
         "pos": "K",
         "nfl": "TB",
         "slot": "K",
-        "pts": 0,
-        "proj": 9.54
+        "pts": 12.0,
+        "proj": 9.45
        },
        {
         "id": -16016,
@@ -13592,7 +13601,7 @@
         "pos": "D/ST",
         "nfl": "MIN",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 5.0,
         "proj": 4.46
        },
        {
@@ -13601,7 +13610,7 @@
         "pos": "TE",
         "nfl": "CLE",
         "slot": "TE",
-        "pts": 0,
+        "pts": 23.4,
         "proj": 8.88
        }
       ],
@@ -13614,6 +13623,15 @@
         "slot": "IR",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "id": 4360569,
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "nfl": "MIN",
+        "slot": "BE",
+        "pts": 2.0,
+        "proj": 9.49
        },
        {
         "id": 3040151,
@@ -13632,15 +13650,6 @@
         "slot": "IR",
         "pts": 0,
         "proj": 0
-       },
-       {
-        "id": 4870653,
-        "name": "KC Concepcion",
-        "pos": "WR",
-        "nfl": "CLE",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 10.2
        },
        {
         "id": 4569559,
@@ -13675,7 +13684,7 @@
         "pos": "WR",
         "nfl": "WSH",
         "slot": "BE",
-        "pts": 0,
+        "pts": 10.4,
         "proj": 8.16
        }
       ]
@@ -13691,7 +13700,7 @@
       "espnId": 10,
       "manager": "reis",
       "name": "Snooki",
-      "score": 9.6,
+      "score": 119.56,
       "starters": [
        {
         "id": 4430807,
@@ -13699,8 +13708,8 @@
         "pos": "RB",
         "nfl": "ATL",
         "slot": "RB",
-        "pts": 0,
-        "proj": 20.28
+        "pts": 7.6,
+        "proj": 20.06
        },
        {
         "id": 4569618,
@@ -13708,8 +13717,8 @@
         "pos": "WR",
         "nfl": "NYJ",
         "slot": "WR",
-        "pts": 0,
-        "proj": 14.14
+        "pts": 14.3,
+        "proj": 14.13
        },
        {
         "id": 3918298,
@@ -13717,7 +13726,7 @@
         "pos": "QB",
         "nfl": "BUF",
         "slot": "QB",
-        "pts": 0,
+        "pts": 26.56,
         "proj": 23.7
        },
        {
@@ -13726,8 +13735,8 @@
         "pos": "RB",
         "nfl": "TB",
         "slot": "RB",
-        "pts": 0,
-        "proj": 17.22
+        "pts": 21.0,
+        "proj": 17.04
        },
        {
         "id": 4241985,
@@ -13735,7 +13744,7 @@
         "pos": "RB",
         "nfl": "DEN",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 1.3,
         "proj": 9.03
        },
        {
@@ -13744,17 +13753,8 @@
         "pos": "TE",
         "nfl": "PHI",
         "slot": "TE",
-        "pts": 0,
+        "pts": 7.2,
         "proj": 10.97
-       },
-       {
-        "id": 4034949,
-        "name": "Eddy Pineiro",
-        "pos": "K",
-        "nfl": "SF",
-        "slot": "K",
-        "pts": 0,
-        "proj": 0
        },
        {
         "id": 4695883,
@@ -13771,8 +13771,8 @@
         "pos": "WR",
         "nfl": "MIA",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 10.26
+        "pts": 15.0,
+        "proj": 10.17
        },
        {
         "id": -16014,
@@ -13780,8 +13780,17 @@
         "pos": "D/ST",
         "nfl": "LAR",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 11.0,
         "proj": 7.64
+       },
+       {
+        "id": 16339,
+        "name": "Brandon McManus",
+        "pos": "K",
+        "nfl": "LAR",
+        "slot": "K",
+        "pts": 6.0,
+        "proj": 7.39
        }
       ],
       "bench": [
@@ -13800,7 +13809,7 @@
         "pos": "WR",
         "nfl": "DEN",
         "slot": "BE",
-        "pts": 0,
+        "pts": 9.3,
         "proj": 9.58
        },
        {
@@ -13818,7 +13827,7 @@
         "pos": "TE",
         "nfl": "MIN",
         "slot": "BE",
-        "pts": 0,
+        "pts": 15.8,
         "proj": 11.23
        },
        {
@@ -13836,8 +13845,8 @@
         "pos": "RB",
         "nfl": "TB",
         "slot": "BE",
-        "pts": 0,
-        "proj": 7.86
+        "pts": 14.0,
+        "proj": 7.79
        },
        {
         "id": 4635008,
@@ -13845,8 +13854,8 @@
         "pos": "WR",
         "nfl": "BUF",
         "slot": "BE",
-        "pts": 0,
-        "proj": 6.65
+        "pts": 1.4,
+        "proj": 7.26
        },
        {
         "id": 5083754,
@@ -13854,7 +13863,7 @@
         "pos": "WR",
         "nfl": "DAL",
         "slot": "BE",
-        "pts": 0,
+        "pts": 13.1,
         "proj": 9.1
        }
       ]
@@ -13863,7 +13872,7 @@
       "espnId": 8,
       "manager": "noah",
       "name": "Gno'msayin Mah-fkah",
-      "score": 21.52,
+      "score": 158.92,
       "starters": [
        {
         "id": 4426515,
@@ -13871,7 +13880,7 @@
         "pos": "WR",
         "nfl": "LAR",
         "slot": "WR",
-        "pts": 0,
+        "pts": 25.0,
         "proj": 22.8
        },
        {
@@ -13880,8 +13889,8 @@
         "pos": "WR",
         "nfl": "ATL",
         "slot": "WR",
-        "pts": 0,
-        "proj": 18.11
+        "pts": 1.8,
+        "proj": 17.93
        },
        {
         "id": 4882093,
@@ -13889,8 +13898,8 @@
         "pos": "RB",
         "nfl": "JAX",
         "slot": "RB",
-        "pts": 0,
-        "proj": 14.72
+        "pts": 29.9,
+        "proj": 14.56
        },
        {
         "id": 4702555,
@@ -13898,7 +13907,7 @@
         "pos": "RB",
         "nfl": "DEN",
         "slot": "RB/WR/TE",
-        "pts": 0,
+        "pts": 20.4,
         "proj": 9.34
        },
        {
@@ -13907,8 +13916,8 @@
         "pos": "RB",
         "nfl": "NYJ",
         "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 17.22
+        "pts": 23.3,
+        "proj": 17.39
        },
        {
         "id": 4571557,
@@ -13916,8 +13925,8 @@
         "pos": "K",
         "nfl": "IND",
         "slot": "K",
-        "pts": 0,
-        "proj": 10.25
+        "pts": 1.0,
+        "proj": 10.16
        },
        {
         "id": 4890973,
@@ -13925,8 +13934,8 @@
         "pos": "RB",
         "nfl": "LV",
         "slot": "RB",
-        "pts": 0,
-        "proj": 16.83
+        "pts": 10.3,
+        "proj": 16.84
        },
        {
         "id": 4036378,
@@ -13943,7 +13952,7 @@
         "pos": "D/ST",
         "nfl": "WSH",
         "slot": "D/ST",
-        "pts": 0,
+        "pts": 14.0,
         "proj": 6.86
        },
        {
@@ -13952,7 +13961,7 @@
         "pos": "TE",
         "nfl": "KC",
         "slot": "TE",
-        "pts": 0,
+        "pts": 11.7,
         "proj": 9.3
        }
       ],
@@ -13964,7 +13973,7 @@
         "nfl": "BAL",
         "slot": "BE",
         "pts": 0,
-        "proj": 22.15
+        "proj": 22.17
        },
        {
         "id": 4373678,
@@ -13972,8 +13981,8 @@
         "pos": "WR",
         "nfl": "BUF",
         "slot": "BE",
-        "pts": 0,
-        "proj": 9.36
+        "pts": 11.4,
+        "proj": 9.35
        },
        {
         "id": 4696981,
@@ -13999,8 +14008,8 @@
         "pos": "WR",
         "nfl": "MIA",
         "slot": "BE",
-        "pts": 0,
-        "proj": 9.15
+        "pts": 8.3,
+        "proj": 9.08
        },
        {
         "id": 15818,
@@ -14008,8 +14017,8 @@
         "pos": "WR",
         "nfl": "IND",
         "slot": "BE",
-        "pts": 0,
-        "proj": 9.21
+        "pts": 13.7,
+        "proj": 9.11
        }
       ]
      },
@@ -14033,7 +14042,7 @@
      "slot": "WR",
      "nfl": "DAL",
      "injury": null,
-     "pts": 155.5
+     "pts": 168.3
     },
     {
      "id": 4379399,
@@ -14042,7 +14051,7 @@
      "slot": "RB",
      "nfl": "BUF",
      "injury": null,
-     "pts": 113.6
+     "pts": 131.7
     },
     {
      "id": 4241478,
@@ -14060,7 +14069,7 @@
      "slot": "RB/WR/TE",
      "nfl": "LAC",
      "injury": null,
-     "pts": 39.0
+     "pts": 51.6
     },
     {
      "id": 4685702,
@@ -14069,7 +14078,7 @@
      "slot": "RB",
      "nfl": "CLE",
      "injury": null,
-     "pts": 79.7
+     "pts": 86.6
     },
     {
      "id": 4432708,
@@ -14087,7 +14096,7 @@
      "slot": "BE",
      "nfl": "PIT",
      "injury": null,
-     "pts": 33.0
+     "pts": 44.6
     },
     {
      "id": 4701936,
@@ -14114,7 +14123,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 73.8
+     "pts": 79.8
     },
     {
      "id": 4426385,
@@ -14131,8 +14140,8 @@
      "pos": "TE",
      "slot": "BE",
      "nfl": "BUF",
-     "injury": "QUESTIONABLE",
-     "pts": 60.5
+     "injury": null,
+     "pts": 79.1
     },
     {
      "id": 4431452,
@@ -14141,7 +14150,7 @@
      "slot": "QB",
      "nfl": "NE",
      "injury": null,
-     "pts": 138.46
+     "pts": 160.92
     },
     {
      "id": 3116165,
@@ -14159,7 +14168,7 @@
      "slot": "K",
      "nfl": "PIT",
      "injury": null,
-     "pts": 69.0
+     "pts": 77.0
     },
     {
      "id": -16017,
@@ -14168,7 +14177,7 @@
      "slot": "D/ST",
      "nfl": "NE",
      "injury": null,
-     "pts": 42.0
+     "pts": 51.0
     }
    ]
   },
@@ -14182,7 +14191,7 @@
      "slot": "WR",
      "nfl": "CIN",
      "injury": null,
-     "pts": 97.1
+     "pts": 128.2
     },
     {
      "id": 4870808,
@@ -14190,8 +14199,8 @@
      "pos": "RB",
      "slot": "RB",
      "nfl": "ARI",
-     "injury": null,
-     "pts": 51.1
+     "injury": "QUESTIONABLE",
+     "pts": 53.4
     },
     {
      "id": 4361307,
@@ -14200,7 +14209,7 @@
      "slot": "TE",
      "nfl": "ARI",
      "injury": null,
-     "pts": 130.2
+     "pts": 150.4
     },
     {
      "id": 4567750,
@@ -14217,8 +14226,8 @@
      "pos": "WR",
      "slot": "RB/WR/TE",
      "nfl": "DEN",
-     "injury": "QUESTIONABLE",
-     "pts": 63.9
+     "injury": null,
+     "pts": 78.8
     },
     {
      "id": 4426388,
@@ -14227,7 +14236,7 @@
      "slot": "WR",
      "nfl": "DET",
      "injury": null,
-     "pts": 83.7
+     "pts": 100.7
     },
     {
      "id": 4426348,
@@ -14236,7 +14245,7 @@
      "slot": "QB",
      "nfl": "WSH",
      "injury": null,
-     "pts": 85.66
+     "pts": 100.64
     },
     {
      "id": 4569173,
@@ -14245,7 +14254,7 @@
      "slot": "RB/WR/TE",
      "nfl": "NE",
      "injury": null,
-     "pts": 86.9
+     "pts": 98.9
     },
     {
      "id": 4608686,
@@ -14263,7 +14272,7 @@
      "slot": "K",
      "nfl": "DAL",
      "injury": null,
-     "pts": 59.0
+     "pts": 71.0
     },
     {
      "id": 4429096,
@@ -14272,7 +14281,7 @@
      "slot": "RB",
      "nfl": "LAR",
      "injury": null,
-     "pts": 69.5
+     "pts": 82.8
     },
     {
      "id": 4683062,
@@ -14281,7 +14290,7 @@
      "slot": "BE",
      "nfl": "KC",
      "injury": null,
-     "pts": 51.7
+     "pts": 56.0
     },
     {
      "id": -16026,
@@ -14326,7 +14335,7 @@
      "slot": "BE",
      "nfl": "TEN",
      "injury": null,
-     "pts": 61.6
+     "pts": 77.3
     },
     {
      "id": 4586312,
@@ -14343,8 +14352,8 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
-     "pts": 36.2
+     "injury": null,
+     "pts": 47.3
     }
    ]
   },
@@ -14358,7 +14367,7 @@
      "slot": "RB",
      "nfl": "DET",
      "injury": null,
-     "pts": 171.0
+     "pts": 195.8
     },
     {
      "id": 3929630,
@@ -14367,7 +14376,7 @@
      "slot": "RB/WR/TE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 38.1
+     "pts": 50.5
     },
     {
      "id": 4258173,
@@ -14394,7 +14403,7 @@
      "slot": "WR",
      "nfl": "CIN",
      "injury": null,
-     "pts": 102.1
+     "pts": 139.6
     },
     {
      "id": 4685512,
@@ -14421,7 +14430,7 @@
      "slot": "RB",
      "nfl": "PIT",
      "injury": null,
-     "pts": 119.5
+     "pts": 140.8
     },
     {
      "id": 4572680,
@@ -14439,7 +14448,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 57.4
+     "pts": 69.7
     },
     {
      "id": 4361050,
@@ -14466,7 +14475,7 @@
      "slot": "RB/WR/TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 77.2
+     "pts": 86.9
     },
     {
      "id": -16023,
@@ -14475,7 +14484,7 @@
      "slot": "D/ST",
      "nfl": "PIT",
      "injury": null,
-     "pts": 57.0
+     "pts": 73.0
     },
     {
      "id": 4361741,
@@ -14493,7 +14502,7 @@
      "slot": "K",
      "nfl": "BAL",
      "injury": null,
-     "pts": 63.0
+     "pts": 66.0
     },
     {
      "id": 12483,
@@ -14502,7 +14511,16 @@
      "slot": "QB",
      "nfl": "LAR",
      "injury": null,
-     "pts": 123.36
+     "pts": 131.64
+    },
+    {
+     "id": 3054850,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 65.8
     }
    ]
   },
@@ -14516,7 +14534,7 @@
      "slot": "RB/WR/TE",
      "nfl": "KC",
      "injury": null,
-     "pts": 38.0
+     "pts": 56.3
     },
     {
      "id": 4239996,
@@ -14533,8 +14551,8 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "DAL",
-     "injury": "QUESTIONABLE",
-     "pts": 97.5
+     "injury": null,
+     "pts": 104.3
     },
     {
      "id": 3916148,
@@ -14543,7 +14561,7 @@
      "slot": "RB",
      "nfl": "TEN",
      "injury": null,
-     "pts": 87.8
+     "pts": 116.5
     },
     {
      "id": 4710714,
@@ -14560,8 +14578,8 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "ARI",
-     "injury": null,
-     "pts": 81.88
+     "injury": "QUESTIONABLE",
+     "pts": 108.68
     },
     {
      "id": 4361579,
@@ -14570,7 +14588,7 @@
      "slot": "RB",
      "nfl": "DAL",
      "injury": null,
-     "pts": 130.5
+     "pts": 137.2
     },
     {
      "id": 4431459,
@@ -14579,7 +14597,7 @@
      "slot": "TE",
      "nfl": "IND",
      "injury": null,
-     "pts": 69.9
+     "pts": 75.7
     },
     {
      "id": 4870847,
@@ -14588,7 +14606,7 @@
      "slot": "BE",
      "nfl": "BAL",
      "injury": null,
-     "pts": 15.6
+     "pts": 17.9
     },
     {
      "id": 4428718,
@@ -14641,8 +14659,8 @@
      "pos": "TE",
      "slot": "BE",
      "nfl": "NE",
-     "injury": null,
-     "pts": 67.6
+     "injury": "QUESTIONABLE",
+     "pts": 73.6
     },
     {
      "id": 4686361,
@@ -14651,7 +14669,7 @@
      "slot": "K",
      "nfl": "JAX",
      "injury": null,
-     "pts": 56.0
+     "pts": 62.0
     },
     {
      "id": 3917315,
@@ -14659,8 +14677,8 @@
      "pos": "QB",
      "slot": "QB",
      "nfl": "MIN",
-     "injury": null,
-     "pts": 53.68
+     "injury": "QUESTIONABLE",
+     "pts": 73.58
     },
     {
      "id": -16005,
@@ -14669,7 +14687,7 @@
      "slot": "D/ST",
      "nfl": "CLE",
      "injury": null,
-     "pts": 42.0
+     "pts": 44.0
     }
    ]
   },
@@ -14683,7 +14701,7 @@
      "slot": "RB",
      "nfl": "BAL",
      "injury": null,
-     "pts": 122.7
+     "pts": 136.7
     },
     {
      "id": 4430737,
@@ -14692,7 +14710,7 @@
      "slot": "RB/WR/TE",
      "nfl": "LAR",
      "injury": null,
-     "pts": 137.1
+     "pts": 150.0
     },
     {
      "id": 4685382,
@@ -14701,7 +14719,7 @@
      "slot": "BE",
      "nfl": "LAC",
      "injury": null,
-     "pts": 57.5
+     "pts": 62.2
     },
     {
      "id": 3121422,
@@ -14728,7 +14746,7 @@
      "slot": "TE",
      "nfl": "ATL",
      "injury": null,
-     "pts": 63.1
+     "pts": 65.7
     },
     {
      "id": 4047650,
@@ -14737,7 +14755,7 @@
      "slot": "WR",
      "nfl": "PIT",
      "injury": null,
-     "pts": 76.5
+     "pts": 77.9
     },
     {
      "id": 4431611,
@@ -14773,7 +14791,7 @@
      "slot": "BE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 49.9
+     "pts": 61.6
     },
     {
      "id": 4429059,
@@ -14791,7 +14809,7 @@
      "slot": "D/ST",
      "nfl": "BAL",
      "injury": null,
-     "pts": 33.0
+     "pts": 32.0
     },
     {
      "id": 2971573,
@@ -14809,7 +14827,7 @@
      "slot": "WR",
      "nfl": "MIN",
      "injury": null,
-     "pts": 72.1
+     "pts": 86.4
     },
     {
      "id": 3917232,
@@ -14818,7 +14836,7 @@
      "slot": "K",
      "nfl": "BUF",
      "injury": null,
-     "pts": 62.0
+     "pts": 78.0
     }
    ]
   },
@@ -14832,7 +14850,7 @@
      "slot": "RB",
      "nfl": "IND",
      "injury": null,
-     "pts": 137.5
+     "pts": 144.2
     },
     {
      "id": 4362238,
@@ -14841,7 +14859,7 @@
      "slot": "RB",
      "nfl": "CIN",
      "injury": null,
-     "pts": 74.8
+     "pts": 90.9
     },
     {
      "id": 4047646,
@@ -14877,7 +14895,7 @@
      "slot": "WR",
      "nfl": "JAX",
      "injury": null,
-     "pts": 91.9
+     "pts": 95.5
     },
     {
      "id": 4360310,
@@ -14886,16 +14904,16 @@
      "slot": "QB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 114.2
+     "pts": 133.6
     },
     {
      "id": 4360569,
      "name": "Jordan Mason",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 18.7
+     "pts": 20.7
     },
     {
      "id": 3040151,
@@ -14919,10 +14937,10 @@
      "id": 4870653,
      "name": "KC Concepcion",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 62.9
+     "pts": 69.6
     },
     {
      "id": 4569559,
@@ -14958,7 +14976,7 @@
      "slot": "K",
      "nfl": "TB",
      "injury": null,
-     "pts": 77.0
+     "pts": 89.0
     },
     {
      "id": 5081432,
@@ -14967,7 +14985,7 @@
      "slot": "BE",
      "nfl": "WSH",
      "injury": null,
-     "pts": 44.5
+     "pts": 54.9
     },
     {
      "id": -16016,
@@ -14976,7 +14994,7 @@
      "slot": "D/ST",
      "nfl": "MIN",
      "injury": null,
-     "pts": 74.0
+     "pts": 79.0
     },
     {
      "id": 5083076,
@@ -14985,7 +15003,7 @@
      "slot": "TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 66.7
+     "pts": 90.1
     }
    ]
   },
@@ -15008,7 +15026,7 @@
      "slot": "TE",
      "nfl": "LV",
      "injury": null,
-     "pts": 95.5
+     "pts": 123.7
     },
     {
      "id": 4047365,
@@ -15035,7 +15053,7 @@
      "slot": "RB/WR/TE",
      "nfl": "BUF",
      "injury": "QUESTIONABLE",
-     "pts": 36.3
+     "pts": 52.9
     },
     {
      "id": 4432710,
@@ -15062,7 +15080,7 @@
      "slot": "QB",
      "nfl": "DAL",
      "injury": null,
-     "pts": 128.14
+     "pts": 147.94
     },
     {
      "id": 4429205,
@@ -15071,7 +15089,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 37.5
+     "pts": 49.1
     },
     {
      "id": 4430027,
@@ -15080,7 +15098,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DET",
      "injury": null,
-     "pts": 79.4
+     "pts": 85.9
     },
     {
      "id": 3916433,
@@ -15088,8 +15106,8 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "JAX",
-     "injury": "QUESTIONABLE",
-     "pts": 60.7
+     "injury": null,
+     "pts": 65.1
     },
     {
      "id": 4366031,
@@ -15134,7 +15152,7 @@
      "slot": "WR",
      "nfl": "PIT",
      "injury": null,
-     "pts": 58.8
+     "pts": 66.8
     },
     {
      "id": 4361432,
@@ -15152,7 +15170,7 @@
      "slot": "RB",
      "nfl": "WSH",
      "injury": null,
-     "pts": 48.8
+     "pts": 62.8
     },
     {
      "id": -16012,
@@ -15161,7 +15179,7 @@
      "slot": "D/ST",
      "nfl": "KC",
      "injury": null,
-     "pts": 36.0
+     "pts": 38.0
     }
    ]
   },
@@ -15175,7 +15193,7 @@
      "slot": "WR",
      "nfl": "LAR",
      "injury": null,
-     "pts": 113.6
+     "pts": 138.6
     },
     {
      "id": 4426502,
@@ -15184,7 +15202,7 @@
      "slot": "WR",
      "nfl": "ATL",
      "injury": null,
-     "pts": 108.0
+     "pts": 109.8
     },
     {
      "id": 3916387,
@@ -15192,7 +15210,7 @@
      "pos": "QB",
      "slot": "BE",
      "nfl": "BAL",
-     "injury": null,
+     "injury": "OUT",
      "pts": 79.08
     },
     {
@@ -15202,7 +15220,7 @@
      "slot": "RB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 88.4
+     "pts": 118.3
     },
     {
      "id": 4373678,
@@ -15211,7 +15229,7 @@
      "slot": "BE",
      "nfl": "BUF",
      "injury": null,
-     "pts": 55.0
+     "pts": 66.4
     },
     {
      "id": 4696981,
@@ -15238,7 +15256,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 23.7
+     "pts": 44.1
     },
     {
      "id": 4685247,
@@ -15247,7 +15265,7 @@
      "slot": "RB/WR/TE",
      "nfl": "NYJ",
      "injury": null,
-     "pts": 76.3
+     "pts": 99.6
     },
     {
      "id": 4571557,
@@ -15256,7 +15274,7 @@
      "slot": "K",
      "nfl": "IND",
      "injury": null,
-     "pts": 87.0
+     "pts": 88.0
     },
     {
      "id": 4890973,
@@ -15265,7 +15283,7 @@
      "slot": "RB",
      "nfl": "LV",
      "injury": null,
-     "pts": 122.0
+     "pts": 132.3
     },
     {
      "id": 4036378,
@@ -15283,7 +15301,7 @@
      "slot": "BE",
      "nfl": "MIA",
      "injury": null,
-     "pts": 39.3
+     "pts": 47.6
     },
     {
      "id": -16028,
@@ -15292,7 +15310,7 @@
      "slot": "D/ST",
      "nfl": "WSH",
      "injury": null,
-     "pts": 23.0
+     "pts": 37.0
     },
     {
      "id": 15847,
@@ -15301,7 +15319,7 @@
      "slot": "TE",
      "nfl": "KC",
      "injury": null,
-     "pts": 70.3
+     "pts": 82.0
     },
     {
      "id": 15818,
@@ -15310,7 +15328,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 60.8
+     "pts": 74.5
     }
    ]
   },
@@ -15324,7 +15342,7 @@
      "slot": "WR",
      "nfl": "DET",
      "injury": null,
-     "pts": 128.4
+     "pts": 141.0
     },
     {
      "id": 4567048,
@@ -15333,7 +15351,7 @@
      "slot": "RB",
      "nfl": "KC",
      "injury": null,
-     "pts": 147.7
+     "pts": 160.1
     },
     {
      "id": 4595348,
@@ -15350,7 +15368,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NYJ",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 42.5
     },
     {
@@ -15387,7 +15405,7 @@
      "slot": "QB",
      "nfl": "CIN",
      "injury": null,
-     "pts": 130.12
+     "pts": 169.6
     },
     {
      "id": 4678008,
@@ -15405,7 +15423,7 @@
      "slot": "RB/WR/TE",
      "nfl": "WSH",
      "injury": null,
-     "pts": 69.4
+     "pts": 82.2
     },
     {
      "id": 4575131,
@@ -15423,7 +15441,7 @@
      "slot": "RB",
      "nfl": "MIA",
      "injury": null,
-     "pts": 65.3
+     "pts": 72.2
     },
     {
      "id": 4430539,
@@ -15432,7 +15450,7 @@
      "slot": "TE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 59.9
+     "pts": 67.4
     },
     {
      "id": 4567104,
@@ -15450,7 +15468,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 18.6
+     "pts": 21.5
     },
     {
      "id": -16030,
@@ -15459,7 +15477,7 @@
      "slot": "D/ST",
      "nfl": "JAX",
      "injury": null,
-     "pts": 34.0
+     "pts": 55.0
     },
     {
      "id": 4432773,
@@ -15468,7 +15486,7 @@
      "slot": "BE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 25.5
+     "pts": 33.7
     },
     {
      "id": 4035538,
@@ -15491,7 +15509,7 @@
      "slot": "RB",
      "nfl": "ATL",
      "injury": null,
-     "pts": 145.7
+     "pts": 153.3
     },
     {
      "id": 4569618,
@@ -15500,7 +15518,7 @@
      "slot": "WR",
      "nfl": "NYJ",
      "injury": null,
-     "pts": 99.4
+     "pts": 113.7
     },
     {
      "id": 3918298,
@@ -15509,7 +15527,7 @@
      "slot": "QB",
      "nfl": "BUF",
      "injury": null,
-     "pts": 161.26
+     "pts": 187.82
     },
     {
      "id": 4596448,
@@ -15518,7 +15536,7 @@
      "slot": "RB",
      "nfl": "TB",
      "injury": null,
-     "pts": 109.6
+     "pts": 130.6
     },
     {
      "id": 16800,
@@ -15536,7 +15554,7 @@
      "slot": "BE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 38.8
+     "pts": 48.1
     },
     {
      "id": 4241985,
@@ -15545,7 +15563,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 58.0
+     "pts": 59.3
     },
     {
      "id": 3121023,
@@ -15554,16 +15572,7 @@
      "slot": "TE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 56.8
-    },
-    {
-     "id": 4034949,
-     "name": "Eddy Pineiro",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "SF",
-     "injury": null,
-     "pts": 41.0
+     "pts": 64.0
     },
     {
      "id": 4695883,
@@ -15590,7 +15599,7 @@
      "slot": "RB/WR/TE",
      "nfl": "MIA",
      "injury": null,
-     "pts": 56.7
+     "pts": 71.7
     },
     {
      "id": 4036133,
@@ -15599,7 +15608,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 62.7
+     "pts": 78.5
     },
     {
      "id": 4429023,
@@ -15617,7 +15626,7 @@
      "slot": "D/ST",
      "nfl": "LAR",
      "injury": null,
-     "pts": 26.0
+     "pts": 37.0
     },
     {
      "id": 4371733,
@@ -15625,8 +15634,8 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "TB",
-     "injury": "QUESTIONABLE",
-     "pts": 39.0
+     "injury": null,
+     "pts": 53.0
     },
     {
      "id": 4635008,
@@ -15635,7 +15644,7 @@
      "slot": "BE",
      "nfl": "BUF",
      "injury": null,
-     "pts": 65.3
+     "pts": 66.7
     },
     {
      "id": 5083754,
@@ -15644,12 +15653,65 @@
      "slot": "BE",
      "nfl": "DAL",
      "injury": null,
-     "pts": 63.4
+     "pts": 76.5
+    },
+    {
+     "id": 16339,
+     "name": "Brandon McManus",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 11.0
     }
    ]
   }
  ],
  "transactions": [
+  {
+   "id": "c1c5ebea-c977-44bd-95d5-fd4d657b18a0",
+   "date": 1793610394982,
+   "types": [
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 3054850,
+     "action": "add",
+     "team": 3,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "nfl": "NO"
+    }
+   ]
+  },
+  {
+   "id": "35fd11c5-f643-4f7a-85ea-80442677bcbd",
+   "date": 1793560102521,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 4034949,
+     "action": "drop",
+     "team": 10,
+     "name": "Eddy Pineiro",
+     "pos": "K",
+     "nfl": "SF",
+     "since": 0.0
+    },
+    {
+     "player": 16339,
+     "action": "add",
+     "team": 10,
+     "name": "Brandon McManus",
+     "pos": "K",
+     "nfl": "LAR"
+    }
+   ]
+  },
   {
    "id": "65b03992-921e-4629-9397-ff437dd3840a",
    "date": 1793523065329,
@@ -15761,7 +15823,7 @@
      "name": "Bengals D/ST",
      "pos": "D/ST",
      "nfl": "CIN",
-     "since": 0.0
+     "since": 2.0
     }
    ]
   },
@@ -15861,7 +15923,7 @@
      "name": "Keenan Allen",
      "pos": "WR",
      "nfl": "IND",
-     "since": 0.0
+     "since": 13.7
     },
     {
      "player": 15847,
@@ -15915,7 +15977,7 @@
      "name": "Kendrick Bourne",
      "pos": "WR",
      "nfl": "ARI",
-     "since": 0.0
+     "since": 3.9
     },
     {
      "player": 5081432,
@@ -15942,7 +16004,7 @@
      "name": "Broncos D/ST",
      "pos": "D/ST",
      "nfl": "DEN",
-     "since": 0.0
+     "since": 1.0
     },
     {
      "player": -16004,
@@ -15977,7 +16039,7 @@
      "name": "Bengals D/ST",
      "pos": "D/ST",
      "nfl": "CIN",
-     "since": 0.0
+     "since": 2.0
     }
    ]
   },
@@ -15996,7 +16058,7 @@
      "name": "Commanders D/ST",
      "pos": "D/ST",
      "nfl": "WSH",
-     "since": 0.0
+     "since": 14.0
     },
     {
      "player": -16004,
@@ -16031,7 +16093,7 @@
      "name": "Vikings D/ST",
      "pos": "D/ST",
      "nfl": "MIN",
-     "since": 0.0
+     "since": 5.0
     }
    ]
   },
@@ -16085,7 +16147,7 @@
      "name": "Jets D/ST",
      "pos": "D/ST",
      "nfl": "NYJ",
-     "since": 0.0
+     "since": -2.0
     }
    ]
   },
@@ -16121,7 +16183,7 @@
      "name": "Brian Thomas Jr.",
      "pos": "WR",
      "nfl": "JAX",
-     "since": 0.0
+     "since": 8.2
     },
     {
      "player": 3917315,
@@ -16165,7 +16227,7 @@
      "name": "DeMario Douglas",
      "pos": "WR",
      "nfl": "NE",
-     "since": 0.0
+     "since": 16.6
     },
     {
      "player": 12483,
@@ -16200,7 +16262,7 @@
      "name": "Pat Freiermuth",
      "pos": "TE",
      "nfl": "PIT",
-     "since": 0.0
+     "since": 11.6
     }
    ]
   },
@@ -16227,7 +16289,7 @@
      "name": "Matt Gay",
      "pos": "K",
      "nfl": "LV",
-     "since": 0.0
+     "since": 10.0
     }
    ]
   },
@@ -16263,7 +16325,7 @@
      "name": "Andre Szmyt",
      "pos": "K",
      "nfl": "CLE",
-     "since": 0.0
+     "since": 7.0
     },
     {
      "player": 4686361,
@@ -16324,7 +16386,7 @@
      "name": "Tyler Allgeier",
      "pos": "RB",
      "nfl": "ARI",
-     "since": 0.0
+     "since": 36.1
     }
    ]
   },
@@ -16360,7 +16422,7 @@
      "name": "Travis Kelce",
      "pos": "TE",
      "nfl": "KC",
-     "since": 0.0
+     "since": 11.7
     }
    ]
   },
@@ -16378,7 +16440,7 @@
      "name": "Bo Nix",
      "pos": "QB",
      "nfl": "DEN",
-     "since": 0.0
+     "since": 19.28
     }
    ]
   },
@@ -16441,7 +16503,7 @@
      "name": "Patrick Mahomes",
      "pos": "QB",
      "nfl": "KC",
-     "since": 6.0
+     "since": 31.44
     }
    ]
   },
@@ -16468,7 +16530,7 @@
      "name": "Matthew Stafford",
      "pos": "QB",
      "nfl": "LAR",
-     "since": 17.5
+     "since": 25.78
     }
    ]
   },
@@ -16495,7 +16557,7 @@
      "name": "Jaguars D/ST",
      "pos": "D/ST",
      "nfl": "JAX",
-     "since": 0.0
+     "since": 21.0
     }
    ]
   },
@@ -16514,7 +16576,7 @@
      "name": "Cam Little",
      "pos": "K",
      "nfl": "JAX",
-     "since": 0.0
+     "since": 6.0
     },
     {
      "player": 3046439,
@@ -16541,7 +16603,7 @@
      "name": "Keaton Mitchell",
      "pos": "RB",
      "nfl": "LAC",
-     "since": 0.0
+     "since": 5.3
     },
     {
      "player": 4373626,
@@ -16647,7 +16709,7 @@
      "name": "Chiefs D/ST",
      "pos": "D/ST",
      "nfl": "KC",
-     "since": -1.0
+     "since": 1.0
     },
     {
      "player": -16007,
@@ -16682,7 +16744,7 @@
      "name": "Tyler Higbee",
      "pos": "TE",
      "nfl": "LAR",
-     "since": 3.4
+     "since": 5.8
     }
    ]
   },
@@ -16726,7 +16788,7 @@
      "name": "Kimani Vidal",
      "pos": "RB",
      "nfl": "LAC",
-     "since": 0.0
+     "since": 5.0
     }
    ]
   },
@@ -16745,7 +16807,7 @@
      "name": "Patriots D/ST",
      "pos": "D/ST",
      "nfl": "NE",
-     "since": -1.0
+     "since": 8.0
     },
     {
      "player": -16020,
@@ -16799,7 +16861,7 @@
      "name": "Pat Freiermuth",
      "pos": "TE",
      "nfl": "PIT",
-     "since": 4.0
+     "since": 15.6
     },
     {
      "player": 4586312,
@@ -16852,7 +16914,7 @@
      "name": "Tyler Allgeier",
      "pos": "RB",
      "nfl": "ARI",
-     "since": 7.9
+     "since": 44.0
     }
    ]
   },
@@ -16870,7 +16932,7 @@
      "name": "Harold Fannin Jr.",
      "pos": "TE",
      "nfl": "CLE",
-     "since": 13.1
+     "since": 36.5
     }
    ]
   },
@@ -16915,7 +16977,7 @@
      "name": "Samaje Perine",
      "pos": "RB",
      "nfl": "CIN",
-     "since": 7.6
+     "since": 10.5
     }
    ]
   },
@@ -16934,7 +16996,7 @@
      "name": "Jared Goff",
      "pos": "QB",
      "nfl": "DET",
-     "since": 18.02
+     "since": 27.06
     },
     {
      "player": 2969939,
@@ -16961,7 +17023,7 @@
      "name": "Adonai Mitchell",
      "pos": "WR",
      "nfl": "NYJ",
-     "since": 0.0
+     "since": 27.2
     },
     {
      "player": 2573401,
@@ -17077,7 +17139,7 @@
      "name": "Kenyon Sadiq",
      "pos": "TE",
      "nfl": "NYJ",
-     "since": 3.8
+     "since": 7.0
     },
     {
      "player": 4360238,
@@ -17112,7 +17174,7 @@
      "name": "Broncos D/ST",
      "pos": "D/ST",
      "nfl": "DEN",
-     "since": 14.0
+     "since": 15.0
     }
    ]
   },
@@ -17166,7 +17228,7 @@
      "name": "Keenan Allen",
      "pos": "WR",
      "nfl": "IND",
-     "since": 22.3
+     "since": 36.0
     }
    ]
   },
@@ -17220,7 +17282,7 @@
      "name": "Mark Andrews",
      "pos": "TE",
      "nfl": "BAL",
-     "since": 6.7
+     "since": 11.1
     }
    ]
   },
@@ -17247,7 +17309,7 @@
      "name": "Cameron Dicker",
      "pos": "K",
      "nfl": "LAC",
-     "since": 6.0
+     "since": 17.0
     }
    ]
   },
@@ -17266,7 +17328,7 @@
      "name": "Browns D/ST",
      "pos": "D/ST",
      "nfl": "CLE",
-     "since": 15.0
+     "since": 17.0
     },
     {
      "player": -16017,
@@ -17355,7 +17417,7 @@
      "name": "Evan McPherson",
      "pos": "K",
      "nfl": "CIN",
-     "since": 5.0
+     "since": 10.0
     }
    ]
   },
@@ -17382,7 +17444,7 @@
      "name": "Bengals D/ST",
      "pos": "D/ST",
      "nfl": "CIN",
-     "since": 8.0
+     "since": 10.0
     }
    ]
   },
@@ -17401,7 +17463,7 @@
      "name": "Jacoby Brissett",
      "pos": "QB",
      "nfl": "ARI",
-     "since": 23.4
+     "since": 26.86
     },
     {
      "player": 4430968,
@@ -17428,7 +17490,7 @@
      "name": "Jaguars D/ST",
      "pos": "D/ST",
      "nfl": "JAX",
-     "since": -2.0
+     "since": 19.0
     },
     {
      "player": -16014,
@@ -17480,7 +17542,7 @@
      "name": "Keon Coleman",
      "pos": "WR",
      "nfl": "BUF",
-     "since": 15.9
+     "since": 17.3
     }
    ]
   },
@@ -17622,7 +17684,7 @@
      "name": "Harrison Butker",
      "pos": "K",
      "nfl": "KC",
-     "since": 15.0
+     "since": 21.0
     }
    ]
   },
@@ -17649,7 +17711,7 @@
      "name": "Rachaad White",
      "pos": "RB",
      "nfl": "WSH",
-     "since": 18.7
+     "since": 32.7
     }
    ]
   },
@@ -17668,7 +17730,7 @@
      "name": "Bills D/ST",
      "pos": "D/ST",
      "nfl": "BUF",
-     "since": -3.0
+     "since": 13.0
     },
     {
      "player": -16007,
@@ -17694,7 +17756,7 @@
      "name": "Oronde Gadsden",
      "pos": "TE",
      "nfl": "LAC",
-     "since": 4.7
+     "since": 14.9
     }
    ]
   },
@@ -17713,7 +17775,7 @@
      "name": "Keenan Allen",
      "pos": "WR",
      "nfl": "IND",
-     "since": 31.8
+     "since": 45.5
     },
     {
      "player": 4431545,
@@ -17748,7 +17810,7 @@
      "name": "Rams D/ST",
      "pos": "D/ST",
      "nfl": "LAR",
-     "since": 2.0
+     "since": 13.0
     }
    ]
   },
@@ -17775,7 +17837,7 @@
      "name": "Chiefs D/ST",
      "pos": "D/ST",
      "nfl": "KC",
-     "since": 13.0
+     "since": 15.0
     }
    ]
   },
@@ -17794,7 +17856,7 @@
      "name": "Jaylen Wright",
      "pos": "RB",
      "nfl": "MIA",
-     "since": 1.9
+     "since": 2.4
     },
     {
      "player": 4373626,
@@ -17829,7 +17891,7 @@
      "name": "Antonio Williams",
      "pos": "WR",
      "nfl": "WSH",
-     "since": 14.1
+     "since": 24.5
     }
    ]
   },
@@ -17929,7 +17991,7 @@
      "name": "Caleb Douglas",
      "pos": "WR",
      "nfl": "MIA",
-     "since": 21.0
+     "since": 29.3
     },
     {
      "player": 3116385,
@@ -17972,7 +18034,7 @@
      "name": "Kenny Gainwell",
      "pos": "RB",
      "nfl": "TB",
-     "since": 28.7
+     "since": 42.7
     }
    ]
   },
@@ -18105,7 +18167,7 @@
      "name": "Tyler Allgeier",
      "pos": "RB",
      "nfl": "ARI",
-     "since": 30.2
+     "since": 66.3
     }
    ]
   },
@@ -18132,7 +18194,7 @@
      "name": "Patriots D/ST",
      "pos": "D/ST",
      "nfl": "NE",
-     "since": 15.0
+     "since": 24.0
     }
    ]
   },
@@ -18176,7 +18238,7 @@
      "name": "Eagles D/ST",
      "pos": "D/ST",
      "nfl": "PHI",
-     "since": -2.0
+     "since": 2.0
     }
    ]
   },
@@ -18257,7 +18319,7 @@
      "name": "Bengals D/ST",
      "pos": "D/ST",
      "nfl": "CIN",
-     "since": 21.0
+     "since": 23.0
     }
    ]
   },
@@ -18330,7 +18392,7 @@
      "name": "Quentin Johnston",
      "pos": "WR",
      "nfl": "LAC",
-     "since": 11.7
+     "since": 19.4
     },
     {
      "player": 4682745,
@@ -18400,7 +18462,7 @@
      "name": "Drake Maye",
      "pos": "QB",
      "nfl": "NE",
-     "since": 116.86
+     "since": 139.32
     }
    ]
   },
@@ -18505,7 +18567,7 @@
      "name": "Lions D/ST",
      "pos": "D/ST",
      "nfl": "DET",
-     "since": 19.0
+     "since": 27.0
     }
    ]
   },
@@ -18585,7 +18647,7 @@
      "name": "Chris Rodriguez Jr.",
      "pos": "RB",
      "nfl": "JAX",
-     "since": 26.8
+     "since": 39.6
     },
     {
      "player": 4360689,
@@ -18612,7 +18674,7 @@
      "name": "Wan'Dale Robinson",
      "pos": "WR",
      "nfl": "TEN",
-     "since": 50.9
+     "since": 66.6
     },
     {
      "player": 4595342,
@@ -18639,7 +18701,7 @@
      "name": "Buccaneers D/ST",
      "pos": "D/ST",
      "nfl": "TB",
-     "since": 55.0
+     "since": 70.0
     },
     {
      "player": -16004,
@@ -18674,7 +18736,7 @@
      "name": "Kendrick Bourne",
      "pos": "WR",
      "nfl": "ARI",
-     "since": 29.8
+     "since": 33.7
     }
    ]
   },
@@ -18728,7 +18790,7 @@
      "name": "Justin Herbert",
      "pos": "QB",
      "nfl": "LAC",
-     "since": 41.3
+     "since": 49.08
     }
    ]
   },
@@ -18747,7 +18809,7 @@
      "name": "Tre' Harris",
      "pos": "WR",
      "nfl": "LAC",
-     "since": 26.2
+     "since": 32.3
     },
     {
      "player": 4597500,
@@ -18774,7 +18836,7 @@
      "name": "Tyler Allgeier",
      "pos": "RB",
      "nfl": "ARI",
-     "since": 35.1
+     "since": 71.2
     },
     {
      "player": 4429013,
@@ -18836,7 +18898,7 @@
      "name": "Matthew Stafford",
      "pos": "QB",
      "nfl": "LAR",
-     "since": 119.26
+     "since": 127.54
     }
    ]
   },
@@ -18890,7 +18952,7 @@
      "name": "Brian Thomas Jr.",
      "pos": "WR",
      "nfl": "JAX",
-     "since": 18.5
+     "since": 26.7
     }
    ]
   },
@@ -18917,7 +18979,7 @@
      "name": "Broncos D/ST",
      "pos": "D/ST",
      "nfl": "DEN",
-     "since": 47.0
+     "since": 48.0
     }
    ]
   },
@@ -19013,7 +19075,7 @@
      "name": "Chargers D/ST",
      "pos": "D/ST",
      "nfl": "LAC",
-     "since": 29.0
+     "since": 34.0
     }
    ]
   },
@@ -19032,7 +19094,7 @@
      "name": "Jake Bates",
      "pos": "K",
      "nfl": "DET",
-     "since": 51.0
+     "since": 57.0
     },
     {
      "player": 4360234,
@@ -19084,7 +19146,7 @@
      "name": "Mike Washington Jr.",
      "pos": "RB",
      "nfl": "LV",
-     "since": 25.5
+     "since": 33.8
     }
    ]
   },
@@ -19216,7 +19278,7 @@
      "name": "Keaton Mitchell",
      "pos": "RB",
      "nfl": "LAC",
-     "since": 37.1
+     "since": 42.4
     }
    ]
   },
@@ -19270,7 +19332,7 @@
      "name": "Andy Borregales",
      "pos": "K",
      "nfl": "NE",
-     "since": 47.0
+     "since": 52.0
     }
    ]
   },
@@ -19314,7 +19376,7 @@
      "name": "KC Concepcion",
      "pos": "WR",
      "nfl": "CLE",
-     "since": 62.9
+     "since": 69.6
     }
    ]
   },
@@ -19368,7 +19430,7 @@
      "name": "Chris Rodriguez Jr.",
      "pos": "RB",
      "nfl": "JAX",
-     "since": 30.4
+     "since": 43.2
     }
    ]
   },
@@ -19414,7 +19476,7 @@
      "name": "Keaton Mitchell",
      "pos": "RB",
      "nfl": "LAC",
-     "since": 37.1
+     "since": 42.4
     },
     {
      "player": 4697815,
@@ -19449,7 +19511,7 @@
      "name": "Cowboys D/ST",
      "pos": "D/ST",
      "nfl": "DAL",
-     "since": 8.0
+     "since": 11.0
     }
    ]
   },
@@ -19468,7 +19530,7 @@
      "name": "Jauan Jennings",
      "pos": "WR",
      "nfl": "MIN",
-     "since": 8.3
+     "since": 11.4
     },
     {
      "player": 4426338,
@@ -19503,7 +19565,7 @@
      "name": "Rachaad White",
      "pos": "RB",
      "nfl": "WSH",
-     "since": 48.8
+     "since": 62.8
     }
    ]
   },
@@ -20002,7 +20064,7 @@
     "playerId": 4430807,
     "pos": "RB",
     "nfl": "ATL",
-    "pts": 145.7,
+    "pts": 153.3,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20020,13 +20082,13 @@
     "playerId": 4362628,
     "pos": "WR",
     "nfl": "CIN",
-    "pts": 97.1,
+    "pts": 128.2,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 1,
-    "posFinish": 16,
-    "value": -15
+    "posFinish": 8,
+    "value": -7
    },
    {
     "overall": 3,
@@ -20038,13 +20100,13 @@
     "playerId": 4262921,
     "pos": "WR",
     "nfl": "MIN",
-    "pts": 72.1,
+    "pts": 86.4,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 2,
-    "posFinish": 27,
-    "value": -25
+    "posFinish": 23,
+    "value": -21
    },
    {
     "overall": 4,
@@ -20061,8 +20123,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 2,
-    "posFinish": 4,
-    "value": -2
+    "posFinish": 6,
+    "value": -4
    },
    {
     "overall": 5,
@@ -20074,13 +20136,13 @@
     "playerId": 4374302,
     "pos": "WR",
     "nfl": "DET",
-    "pts": 128.4,
+    "pts": 141.0,
     "kept": true,
     "keeper": true,
     "bid": null,
     "posDraft": 3,
-    "posFinish": 5,
-    "value": -2
+    "posFinish": 4,
+    "value": -1
    },
    {
     "overall": 6,
@@ -20092,7 +20154,7 @@
     "playerId": 4429795,
     "pos": "RB",
     "nfl": "DET",
-    "pts": 171.0,
+    "pts": 195.8,
     "kept": true,
     "keeper": true,
     "bid": null,
@@ -20110,13 +20172,13 @@
     "playerId": 4428331,
     "pos": "WR",
     "nfl": "KC",
-    "pts": 38.0,
+    "pts": 56.3,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 4,
-    "posFinish": 47,
-    "value": -43
+    "posFinish": 41,
+    "value": -37
    },
    {
     "overall": 8,
@@ -20128,7 +20190,7 @@
     "playerId": 4242335,
     "pos": "RB",
     "nfl": "IND",
-    "pts": 137.5,
+    "pts": 144.2,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20146,7 +20208,7 @@
     "playerId": 4890973,
     "pos": "RB",
     "nfl": "LV",
-    "pts": 122.0,
+    "pts": 132.3,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -20164,7 +20226,7 @@
     "playerId": 4241389,
     "pos": "WR",
     "nfl": "DAL",
-    "pts": 155.5,
+    "pts": 168.3,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20182,13 +20244,13 @@
     "playerId": 4379399,
     "pos": "RB",
     "nfl": "BUF",
-    "pts": 113.6,
+    "pts": 131.7,
     "kept": true,
     "keeper": true,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 13,
-    "value": -7
+    "posFinish": 12,
+    "value": -6
    },
    {
     "overall": 12,
@@ -20200,13 +20262,13 @@
     "playerId": 3043078,
     "pos": "RB",
     "nfl": "BAL",
-    "pts": 122.7,
+    "pts": 136.7,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 7,
-    "posFinish": 10,
-    "value": -3
+    "posFinish": 9,
+    "value": -2
    },
    {
     "overall": 13,
@@ -20218,13 +20280,13 @@
     "playerId": 4362238,
     "pos": "RB",
     "nfl": "CIN",
-    "pts": 74.8,
+    "pts": 90.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 19,
-    "value": -11
+    "posFinish": 18,
+    "value": -10
    },
    {
     "overall": 14,
@@ -20254,13 +20316,13 @@
     "playerId": 3929630,
     "pos": "RB",
     "nfl": "PHI",
-    "pts": 38.1,
+    "pts": 50.5,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 10,
-    "posFinish": 38,
-    "value": -28
+    "posFinish": 34,
+    "value": -24
    },
    {
     "overall": 16,
@@ -20272,7 +20334,7 @@
     "playerId": 4567048,
     "pos": "RB",
     "nfl": "KC",
-    "pts": 147.7,
+    "pts": 160.1,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20290,13 +20352,13 @@
     "playerId": 4432665,
     "pos": "TE",
     "nfl": "LV",
-    "pts": 95.5,
+    "pts": 123.7,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 1,
-    "posFinish": 4,
-    "value": -3
+    "posFinish": 2,
+    "value": -1
    },
    {
     "overall": 18,
@@ -20308,13 +20370,13 @@
     "playerId": 4426515,
     "pos": "WR",
     "nfl": "LAR",
-    "pts": 113.6,
+    "pts": 138.6,
     "kept": true,
     "keeper": true,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 9,
-    "value": -3
+    "posFinish": 6,
+    "value": 0
    },
    {
     "overall": 19,
@@ -20326,13 +20388,13 @@
     "playerId": 4870808,
     "pos": "RB",
     "nfl": "ARI",
-    "pts": 51.1,
+    "pts": 53.4,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 12,
-    "posFinish": 30,
-    "value": -18
+    "posFinish": 31,
+    "value": -19
    },
    {
     "overall": 20,
@@ -20344,13 +20406,13 @@
     "playerId": 4569618,
     "pos": "WR",
     "nfl": "NYJ",
-    "pts": 99.4,
+    "pts": 113.7,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 7,
-    "posFinish": 14,
-    "value": -7
+    "posFinish": 12,
+    "value": -5
    },
    {
     "overall": 21,
@@ -20362,7 +20424,7 @@
     "playerId": 3918298,
     "pos": "QB",
     "nfl": "BUF",
-    "pts": 161.26,
+    "pts": 187.82,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20380,7 +20442,7 @@
     "playerId": 4361307,
     "pos": "TE",
     "nfl": "ARI",
-    "pts": 130.2,
+    "pts": 150.4,
     "kept": true,
     "keeper": true,
     "bid": null,
@@ -20398,13 +20460,13 @@
     "playerId": 4426502,
     "pos": "WR",
     "nfl": "ATL",
-    "pts": 108.0,
+    "pts": 109.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 11,
-    "value": -3
+    "posFinish": 13,
+    "value": -5
    },
    {
     "overall": 24,
@@ -20421,8 +20483,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 13,
-    "posFinish": 35,
-    "value": -22
+    "posFinish": 38,
+    "value": -25
    },
    {
     "overall": 25,
@@ -20439,8 +20501,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 9,
-    "posFinish": 8,
-    "value": 1
+    "posFinish": 11,
+    "value": -2
    },
    {
     "overall": 26,
@@ -20457,8 +20519,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 10,
-    "posFinish": 26,
-    "value": -16
+    "posFinish": 30,
+    "value": -20
    },
    {
     "overall": 27,
@@ -20475,8 +20537,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 14,
-    "posFinish": 41,
-    "value": -27
+    "posFinish": 42,
+    "value": -28
    },
    {
     "overall": 28,
@@ -20506,13 +20568,13 @@
     "playerId": 4430737,
     "pos": "RB",
     "nfl": "LAR",
-    "pts": 137.1,
+    "pts": 150.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 15,
-    "posFinish": 6,
-    "value": 9
+    "posFinish": 4,
+    "value": 11
    },
    {
     "overall": 30,
@@ -20529,8 +20591,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 12,
-    "posFinish": 30,
-    "value": -18
+    "posFinish": 34,
+    "value": -22
    },
    {
     "overall": 31,
@@ -20542,7 +20604,7 @@
     "playerId": 4612826,
     "pos": "WR",
     "nfl": "LAC",
-    "pts": 39.0,
+    "pts": 51.6,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20560,7 +20622,7 @@
     "playerId": 4685382,
     "pos": "RB",
     "nfl": "LAC",
-    "pts": 57.5,
+    "pts": 62.2,
     "kept": true,
     "keeper": true,
     "bid": null,
@@ -20596,13 +20658,13 @@
     "playerId": 4426354,
     "pos": "WR",
     "nfl": "DAL",
-    "pts": 97.5,
+    "pts": 104.3,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 15,
-    "posFinish": 15,
-    "value": 0
+    "posFinish": 16,
+    "value": -1
    },
    {
     "overall": 35,
@@ -20619,8 +20681,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 16,
-    "posFinish": 6,
-    "value": 10
+    "posFinish": 9,
+    "value": 7
    },
    {
     "overall": 36,
@@ -20637,8 +20699,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 17,
-    "posFinish": 36,
-    "value": -19
+    "posFinish": 40,
+    "value": -23
    },
    {
     "overall": 37,
@@ -20655,8 +20717,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 17,
-    "posFinish": 7,
-    "value": 10
+    "posFinish": 10,
+    "value": 7
    },
    {
     "overall": 38,
@@ -20691,8 +20753,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 18,
-    "posFinish": 28,
-    "value": -10
+    "posFinish": 31,
+    "value": -13
    },
    {
     "overall": 40,
@@ -20704,13 +20766,13 @@
     "playerId": 4596448,
     "pos": "RB",
     "nfl": "TB",
-    "pts": 109.6,
+    "pts": 130.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 18,
-    "posFinish": 14,
-    "value": 4
+    "posFinish": 13,
+    "value": 5
    },
    {
     "overall": 41,
@@ -20727,8 +20789,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 19,
-    "posFinish": 13,
-    "value": 6
+    "posFinish": 17,
+    "value": 2
    },
    {
     "overall": 42,
@@ -20740,13 +20802,13 @@
     "playerId": 4372016,
     "pos": "WR",
     "nfl": "DEN",
-    "pts": 63.9,
+    "pts": 78.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 20,
-    "posFinish": 31,
-    "value": -11
+    "posFinish": 26,
+    "value": -6
    },
    {
     "overall": 43,
@@ -20758,7 +20820,7 @@
     "playerId": 4882093,
     "pos": "RB",
     "nfl": "JAX",
-    "pts": 88.4,
+    "pts": 118.3,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20776,13 +20838,13 @@
     "playerId": 3915416,
     "pos": "WR",
     "nfl": "BUF",
-    "pts": 36.3,
+    "pts": 52.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 21,
-    "posFinish": 49,
-    "value": -28
+    "posFinish": 44,
+    "value": -23
    },
    {
     "overall": 45,
@@ -20799,8 +20861,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 22,
-    "posFinish": 10,
-    "value": 12
+    "posFinish": 14,
+    "value": 8
    },
    {
     "overall": 46,
@@ -20812,13 +20874,13 @@
     "playerId": 4239993,
     "pos": "WR",
     "nfl": "CIN",
-    "pts": 102.1,
+    "pts": 139.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 23,
-    "posFinish": 12,
-    "value": 11
+    "posFinish": 5,
+    "value": 18
    },
    {
     "overall": 47,
@@ -20830,7 +20892,7 @@
     "playerId": 3916148,
     "pos": "RB",
     "nfl": "TEN",
-    "pts": 87.8,
+    "pts": 116.5,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -20853,8 +20915,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 21,
-    "posFinish": 9,
-    "value": 12
+    "posFinish": 14,
+    "value": 7
    },
    {
     "overall": 49,
@@ -20871,8 +20933,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 24,
-    "posFinish": 43,
-    "value": -19
+    "posFinish": 49,
+    "value": -25
    },
    {
     "overall": 50,
@@ -20884,13 +20946,13 @@
     "playerId": 4685702,
     "pos": "RB",
     "nfl": "CLE",
-    "pts": 79.7,
+    "pts": 86.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 22,
-    "posFinish": 18,
-    "value": 4
+    "posFinish": 19,
+    "value": 3
    },
    {
     "overall": 51,
@@ -20907,8 +20969,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 25,
-    "posFinish": 50,
-    "value": -25
+    "posFinish": 51,
+    "value": -26
    },
    {
     "overall": 52,
@@ -20925,8 +20987,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 26,
-    "posFinish": 23,
-    "value": 3
+    "posFinish": 28,
+    "value": -2
    },
    {
     "overall": 53,
@@ -20938,13 +21000,13 @@
     "playerId": 4432620,
     "pos": "WR",
     "nfl": "JAX",
-    "pts": 91.9,
+    "pts": 95.5,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 27,
-    "posFinish": 18,
-    "value": 9
+    "posFinish": 20,
+    "value": 7
    },
    {
     "overall": 54,
@@ -20997,8 +21059,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 29,
-    "posFinish": 36,
-    "value": -7
+    "posFinish": 39,
+    "value": -10
    },
    {
     "overall": 57,
@@ -21015,8 +21077,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 24,
-    "posFinish": 39,
-    "value": -15
+    "posFinish": 41,
+    "value": -17
    },
    {
     "overall": 58,
@@ -21033,8 +21095,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 25,
-    "posFinish": 33,
-    "value": -8
+    "posFinish": 35,
+    "value": -10
    },
    {
     "overall": 59,
@@ -21046,13 +21108,13 @@
     "playerId": 4426388,
     "pos": "WR",
     "nfl": "DET",
-    "pts": 83.7,
+    "pts": 100.7,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 30,
-    "posFinish": 20,
-    "value": 10
+    "posFinish": 18,
+    "value": 12
    },
    {
     "overall": 60,
@@ -21064,13 +21126,13 @@
     "playerId": 3128429,
     "pos": "WR",
     "nfl": "DEN",
-    "pts": 38.8,
+    "pts": 48.1,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 31,
-    "posFinish": 46,
-    "value": -15
+    "posFinish": 47,
+    "value": -16
    },
    {
     "overall": 61,
@@ -21082,13 +21144,13 @@
     "playerId": 4241985,
     "pos": "RB",
     "nfl": "DEN",
-    "pts": 58.0,
+    "pts": 59.3,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 26,
-    "posFinish": 27,
-    "value": -1
+    "posFinish": 29,
+    "value": -3
    },
    {
     "overall": 62,
@@ -21100,7 +21162,7 @@
     "playerId": 4426348,
     "pos": "QB",
     "nfl": "WSH",
-    "pts": 85.66,
+    "pts": 100.64,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -21118,13 +21180,13 @@
     "playerId": 4431452,
     "pos": "QB",
     "nfl": "NE",
-    "pts": 138.46,
+    "pts": 160.92,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 4,
-    "posFinish": 2,
-    "value": 2
+    "posFinish": 3,
+    "value": 1
    },
    {
     "overall": 64,
@@ -21141,8 +21203,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 32,
-    "posFinish": 54,
-    "value": -22
+    "posFinish": 55,
+    "value": -23
    },
    {
     "overall": 65,
@@ -21159,8 +21221,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 33,
-    "posFinish": 19,
-    "value": 14
+    "posFinish": 21,
+    "value": 12
    },
    {
     "overall": 66,
@@ -21213,8 +21275,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 35,
-    "posFinish": 40,
-    "value": -5
+    "posFinish": 43,
+    "value": -8
    },
    {
     "overall": 69,
@@ -21226,7 +21288,7 @@
     "playerId": 4360248,
     "pos": "TE",
     "nfl": "ATL",
-    "pts": 63.1,
+    "pts": 65.7,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -21244,13 +21306,13 @@
     "playerId": 4038815,
     "pos": "RB",
     "nfl": "PIT",
-    "pts": 33.0,
+    "pts": 44.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 27,
-    "posFinish": 40,
-    "value": -13
+    "posFinish": 37,
+    "value": -10
    },
    {
     "overall": 71,
@@ -21267,8 +21329,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 36,
-    "posFinish": 4,
-    "value": 32
+    "posFinish": 7,
+    "value": 29
    },
    {
     "overall": 72,
@@ -21280,13 +21342,13 @@
     "playerId": 4047650,
     "pos": "WR",
     "nfl": "PIT",
-    "pts": 76.5,
+    "pts": 77.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 37,
-    "posFinish": 25,
-    "value": 12
+    "posFinish": 27,
+    "value": 10
    },
    {
     "overall": 73,
@@ -21298,13 +21360,13 @@
     "playerId": 5083076,
     "pos": "TE",
     "nfl": "CLE",
-    "pts": 66.7,
+    "pts": 90.1,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 4,
-    "posFinish": 9,
-    "value": -5
+    "posFinish": 5,
+    "value": -1
    },
    {
     "overall": 74,
@@ -21316,13 +21378,13 @@
     "playerId": 4360761,
     "pos": "WR",
     "nfl": "ARI",
-    "pts": 81.88,
+    "pts": 108.68,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 38,
-    "posFinish": 21,
-    "value": 17
+    "posFinish": 15,
+    "value": 23
    },
    {
     "overall": 75,
@@ -21334,13 +21396,13 @@
     "playerId": 4569987,
     "pos": "RB",
     "nfl": "PIT",
-    "pts": 119.5,
+    "pts": 140.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 28,
-    "posFinish": 12,
-    "value": 16
+    "posFinish": 7,
+    "value": 21
    },
    {
     "overall": 76,
@@ -21352,13 +21414,13 @@
     "playerId": 3915511,
     "pos": "QB",
     "nfl": "CIN",
-    "pts": 130.12,
+    "pts": 169.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 3,
-    "value": 3
+    "posFinish": 2,
+    "value": 4
    },
    {
     "overall": 77,
@@ -21370,7 +21432,7 @@
     "playerId": 2577417,
     "pos": "QB",
     "nfl": "DAL",
-    "pts": 128.14,
+    "pts": 147.94,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -21388,13 +21450,13 @@
     "playerId": 4373678,
     "pos": "WR",
     "nfl": "BUF",
-    "pts": 55.0,
+    "pts": 66.4,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 39,
-    "posFinish": 39,
-    "value": 0
+    "posFinish": 35,
+    "value": 4
    },
    {
     "overall": 79,
@@ -21406,7 +21468,7 @@
     "playerId": 4569173,
     "pos": "RB",
     "nfl": "NE",
-    "pts": 86.9,
+    "pts": 98.9,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -21424,13 +21486,13 @@
     "playerId": 4432773,
     "pos": "WR",
     "nfl": "JAX",
-    "pts": 25.5,
+    "pts": 33.7,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 40,
-    "posFinish": 51,
-    "value": -11
+    "posFinish": 50,
+    "value": -10
    },
    {
     "overall": 81,
@@ -21442,13 +21504,13 @@
     "playerId": 3121023,
     "pos": "TE",
     "nfl": "PHI",
-    "pts": 56.8,
+    "pts": 64.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 5,
-    "posFinish": 12,
-    "value": -7
+    "posFinish": 11,
+    "value": -6
    },
    {
     "overall": 82,
@@ -21460,13 +21522,13 @@
     "playerId": 4569587,
     "pos": "WR",
     "nfl": "TEN",
-    "pts": 61.6,
+    "pts": 77.3,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 41,
-    "posFinish": 33,
-    "value": 8
+    "posFinish": 29,
+    "value": 12
    },
    {
     "overall": 83,
@@ -21483,8 +21545,8 @@
     "keeper": true,
     "bid": null,
     "posDraft": 30,
-    "posFinish": 21,
-    "value": 9
+    "posFinish": 23,
+    "value": 7
    },
    {
     "overall": 84,
@@ -21496,13 +21558,13 @@
     "playerId": 4429205,
     "pos": "WR",
     "nfl": "MIN",
-    "pts": 37.5,
+    "pts": 49.1,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 42,
-    "posFinish": 48,
-    "value": -6
+    "posFinish": 46,
+    "value": -4
    },
    {
     "overall": 85,
@@ -21532,13 +21594,13 @@
     "playerId": 12483,
     "pos": "QB",
     "nfl": "LAR",
-    "pts": 123.36,
+    "pts": 131.64,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 5,
-    "value": 3
+    "posFinish": 6,
+    "value": 2
    },
    {
     "overall": 87,
@@ -21550,7 +21612,7 @@
     "playerId": 4361579,
     "pos": "RB",
     "nfl": "DAL",
-    "pts": 130.5,
+    "pts": 137.2,
     "kept": true,
     "keeper": true,
     "bid": null,
@@ -21568,13 +21630,13 @@
     "playerId": 4360310,
     "pos": "QB",
     "nfl": "JAX",
-    "pts": 114.2,
+    "pts": 133.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 9,
-    "posFinish": 6,
-    "value": 3
+    "posFinish": 5,
+    "value": 4
    },
    {
     "overall": 89,
@@ -21604,7 +21666,7 @@
     "playerId": 4038941,
     "pos": "QB",
     "nfl": "LAC",
-    "pts": 62.44,
+    "pts": 70.22,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -21627,8 +21689,8 @@
     "keeper": true,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 11,
-    "value": -5
+    "posFinish": 12,
+    "value": -6
    },
    {
     "overall": 92,
@@ -21645,8 +21707,8 @@
     "keeper": true,
     "bid": null,
     "posDraft": 43,
-    "posFinish": 17,
-    "value": 26
+    "posFinish": 19,
+    "value": 24
    },
    {
     "overall": 93,
@@ -21658,7 +21720,7 @@
     "playerId": 4429025,
     "pos": "WR",
     "nfl": "LAC",
-    "pts": 24.8,
+    "pts": 32.5,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -21676,13 +21738,13 @@
     "playerId": 4431459,
     "pos": "TE",
     "nfl": "IND",
-    "pts": 69.9,
+    "pts": 75.7,
     "kept": true,
     "keeper": true,
     "bid": null,
     "posDraft": 7,
-    "posFinish": 8,
-    "value": -1
+    "posFinish": 9,
+    "value": -2
    },
    {
     "overall": 95,
@@ -21699,8 +21761,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 5,
-    "value": 3
+    "posFinish": 6,
+    "value": 2
    },
    {
     "overall": 96,
@@ -21712,13 +21774,13 @@
     "playerId": 2976212,
     "pos": "WR",
     "nfl": "WSH",
-    "pts": 69.4,
+    "pts": 82.2,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 45,
-    "posFinish": 29,
-    "value": 16
+    "posFinish": 24,
+    "value": 21
    },
    {
     "overall": 97,
@@ -21730,13 +21792,13 @@
     "playerId": 4430027,
     "pos": "TE",
     "nfl": "DET",
-    "pts": 79.4,
+    "pts": 85.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 9,
-    "posFinish": 6,
-    "value": 3
+    "posFinish": 7,
+    "value": 2
    },
    {
     "overall": 98,
@@ -21748,13 +21810,13 @@
     "playerId": 4870653,
     "pos": "WR",
     "nfl": "CLE",
-    "pts": 62.9,
+    "pts": 69.6,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 46,
-    "posFinish": 32,
-    "value": 14
+    "posFinish": 33,
+    "value": 13
    },
    {
     "overall": 99,
@@ -21771,8 +21833,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 33,
-    "posFinish": 26,
-    "value": 7
+    "posFinish": 30,
+    "value": 3
    },
    {
     "overall": 100,
@@ -21784,13 +21846,13 @@
     "playerId": 4371733,
     "pos": "RB",
     "nfl": "TB",
-    "pts": 39.0,
+    "pts": 53.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 34,
-    "posFinish": 37,
-    "value": -3
+    "posFinish": 33,
+    "value": 1
    },
    {
     "overall": 101,
@@ -21802,13 +21864,13 @@
     "playerId": 15847,
     "pos": "TE",
     "nfl": "KC",
-    "pts": 70.3,
+    "pts": 82.0,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 10,
-    "posFinish": 7,
-    "value": 3
+    "posFinish": 8,
+    "value": 2
    },
    {
     "overall": 102,
@@ -21838,13 +21900,13 @@
     "playerId": 4373626,
     "pos": "RB",
     "nfl": "ARI",
-    "pts": 48.0,
+    "pts": 84.1,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 35,
-    "posFinish": 32,
-    "value": 3
+    "posFinish": 20,
+    "value": 15
    },
    {
     "overall": 104,
@@ -21856,13 +21918,13 @@
     "playerId": 3916433,
     "pos": "WR",
     "nfl": "JAX",
-    "pts": 60.7,
+    "pts": 65.1,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 48,
-    "posFinish": 34,
-    "value": 14
+    "posFinish": 36,
+    "value": 12
    },
    {
     "overall": 105,
@@ -21879,8 +21941,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 36,
-    "posFinish": 34,
-    "value": 2
+    "posFinish": 36,
+    "value": 0
    },
    {
     "overall": 106,
@@ -21892,13 +21954,13 @@
     "playerId": 4688813,
     "pos": "WR",
     "nfl": "IND",
-    "pts": 57.4,
+    "pts": 69.7,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 49,
-    "posFinish": 38,
-    "value": 11
+    "posFinish": 32,
+    "value": 17
    },
    {
     "overall": 107,
@@ -21910,13 +21972,13 @@
     "playerId": 4870847,
     "pos": "WR",
     "nfl": "BAL",
-    "pts": 15.6,
+    "pts": 17.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 50,
-    "posFinish": 55,
-    "value": -5
+    "posFinish": 54,
+    "value": -4
    },
    {
     "overall": 108,
@@ -21928,7 +21990,7 @@
     "playerId": 4360569,
     "pos": "RB",
     "nfl": "MIN",
-    "pts": 18.7,
+    "pts": 20.7,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -21951,8 +22013,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 38,
-    "posFinish": 7,
-    "value": 31
+    "posFinish": 10,
+    "value": 28
    },
    {
     "overall": 110,
@@ -21964,13 +22026,13 @@
     "playerId": 5083315,
     "pos": "TE",
     "nfl": "NYJ",
-    "pts": 42.7,
+    "pts": 45.9,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 11,
-    "posFinish": 15,
-    "value": -4
+    "posFinish": 14,
+    "value": -3
    },
    {
     "overall": 111,
@@ -21982,13 +22044,13 @@
     "playerId": 3042519,
     "pos": "RB",
     "nfl": "MIN",
-    "pts": 73.8,
+    "pts": 79.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 39,
-    "posFinish": 20,
-    "value": 19
+    "posFinish": 22,
+    "value": 17
    },
    {
     "overall": 112,
@@ -22000,13 +22062,13 @@
     "playerId": 4870795,
     "pos": "WR",
     "nfl": "PHI",
-    "pts": 49.9,
+    "pts": 61.6,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 51,
-    "posFinish": 42,
-    "value": 9
+    "posFinish": 37,
+    "value": 14
    },
    {
     "overall": 113,
@@ -22023,8 +22085,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 12,
-    "posFinish": 3,
-    "value": 9
+    "posFinish": 4,
+    "value": 8
    },
    {
     "overall": 114,
@@ -22059,8 +22121,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 13,
-    "posFinish": 2,
-    "value": 11
+    "posFinish": 3,
+    "value": 10
    },
    {
     "overall": 116,
@@ -22077,8 +22139,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 41,
-    "posFinish": 24,
-    "value": 17
+    "posFinish": 25,
+    "value": 16
    },
    {
     "overall": 117,
@@ -22108,13 +22170,13 @@
     "playerId": 4697815,
     "pos": "RB",
     "nfl": "WSH",
-    "pts": 48.8,
+    "pts": 62.8,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 42,
-    "posFinish": 31,
-    "value": 11
+    "posFinish": 26,
+    "value": 16
    },
    {
     "overall": 119,
@@ -22126,13 +22188,13 @@
     "playerId": 3953687,
     "pos": "K",
     "nfl": "DAL",
-    "pts": 59.0,
+    "pts": 71.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 1,
-    "posFinish": 4,
-    "value": -3
+    "posFinish": 3,
+    "value": -2
    },
    {
     "overall": 120,
@@ -22162,7 +22224,7 @@
     "playerId": 3886598,
     "pos": "WR",
     "nfl": "MIN",
-    "pts": 8.3,
+    "pts": 11.4,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22180,13 +22242,13 @@
     "playerId": 4429096,
     "pos": "RB",
     "nfl": "LAR",
-    "pts": 69.5,
+    "pts": 82.8,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 44,
-    "posFinish": 22,
-    "value": 22
+    "posFinish": 21,
+    "value": 23
    },
    {
     "overall": 123,
@@ -22203,8 +22265,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 45,
-    "posFinish": 42,
-    "value": 3
+    "posFinish": 43,
+    "value": 2
    },
    {
     "overall": 124,
@@ -22221,8 +22283,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 2,
-    "posFinish": 3,
-    "value": -1
+    "posFinish": 4,
+    "value": -2
    },
    {
     "overall": 125,
@@ -22234,7 +22296,7 @@
     "playerId": 3116365,
     "pos": "TE",
     "nfl": "BAL",
-    "pts": 50.4,
+    "pts": 54.8,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22257,8 +22319,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 46,
-    "posFinish": 23,
-    "value": 23
+    "posFinish": 24,
+    "value": 22
    },
    {
     "overall": 127,
@@ -22270,13 +22332,13 @@
     "playerId": 4869645,
     "pos": "WR",
     "nfl": "MIA",
-    "pts": 39.3,
+    "pts": 47.6,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 54,
-    "posFinish": 44,
-    "value": 10
+    "posFinish": 48,
+    "value": 6
    },
    {
     "overall": 128,
@@ -22324,13 +22386,13 @@
     "playerId": 4362619,
     "pos": "RB",
     "nfl": "JAX",
-    "pts": 30.4,
+    "pts": 43.2,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 47,
-    "posFinish": 43,
-    "value": 4
+    "posFinish": 39,
+    "value": 8
    },
    {
     "overall": 131,
@@ -22365,8 +22427,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 49,
-    "posFinish": 25,
-    "value": 24
+    "posFinish": 27,
+    "value": 22
    },
    {
     "overall": 133,
@@ -22383,8 +22445,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 57,
-    "posFinish": 22,
-    "value": 35
+    "posFinish": 25,
+    "value": 32
    },
    {
     "overall": 134,
@@ -22414,13 +22476,13 @@
     "playerId": 4832800,
     "pos": "WR",
     "nfl": "CLE",
-    "pts": 77.2,
+    "pts": 86.9,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 59,
-    "posFinish": 24,
-    "value": 35
+    "posFinish": 22,
+    "value": 37
    },
    {
     "overall": 136,
@@ -22437,8 +22499,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 60,
-    "posFinish": 37,
-    "value": 23
+    "posFinish": 40,
+    "value": 20
    },
    {
     "overall": 137,
@@ -22455,8 +22517,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 1,
-    "posFinish": 6,
-    "value": -5
+    "posFinish": 7,
+    "value": -6
    },
    {
     "overall": 138,
@@ -22468,7 +22530,7 @@
     "playerId": -16007,
     "pos": "D/ST",
     "nfl": "DEN",
-    "pts": 49.0,
+    "pts": 50.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22486,13 +22548,13 @@
     "playerId": 4683062,
     "pos": "WR",
     "nfl": "KC",
-    "pts": 51.7,
+    "pts": 56.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 61,
-    "posFinish": 41,
-    "value": 20
+    "posFinish": 42,
+    "value": 19
    },
    {
     "overall": 140,
@@ -22522,7 +22584,7 @@
     "playerId": -16006,
     "pos": "D/ST",
     "nfl": "DAL",
-    "pts": 8.0,
+    "pts": 11.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22545,8 +22607,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 4,
-    "posFinish": 1,
-    "value": 3
+    "posFinish": 2,
+    "value": 2
    },
    {
     "overall": 143,
@@ -22563,8 +22625,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 15,
-    "posFinish": 14,
-    "value": 1
+    "posFinish": 15,
+    "value": 0
    },
    {
     "overall": 144,
@@ -22594,7 +22656,7 @@
     "playerId": 4362081,
     "pos": "K",
     "nfl": "LAC",
-    "pts": 36.0,
+    "pts": 47.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22612,13 +22674,13 @@
     "playerId": -16023,
     "pos": "D/ST",
     "nfl": "PIT",
-    "pts": 57.0,
+    "pts": 73.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 5,
-    "posFinish": 2,
-    "value": 3
+    "posFinish": 1,
+    "value": 4
    },
    {
     "overall": 147,
@@ -22635,8 +22697,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 6,
-    "posFinish": 4,
-    "value": 2
+    "posFinish": 5,
+    "value": 1
    },
    {
     "overall": 148,
@@ -22648,13 +22710,13 @@
     "playerId": -16014,
     "pos": "D/ST",
     "nfl": "LAR",
-    "pts": 26.0,
+    "pts": 37.0,
     "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 7,
-    "posFinish": 7,
-    "value": 0
+    "posFinish": 4,
+    "value": 3
    },
    {
     "overall": 149,
@@ -22666,13 +22728,13 @@
     "playerId": -16033,
     "pos": "D/ST",
     "nfl": "BAL",
-    "pts": 33.0,
+    "pts": 32.0,
     "kept": true,
     "keeper": false,
     "bid": null,
     "posDraft": 8,
-    "posFinish": 5,
-    "value": 3
+    "posFinish": 6,
+    "value": 2
    },
    {
     "overall": 150,
@@ -22684,7 +22746,7 @@
     "playerId": -16008,
     "pos": "D/ST",
     "nfl": "DET",
-    "pts": 20.0,
+    "pts": 28.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22702,7 +22764,7 @@
     "playerId": 4689936,
     "pos": "K",
     "nfl": "DET",
-    "pts": 58.0,
+    "pts": 64.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22756,7 +22818,7 @@
     "playerId": 4686361,
     "pos": "K",
     "nfl": "JAX",
-    "pts": 56.0,
+    "pts": 62.0,
     "kept": true,
     "keeper": false,
     "bid": null,
@@ -22792,7 +22854,7 @@
     "playerId": -16021,
     "pos": "D/ST",
     "nfl": "PHI",
-    "pts": 6.0,
+    "pts": 10.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22815,8 +22877,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 51,
-    "posFinish": 29,
-    "value": 22
+    "posFinish": 32,
+    "value": 19
    },
    {
     "overall": 158,
@@ -22828,7 +22890,7 @@
     "playerId": 3055899,
     "pos": "K",
     "nfl": "KC",
-    "pts": 49.0,
+    "pts": 55.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22851,8 +22913,8 @@
     "keeper": false,
     "bid": null,
     "posDraft": 62,
-    "posFinish": 35,
-    "value": 27
+    "posFinish": 38,
+    "value": 24
    },
    {
     "overall": 160,
@@ -22864,7 +22926,7 @@
     "playerId": 4569923,
     "pos": "K",
     "nfl": "NE",
-    "pts": 47.0,
+    "pts": 52.0,
     "kept": false,
     "keeper": false,
     "bid": null,
@@ -22878,7 +22940,7 @@
     "espnId": 3,
     "manager": "cody",
     "rank": 1,
-    "total": 1403.56,
+    "total": 1545.84,
     "grade": "A+",
     "best": 135,
     "worst": 15
@@ -22887,8 +22949,8 @@
     "espnId": 5,
     "manager": "tyler",
     "rank": 2,
-    "total": 1248.4,
-    "grade": "A",
+    "total": 1305.0,
+    "grade": "A-",
     "best": 109,
     "worst": 49
    },
@@ -22896,85 +22958,85 @@
     "espnId": 6,
     "manager": "keith",
     "rank": 3,
-    "total": 1209.66,
+    "total": 1299.56,
     "grade": "A-",
     "best": 133,
     "worst": 28
    },
    {
+    "espnId": 8,
+    "manager": "noah",
+    "rank": 4,
+    "total": 1272.1,
+    "grade": "B+",
+    "best": 118,
+    "worst": 3
+   },
+   {
     "espnId": 9,
     "manager": "kyle",
-    "rank": 4,
-    "total": 1167.12,
+    "rank": 5,
+    "total": 1263.8,
     "grade": "B+",
-    "best": 136,
+    "best": 96,
     "worst": 36
    },
    {
     "espnId": 2,
     "manager": "josh",
-    "rank": 5,
-    "total": 1103.56,
-    "grade": "B",
+    "rank": 6,
+    "total": 1261.34,
+    "grade": "B+",
     "best": 159,
     "worst": 19
    },
    {
-    "espnId": 8,
-    "manager": "noah",
-    "rank": 6,
-    "total": 1103.44,
-    "grade": "B",
-    "best": 98,
-    "worst": 3
+    "espnId": 10,
+    "manager": "reis",
+    "rank": 7,
+    "total": 1129.02,
+    "grade": "C+",
+    "best": 40,
+    "worst": 60
    },
    {
     "espnId": 1,
     "manager": "brett",
-    "rank": 7,
-    "total": 1004.54,
+    "rank": 8,
+    "total": 1110.32,
     "grade": "C+",
     "best": 71,
     "worst": 31
    },
    {
-    "espnId": 10,
-    "manager": "reis",
-    "rank": 8,
-    "total": 996.76,
-    "grade": "C+",
-    "best": 41,
-    "worst": 60
-   },
-   {
     "espnId": 7,
     "manager": "brad",
     "rank": 9,
-    "total": 978.74,
-    "grade": "C+",
+    "total": 1065.84,
+    "grade": "C",
     "best": 157,
-    "worst": 44
+    "worst": 24
    },
    {
     "espnId": 4,
     "manager": "brandon",
     "rank": 10,
-    "total": 814.6,
+    "total": 924.3,
     "grade": "F",
     "best": 87,
     "worst": 7
    }
   ],
   "values": [
-   133,
    135,
-   71,
+   133,
    66,
+   71,
    109
   ],
   "busts": [
-   7,
    28,
+   7,
    14,
    54,
    31
@@ -24497,7 +24559,7 @@
      "slot": "WR",
      "nfl": "DAL",
      "injury": null,
-     "pts": 155.5,
+     "pts": 168.3,
      "how": "draft",
      "round": 1,
      "pick": 10
@@ -24509,7 +24571,7 @@
      "slot": "RB",
      "nfl": "BUF",
      "injury": null,
-     "pts": 113.6,
+     "pts": 131.7,
      "how": "draft",
      "round": 2,
      "pick": 1
@@ -24533,7 +24595,7 @@
      "slot": "RB/WR/TE",
      "nfl": "LAC",
      "injury": null,
-     "pts": 39.0,
+     "pts": 51.6,
      "how": "draft",
      "round": 4,
      "pick": 1
@@ -24545,7 +24607,7 @@
      "slot": "RB",
      "nfl": "CLE",
      "injury": null,
-     "pts": 79.7,
+     "pts": 86.6,
      "how": "draft",
      "round": 5,
      "pick": 10
@@ -24569,7 +24631,7 @@
      "slot": "BE",
      "nfl": "PIT",
      "injury": null,
-     "pts": 33.0,
+     "pts": 44.6,
      "how": "draft",
      "round": 7,
      "pick": 10
@@ -24605,7 +24667,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 73.8,
+     "pts": 79.8,
      "how": "draft",
      "round": 12,
      "pick": 1
@@ -24628,8 +24690,8 @@
      "pos": "TE",
      "slot": "BE",
      "nfl": "BUF",
-     "injury": "QUESTIONABLE",
-     "pts": 60.5,
+     "injury": null,
+     "pts": 79.1,
      "how": "waiver"
     },
     {
@@ -24639,7 +24701,7 @@
      "slot": "QB",
      "nfl": "NE",
      "injury": null,
-     "pts": 138.46,
+     "pts": 160.92,
      "how": "waiver"
     },
     {
@@ -24659,7 +24721,7 @@
      "slot": "K",
      "nfl": "PIT",
      "injury": null,
-     "pts": 69.0,
+     "pts": 77.0,
      "how": "waiver"
     },
     {
@@ -24669,7 +24731,7 @@
      "slot": "D/ST",
      "nfl": "NE",
      "injury": null,
-     "pts": 42.0,
+     "pts": 51.0,
      "how": "waiver"
     }
    ]
@@ -24684,7 +24746,7 @@
      "slot": "WR",
      "nfl": "CIN",
      "injury": null,
-     "pts": 97.1,
+     "pts": 128.2,
      "how": "draft",
      "round": 1,
      "pick": 2
@@ -24695,8 +24757,8 @@
      "pos": "RB",
      "slot": "RB",
      "nfl": "ARI",
-     "injury": null,
-     "pts": 51.1,
+     "injury": "QUESTIONABLE",
+     "pts": 53.4,
      "how": "draft",
      "round": 2,
      "pick": 9
@@ -24708,7 +24770,7 @@
      "slot": "TE",
      "nfl": "ARI",
      "injury": null,
-     "pts": 130.2,
+     "pts": 150.4,
      "how": "draft",
      "round": 3,
      "pick": 2
@@ -24731,8 +24793,8 @@
      "pos": "WR",
      "slot": "RB/WR/TE",
      "nfl": "DEN",
-     "injury": "QUESTIONABLE",
-     "pts": 63.9,
+     "injury": null,
+     "pts": 78.8,
      "how": "draft",
      "round": 5,
      "pick": 2
@@ -24744,7 +24806,7 @@
      "slot": "WR",
      "nfl": "DET",
      "injury": null,
-     "pts": 83.7,
+     "pts": 100.7,
      "how": "draft",
      "round": 6,
      "pick": 9
@@ -24756,7 +24818,7 @@
      "slot": "QB",
      "nfl": "WSH",
      "injury": null,
-     "pts": 85.66,
+     "pts": 100.64,
      "how": "draft",
      "round": 7,
      "pick": 2
@@ -24768,7 +24830,7 @@
      "slot": "RB/WR/TE",
      "nfl": "NE",
      "injury": null,
-     "pts": 86.9,
+     "pts": 98.9,
      "how": "draft",
      "round": 8,
      "pick": 9
@@ -24792,7 +24854,7 @@
      "slot": "K",
      "nfl": "DAL",
      "injury": null,
-     "pts": 59.0,
+     "pts": 71.0,
      "how": "draft",
      "round": 12,
      "pick": 9
@@ -24804,7 +24866,7 @@
      "slot": "RB",
      "nfl": "LAR",
      "injury": null,
-     "pts": 69.5,
+     "pts": 82.8,
      "how": "draft",
      "round": 13,
      "pick": 2
@@ -24816,7 +24878,7 @@
      "slot": "BE",
      "nfl": "KC",
      "injury": null,
-     "pts": 51.7,
+     "pts": 56.0,
      "how": "draft",
      "round": 14,
      "pick": 9
@@ -24872,7 +24934,7 @@
      "slot": "BE",
      "nfl": "TEN",
      "injury": null,
-     "pts": 61.6,
+     "pts": 77.3,
      "how": "fa",
      "round": 9,
      "pick": 2
@@ -24893,8 +24955,8 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "WSH",
-     "injury": "QUESTIONABLE",
-     "pts": 36.2,
+     "injury": null,
+     "pts": 47.3,
      "how": "fa"
     }
    ]
@@ -24909,7 +24971,7 @@
      "slot": "RB",
      "nfl": "DET",
      "injury": null,
-     "pts": 171.0,
+     "pts": 195.8,
      "how": "draft",
      "round": 1,
      "pick": 6
@@ -24921,7 +24983,7 @@
      "slot": "RB/WR/TE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 38.1,
+     "pts": 50.5,
      "how": "draft",
      "round": 2,
      "pick": 5
@@ -24957,7 +25019,7 @@
      "slot": "WR",
      "nfl": "CIN",
      "injury": null,
-     "pts": 102.1,
+     "pts": 139.6,
      "how": "draft",
      "round": 5,
      "pick": 6
@@ -24993,7 +25055,7 @@
      "slot": "RB",
      "nfl": "PIT",
      "injury": null,
-     "pts": 119.5,
+     "pts": 140.8,
      "how": "draft",
      "round": 8,
      "pick": 5
@@ -25017,7 +25079,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 57.4,
+     "pts": 69.7,
      "how": "draft",
      "round": 11,
      "pick": 6
@@ -25053,7 +25115,7 @@
      "slot": "RB/WR/TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 77.2,
+     "pts": 86.9,
      "how": "draft",
      "round": 14,
      "pick": 5
@@ -25065,7 +25127,7 @@
      "slot": "D/ST",
      "nfl": "PIT",
      "injury": null,
-     "pts": 57.0,
+     "pts": 73.0,
      "how": "draft",
      "round": 15,
      "pick": 6
@@ -25087,7 +25149,7 @@
      "slot": "K",
      "nfl": "BAL",
      "injury": null,
-     "pts": 63.0,
+     "pts": 66.0,
      "how": "fa"
     },
     {
@@ -25097,10 +25159,20 @@
      "slot": "QB",
      "nfl": "LAR",
      "injury": null,
-     "pts": 123.36,
+     "pts": 131.64,
      "how": "waiver",
      "round": 9,
      "pick": 6
+    },
+    {
+     "id": 3054850,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 65.8,
+     "how": "waiver"
     }
    ]
   },
@@ -25114,7 +25186,7 @@
      "slot": "RB/WR/TE",
      "nfl": "KC",
      "injury": null,
-     "pts": 38.0,
+     "pts": 56.3,
      "how": "draft",
      "round": 1,
      "pick": 7
@@ -25137,8 +25209,8 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "DAL",
-     "injury": "QUESTIONABLE",
-     "pts": 97.5,
+     "injury": null,
+     "pts": 104.3,
      "how": "draft",
      "round": 4,
      "pick": 4
@@ -25150,7 +25222,7 @@
      "slot": "RB",
      "nfl": "TEN",
      "injury": null,
-     "pts": 87.8,
+     "pts": 116.5,
      "how": "draft",
      "round": 5,
      "pick": 7
@@ -25173,8 +25245,8 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "ARI",
-     "injury": null,
-     "pts": 81.88,
+     "injury": "QUESTIONABLE",
+     "pts": 108.68,
      "how": "draft",
      "round": 8,
      "pick": 4
@@ -25186,7 +25258,7 @@
      "slot": "RB",
      "nfl": "DAL",
      "injury": null,
-     "pts": 130.5,
+     "pts": 137.2,
      "how": "draft",
      "round": 9,
      "pick": 7
@@ -25198,7 +25270,7 @@
      "slot": "TE",
      "nfl": "IND",
      "injury": null,
-     "pts": 69.9,
+     "pts": 75.7,
      "how": "draft",
      "round": 10,
      "pick": 4
@@ -25210,7 +25282,7 @@
      "slot": "BE",
      "nfl": "BAL",
      "injury": null,
-     "pts": 15.6,
+     "pts": 17.9,
      "how": "draft",
      "round": 11,
      "pick": 7
@@ -25271,8 +25343,8 @@
      "pos": "TE",
      "slot": "BE",
      "nfl": "NE",
-     "injury": null,
-     "pts": 67.6,
+     "injury": "QUESTIONABLE",
+     "pts": 73.6,
      "how": "fa"
     },
     {
@@ -25282,7 +25354,7 @@
      "slot": "K",
      "nfl": "JAX",
      "injury": null,
-     "pts": 56.0,
+     "pts": 62.0,
      "how": "waiver",
      "round": 16,
      "pick": 4
@@ -25293,8 +25365,8 @@
      "pos": "QB",
      "slot": "QB",
      "nfl": "MIN",
-     "injury": null,
-     "pts": 53.68,
+     "injury": "QUESTIONABLE",
+     "pts": 73.58,
      "how": "waiver"
     },
     {
@@ -25304,7 +25376,7 @@
      "slot": "D/ST",
      "nfl": "CLE",
      "injury": null,
-     "pts": 42.0,
+     "pts": 44.0,
      "how": "fa"
     }
    ]
@@ -25319,7 +25391,7 @@
      "slot": "RB",
      "nfl": "BAL",
      "injury": null,
-     "pts": 122.7,
+     "pts": 136.7,
      "how": "draft",
      "round": 2,
      "pick": 2
@@ -25331,7 +25403,7 @@
      "slot": "RB/WR/TE",
      "nfl": "LAR",
      "injury": null,
-     "pts": 137.1,
+     "pts": 150.0,
      "how": "draft",
      "round": 3,
      "pick": 9
@@ -25343,7 +25415,7 @@
      "slot": "BE",
      "nfl": "LAC",
      "injury": null,
-     "pts": 57.5,
+     "pts": 62.2,
      "how": "draft",
      "round": 4,
      "pick": 2
@@ -25379,7 +25451,7 @@
      "slot": "TE",
      "nfl": "ATL",
      "injury": null,
-     "pts": 63.1,
+     "pts": 65.7,
      "how": "draft",
      "round": 7,
      "pick": 9
@@ -25391,7 +25463,7 @@
      "slot": "WR",
      "nfl": "PIT",
      "injury": null,
-     "pts": 76.5,
+     "pts": 77.9,
      "how": "draft",
      "round": 8,
      "pick": 2
@@ -25439,7 +25511,7 @@
      "slot": "BE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 49.9,
+     "pts": 61.6,
      "how": "draft",
      "round": 12,
      "pick": 2
@@ -25463,7 +25535,7 @@
      "slot": "D/ST",
      "nfl": "BAL",
      "injury": null,
-     "pts": 33.0,
+     "pts": 32.0,
      "how": "draft",
      "round": 15,
      "pick": 9
@@ -25487,7 +25559,7 @@
      "slot": "WR",
      "nfl": "MIN",
      "injury": null,
-     "pts": 72.1,
+     "pts": 86.4,
      "how": "trade"
     },
     {
@@ -25497,7 +25569,7 @@
      "slot": "K",
      "nfl": "BUF",
      "injury": null,
-     "pts": 62.0,
+     "pts": 78.0,
      "how": "fa"
     }
    ]
@@ -25512,7 +25584,7 @@
      "slot": "RB",
      "nfl": "IND",
      "injury": null,
-     "pts": 137.5,
+     "pts": 144.2,
      "how": "draft",
      "round": 1,
      "pick": 8
@@ -25524,7 +25596,7 @@
      "slot": "RB",
      "nfl": "CIN",
      "injury": null,
-     "pts": 74.8,
+     "pts": 90.9,
      "how": "draft",
      "round": 2,
      "pick": 3
@@ -25572,7 +25644,7 @@
      "slot": "WR",
      "nfl": "JAX",
      "injury": null,
-     "pts": 91.9,
+     "pts": 95.5,
      "how": "draft",
      "round": 6,
      "pick": 3
@@ -25584,7 +25656,7 @@
      "slot": "QB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 114.2,
+     "pts": 133.6,
      "how": "draft",
      "round": 9,
      "pick": 8
@@ -25593,10 +25665,10 @@
      "id": 4360569,
      "name": "Jordan Mason",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 18.7,
+     "pts": 20.7,
      "how": "draft",
      "round": 11,
      "pick": 8
@@ -25629,10 +25701,10 @@
      "id": 4870653,
      "name": "KC Concepcion",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 62.9,
+     "pts": 69.6,
      "how": "waiver"
     },
     {
@@ -25672,7 +25744,7 @@
      "slot": "K",
      "nfl": "TB",
      "injury": null,
-     "pts": 77.0,
+     "pts": 89.0,
      "how": "waiver"
     },
     {
@@ -25682,7 +25754,7 @@
      "slot": "BE",
      "nfl": "WSH",
      "injury": null,
-     "pts": 44.5,
+     "pts": 54.9,
      "how": "fa"
     },
     {
@@ -25692,7 +25764,7 @@
      "slot": "D/ST",
      "nfl": "MIN",
      "injury": null,
-     "pts": 74.0,
+     "pts": 79.0,
      "how": "waiver"
     },
     {
@@ -25702,7 +25774,7 @@
      "slot": "TE",
      "nfl": "CLE",
      "injury": null,
-     "pts": 66.7,
+     "pts": 90.1,
      "how": "fa",
      "round": 8,
      "pick": 3
@@ -25731,7 +25803,7 @@
      "slot": "TE",
      "nfl": "LV",
      "injury": null,
-     "pts": 95.5,
+     "pts": 123.7,
      "how": "draft",
      "round": 2,
      "pick": 7
@@ -25767,7 +25839,7 @@
      "slot": "RB/WR/TE",
      "nfl": "BUF",
      "injury": "QUESTIONABLE",
-     "pts": 36.3,
+     "pts": 52.9,
      "how": "draft",
      "round": 5,
      "pick": 4
@@ -25803,7 +25875,7 @@
      "slot": "QB",
      "nfl": "DAL",
      "injury": null,
-     "pts": 128.14,
+     "pts": 147.94,
      "how": "draft",
      "round": 8,
      "pick": 7
@@ -25815,7 +25887,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 37.5,
+     "pts": 49.1,
      "how": "draft",
      "round": 9,
      "pick": 4
@@ -25827,7 +25899,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DET",
      "injury": null,
-     "pts": 79.4,
+     "pts": 85.9,
      "how": "draft",
      "round": 10,
      "pick": 7
@@ -25838,8 +25910,8 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "JAX",
-     "injury": "QUESTIONABLE",
-     "pts": 60.7,
+     "injury": null,
+     "pts": 65.1,
      "how": "draft",
      "round": 11,
      "pick": 4
@@ -25899,7 +25971,7 @@
      "slot": "WR",
      "nfl": "PIT",
      "injury": null,
-     "pts": 58.8,
+     "pts": 66.8,
      "how": "waiver"
     },
     {
@@ -25919,7 +25991,7 @@
      "slot": "RB",
      "nfl": "WSH",
      "injury": null,
-     "pts": 48.8,
+     "pts": 62.8,
      "how": "fa"
     },
     {
@@ -25929,7 +26001,7 @@
      "slot": "D/ST",
      "nfl": "KC",
      "injury": null,
-     "pts": 36.0,
+     "pts": 38.0,
      "how": "fa"
     }
    ]
@@ -25944,7 +26016,7 @@
      "slot": "WR",
      "nfl": "LAR",
      "injury": null,
-     "pts": 113.6,
+     "pts": 138.6,
      "how": "draft",
      "round": 2,
      "pick": 8
@@ -25956,7 +26028,7 @@
      "slot": "WR",
      "nfl": "ATL",
      "injury": null,
-     "pts": 108.0,
+     "pts": 109.8,
      "how": "draft",
      "round": 3,
      "pick": 3
@@ -25967,7 +26039,7 @@
      "pos": "QB",
      "slot": "BE",
      "nfl": "BAL",
-     "injury": null,
+     "injury": "OUT",
      "pts": 79.08,
      "how": "draft",
      "round": 4,
@@ -25980,7 +26052,7 @@
      "slot": "RB",
      "nfl": "JAX",
      "injury": null,
-     "pts": 88.4,
+     "pts": 118.3,
      "how": "draft",
      "round": 5,
      "pick": 3
@@ -25992,7 +26064,7 @@
      "slot": "BE",
      "nfl": "BUF",
      "injury": null,
-     "pts": 55.0,
+     "pts": 66.4,
      "how": "draft",
      "round": 8,
      "pick": 8
@@ -26028,7 +26100,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 23.7,
+     "pts": 44.1,
      "how": "fa"
     },
     {
@@ -26038,7 +26110,7 @@
      "slot": "RB/WR/TE",
      "nfl": "NYJ",
      "injury": null,
-     "pts": 76.3,
+     "pts": 99.6,
      "how": "waiver"
     },
     {
@@ -26048,7 +26120,7 @@
      "slot": "K",
      "nfl": "IND",
      "injury": null,
-     "pts": 87.0,
+     "pts": 88.0,
      "how": "fa"
     },
     {
@@ -26058,7 +26130,7 @@
      "slot": "RB",
      "nfl": "LV",
      "injury": null,
-     "pts": 122.0,
+     "pts": 132.3,
      "how": "trade"
     },
     {
@@ -26078,7 +26150,7 @@
      "slot": "BE",
      "nfl": "MIA",
      "injury": null,
-     "pts": 39.3,
+     "pts": 47.6,
      "how": "waiver"
     },
     {
@@ -26088,7 +26160,7 @@
      "slot": "D/ST",
      "nfl": "WSH",
      "injury": null,
-     "pts": 23.0,
+     "pts": 37.0,
      "how": "fa"
     },
     {
@@ -26098,7 +26170,7 @@
      "slot": "TE",
      "nfl": "KC",
      "injury": null,
-     "pts": 70.3,
+     "pts": 82.0,
      "how": "fa"
     },
     {
@@ -26108,7 +26180,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 60.8,
+     "pts": 74.5,
      "how": "waiver"
     }
    ]
@@ -26123,7 +26195,7 @@
      "slot": "WR",
      "nfl": "DET",
      "injury": null,
-     "pts": 128.4,
+     "pts": 141.0,
      "how": "draft",
      "round": 1,
      "pick": 5
@@ -26135,7 +26207,7 @@
      "slot": "RB",
      "nfl": "KC",
      "injury": null,
-     "pts": 147.7,
+     "pts": 160.1,
      "how": "draft",
      "round": 2,
      "pick": 6
@@ -26158,7 +26230,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NYJ",
-     "injury": "QUESTIONABLE",
+     "injury": "OUT",
      "pts": 42.5,
      "how": "draft",
      "round": 4,
@@ -26207,7 +26279,7 @@
      "slot": "QB",
      "nfl": "CIN",
      "injury": null,
-     "pts": 130.12,
+     "pts": 169.6,
      "how": "draft",
      "round": 8,
      "pick": 6
@@ -26231,7 +26303,7 @@
      "slot": "RB/WR/TE",
      "nfl": "WSH",
      "injury": null,
-     "pts": 69.4,
+     "pts": 82.2,
      "how": "draft",
      "round": 10,
      "pick": 6
@@ -26255,7 +26327,7 @@
      "slot": "RB",
      "nfl": "MIA",
      "injury": null,
-     "pts": 65.3,
+     "pts": 72.2,
      "how": "waiver"
     },
     {
@@ -26265,7 +26337,7 @@
      "slot": "TE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 59.9,
+     "pts": 67.4,
      "how": "waiver"
     },
     {
@@ -26285,7 +26357,7 @@
      "slot": "BE",
      "nfl": "IND",
      "injury": null,
-     "pts": 18.6,
+     "pts": 21.5,
      "how": "waiver"
     },
     {
@@ -26295,7 +26367,7 @@
      "slot": "D/ST",
      "nfl": "JAX",
      "injury": null,
-     "pts": 34.0,
+     "pts": 55.0,
      "how": "waiver"
     },
     {
@@ -26305,7 +26377,7 @@
      "slot": "BE",
      "nfl": "JAX",
      "injury": null,
-     "pts": 25.5,
+     "pts": 33.7,
      "how": "fa"
     },
     {
@@ -26330,7 +26402,7 @@
      "slot": "RB",
      "nfl": "ATL",
      "injury": null,
-     "pts": 145.7,
+     "pts": 153.3,
      "how": "draft",
      "round": 1,
      "pick": 1
@@ -26342,7 +26414,7 @@
      "slot": "WR",
      "nfl": "NYJ",
      "injury": null,
-     "pts": 99.4,
+     "pts": 113.7,
      "how": "draft",
      "round": 2,
      "pick": 10
@@ -26354,7 +26426,7 @@
      "slot": "QB",
      "nfl": "BUF",
      "injury": null,
-     "pts": 161.26,
+     "pts": 187.82,
      "how": "draft",
      "round": 3,
      "pick": 1
@@ -26366,7 +26438,7 @@
      "slot": "RB",
      "nfl": "TB",
      "injury": null,
-     "pts": 109.6,
+     "pts": 130.6,
      "how": "draft",
      "round": 4,
      "pick": 10
@@ -26390,7 +26462,7 @@
      "slot": "BE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 38.8,
+     "pts": 48.1,
      "how": "draft",
      "round": 6,
      "pick": 10
@@ -26402,7 +26474,7 @@
      "slot": "RB/WR/TE",
      "nfl": "DEN",
      "injury": null,
-     "pts": 58.0,
+     "pts": 59.3,
      "how": "draft",
      "round": 7,
      "pick": 1
@@ -26414,20 +26486,10 @@
      "slot": "TE",
      "nfl": "PHI",
      "injury": null,
-     "pts": 56.8,
+     "pts": 64.0,
      "how": "draft",
      "round": 9,
      "pick": 1
-    },
-    {
-     "id": 4034949,
-     "name": "Eddy Pineiro",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "SF",
-     "injury": null,
-     "pts": 41.0,
-     "how": "fa"
     },
     {
      "id": 4695883,
@@ -26456,7 +26518,7 @@
      "slot": "RB/WR/TE",
      "nfl": "MIA",
      "injury": null,
-     "pts": 56.7,
+     "pts": 71.7,
      "how": "fa"
     },
     {
@@ -26466,7 +26528,7 @@
      "slot": "BE",
      "nfl": "MIN",
      "injury": null,
-     "pts": 62.7,
+     "pts": 78.5,
      "how": "waiver"
     },
     {
@@ -26486,7 +26548,7 @@
      "slot": "D/ST",
      "nfl": "LAR",
      "injury": null,
-     "pts": 26.0,
+     "pts": 37.0,
      "how": "waiver"
     },
     {
@@ -26495,8 +26557,8 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "TB",
-     "injury": "QUESTIONABLE",
-     "pts": 39.0,
+     "injury": null,
+     "pts": 53.0,
      "how": "fa",
      "round": 10,
      "pick": 10
@@ -26508,7 +26570,7 @@
      "slot": "BE",
      "nfl": "BUF",
      "injury": null,
-     "pts": 65.3,
+     "pts": 66.7,
      "how": "waiver"
     },
     {
@@ -26518,8 +26580,18 @@
      "slot": "BE",
      "nfl": "DAL",
      "injury": null,
-     "pts": 63.4,
+     "pts": 76.5,
      "how": "waiver"
+    },
+    {
+     "id": 16339,
+     "name": "Brandon McManus",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 11.0,
+     "how": "fa"
     }
    ]
   }
