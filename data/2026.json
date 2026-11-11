@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-11-10T14:43+00:00",
+ "updated": "2026-11-11T14:43+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 10,
@@ -15850,7 +15850,7 @@
         "nfl": "KC",
         "slot": "RB",
         "pts": 0,
-        "proj": 26.05
+        "proj": 26.11
        },
        {
         "id": 4595348,
@@ -15860,6 +15860,15 @@
         "slot": "RB/WR/TE",
         "pts": 0,
         "proj": 16.41
+       },
+       {
+        "id": 4427366,
+        "name": "Breece Hall",
+        "pos": "RB",
+        "nfl": "NYJ",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 12.13
        },
        {
         "id": 4685472,
@@ -15880,22 +15889,13 @@
         "proj": 19.03
        },
        {
-        "id": 2976212,
-        "name": "Stefon Diggs",
-        "pos": "WR",
-        "nfl": "WSH",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 10.75
-       },
-       {
         "id": 4711533,
         "name": "Ollie Gordon II",
         "pos": "RB",
         "nfl": "MIA",
         "slot": "RB",
         "pts": 0,
-        "proj": 15.95
+        "proj": 15.7
        },
        {
         "id": 4430539,
@@ -15913,7 +15913,7 @@
         "nfl": "MIN",
         "slot": "K",
         "pts": 0,
-        "proj": 9.16
+        "proj": 9.41
        },
        {
         "id": -16030,
@@ -15922,19 +15922,10 @@
         "nfl": "JAX",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 6.26
+        "proj": 6.41
        }
       ],
       "bench": [
-       {
-        "id": 4427366,
-        "name": "Breece Hall",
-        "pos": "RB",
-        "nfl": "NYJ",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 12.13
-       },
        {
         "id": 4431299,
         "name": "Rome Odunze",
@@ -15963,6 +15954,15 @@
         "proj": 0
        },
        {
+        "id": 2976212,
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "nfl": "WSH",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.75
+       },
+       {
         "id": 4575131,
         "name": "Jacory Croskey-Merritt",
         "pos": "RB",
@@ -15970,15 +15970,6 @@
         "slot": "IR",
         "pts": 0,
         "proj": 0
-       },
-       {
-        "id": 4686468,
-        "name": "Seth McGowan",
-        "pos": "RB",
-        "nfl": "IND",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 5.06
        },
        {
         "id": 4432773,
@@ -15997,6 +15988,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "id": 2573401,
+        "name": "Tyler Higbee",
+        "pos": "TE",
+        "nfl": "LAR",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 7.14
        }
       ]
      },
@@ -16013,7 +16013,7 @@
         "nfl": "SF",
         "slot": "RB",
         "pts": 0,
-        "proj": 21.72
+        "proj": 21.75
        },
        {
         "id": 4432665,
@@ -16022,7 +16022,7 @@
         "nfl": "LV",
         "slot": "TE",
         "pts": 0,
-        "proj": 16.76
+        "proj": 15.39
        },
        {
         "id": 4047365,
@@ -16040,7 +16040,7 @@
         "nfl": "BAL",
         "slot": "WR",
         "pts": 0,
-        "proj": 14.59
+        "proj": 14.6
        },
        {
         "id": 3915416,
@@ -16123,7 +16123,7 @@
         "nfl": "MIN",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.43
+        "proj": 10.67
        },
        {
         "id": 3916433,
@@ -16255,7 +16255,7 @@
         "nfl": "KC",
         "slot": "WR",
         "pts": 0,
-        "proj": 10.05
+        "proj": 8.27
        },
        {
         "id": -16026,
@@ -16264,7 +16264,7 @@
         "nfl": "SEA",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 6.13
+        "proj": 7.11
        },
        {
         "id": 4685720,
@@ -16338,7 +16338,7 @@
         "nfl": "SF",
         "slot": "BE",
         "pts": 0,
-        "proj": 12.29
+        "proj": 11.7
        },
        {
         "id": 4360078,
@@ -16394,15 +16394,6 @@
         "proj": 20.54
        },
        {
-        "id": 4612826,
-        "name": "Ladd McConkey",
-        "pos": "WR",
-        "nfl": "LAC",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 10.43
-       },
-       {
         "id": 4685702,
         "name": "Quinshon Judkins",
         "pos": "RB",
@@ -16418,16 +16409,25 @@
         "nfl": "GB",
         "slot": "WR",
         "pts": 0,
-        "proj": 16.94
+        "proj": 17.22
        },
        {
-        "id": 4723086,
-        "name": "Colston Loveland",
+        "id": 4426385,
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "nfl": "SEA",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 14.53
+       },
+       {
+        "id": 4385690,
+        "name": "Dalton Kincaid",
         "pos": "TE",
-        "nfl": "CHI",
+        "nfl": "BUF",
         "slot": "TE",
         "pts": 0,
-        "proj": 0
+        "proj": 8.85
        },
        {
         "id": 4431452,
@@ -16454,16 +16454,16 @@
         "nfl": "NYG",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 5.41
+        "proj": 5.27
        },
        {
-        "id": 17427,
-        "name": "Cairo Santos",
+        "id": 17372,
+        "name": "Chris Boswell",
         "pos": "K",
-        "nfl": "CHI",
+        "nfl": "PIT",
         "slot": "K",
         "pts": 0,
-        "proj": 0
+        "proj": 10.5
        }
       ],
       "bench": [
@@ -16475,6 +16475,15 @@
         "slot": "BE",
         "pts": 0,
         "proj": 0
+       },
+       {
+        "id": 4612826,
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "nfl": "LAC",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.43
        },
        {
         "id": 4432708,
@@ -16495,31 +16504,22 @@
         "proj": 9.78
        },
        {
+        "id": 4723086,
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "nfl": "CHI",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
+       },
+       {
         "id": 3042519,
         "name": "Aaron Jones Sr.",
         "pos": "RB",
         "nfl": "MIN",
         "slot": "BE",
         "pts": 0,
-        "proj": 6.79
-       },
-       {
-        "id": 4426385,
-        "name": "Zach Charbonnet",
-        "pos": "RB",
-        "nfl": "SEA",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 14.43
-       },
-       {
-        "id": 4385690,
-        "name": "Dalton Kincaid",
-        "pos": "TE",
-        "nfl": "BUF",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 8.85
+        "proj": 8.46
        }
       ]
      },
@@ -16543,16 +16543,7 @@
         "nfl": "ATL",
         "slot": "RB",
         "pts": 0,
-        "proj": 18.61
-       },
-       {
-        "id": 4569618,
-        "name": "Garrett Wilson",
-        "pos": "WR",
-        "nfl": "NYJ",
-        "slot": "WR",
-        "pts": 0,
-        "proj": 12.71
+        "proj": 18.63
        },
        {
         "id": 3918298,
@@ -16573,24 +16564,6 @@
         "proj": 0
        },
        {
-        "id": 4241985,
-        "name": "J.K. Dobbins",
-        "pos": "RB",
-        "nfl": "DEN",
-        "slot": "RB/WR/TE",
-        "pts": 0,
-        "proj": 0
-       },
-       {
-        "id": 3121023,
-        "name": "Dallas Goedert",
-        "pos": "TE",
-        "nfl": "PHI",
-        "slot": "TE",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": 4695883,
         "name": "Jalen Coker",
         "pos": "WR",
@@ -16600,13 +16573,31 @@
         "proj": 11.3
        },
        {
+        "id": 2991662,
+        "name": "Mack Hollins",
+        "pos": "WR",
+        "nfl": "NE",
+        "slot": "WR",
+        "pts": 0,
+        "proj": 10.6
+       },
+       {
         "id": 4569603,
         "name": "Malik Washington",
         "pos": "WR",
         "nfl": "MIA",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 9.01
+        "proj": 9.06
+       },
+       {
+        "id": 4036133,
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "nfl": "MIN",
+        "slot": "TE",
+        "pts": 0,
+        "proj": 11.53
        },
        {
         "id": -16014,
@@ -16615,7 +16606,16 @@
         "nfl": "LAR",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 8.35
+        "proj": 8.26
+       },
+       {
+        "id": 5083754,
+        "name": "Ryan Flournoy",
+        "pos": "WR",
+        "nfl": "DAL",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 8.39
        },
        {
         "id": 16339,
@@ -16628,6 +16628,15 @@
        }
       ],
       "bench": [
+       {
+        "id": 4569618,
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "nfl": "NYJ",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 12.71
+       },
        {
         "id": 16800,
         "name": "Davante Adams",
@@ -16647,22 +16656,22 @@
         "proj": 0
        },
        {
-        "id": 2991662,
-        "name": "Mack Hollins",
-        "pos": "WR",
-        "nfl": "NE",
+        "id": 4241985,
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "nfl": "DEN",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.6
+        "proj": 0
        },
        {
-        "id": 4036133,
-        "name": "T.J. Hockenson",
+        "id": 3121023,
+        "name": "Dallas Goedert",
         "pos": "TE",
-        "nfl": "MIN",
+        "nfl": "PHI",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.89
+        "proj": 0
        },
        {
         "id": 4429023,
@@ -16671,16 +16680,7 @@
         "nfl": "GB",
         "slot": "IR",
         "pts": 0,
-        "proj": 7.48
-       },
-       {
-        "id": 4371733,
-        "name": "Kenny Gainwell",
-        "pos": "RB",
-        "nfl": "TB",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 0
+        "proj": 7.38
        },
        {
         "id": 4635008,
@@ -16692,13 +16692,13 @@
         "proj": 7.53
        },
        {
-        "id": 5083754,
-        "name": "Ryan Flournoy",
-        "pos": "WR",
-        "nfl": "DAL",
+        "id": 4912274,
+        "name": "Sione Vaki",
+        "pos": "RB",
+        "nfl": "DET",
         "slot": "BE",
         "pts": 0,
-        "proj": 8.39
+        "proj": 4.28
        }
       ]
      },
@@ -16715,7 +16715,7 @@
         "nfl": "KC",
         "slot": "WR",
         "pts": 0,
-        "proj": 13.38
+        "proj": 12.85
        },
        {
         "id": 4426354,
@@ -16751,7 +16751,7 @@
         "nfl": "IND",
         "slot": "TE",
         "pts": 0,
-        "proj": 10.9
+        "proj": 10.56
        },
        {
         "id": 4360689,
@@ -16796,7 +16796,7 @@
         "nfl": "SF",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 4.41
+        "proj": 4.49
        }
       ],
       "bench": [
@@ -16805,7 +16805,7 @@
         "name": "Travis Etienne Jr.",
         "pos": "RB",
         "nfl": "NO",
-        "slot": "BE",
+        "slot": "IR",
         "pts": 0,
         "proj": 0
        },
@@ -16819,22 +16819,13 @@
         "proj": 0
        },
        {
-        "id": 4360761,
-        "name": "Michael Wilson",
-        "pos": "WR",
-        "nfl": "ARI",
-        "slot": "IR",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": 4428718,
         "name": "Tre Tucker",
         "pos": "WR",
         "nfl": "LV",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.4
+        "proj": 8.41
        },
        {
         "id": 4686658,
@@ -16843,16 +16834,7 @@
         "nfl": "LV",
         "slot": "BE",
         "pts": 0,
-        "proj": 6.38
-       },
-       {
-        "id": 4360698,
-        "name": "Joe Milton",
-        "pos": "QB",
-        "nfl": "PHI",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 0
+        "proj": 5.98
        },
        {
         "id": 3054850,
@@ -16862,6 +16844,24 @@
         "slot": "BE",
         "pts": 0,
         "proj": 10.25
+       },
+       {
+        "id": 4569682,
+        "name": "Audric Estime",
+        "pos": "RB",
+        "nfl": "NO",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 10.33
+       },
+       {
+        "id": 4432577,
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "nfl": "HOU",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 18.28
        }
       ]
      },
@@ -16879,22 +16879,13 @@
       "score": 0,
       "starters": [
        {
-        "id": 4426515,
-        "name": "Puka Nacua",
-        "pos": "WR",
-        "nfl": "LAR",
-        "slot": "WR",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": 4426502,
         "name": "Drake London",
         "pos": "WR",
         "nfl": "ATL",
         "slot": "WR",
         "pts": 0,
-        "proj": 14.8
+        "proj": 14.82
        },
        {
         "id": 4882093,
@@ -16904,15 +16895,6 @@
         "slot": "RB",
         "pts": 0,
         "proj": 17.26
-       },
-       {
-        "id": 4702555,
-        "name": "Jonah Coleman",
-        "pos": "RB",
-        "nfl": "DEN",
-        "slot": "RB",
-        "pts": 0,
-        "proj": 0
        },
        {
         "id": 4571557,
@@ -16928,9 +16910,9 @@
         "name": "Ashton Jeanty",
         "pos": "RB",
         "nfl": "LV",
-        "slot": "RB/WR/TE",
+        "slot": "RB",
         "pts": 0,
-        "proj": 14.6
+        "proj": 13.57
        },
        {
         "id": 15847,
@@ -16939,7 +16921,16 @@
         "nfl": "KC",
         "slot": "TE",
         "pts": 0,
-        "proj": 11.7
+        "proj": 11.17
+       },
+       {
+        "id": 15818,
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "nfl": "IND",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 8.69
        },
        {
         "id": -16003,
@@ -16960,16 +16951,34 @@
         "proj": 17.31
        },
        {
-        "id": 4040761,
-        "name": "Devin Singletary",
-        "pos": "RB",
-        "nfl": "NYG",
+        "id": 4427095,
+        "name": "DeMario Douglas",
+        "pos": "WR",
+        "nfl": "NE",
+        "slot": "WR",
+        "pts": 0,
+        "proj": 12.01
+       },
+       {
+        "id": 4869645,
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "nfl": "MIA",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 7.45
+        "proj": 9.32
        }
       ],
       "bench": [
+       {
+        "id": 4426515,
+        "name": "Puka Nacua",
+        "pos": "WR",
+        "nfl": "LAR",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
+       },
        {
         "id": 3916387,
         "name": "Lamar Jackson",
@@ -16995,7 +17004,16 @@
         "nfl": "SF",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.58
+        "proj": 7.59
+       },
+       {
+        "id": 4702555,
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "nfl": "DEN",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
        },
        {
         "id": 4685247,
@@ -17013,25 +17031,7 @@
         "nfl": "GB",
         "slot": "BE",
         "pts": 0,
-        "proj": 15.92
-       },
-       {
-        "id": 15818,
-        "name": "Keenan Allen",
-        "pos": "WR",
-        "nfl": "IND",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 10.12
-       },
-       {
-        "id": 4362619,
-        "name": "Chris Rodriguez Jr.",
-        "pos": "RB",
-        "nfl": "JAX",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 6.86
+        "proj": 16.02
        }
       ]
      },
@@ -17057,7 +17057,16 @@
         "nfl": "LAR",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 18.67
+        "proj": 18.65
+       },
+       {
+        "id": 4871023,
+        "name": "Carnell Tate",
+        "pos": "WR",
+        "nfl": "TEN",
+        "slot": "RB/WR/TE",
+        "pts": 0,
+        "proj": 12.23
        },
        {
         "id": 4360248,
@@ -17066,25 +17075,16 @@
         "nfl": "ATL",
         "slot": "TE",
         "pts": 0,
-        "proj": 9.15
+        "proj": 9.16
        },
        {
-        "id": 4431611,
-        "name": "Caleb Williams",
-        "pos": "QB",
-        "nfl": "CHI",
-        "slot": "QB",
-        "pts": 0,
-        "proj": 0
-       },
-       {
-        "id": 4685278,
-        "name": "Luther Burden III",
+        "id": 4047650,
+        "name": "DK Metcalf",
         "pos": "WR",
-        "nfl": "CHI",
-        "slot": "RB/WR/TE",
+        "nfl": "PIT",
+        "slot": "WR",
         "pts": 0,
-        "proj": 0
+        "proj": 11.17
        },
        {
         "id": 4241416,
@@ -17096,22 +17096,22 @@
         "proj": 20.01
        },
        {
-        "id": 4870795,
-        "name": "Makai Lemon",
-        "pos": "WR",
-        "nfl": "PHI",
-        "slot": "WR",
-        "pts": 0,
-        "proj": 0
-       },
-       {
         "id": -16033,
         "name": "Ravens D/ST",
         "pos": "D/ST",
         "nfl": "BAL",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 7.56
+        "proj": 7.7
+       },
+       {
+        "id": 2971573,
+        "name": "Ka'imi Fairbairn",
+        "pos": "K",
+        "nfl": "HOU",
+        "slot": "K",
+        "pts": 0,
+        "proj": 10.02
        },
        {
         "id": 4262921,
@@ -17120,16 +17120,16 @@
         "nfl": "MIN",
         "slot": "WR",
         "pts": 0,
-        "proj": 15.13
+        "proj": 17.48
        },
        {
-        "id": 3917232,
-        "name": "Tyler Bass",
-        "pos": "K",
-        "nfl": "BUF",
-        "slot": "K",
+        "id": 12483,
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "nfl": "LAR",
+        "slot": "QB",
         "pts": 0,
-        "proj": 11.23
+        "proj": 16.98
        }
       ],
       "bench": [
@@ -17152,22 +17152,31 @@
         "proj": 0
        },
        {
-        "id": 4871023,
-        "name": "Carnell Tate",
-        "pos": "WR",
-        "nfl": "TEN",
+        "id": 4431611,
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "nfl": "CHI",
         "slot": "BE",
         "pts": 0,
-        "proj": 12.23
+        "proj": 0
        },
        {
-        "id": 4047650,
-        "name": "DK Metcalf",
+        "id": 4685278,
+        "name": "Luther Burden III",
         "pos": "WR",
-        "nfl": "PIT",
+        "nfl": "CHI",
         "slot": "BE",
         "pts": 0,
-        "proj": 11.17
+        "proj": 0
+       },
+       {
+        "id": 4870795,
+        "name": "Makai Lemon",
+        "pos": "WR",
+        "nfl": "PHI",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
        },
        {
         "id": 4429059,
@@ -17179,13 +17188,13 @@
         "proj": 13.92
        },
        {
-        "id": 2971573,
-        "name": "Ka'imi Fairbairn",
+        "id": 3917232,
+        "name": "Tyler Bass",
         "pos": "K",
-        "nfl": "HOU",
+        "nfl": "BUF",
         "slot": "BE",
         "pts": 0,
-        "proj": 10.02
+        "proj": 11.23
        }
       ]
      },
@@ -17209,7 +17218,7 @@
         "nfl": "IND",
         "slot": "RB",
         "pts": 0,
-        "proj": 17.87
+        "proj": 17.83
        },
        {
         "id": 4362238,
@@ -17225,18 +17234,9 @@
         "name": "Jaxon Smith-Njigba",
         "pos": "WR",
         "nfl": "SEA",
-        "slot": "WR",
-        "pts": 0,
-        "proj": 22.5
-       },
-       {
-        "id": 4259545,
-        "name": "D'Andre Swift",
-        "pos": "RB",
-        "nfl": "CHI",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 0
+        "proj": 22.3
        },
        {
         "id": 4432620,
@@ -17245,7 +17245,7 @@
         "nfl": "JAX",
         "slot": "WR",
         "pts": 0,
-        "proj": 14.4
+        "proj": 14.39
        },
        {
         "id": 4360310,
@@ -17254,25 +17254,25 @@
         "nfl": "JAX",
         "slot": "QB",
         "pts": 0,
-        "proj": 21.43
+        "proj": 21.46
        },
        {
         "id": 3040151,
         "name": "George Kittle",
         "pos": "TE",
         "nfl": "SF",
-        "slot": "TE",
+        "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 15.9
+        "proj": 15.35
        },
        {
-        "id": 3150744,
-        "name": "Chase McLaughlin",
-        "pos": "K",
-        "nfl": "TB",
-        "slot": "K",
+        "id": 4870653,
+        "name": "KC Concepcion",
+        "pos": "WR",
+        "nfl": "CLE",
+        "slot": "WR",
         "pts": 0,
-        "proj": 0
+        "proj": 10.61
        },
        {
         "id": -16016,
@@ -17281,16 +17281,25 @@
         "nfl": "MIN",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 5.13
+        "proj": 5.19
        },
        {
         "id": 5083076,
         "name": "Harold Fannin Jr.",
         "pos": "TE",
         "nfl": "CLE",
-        "slot": "RB/WR/TE",
+        "slot": "TE",
         "pts": 0,
         "proj": 10.08
+       },
+       {
+        "id": 5082424,
+        "name": "Dominic Zvada",
+        "pos": "K",
+        "nfl": "NYG",
+        "slot": "K",
+        "pts": 0,
+        "proj": 10.83
        }
       ],
       "bench": [
@@ -17304,40 +17313,31 @@
         "proj": 0
        },
        {
+        "id": 4259545,
+        "name": "D'Andre Swift",
+        "pos": "RB",
+        "nfl": "CHI",
+        "slot": "BE",
+        "pts": 0,
+        "proj": 0
+       },
+       {
         "id": 4360569,
         "name": "Jordan Mason",
         "pos": "RB",
         "nfl": "MIN",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.64
+        "proj": 9.15
        },
        {
         "id": 4880281,
         "name": "Jordyn Tyson",
         "pos": "WR",
         "nfl": "NO",
-        "slot": "IR",
+        "slot": "BE",
         "pts": 0,
         "proj": 8.58
-       },
-       {
-        "id": 4870653,
-        "name": "KC Concepcion",
-        "pos": "WR",
-        "nfl": "CLE",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 10.61
-       },
-       {
-        "id": 4569559,
-        "name": "Devaughn Vele",
-        "pos": "WR",
-        "nfl": "NO",
-        "slot": "BE",
-        "pts": 0,
-        "proj": 7.4
        },
        {
         "id": 5081432,
@@ -17355,7 +17355,7 @@
         "nfl": "KC",
         "slot": "BE",
         "pts": 0,
-        "proj": 6.94
+        "proj": 6.41
        }
       ]
      },
@@ -17408,7 +17408,7 @@
         "nfl": "GB",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 15.42
+        "proj": 15.7
        },
        {
         "id": 4569987,
@@ -17444,7 +17444,7 @@
         "nfl": "HOU",
         "slot": "D/ST",
         "pts": 0,
-        "proj": 7.32
+        "proj": 7.34
        },
        {
         "id": 4689936,
@@ -17473,7 +17473,7 @@
         "nfl": "SEA",
         "slot": "BE",
         "pts": 0,
-        "proj": 11.81
+        "proj": 11.87
        },
        {
         "id": 4572680,
@@ -17482,7 +17482,7 @@
         "nfl": "GB",
         "slot": "BE",
         "pts": 0,
-        "proj": 9.25
+        "proj": 9.4
        },
        {
         "id": 4688813,
@@ -17491,7 +17491,7 @@
         "nfl": "IND",
         "slot": "BE",
         "pts": 0,
-        "proj": 8.66
+        "proj": 9.14
        },
        {
         "id": 4568490,
@@ -17518,7 +17518,7 @@
         "nfl": "PIT",
         "slot": "BE",
         "pts": 0,
-        "proj": 5.55
+        "proj": 5.38
        }
       ]
      },
@@ -17566,7 +17566,7 @@
      "id": 4612826,
      "name": "Ladd McConkey",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "LAC",
      "injury": "QUESTIONABLE",
      "pts": 51.6
@@ -17611,7 +17611,7 @@
      "id": 4723086,
      "name": "Colston Loveland",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 83.3
@@ -17629,7 +17629,7 @@
      "id": 4426385,
      "name": "Zach Charbonnet",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "SEA",
      "injury": null,
      "pts": 15.5
@@ -17638,7 +17638,7 @@
      "id": 4385690,
      "name": "Dalton Kincaid",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "BUF",
      "injury": null,
      "pts": 84.9
@@ -17671,13 +17671,13 @@
      "pts": 50.0
     },
     {
-     "id": 17427,
-     "name": "Cairo Santos",
+     "id": 17372,
+     "name": "Chris Boswell",
      "pos": "K",
      "slot": "K",
-     "nfl": "CHI",
+     "nfl": "PIT",
      "injury": null,
-     "pts": 79.0
+     "pts": 77.0
     }
    ]
   },
@@ -17753,7 +17753,7 @@
      "pos": "RB",
      "slot": "RB",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "DOUBTFUL",
      "pts": 113.7
     },
     {
@@ -17807,7 +17807,7 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "SF",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 60.4
     },
     {
@@ -17946,7 +17946,7 @@
      "name": "Josh Downs",
      "pos": "WR",
      "slot": "BE",
-     "nfl": "IND",
+     "nfl": "KC",
      "injury": null,
      "pts": 75.1
     },
@@ -18031,7 +18031,7 @@
      "id": 4239996,
      "name": "Travis Etienne Jr.",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "NO",
      "injury": "INJURY_RESERVE",
      "pts": 30.9
@@ -18042,7 +18042,7 @@
      "pos": "WR",
      "slot": "RB/WR/TE",
      "nfl": "DAL",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 104.3
     },
     {
@@ -18062,15 +18062,6 @@
      "nfl": "SF",
      "injury": "INJURY_RESERVE",
      "pts": 0
-    },
-    {
-     "id": 4360761,
-     "name": "Michael Wilson",
-     "pos": "WR",
-     "slot": "IR",
-     "nfl": "ARI",
-     "injury": "OUT",
-     "pts": 120.68
     },
     {
      "id": 4361579,
@@ -18145,15 +18136,6 @@
      "pts": 48.5
     },
     {
-     "id": 4360698,
-     "name": "Joe Milton",
-     "pos": "QB",
-     "slot": "BE",
-     "nfl": "PHI",
-     "injury": null,
-     "pts": 13.16
-    },
-    {
      "id": -16025,
      "name": "49ers D/ST",
      "pos": "D/ST",
@@ -18170,6 +18152,24 @@
      "nfl": "NO",
      "injury": null,
      "pts": 73.7
+    },
+    {
+     "id": 4569682,
+     "name": "Audric Estime",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 22.6
+    },
+    {
+     "id": 4432577,
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 164.04
     }
    ]
   },
@@ -18216,9 +18216,9 @@
      "id": 4871023,
      "name": "Carnell Tate",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "TEN",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 77.3
     },
     {
@@ -18234,7 +18234,7 @@
      "id": 4047650,
      "name": "DK Metcalf",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "PIT",
      "injury": null,
      "pts": 77.9
@@ -18243,7 +18243,7 @@
      "id": 4431611,
      "name": "Caleb Williams",
      "pos": "QB",
-     "slot": "QB",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 110.34
@@ -18252,7 +18252,7 @@
      "id": 4685278,
      "name": "Luther Burden III",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": "QUESTIONABLE",
      "pts": 136.3
@@ -18270,7 +18270,7 @@
      "id": 4870795,
      "name": "Makai Lemon",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": null,
      "pts": 73.7
@@ -18297,7 +18297,7 @@
      "id": 2971573,
      "name": "Ka'imi Fairbairn",
      "pos": "K",
-     "slot": "BE",
+     "slot": "K",
      "nfl": "HOU",
      "injury": null,
      "pts": 92.0
@@ -18315,10 +18315,19 @@
      "id": 3917232,
      "name": "Tyler Bass",
      "pos": "K",
-     "slot": "K",
+     "slot": "BE",
      "nfl": "BUF",
      "injury": null,
      "pts": 91.0
+    },
+    {
+     "id": 12483,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 142.86
     }
    ]
   },
@@ -18349,14 +18358,14 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 19.1
     },
     {
      "id": 4430878,
      "name": "Jaxon Smith-Njigba",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "RB/WR/TE",
      "nfl": "SEA",
      "injury": null,
      "pts": 232.06
@@ -18365,7 +18374,7 @@
      "id": 4259545,
      "name": "D'Andre Swift",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 153.8
@@ -18401,7 +18410,7 @@
      "id": 3040151,
      "name": "George Kittle",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "RB/WR/TE",
      "nfl": "SF",
      "injury": null,
      "pts": 114.3
@@ -18410,7 +18419,7 @@
      "id": 4880281,
      "name": "Jordyn Tyson",
      "pos": "WR",
-     "slot": "IR",
+     "slot": "BE",
      "nfl": "NO",
      "injury": null,
      "pts": 5.0
@@ -18419,28 +18428,10 @@
      "id": 4870653,
      "name": "KC Concepcion",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "CLE",
      "injury": null,
      "pts": 88.4
-    },
-    {
-     "id": 4569559,
-     "name": "Devaughn Vele",
-     "pos": "WR",
-     "slot": "BE",
-     "nfl": "NO",
-     "injury": null,
-     "pts": 89.5
-    },
-    {
-     "id": 3150744,
-     "name": "Chase McLaughlin",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "TB",
-     "injury": null,
-     "pts": 99.0
     },
     {
      "id": 5081432,
@@ -18464,7 +18455,7 @@
      "id": 5083076,
      "name": "Harold Fannin Jr.",
      "pos": "TE",
-     "slot": "RB/WR/TE",
+     "slot": "TE",
      "nfl": "CLE",
      "injury": null,
      "pts": 102.3
@@ -18477,6 +18468,15 @@
      "nfl": "KC",
      "injury": null,
      "pts": 60.8
+    },
+    {
+     "id": 5082424,
+     "name": "Dominic Zvada",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 74.0
     }
    ]
   },
@@ -18534,7 +18534,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 33.8
     },
     {
@@ -18663,7 +18663,7 @@
      "id": 4426515,
      "name": "Puka Nacua",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "LAR",
      "injury": "DOUBTFUL",
      "pts": 173.6
@@ -18717,7 +18717,7 @@
      "id": 4702555,
      "name": "Jonah Coleman",
      "pos": "RB",
-     "slot": "RB",
+     "slot": "BE",
      "nfl": "DEN",
      "injury": null,
      "pts": 62.9
@@ -18744,7 +18744,7 @@
      "id": 4890973,
      "name": "Ashton Jeanty",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "RB",
      "nfl": "LV",
      "injury": null,
      "pts": 139.3
@@ -18771,8 +18771,8 @@
      "id": 15818,
      "name": "Keenan Allen",
      "pos": "WR",
-     "slot": "BE",
-     "nfl": "IND",
+     "slot": "RB/WR/TE",
+     "nfl": "SF",
      "injury": null,
      "pts": 81.1
     },
@@ -18795,22 +18795,22 @@
      "pts": 147.36
     },
     {
-     "id": 4362619,
-     "name": "Chris Rodriguez Jr.",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "JAX",
+     "id": 4427095,
+     "name": "DeMario Douglas",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "NE",
      "injury": null,
-     "pts": 54.4
+     "pts": 96.4
     },
     {
-     "id": 4040761,
-     "name": "Devin Singletary",
-     "pos": "RB",
+     "id": 4869645,
+     "name": "Caleb Douglas",
+     "pos": "WR",
      "slot": "RB/WR/TE",
-     "nfl": "NYG",
+     "nfl": "MIA",
      "injury": null,
-     "pts": 39.4
+     "pts": 60.6
     }
    ]
   },
@@ -18848,7 +18848,7 @@
      "id": 4427366,
      "name": "Breece Hall",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "NYJ",
      "injury": null,
      "pts": 54.2
@@ -18877,7 +18877,7 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "SF",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 89.0
     },
     {
@@ -18902,7 +18902,7 @@
      "id": 2976212,
      "name": "Stefon Diggs",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "WSH",
      "injury": null,
      "pts": 90.3
@@ -18944,15 +18944,6 @@
      "pts": 89.0
     },
     {
-     "id": 4686468,
-     "name": "Seth McGowan",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "IND",
-     "injury": null,
-     "pts": 32.7
-    },
-    {
      "id": -16030,
      "name": "Jaguars D/ST",
      "pos": "D/ST",
@@ -18976,8 +18967,17 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "HOU",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 45.5
+    },
+    {
+     "id": 2573401,
+     "name": "Tyler Higbee",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 58.7
     }
    ]
   },
@@ -18997,9 +18997,9 @@
      "id": 4569618,
      "name": "Garrett Wilson",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "NYJ",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 113.7
     },
     {
@@ -19042,7 +19042,7 @@
      "id": 4241985,
      "name": "J.K. Dobbins",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "DEN",
      "injury": null,
      "pts": 62.5
@@ -19051,7 +19051,7 @@
      "id": 3121023,
      "name": "Dallas Goedert",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": null,
      "pts": 74.0
@@ -19069,7 +19069,7 @@
      "id": 2991662,
      "name": "Mack Hollins",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "NE",
      "injury": null,
      "pts": 48.5
@@ -19087,7 +19087,7 @@
      "id": 4036133,
      "name": "T.J. Hockenson",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "MIN",
      "injury": null,
      "pts": 85.8
@@ -19098,7 +19098,7 @@
      "pos": "RB",
      "slot": "IR",
      "nfl": "GB",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 51.8
     },
     {
@@ -19109,15 +19109,6 @@
      "nfl": "LAR",
      "injury": null,
      "pts": 48.0
-    },
-    {
-     "id": 4371733,
-     "name": "Kenny Gainwell",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "TB",
-     "injury": null,
-     "pts": 63.6
     },
     {
      "id": 4635008,
@@ -19132,7 +19123,7 @@
      "id": 5083754,
      "name": "Ryan Flournoy",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "DAL",
      "injury": null,
      "pts": 83.8
@@ -19145,11 +19136,271 @@
      "nfl": "LAR",
      "injury": null,
      "pts": 19.0
+    },
+    {
+     "id": 4912274,
+     "name": "Sione Vaki",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 26.9
     }
    ]
   }
  ],
  "transactions": [
+  {
+   "id": "ae20565c-d53f-45d8-82bc-ed0d10d8f46c",
+   "date": 1794403661880,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 17372,
+     "action": "add",
+     "team": 1,
+     "name": "Chris Boswell",
+     "pos": "K",
+     "nfl": "PIT"
+    },
+    {
+     "player": 17427,
+     "action": "drop",
+     "team": 1,
+     "name": "Cairo Santos",
+     "pos": "K",
+     "nfl": "CHI",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "cb7269f2-42b5-4b5f-8775-01f0d08ed593",
+   "date": 1794403376334,
+   "types": [
+    "drop",
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 3150744,
+     "action": "drop",
+     "team": 6,
+     "name": "Chase McLaughlin",
+     "pos": "K",
+     "nfl": "TB",
+     "since": 0.0
+    },
+    {
+     "player": 5082424,
+     "action": "add",
+     "team": 6,
+     "name": "Dominic Zvada",
+     "pos": "K",
+     "nfl": "NYG"
+    }
+   ]
+  },
+  {
+   "id": "ba79797e-9684-4f59-b867-6e171cd622ea",
+   "date": 1794402981640,
+   "types": [
+    "fa"
+   ],
+   "moves": [
+    {
+     "player": 12483,
+     "action": "add",
+     "team": 5,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR"
+    }
+   ]
+  },
+  {
+   "id": "b1741c90-6087-4b2e-8057-ad0c3b63428e",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4360698,
+     "action": "drop",
+     "team": 4,
+     "name": "Joe Milton",
+     "pos": "QB",
+     "nfl": "PHI",
+     "since": 0.0
+    },
+    {
+     "player": 4432577,
+     "action": "add",
+     "team": 4,
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "nfl": "HOU"
+    }
+   ]
+  },
+  {
+   "id": "e3d51c1a-ff5a-423c-b244-b1700a595edc",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4869645,
+     "action": "add",
+     "team": 8,
+     "name": "Caleb Douglas",
+     "pos": "WR",
+     "nfl": "MIA"
+    },
+    {
+     "player": 4040761,
+     "action": "drop",
+     "team": 8,
+     "name": "Devin Singletary",
+     "pos": "RB",
+     "nfl": "NYG",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "71ff00ad-ce61-4352-a25a-9dfce1153c52",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4686468,
+     "action": "drop",
+     "team": 9,
+     "name": "Seth McGowan",
+     "pos": "RB",
+     "nfl": "IND",
+     "since": 0.0
+    },
+    {
+     "player": 2573401,
+     "action": "add",
+     "team": 9,
+     "name": "Tyler Higbee",
+     "pos": "TE",
+     "nfl": "LAR"
+    }
+   ]
+  },
+  {
+   "id": "366dc615-97ac-41d4-af7d-b0bafe109a14",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4371733,
+     "action": "drop",
+     "team": 10,
+     "name": "Kenny Gainwell",
+     "pos": "RB",
+     "nfl": "TB",
+     "since": 0.0
+    },
+    {
+     "player": 4912274,
+     "action": "add",
+     "team": 10,
+     "name": "Sione Vaki",
+     "pos": "RB",
+     "nfl": "DET"
+    }
+   ]
+  },
+  {
+   "id": "8429be3f-01a8-4716-9bdd-c2da62271955",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4569682,
+     "action": "add",
+     "team": 4,
+     "name": "Audric Estime",
+     "pos": "RB",
+     "nfl": "NO"
+    },
+    {
+     "player": 4360761,
+     "action": "drop",
+     "team": 4,
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "nfl": "ARI",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "e7e8e207-108d-4a70-b962-d902b4c2b9a2",
+   "date": 1794387527992,
+   "types": [
+    "drop",
+    "waiver"
+   ],
+   "moves": [
+    {
+     "player": 4427095,
+     "action": "add",
+     "team": 8,
+     "name": "DeMario Douglas",
+     "pos": "WR",
+     "nfl": "NE"
+    },
+    {
+     "player": 4362619,
+     "action": "drop",
+     "team": 8,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAX",
+     "since": 0.0
+    }
+   ]
+  },
+  {
+   "id": "05805d8b-ef25-43ee-a9b2-a0b18e399fe3",
+   "date": 1794331401116,
+   "types": [
+    "drop"
+   ],
+   "moves": [
+    {
+     "player": 4569559,
+     "action": "drop",
+     "team": 6,
+     "name": "Devaughn Vele",
+     "pos": "WR",
+     "nfl": "NO",
+     "since": 0.0
+    }
+   ]
+  },
   {
    "id": "c2c20370-d86d-4e33-9a74-2efe492b84fb",
    "date": 1794141308364,
@@ -19772,7 +20023,7 @@
      "team": 8,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND"
+     "nfl": "SF"
     }
    ]
   },
@@ -19915,8 +20166,8 @@
      "team": 8,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND",
-     "since": 20.3
+     "nfl": "SF",
+     "since": 6.6
     },
     {
      "player": 15847,
@@ -20541,7 +20792,7 @@
      "team": 8,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND"
+     "nfl": "SF"
     },
     {
      "player": -16030,
@@ -21220,8 +21471,8 @@
      "team": 8,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND",
-     "since": 42.6
+     "nfl": "SF",
+     "since": 28.9
     }
    ]
   },
@@ -21553,7 +21804,7 @@
      "team": 8,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND"
+     "nfl": "SF"
     },
     {
      "player": 4242355,
@@ -21767,8 +22018,8 @@
      "team": 6,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND",
-     "since": 52.1
+     "nfl": "SF",
+     "since": 38.4
     },
     {
      "player": 4431545,
@@ -22339,7 +22590,7 @@
      "team": 6,
      "name": "Keenan Allen",
      "pos": "WR",
-     "nfl": "IND"
+     "nfl": "SF"
     }
    ]
   },
@@ -25372,7 +25623,7 @@
     "pos": "WR",
     "nfl": "ARI",
     "pts": 120.68,
-    "kept": true,
+    "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 38,
@@ -25840,7 +26091,7 @@
     "pos": "RB",
     "nfl": "TB",
     "pts": 63.6,
-    "kept": true,
+    "kept": false,
     "keeper": false,
     "bid": null,
     "posDraft": 34,
@@ -25946,7 +26197,7 @@
     "player": "Josh Downs",
     "playerId": 4688813,
     "pos": "WR",
-    "nfl": "IND",
+    "nfl": "KC",
     "pts": 75.1,
     "kept": true,
     "keeper": false,
@@ -28585,7 +28836,7 @@
      "id": 4612826,
      "name": "Ladd McConkey",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "LAC",
      "injury": "QUESTIONABLE",
      "pts": 51.6,
@@ -28645,7 +28896,7 @@
      "id": 4723086,
      "name": "Colston Loveland",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 83.3,
@@ -28669,7 +28920,7 @@
      "id": 4426385,
      "name": "Zach Charbonnet",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "SEA",
      "injury": null,
      "pts": 15.5,
@@ -28681,7 +28932,7 @@
      "id": 4385690,
      "name": "Dalton Kincaid",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "BUF",
      "injury": null,
      "pts": 84.9,
@@ -28718,13 +28969,13 @@
      "how": "fa"
     },
     {
-     "id": 17427,
-     "name": "Cairo Santos",
+     "id": 17372,
+     "name": "Chris Boswell",
      "pos": "K",
      "slot": "K",
-     "nfl": "CHI",
+     "nfl": "PIT",
      "injury": null,
-     "pts": 79.0,
+     "pts": 77.0,
      "how": "fa"
     }
    ]
@@ -28822,7 +29073,7 @@
      "pos": "RB",
      "slot": "RB",
      "nfl": "NE",
-     "injury": "QUESTIONABLE",
+     "injury": "DOUBTFUL",
      "pts": 113.7,
      "how": "draft",
      "round": 8,
@@ -28894,7 +29145,7 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "SF",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 60.4,
      "how": "draft",
      "round": 16,
@@ -29070,7 +29321,7 @@
      "name": "Josh Downs",
      "pos": "WR",
      "slot": "BE",
-     "nfl": "IND",
+     "nfl": "KC",
      "injury": null,
      "pts": 75.1,
      "how": "draft",
@@ -29176,7 +29427,7 @@
      "id": 4239996,
      "name": "Travis Etienne Jr.",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "IR",
      "nfl": "NO",
      "injury": "INJURY_RESERVE",
      "pts": 30.9,
@@ -29190,7 +29441,7 @@
      "pos": "WR",
      "slot": "RB/WR/TE",
      "nfl": "DAL",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 104.3,
      "how": "draft",
      "round": 4,
@@ -29218,18 +29469,6 @@
      "pts": 0,
      "how": "draft",
      "round": 6,
-     "pick": 4
-    },
-    {
-     "id": 4360761,
-     "name": "Michael Wilson",
-     "pos": "WR",
-     "slot": "IR",
-     "nfl": "ARI",
-     "injury": "OUT",
-     "pts": 120.68,
-     "how": "draft",
-     "round": 8,
      "pick": 4
     },
     {
@@ -29319,16 +29558,6 @@
      "how": "waiver"
     },
     {
-     "id": 4360698,
-     "name": "Joe Milton",
-     "pos": "QB",
-     "slot": "BE",
-     "nfl": "PHI",
-     "injury": null,
-     "pts": 13.16,
-     "how": "fa"
-    },
-    {
      "id": -16025,
      "name": "49ers D/ST",
      "pos": "D/ST",
@@ -29347,6 +29576,26 @@
      "injury": null,
      "pts": 73.7,
      "how": "fa"
+    },
+    {
+     "id": 4569682,
+     "name": "Audric Estime",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "NO",
+     "injury": null,
+     "pts": 22.6,
+     "how": "waiver"
+    },
+    {
+     "id": 4432577,
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "slot": "BE",
+     "nfl": "HOU",
+     "injury": null,
+     "pts": 164.04,
+     "how": "waiver"
     }
    ]
   },
@@ -29405,9 +29654,9 @@
      "id": 4871023,
      "name": "Carnell Tate",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "TEN",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 77.3,
      "how": "draft",
      "round": 6,
@@ -29429,7 +29678,7 @@
      "id": 4047650,
      "name": "DK Metcalf",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "PIT",
      "injury": null,
      "pts": 77.9,
@@ -29441,7 +29690,7 @@
      "id": 4431611,
      "name": "Caleb Williams",
      "pos": "QB",
-     "slot": "QB",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 110.34,
@@ -29453,7 +29702,7 @@
      "id": 4685278,
      "name": "Luther Burden III",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": "QUESTIONABLE",
      "pts": 136.3,
@@ -29477,7 +29726,7 @@
      "id": 4870795,
      "name": "Makai Lemon",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": null,
      "pts": 73.7,
@@ -29513,7 +29762,7 @@
      "id": 2971573,
      "name": "Ka'imi Fairbairn",
      "pos": "K",
-     "slot": "BE",
+     "slot": "K",
      "nfl": "HOU",
      "injury": null,
      "pts": 92.0,
@@ -29535,10 +29784,20 @@
      "id": 3917232,
      "name": "Tyler Bass",
      "pos": "K",
-     "slot": "K",
+     "slot": "BE",
      "nfl": "BUF",
      "injury": null,
      "pts": 91.0,
+     "how": "fa"
+    },
+    {
+     "id": 12483,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "slot": "QB",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 142.86,
      "how": "fa"
     }
    ]
@@ -29576,7 +29835,7 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 19.1,
      "how": "draft",
      "round": 3,
@@ -29586,7 +29845,7 @@
      "id": 4430878,
      "name": "Jaxon Smith-Njigba",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "RB/WR/TE",
      "nfl": "SEA",
      "injury": null,
      "pts": 232.06,
@@ -29598,7 +29857,7 @@
      "id": 4259545,
      "name": "D'Andre Swift",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "CHI",
      "injury": null,
      "pts": 153.8,
@@ -29646,7 +29905,7 @@
      "id": 3040151,
      "name": "George Kittle",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "RB/WR/TE",
      "nfl": "SF",
      "injury": null,
      "pts": 114.3,
@@ -29658,7 +29917,7 @@
      "id": 4880281,
      "name": "Jordyn Tyson",
      "pos": "WR",
-     "slot": "IR",
+     "slot": "BE",
      "nfl": "NO",
      "injury": null,
      "pts": 5.0,
@@ -29670,30 +29929,10 @@
      "id": 4870653,
      "name": "KC Concepcion",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "CLE",
      "injury": null,
      "pts": 88.4,
-     "how": "waiver"
-    },
-    {
-     "id": 4569559,
-     "name": "Devaughn Vele",
-     "pos": "WR",
-     "slot": "BE",
-     "nfl": "NO",
-     "injury": null,
-     "pts": 89.5,
-     "how": "waiver"
-    },
-    {
-     "id": 3150744,
-     "name": "Chase McLaughlin",
-     "pos": "K",
-     "slot": "K",
-     "nfl": "TB",
-     "injury": null,
-     "pts": 99.0,
      "how": "waiver"
     },
     {
@@ -29720,7 +29959,7 @@
      "id": 5083076,
      "name": "Harold Fannin Jr.",
      "pos": "TE",
-     "slot": "RB/WR/TE",
+     "slot": "TE",
      "nfl": "CLE",
      "injury": null,
      "pts": 102.3,
@@ -29737,6 +29976,16 @@
      "injury": null,
      "pts": 60.8,
      "how": "waiver"
+    },
+    {
+     "id": 5082424,
+     "name": "Dominic Zvada",
+     "pos": "K",
+     "slot": "K",
+     "nfl": "NYG",
+     "injury": null,
+     "pts": 74.0,
+     "how": "fa"
     }
    ]
   },
@@ -29809,7 +30058,7 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "NE",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 33.8,
      "how": "draft",
      "round": 6,
@@ -29972,7 +30221,7 @@
      "id": 4426515,
      "name": "Puka Nacua",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "LAR",
      "injury": "DOUBTFUL",
      "pts": 173.6,
@@ -30044,7 +30293,7 @@
      "id": 4702555,
      "name": "Jonah Coleman",
      "pos": "RB",
-     "slot": "RB",
+     "slot": "BE",
      "nfl": "DEN",
      "injury": null,
      "pts": 62.9,
@@ -30074,7 +30323,7 @@
      "id": 4890973,
      "name": "Ashton Jeanty",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "RB",
      "nfl": "LV",
      "injury": null,
      "pts": 139.3,
@@ -30104,8 +30353,8 @@
      "id": 15818,
      "name": "Keenan Allen",
      "pos": "WR",
-     "slot": "BE",
-     "nfl": "IND",
+     "slot": "RB/WR/TE",
+     "nfl": "SF",
      "injury": null,
      "pts": 81.1,
      "how": "waiver"
@@ -30131,24 +30380,24 @@
      "how": "fa"
     },
     {
-     "id": 4362619,
-     "name": "Chris Rodriguez Jr.",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "JAX",
+     "id": 4427095,
+     "name": "DeMario Douglas",
+     "pos": "WR",
+     "slot": "WR",
+     "nfl": "NE",
      "injury": null,
-     "pts": 54.4,
-     "how": "fa"
+     "pts": 96.4,
+     "how": "waiver"
     },
     {
-     "id": 4040761,
-     "name": "Devin Singletary",
-     "pos": "RB",
+     "id": 4869645,
+     "name": "Caleb Douglas",
+     "pos": "WR",
      "slot": "RB/WR/TE",
-     "nfl": "NYG",
+     "nfl": "MIA",
      "injury": null,
-     "pts": 39.4,
-     "how": "fa"
+     "pts": 60.6,
+     "how": "waiver"
     }
    ]
   },
@@ -30195,7 +30444,7 @@
      "id": 4427366,
      "name": "Breece Hall",
      "pos": "RB",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "NYJ",
      "injury": null,
      "pts": 54.2,
@@ -30233,7 +30482,7 @@
      "pos": "WR",
      "slot": "BE",
      "nfl": "SF",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 89.0,
      "how": "draft",
      "round": 7,
@@ -30267,7 +30516,7 @@
      "id": 2976212,
      "name": "Stefon Diggs",
      "pos": "WR",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "WSH",
      "injury": null,
      "pts": 90.3,
@@ -30318,16 +30567,6 @@
      "how": "waiver"
     },
     {
-     "id": 4686468,
-     "name": "Seth McGowan",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "IND",
-     "injury": null,
-     "pts": 32.7,
-     "how": "waiver"
-    },
-    {
      "id": -16030,
      "name": "Jaguars D/ST",
      "pos": "D/ST",
@@ -30353,8 +30592,18 @@
      "pos": "RB",
      "slot": "BE",
      "nfl": "HOU",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 45.5,
+     "how": "waiver"
+    },
+    {
+     "id": 2573401,
+     "name": "Tyler Higbee",
+     "pos": "TE",
+     "slot": "BE",
+     "nfl": "LAR",
+     "injury": null,
+     "pts": 58.7,
      "how": "waiver"
     }
    ]
@@ -30378,9 +30627,9 @@
      "id": 4569618,
      "name": "Garrett Wilson",
      "pos": "WR",
-     "slot": "WR",
+     "slot": "BE",
      "nfl": "NYJ",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 113.7,
      "how": "draft",
      "round": 2,
@@ -30438,7 +30687,7 @@
      "id": 4241985,
      "name": "J.K. Dobbins",
      "pos": "RB",
-     "slot": "RB/WR/TE",
+     "slot": "BE",
      "nfl": "DEN",
      "injury": null,
      "pts": 62.5,
@@ -30450,7 +30699,7 @@
      "id": 3121023,
      "name": "Dallas Goedert",
      "pos": "TE",
-     "slot": "TE",
+     "slot": "BE",
      "nfl": "PHI",
      "injury": null,
      "pts": 74.0,
@@ -30472,7 +30721,7 @@
      "id": 2991662,
      "name": "Mack Hollins",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "WR",
      "nfl": "NE",
      "injury": null,
      "pts": 48.5,
@@ -30492,7 +30741,7 @@
      "id": 4036133,
      "name": "T.J. Hockenson",
      "pos": "TE",
-     "slot": "BE",
+     "slot": "TE",
      "nfl": "MIN",
      "injury": null,
      "pts": 85.8,
@@ -30504,7 +30753,7 @@
      "pos": "RB",
      "slot": "IR",
      "nfl": "GB",
-     "injury": "OUT",
+     "injury": "QUESTIONABLE",
      "pts": 51.8,
      "how": "fa"
     },
@@ -30517,18 +30766,6 @@
      "injury": null,
      "pts": 48.0,
      "how": "waiver"
-    },
-    {
-     "id": 4371733,
-     "name": "Kenny Gainwell",
-     "pos": "RB",
-     "slot": "BE",
-     "nfl": "TB",
-     "injury": null,
-     "pts": 63.6,
-     "how": "fa",
-     "round": 10,
-     "pick": 10
     },
     {
      "id": 4635008,
@@ -30544,7 +30781,7 @@
      "id": 5083754,
      "name": "Ryan Flournoy",
      "pos": "WR",
-     "slot": "BE",
+     "slot": "RB/WR/TE",
      "nfl": "DAL",
      "injury": null,
      "pts": 83.8,
@@ -30559,6 +30796,16 @@
      "injury": null,
      "pts": 19.0,
      "how": "fa"
+    },
+    {
+     "id": 4912274,
+     "name": "Sione Vaki",
+     "pos": "RB",
+     "slot": "BE",
+     "nfl": "DET",
+     "injury": null,
+     "pts": 26.9,
+     "how": "waiver"
     }
    ]
   }
