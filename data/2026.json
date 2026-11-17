@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-11-17T19:48+00:00",
+ "updated": "2026-11-17T21:59+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 11,
@@ -17710,7 +17710,7 @@
         "nfl": "WSH",
         "slot": "BE",
         "pts": 0,
-        "proj": 19.6
+        "proj": 19.57
        },
        {
         "id": 4569173,
@@ -17891,7 +17891,7 @@
         "nfl": "WSH",
         "slot": "BE",
         "pts": 0,
-        "proj": 12.86
+        "proj": 12.91
        },
        {
         "id": 4575131,
@@ -17900,7 +17900,7 @@
         "nfl": "WSH",
         "slot": "IR",
         "pts": 0,
-        "proj": 0
+        "proj": 7.49
        },
        {
         "id": 4035538,
@@ -18014,7 +18014,7 @@
         "nfl": "WSH",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 10.87
+        "proj": 7.71
        },
        {
         "id": -16012,
@@ -18150,7 +18150,7 @@
         "nfl": "BUF",
         "slot": "QB",
         "pts": 0,
-        "proj": 23.4
+        "proj": 23.39
        },
        {
         "id": 4596448,
@@ -18311,7 +18311,7 @@
         "nfl": "BUF",
         "slot": "RB",
         "pts": 0,
-        "proj": 20.87
+        "proj": 20.86
        },
        {
         "id": 4685702,
@@ -18356,7 +18356,7 @@
         "nfl": "BUF",
         "slot": "TE",
         "pts": 0,
-        "proj": 8.6
+        "proj": 8.59
        },
        {
         "id": 4431452,
@@ -18653,7 +18653,7 @@
         "nfl": "TEN",
         "slot": "RB",
         "pts": 0,
-        "proj": 18.45
+        "proj": 18.44
        },
        {
         "id": 4361579,
@@ -18861,7 +18861,7 @@
         "nfl": "WSH",
         "slot": "RB/WR/TE",
         "pts": 0,
-        "proj": 8.94
+        "proj": 8.97
        },
        {
         "id": -16016,
@@ -19069,7 +19069,7 @@
         "nfl": "TEN",
         "slot": "BE",
         "pts": 0,
-        "proj": 13.28
+        "proj": 13.19
        },
        {
         "id": 4431611,
@@ -29241,18 +29241,18 @@
    7
   ],
   "roasts": {
-   "3": "Cody, your A+ and first place in points come from Jahmyr Gibbs being RB1 and a pile of late-round lottery tickets cashing in, while your round-2 Saquon Barkley sits at RB32 with 58.7 points and you somehow cut Matthew Stafford, a QB6 with 142.86 points.",
-   "6": "Keith, an A- is generous for a guy who spent a round-3 pick on A.J. Brown (19.1 points, WR54), still holds Jordyn Tyson's 5.0 points like a keepsake, and dropped Jalen Coker and kicker Will Reichard, two of his best values, so his own best picks are playing for other managers' benches.",
-   "5": "Tyler, you named your team after Ashton Jeanty and then dropped him despite 139.3 points, while Terry McLaurin (WR49, 46.0 points) still has a roster spot, so the A- is carried by a kicker and a round-10 receiver.",
-   "9": "Kyle, Kenneth Walker and Joe Burrow built you a nice A-, but Breece Hall (RB34) and Jonathon Brooks (9.3 points, RB50) are still on your roster stinking it up while you let Alvin Kamara and his 73.7 points walk.",
-   "8": "Noah, a B+ draft that dropped Drake Maye, the QB3 with 179.18 points, and Justin Jefferson, while keeping Lamar Jackson at QB11, is a masterclass in cutting your winners and hugging your losers.",
-   "2": "Josh, you took Ja'Marr Chase at No. 2 and then handed round 2 to Jeremiyah Love (RB35, 53.4 points), so your best pick is a round-13 Blake Corum and that is not a compliment to your first two rounds.",
-   "1": "Brett, you got CeeDee Lamb and a lucky Matthew Golden hit, but Ladd McConkey (WR48), Marvin Harrison Jr. (37.5 points) and Zach Charbonnet (15.5 points) are all still on your roster, so the B- feels like a participation trophy.",
-   "10": "Reis, you spent the No. 1 overall pick and landed Josh Allen at QB1, yet you cut Travis Kelce at TE6 while keeping Dallas Goedert at TE11 and wasted picks on Brian Thomas Jr. and Isiah Pacheco, who scored a combined 33.7 points.",
-   "7": "Brad, your team is named 'Free Josh Jacobs' even though you kept him and he is RB40 with 43.8 points, your best pick is a round-16 Brian Robinson Jr. at 53.1 points, and Michael Pittman Jr. (15.9 points) and Jaxson Dart (27.4 points) are still on your roster, so the C is honestly a mercy.",
-   "4": "Brandon, the F and last place in points are what you get when your round-1 Rashee Rice is WR40, De'Von Achane got cut at RB47, and De'Zhaun Stribling is still on your roster with a perfect 0 points, so thank goodness for Javonte Williams in round 9."
+   "3": "Cody's A+ is basically Jahmyr Gibbs at RB1 plus a round-14 Denzel Boston lottery win, because his round-2 Saquon Barkley is RB33 with 58.7 points and he still cut Matthew Stafford, who is QB6.",
+   "6": "Keith's A is Jaxon Smith-Njigba doing all the work while A.J. Brown sits at WR56 with 23.8 points, and he somehow cut Will Reichard, the number one kicker in the league, along with his best pick Jalen Coker and the Rams D/ST.",
+   "9": "Kyle's A- got carried by Joe Burrow as QB1 in round 8, so please don't mention that Breece Hall is RB28, Jonathon Brooks has 9.3 points as RB50 and is still on the roster, and he cut Alvin Kamara, who is RB24.",
+   "5": "Tyler's B+ comes from a round-11 Chuba Hubbard heist, which is the only thing covering for Terry McLaurin sitting at WR50 and for dumping Ashton Jeanty, his own first-round pick, with 149.7 points.",
+   "8": "Noah cut Justin Jefferson, Drake Maye (QB4 with 182.2 points) and his best pick KC Concepcion, then kept Lamar Jackson at QB11 as his round-4 pick, which is how you turn a B+ into a cautionary tale.",
+   "7": "Brad named his team Free Josh Jacobs, yet Jacobs is still on the roster as RB41 with 43.8 points, so the only person holding him hostage is Brad, and meanwhile Pittman has 15.9 points and his best pick is a round-16 Brian Robinson Jr. he already cut.",
+   "2": "Josh's B was saved by Trey McBride at TE1, while Jeremiyah Love in round 2 is RB35, Jayden Reed scored 6.4 points before getting cut, and his best pick was literally the last guy he took, Deebo Samuel Sr. in round 16.",
+   "1": "Brett spent rounds 3 through 6 on DeVonta Smith (WR42), Ladd McConkey (WR48) and Marvin Harrison Jr. (WR52), a three-receiver pile of disappointment that Matthew Golden in round 8 can't fully bury.",
+   "10": "Reis got Bijan Robinson at RB3 and Josh Allen at QB2 and still finished ninth, thanks to a graveyard of cut picks including Isiah Pacheco's perfect zero points and Travis Kelce, who is TE6 now that he's on someone else's roster.",
+   "4": "Brandon's F is a monument to bad drafting: Rashee Rice is WR36, Travis Etienne is RB43, De'Zhaun Stribling has scored exactly zero points as WR62 and is still on the roster, and De'Von Achane got dumped as RB48, so only a kicker and a round-9 Javonte Williams kept this from being a total wipeout."
   },
-  "roastWeek": 10,
+  "roastWeek": 11,
   "roastStyle": "01e2841b53"
  },
  "draftRosters": [
