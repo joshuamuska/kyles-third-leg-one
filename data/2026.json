@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updated": "2026-11-20T21:39+00:00",
+ "updated": "2026-11-21T20:20+00:00",
  "regularSeasonWeeks": 14,
  "playoffTeams": 6,
  "currentWeek": 11,
@@ -17772,7 +17772,7 @@
         "nfl": "DET",
         "slot": "WR",
         "pts": 0,
-        "proj": 17.7
+        "proj": 17.71
        },
        {
         "id": 4595348,
@@ -18195,7 +18195,7 @@
         "nfl": "DEN",
         "slot": "RB",
         "pts": 0,
-        "proj": 8.52
+        "proj": 8.53
        },
        {
         "id": 5081432,
@@ -18320,7 +18320,7 @@
         "nfl": "LAC",
         "slot": "WR",
         "pts": 0,
-        "proj": 10.75
+        "proj": 10.76
        },
        {
         "id": 4038815,
@@ -18501,7 +18501,7 @@
         "nfl": "DET",
         "slot": "QB",
         "pts": 0,
-        "proj": 14.76
+        "proj": 14.77
        },
        {
         "id": 4869645,
@@ -18566,7 +18566,7 @@
         "nfl": "NYJ",
         "slot": "BE",
         "pts": 0,
-        "proj": 7.66
+        "proj": 7.67
        },
        {
         "id": 4036378,
@@ -19476,7 +19476,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "DEN",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 82.0
     },
     {
@@ -31520,7 +31520,7 @@
      "pos": "WR",
      "slot": "WR",
      "nfl": "DEN",
-     "injury": "QUESTIONABLE",
+     "injury": null,
      "pts": 82.0,
      "how": "draft",
      "round": 5,
