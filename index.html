@@ -1177,7 +1177,7 @@ const teamNow=id=>{const t=liveTeam(id); if(t) return t.name; const r=S.filter(r
 const recStr=t=>`${t.w}-${t.l}${t.t?"-"+t.t:""}`;
 
 function managers(){
-  const all=Object.keys(M).map(stats);
+  const all=Object.keys(M).map(statsNow);
   const active=all.filter(s=>!M[s.id].former).sort((a,b)=>b.titles-a.titles||b.p-a.p);
   const former=all.filter(s=>M[s.id].former&&s.seasons);
   const card=s=>{const m=M[s.id], t=!m.former&&liveTeam(s.id);
@@ -1186,7 +1186,7 @@ function managers(){
     <div class="body">
       <div class="n">${esc(m.name)}${m.role?` <span class="tag">${esc(m.role)}</span>`:""}</div>
       <div class="t">${m.former?esc(m.former):esc(teamNow(s.id))}</div>
-      <div class="s">${s.seasons?`${s.w}-${s.l} career`:"New this season"}${s.titles?` <span class="trophies">${"🏆".repeat(s.titles)}</span>`:""}</div>
+      <div class="s">${s.seasons?`${recStr(s)} career`:"New this season"}${s.titles?` <span class="trophies">${"🏆".repeat(s.titles)}</span>`:""}</div>
       ${t?`<div class="t">${LIVE.season}: ${recStr(t)}, ${LIVE.seasonOver?ord(t.final):`seed ${t.seed}`}</div>`:""}
     </div></a>`;};
   return `<section><h2>Managers</h2><p class="lede">Current team names, career records and titles. Pick a manager for their full history.</p>
